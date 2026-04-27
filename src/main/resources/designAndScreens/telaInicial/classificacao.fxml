@@ -12,18 +12,18 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.arthur.testefx.ControllerClassificacao">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerClassificacao">
    <content>
-      <AnchorPane prefHeight="2300.0" styleClass="white" stylesheets="@style.css">
+      <AnchorPane prefHeight="2300.0" styleClass="white" stylesheets="@../../css/style.css">
          <children>
             <Group>
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="#ffffff6d" strokeType="INSIDE" width="1690.0" />
-                  <StackPane layoutX="91.0" layoutY="59.0" prefHeight="150.0" prefWidth="125.0" styleClass="logo_copa26_arredondado" stylesheets="@style.css">
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="#ffffff6d" strokeType="INSIDE" width="1700.0" />
+                  <StackPane layoutX="91.0" layoutY="59.0" prefHeight="150.0" prefWidth="125.0" styleClass="logo_copa26_arredondado" stylesheets="@../../css/style.css">
                      <children>
                         <ImageView fitHeight="122.0" fitWidth="115.0" onMouseClicked="#irPaginaInicial" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/copa.jpg" />
+                              <Image url="@../../images/copa.jpg" />
                            </image>
                         </ImageView>
                      </children>
@@ -48,7 +48,7 @@
                         <Font name="Oswald Medium" size="30.0" />
                      </font>
                   </Text>
-                  <Button layoutX="1537.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@style.css" text="Login">
+                  <Button layoutX="1537.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
                      <font>
                         <Font name="Oswald Medium" size="12.0" />
                      </font>
@@ -57,7 +57,7 @@
             </Group>
             <ImageView fitHeight="1221.0" fitWidth="1159.0" layoutX="400.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@image/ChatGPT%20Image%2024%20de%20abr.%20de%202026,%2016_23_49.png" />
+                  <Image url="@../../images/ChatGPT%20Image%2024%20de%20abr.%20de%202026,%2016_23_49.png" />
                </image>
             </ImageView>
             <Group layoutX="29.0" layoutY="296.0">
@@ -72,12 +72,12 @@
                         <Line endX="153.111083984375" endY="-3.0517578125E-5" layoutX="186.0" layoutY="66.0" startX="-65.99998474121094" startY="-3.0517578125E-5" stroke="#d9d9d9" strokeWidth="2.0" />
                         <ImageView fitHeight="65.0" fitWidth="90.0" layoutX="29.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Mexico_national_football_team_crest_(2022).png" />
+                              <Image url="@../../images/Mexico_national_football_team_crest_(2022).png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="53.0" fitWidth="65.0" layoutX="20.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/South_African_Football_Association.png" />
+                              <Image url="@../../images/South_African_Football_Association.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="México">
@@ -87,7 +87,7 @@
                         </Text>
                         <ImageView fitHeight="65.0" fitWidth="90.0" layoutX="32.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/South_Korea_national_football_team_logo.png" />
+                              <Image url="@../../images/South_Korea_national_football_team_logo.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="África do Sul">
@@ -102,7 +102,7 @@
                         </Text>
                         <ImageView fitHeight="65.0" fitWidth="90.0" layoutX="27.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/FACR.png" />
+                              <Image url="@../../images/FACR.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="República Tcheca">
@@ -112,27 +112,27 @@
                         </Text>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                      </children>
                   </AnchorPane>
-                  <StackPane prefHeight="71.0" prefWidth="93.0" styleClass="letra-grupo" stylesheets="@style.css">
+                  <StackPane prefHeight="71.0" prefWidth="93.0" styleClass="letra-grupo" stylesheets="@../../css/style.css">
                      <children>
                         <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="A">
                            <font>
@@ -155,12 +155,12 @@
                         <Line endX="153.111083984375" endY="-3.0517578125E-5" layoutX="186.0" layoutY="66.0" startX="-65.99998474121094" startY="-3.0517578125E-5" stroke="#d9d9d9" strokeWidth="2.0" />
                         <ImageView fitHeight="65.0" fitWidth="90.0" layoutX="28.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Brazilian_Football_Confederation_logo.svg.png" />
+                              <Image url="@../../images/Brazilian_Football_Confederation_logo.svg.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="53.0" fitWidth="65.0" layoutX="25.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Fédération_Royale_Marocaine_de_Football.png" />
+                              <Image url="@../../images/Fédération_Royale_Marocaine_de_Football.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brasil">
@@ -170,7 +170,7 @@
                         </Text>
                         <ImageView fitHeight="56.0" fitWidth="57.0" layoutX="25.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Federation_Haitienne_de_Football.png" />
+                              <Image url="@../../images/Federation_Haitienne_de_Football.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Marrocos">
@@ -185,7 +185,7 @@
                         </Text>
                         <ImageView fitHeight="54.0" fitWidth="61.0" layoutX="27.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Seleção_Escocesa_logo.png" />
+                              <Image url="@../../images/Seleção_Escocesa_logo.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Escócia">
@@ -195,22 +195,22 @@
                         </Text>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -238,12 +238,12 @@
                         <Line endX="153.111083984375" endY="-3.0517578125E-5" layoutX="186.0" layoutY="66.0" startX="-65.99998474121094" startY="-3.0517578125E-5" stroke="#d9d9d9" strokeWidth="2.0" />
                         <ImageView fitHeight="65.0" fitWidth="90.0" layoutX="20.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Logotipo_Seleção_Canadá.png" />
+                              <Image url="@../../images/Logotipo_Seleção_Canadá.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="53.0" fitWidth="65.0" layoutX="25.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Logo_of_the_Football_Association_of_Bosnia_and_Herzegovina_(2013-present).png" />
+                              <Image url="@../../images/Logo_of_the_Football_Association_of_Bosnia_and_Herzegovina_(2013-present).png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Canadá">
@@ -253,7 +253,7 @@
                         </Text>
                         <ImageView fitHeight="56.0" fitWidth="57.0" layoutX="25.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Associação_do_Qatar_de_Futebol.png" />
+                              <Image url="@../../images/Associação_do_Qatar_de_Futebol.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bósnia e Herzegovina">
@@ -268,7 +268,7 @@
                         </Text>
                         <ImageView fitHeight="54.0" fitWidth="61.0" layoutX="23.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/SFV_Logo.svg.png" />
+                              <Image url="@../../images/SFV_Logo.svg.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Suíça">
@@ -278,27 +278,27 @@
                         </Text>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                      </children>
                   </AnchorPane>
-                  <StackPane prefHeight="71.0" prefWidth="93.0" styleClass="letra-grupo" stylesheets="@style.css">
+                  <StackPane prefHeight="71.0" prefWidth="93.0" styleClass="letra-grupo" stylesheets="@../../css/style.css">
                      <children>
                         <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="B">
                            <font>
@@ -321,12 +321,12 @@
                         <Line endX="153.111083984375" endY="-3.0517578125E-5" layoutX="186.0" layoutY="66.0" startX="-65.99998474121094" startY="-3.0517578125E-5" stroke="#d9d9d9" strokeWidth="2.0" />
                         <ImageView fitHeight="57.0" fitWidth="42.0" layoutX="30.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Crest_of_the_United_States_Soccer_Federation.png" />
+                              <Image url="@../../images/Crest_of_the_United_States_Soccer_Federation.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="51.0" fitWidth="56.0" layoutX="26.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Asociación_Paraguaya_de_Fútbol_logo.svg.png" />
+                              <Image url="@../../images/Asociación_Paraguaya_de_Fútbol_logo.svg.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estados Unidos">
@@ -336,7 +336,7 @@
                         </Text>
                         <ImageView fitHeight="65.0" fitWidth="90.0" layoutX="26.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Football_Federation_Logo,_2018.png" />
+                              <Image url="@../../images/Football_Federation_Logo,_2018.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Paraguai">
@@ -351,7 +351,7 @@
                         </Text>
                         <ImageView fitHeight="61.0" fitWidth="51.0" layoutX="27.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/TürkiyeFF.png" />
+                              <Image url="@../../images/TürkiyeFF.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Turquia">
@@ -361,27 +361,27 @@
                         </Text>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                      </children>
                   </AnchorPane>
-                  <StackPane prefHeight="71.0" prefWidth="93.0" styleClass="letra-grupo" stylesheets="@style.css">
+                  <StackPane prefHeight="71.0" prefWidth="93.0" styleClass="letra-grupo" stylesheets="@../../css/style.css">
                      <children>
                         <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="D">
                            <font>
@@ -404,12 +404,12 @@
                         <Line endX="153.111083984375" endY="-3.0517578125E-5" layoutX="186.0" layoutY="66.0" startX="-65.99998474121094" startY="-3.0517578125E-5" stroke="#d9d9d9" strokeWidth="2.0" />
                         <ImageView fitHeight="65.0" fitWidth="90.0" layoutX="28.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/DFBEagle.png" />
+                              <Image url="@../../images/DFBEagle.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="53.0" fitWidth="65.0" layoutX="25.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Federashon_Futbòl_Kòrsou.png" />
+                              <Image url="@../../images/Federashon_Futbòl_Kòrsou.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alemanha">
@@ -419,7 +419,7 @@
                         </Text>
                         <ImageView fitHeight="56.0" fitWidth="57.0" layoutX="32.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Fédération_Ivorienne_de_Football.png" />
+                              <Image url="@../../images/Fédération_Ivorienne_de_Football.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Curaçau">
@@ -434,7 +434,7 @@
                         </Text>
                         <ImageView fitHeight="54.0" fitWidth="61.0" layoutX="32.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/FEFecu.png" />
+                              <Image url="@../../images/FEFecu.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Equador">
@@ -444,22 +444,22 @@
                         </Text>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -487,12 +487,12 @@
                         <Line endX="153.111083984375" endY="-3.0517578125E-5" layoutX="186.0" layoutY="66.0" startX="-65.99998474121094" startY="-3.0517578125E-5" stroke="#d9d9d9" strokeWidth="2.0" />
                         <ImageView fitHeight="57.0" fitWidth="42.0" layoutX="30.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Netherlands_national_football_team_logo_2017.png" />
+                              <Image url="@../../images/Netherlands_national_football_team_logo_2017.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="51.0" fitWidth="56.0" layoutX="33.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/JapanFA.png" />
+                              <Image url="@../../images/JapanFA.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Holanda">
@@ -502,7 +502,7 @@
                         </Text>
                         <ImageView fitHeight="65.0" fitWidth="90.0" layoutX="32.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/SFSverige.png" />
+                              <Image url="@../../images/SFSverige.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Japão">
@@ -517,7 +517,7 @@
                         </Text>
                         <ImageView fitHeight="61.0" fitWidth="51.0" layoutX="27.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Fédération_Tunisienne_de_Football.png" />
+                              <Image url="@../../images/Fédération_Tunisienne_de_Football.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tunísia">
@@ -527,22 +527,22 @@
                         </Text>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -570,12 +570,12 @@
                         <Line endX="153.111083984375" endY="-3.0517578125E-5" layoutX="186.0" layoutY="66.0" startX="-65.99998474121094" startY="-3.0517578125E-5" stroke="#d9d9d9" strokeWidth="2.0" />
                         <ImageView fitHeight="65.0" fitWidth="90.0" layoutX="35.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Royal_Belgian_FA_logo_2019.png" />
+                              <Image url="@../../images/Royal_Belgian_FA_logo_2019.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="53.0" fitWidth="63.0" layoutX="26.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Egyptian_Football_Association.png" />
+                              <Image url="@../../images/Egyptian_Football_Association.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bélgica">
@@ -585,7 +585,7 @@
                         </Text>
                         <ImageView fitHeight="56.0" fitWidth="57.0" layoutX="36.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Football_Federation_Islamic_Republic_of_Iran.png" />
+                              <Image url="@../../images/Football_Federation_Islamic_Republic_of_Iran.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Egito">
@@ -600,7 +600,7 @@
                         </Text>
                         <ImageView fitHeight="54.0" fitWidth="61.0" layoutX="32.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/New_Zealand_Football.png" />
+                              <Image url="@../../images/New_Zealand_Football.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nova Zelândia">
@@ -610,22 +610,22 @@
                         </Text>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -653,12 +653,12 @@
                         <Line endX="153.111083984375" endY="-3.0517578125E-5" layoutX="186.0" layoutY="66.0" startX="-65.99998474121094" startY="-3.0517578125E-5" stroke="#d9d9d9" strokeWidth="2.0" />
                         <ImageView fitHeight="57.0" fitWidth="42.0" layoutX="36.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/250px-230px-Afa_logo.svg.png" />
+                              <Image url="@../../images/250px-230px-Afa_logo.svg.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="51.0" fitWidth="56.0" layoutX="33.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Algeria_National_Football_Team_logo.png" />
+                              <Image url="@../../images/Algeria_National_Football_Team_logo.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Argentina">
@@ -668,7 +668,7 @@
                         </Text>
                         <ImageView fitHeight="58.0" fitWidth="44.0" layoutX="31.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/OFB.png" />
+                              <Image url="@../../images/OFB.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Argélia">
@@ -683,7 +683,7 @@
                         </Text>
                         <ImageView fitHeight="61.0" fitWidth="51.0" layoutX="29.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/jordania.png" />
+                              <Image url="@../../images/jordania.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jordânia">
@@ -693,22 +693,22 @@
                         </Text>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -726,7 +726,7 @@
             </Group>
             <ImageView fitHeight="379.0" fitWidth="1117.0" layoutX="548.0" layoutY="1150.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@image/bb45f82a-33e5-48c1-8cb2-cdfaa72b855c.png" />
+                  <Image url="@../../images/bb45f82a-33e5-48c1-8cb2-cdfaa72b855c.png" />
                </image>
             </ImageView>
             <Group layoutX="442.0" layoutY="1496.0">
@@ -741,12 +741,12 @@
                         <Line endX="153.111083984375" endY="-3.0517578125E-5" layoutX="186.0" layoutY="66.0" startX="-65.99998474121094" startY="-3.0517578125E-5" stroke="#d9d9d9" strokeWidth="2.0" />
                         <ImageView fitHeight="65.0" fitWidth="90.0" layoutX="31.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Spain_National_Football_Team_badge.png" />
+                              <Image url="@../../images/Spain_National_Football_Team_badge.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="53.0" fitWidth="65.0" layoutX="32.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Federação_Cabo-Verdiana_de_Futebol.png" />
+                              <Image url="@../../images/Federação_Cabo-Verdiana_de_Futebol.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Espanha">
@@ -756,7 +756,7 @@
                         </Text>
                         <ImageView fitHeight="53.0" fitWidth="51.0" layoutX="28.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/SAFF.png" />
+                              <Image url="@../../images/SAFF.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cabo Verde">
@@ -771,7 +771,7 @@
                         </Text>
                         <ImageView fitHeight="54.0" fitWidth="61.0" layoutX="34.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/AUF.png" />
+                              <Image url="@../../images/AUF.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Uruguai">
@@ -781,22 +781,22 @@
                         </Text>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -824,12 +824,12 @@
                         <Line endX="153.111083984375" endY="-3.0517578125E-5" layoutX="186.0" layoutY="66.0" startX="-65.99998474121094" startY="-3.0517578125E-5" stroke="#d9d9d9" strokeWidth="2.0" />
                         <ImageView fitHeight="65.0" fitWidth="90.0" layoutX="28.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Logo_Seleção_Francesa_2018.png" />
+                              <Image url="@../../images/Logo_Seleção_Francesa_2018.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="53.0" fitWidth="65.0" layoutX="25.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/FSenegalaiseF.png" />
+                              <Image url="@../../images/FSenegalaiseF.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="França">
@@ -839,7 +839,7 @@
                         </Text>
                         <ImageView fitHeight="56.0" fitWidth="57.0" layoutX="36.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Iraq_National_Team_Badge_2021_v2.svg.png" />
+                              <Image url="@../../images/Iraq_National_Team_Badge_2021_v2.svg.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senegal">
@@ -854,7 +854,7 @@
                         </Text>
                         <ImageView fitHeight="54.0" fitWidth="61.0" layoutX="26.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/nor_women.png" />
+                              <Image url="@../../images/nor_women.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Noruega">
@@ -864,22 +864,22 @@
                         </Text>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -907,12 +907,12 @@
                         <Line endX="153.111083984375" endY="-3.0517578125E-5" layoutX="186.0" layoutY="66.0" startX="-65.99998474121094" startY="-3.0517578125E-5" stroke="#d9d9d9" strokeWidth="2.0" />
                         <ImageView fitHeight="64.0" fitWidth="43.0" layoutX="30.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Portugal_National_Team_logo.png" />
+                              <Image url="@../../images/Portugal_National_Team_logo.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="53.0" fitWidth="65.0" layoutX="28.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Fédération_Congolaise_de_Football.png" />
+                              <Image url="@../../images/Fédération_Congolaise_de_Football.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Portugal">
@@ -922,7 +922,7 @@
                         </Text>
                         <ImageView fitHeight="53.0" fitWidth="51.0" layoutX="28.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Uzbekistan_Football_Federation.png" />
+                              <Image url="@../../images/Uzbekistan_Football_Federation.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RD do Congo">
@@ -937,7 +937,7 @@
                         </Text>
                         <ImageView fitHeight="54.0" fitWidth="61.0" layoutX="23.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/fcf-seleccion-de-fútbol-de-colombia-logo-0.png" />
+                              <Image url="@../../images/fcf-seleccion-de-fútbol-de-colombia-logo-0.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Colômbia">
@@ -947,22 +947,22 @@
                         </Text>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -990,12 +990,12 @@
                         <Line endX="153.111083984375" endY="-3.0517578125E-5" layoutX="186.0" layoutY="66.0" startX="-65.99998474121094" startY="-3.0517578125E-5" stroke="#d9d9d9" strokeWidth="2.0" />
                         <ImageView fitHeight="65.0" fitWidth="90.0" layoutX="28.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/eng_new.png" />
+                              <Image url="@../../images/eng_new.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="53.0" fitWidth="65.0" layoutX="28.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Croatia_football_federation.png" />
+                              <Image url="@../../images/Croatia_football_federation.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inglaterra">
@@ -1005,7 +1005,7 @@
                         </Text>
                         <ImageView fitHeight="56.0" fitWidth="57.0" layoutX="27.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/Ghana_Football_Association.png" />
+                              <Image url="@../../images/Ghana_Football_Association.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Croácia">
@@ -1020,7 +1020,7 @@
                         </Text>
                         <ImageView fitHeight="54.0" fitWidth="61.0" layoutX="29.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/panama.png" />
+                              <Image url="@../../images/panama.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="100.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Panamá">
@@ -1030,22 +1030,22 @@
                         </Text>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@image/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
                            </image>
                         </ImageView>
                      </children>

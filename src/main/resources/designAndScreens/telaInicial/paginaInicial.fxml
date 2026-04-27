@@ -10,22 +10,22 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.arthur.testefx.ControllerMenu">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerMenu">
    <children>
       <ImageView fitHeight="1000.0" fitWidth="1710.0" pickOnBounds="true">
          <image>
-            <Image url="@image/ChatGPT%20Image%2020%20de%20abr.%20de%202026,%2007_50_05.png" />
+            <Image url="@../../images/ChatGPT%20Image%2020%20de%20abr.%20de%202026,%2007_50_05.png" />
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="1000.0" opacity="0.35" stroke="TRANSPARENT" strokeType="INSIDE" width="1710.0" />
       <Group>
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="#ffffff6d" strokeType="INSIDE" width="1710.0" />
-            <StackPane layoutX="91.0" layoutY="59.0" prefHeight="150.0" prefWidth="125.0" styleClass="logo_copa26_arredondado" stylesheets="@style.css">
+            <StackPane layoutX="91.0" layoutY="59.0" prefHeight="150.0" prefWidth="125.0" styleClass="logo_copa26_arredondado" stylesheets="@../../css/style.css">
                <children>
                   <ImageView fitHeight="122.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@image/copa.jpg" />
+                        <Image url="@../../images/copa.jpg" />
                      </image>
                   </ImageView>
                </children>
@@ -50,7 +50,7 @@
                   <Font name="Oswald Medium" size="30.0" />
                </font>
             </Text>
-            <Button layoutX="1567.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@style.css" text="Login">
+            <Button layoutX="1567.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
                <font>
                   <Font name="Oswald Medium" size="12.0" />
                </font>
@@ -59,7 +59,7 @@
       </Group>
       <ImageView fitHeight="770.0" fitWidth="1199.0" layoutX="230.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="224.66666666666674" AnchorPane.rightAnchor="286.0">
          <image>
-            <Image url="@image/maxresdefault-removebg-preview.png" />
+            <Image url="@../../images/maxresdefault-removebg-preview.png" />
          </image>
       </ImageView>
       <Text fill="WHITE" layoutX="350.0" layoutY="660.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sistema de Gestão Da Copa do Mundo de 2026">

@@ -2,7 +2,8 @@ module com.tp1.sistemacopa2026 {
     requires javafx.controls;
     requires javafx.fxml;
 
+    opens controller to javafx.fxml;
+    opens main to javafx.graphics;
 
-    opens com.tp1.sistemacopa2026 to javafx.fxml;
-    exports com.tp1.sistemacopa2026;
+    exports main;
 }

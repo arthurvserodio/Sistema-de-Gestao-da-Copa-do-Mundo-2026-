@@ -6,6 +6,7 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class SiteRodando extends Application {
     @Override
@@ -21,7 +22,7 @@ public class SiteRodando extends Application {
         Font.loadFont(getClass().getResourceAsStream("/fonts/Roboto_Condensed-Medium.ttf"), 12);
         //Carregando a tela
         Scene scene = new Scene(
-                FXMLLoader.load(getClass().getResource("paginaInicial.fxml"))
+                FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/designAndScreens/telaInicial/paginaInicial.fxml")))
         );
         stage.setTitle("Copa do Mundo");
         stage.setScene(scene);
