@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="792.0" prefWidth="1430.0" style="-fx-background-radius: 25;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
+    <children>
+        <HBox prefHeight="39.0" prefWidth="1430.0" spacing="40.0" style="-fx-background-color: #0d0d0d;">
+            <padding>
+                <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+            </padding>
+            <children>
+                <HBox prefHeight="30.0" prefWidth="83.0">
+                    <children>
+                        <StackPane prefHeight="104.0" prefWidth="95.0" styleClass="logo_copa26_arredondado" stylesheets="@/css/style.css" />
+                    </children></HBox>
+                <Label prefHeight="26.0" prefWidth="82.0" text="História" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label text="Classificação" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label text="Equipes" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label text="Estádios" textFill="WHITE" underline="true">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <HBox prefHeight="30.0" prefWidth="636.0" />
+                <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: transparent; -fx-border-radius: 20; -fx-border-color: White; -fx-text-fill: white;" text="Login" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#80ff00" height="95.0" layoutX="72.0" layoutY="429.0" opacity="0.23" stroke="BLACK" strokeType="INSIDE" width="229.0" />
+        <Label layoutX="86.0" layoutY="463.0" text="Capacidade:  87.500 " />
+        <Label layoutX="86.0" layoutY="445.0" prefHeight="18.0" prefWidth="158.0" text="Nome:  Azteca " />
+        <Label layoutX="84.0" layoutY="481.0" prefHeight="18.0" prefWidth="206.0" text="Local :  Cidade do México" />
+        <Label layoutX="52.0" layoutY="187.0" prefHeight="51.0" prefWidth="369.0" text="México">
+            <font>
+                <Font name="Arial Bold" size="46.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="142.0" fitWidth="229.0" layoutX="72.0" layoutY="293.0" pickOnBounds="true">
+            <image>
+                <Image url="@/images/imageStadiums/estadio 12.png" />
+            </image>
+        </ImageView>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#73ff00" height="95.0" layoutX="362.0" layoutY="429.0" opacity="0.23" stroke="BLACK" strokeType="INSIDE" width="229.0" />
+        <Label layoutX="376.0" layoutY="463.0" text="Capacidade:  48.000 " />
+        <Label layoutX="376.0" layoutY="445.0" prefHeight="18.0" prefWidth="158.0" text="Nome: Akron" />
+        <Label layoutX="374.0" layoutY="481.0" prefHeight="18.0" prefWidth="206.0" text="Local :  Guadalajara, Jalisco" />
+        <ImageView fitHeight="140.0" fitWidth="229.0" layoutX="363.0" layoutY="295.0" pickOnBounds="true">
+            <image>
+                <Image url="@/images/imageStadiums/estadio 13.png" />
+            </image>
+        </ImageView>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#7bff00" height="95.0" layoutX="643.0" layoutY="429.0" opacity="0.23" stroke="BLACK" strokeType="INSIDE" width="229.0" />
+        <Label layoutX="657.0" layoutY="463.0" text="Capacidade:  53.500  " />
+        <Label layoutX="657.0" layoutY="445.0" prefHeight="18.0" prefWidth="158.0" text="Nome:  BBVA" />
+        <Label layoutX="655.0" layoutY="481.0" prefHeight="18.0" prefWidth="206.0" text="Local :  Guadalupe, Nuevo León" />
+        <ImageView fitHeight="140.0" fitWidth="229.0" layoutX="644.0" layoutY="295.0" pickOnBounds="true">
+            <image>
+                <Image url="@/images/imageStadiums/estadio 14.png" />
+            </image>
+        </ImageView>
+        <Button layoutX="1152.0" layoutY="729.0" mnemonicParsing="false" onAction="#mudarTela4" prefHeight="39.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-border-radius: 20; -fx-border-color: Black; -fx-text-fill: Black;" text="Avançar" textFill="#3e3838">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Button>
+        <StackPane layoutX="14.0" layoutY="14.0" prefHeight="121.0" prefWidth="107.0" styleClass="logo_copa26_arredondado" stylesheets="@style.css">
+            <children>
+                <ImageView fitHeight="114.0" fitWidth="115.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@/images/imageStadiums/logo.png" />
+                    </image>
+                    <clip>
+                        <Rectangle arcHeight="20.0" arcWidth="20.0" height="100.0" width="100.0" />
+                    </clip>
+                </ImageView>
+            </children>
+        </StackPane>
+        <Button layoutX="976.0" layoutY="729.0" mnemonicParsing="false" onAction="#mudarTela2" prefHeight="39.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-border-radius: 20; -fx-border-color: Black; -fx-text-fill: Black;" text="Voltar" textFill="#3e3838">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
