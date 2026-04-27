@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="792.0" prefWidth="1430.0" style="-fx-background-radius: 25;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
+<AnchorPane prefHeight="792.0" prefWidth="1430.0" style="-fx-background-radius: 25;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerTelasEstadios">
     <children>
         <HBox prefHeight="39.0" prefWidth="1430.0" spacing="40.0" style="-fx-background-color: #0d0d0d;">
             <padding>
@@ -20,7 +20,7 @@
             <children>
                 <HBox prefHeight="30.0" prefWidth="83.0">
                     <children>
-                        <StackPane prefHeight="104.0" prefWidth="95.0" styleClass="logo_copa26_arredondado" stylesheets="@style.css" />
+                        <StackPane prefHeight="104.0" prefWidth="95.0" styleClass="logo_copa26_arredondado" stylesheets="@../../css/style.css" />
                     </children></HBox>
                 <Label prefHeight="26.0" prefWidth="82.0" text="História" textFill="WHITE">
                     <HBox.margin>
@@ -64,7 +64,7 @@
         </Label>
         <ImageView fitHeight="142.0" fitWidth="229.0" layoutX="72.0" layoutY="293.0" pickOnBounds="true">
             <image>
-                <Image url="@/images/imageStadiums/estadio 15.png" />
+                <Image url="@../../images/imageStadiums/estadio 15.png" />
             </image>
         </ImageView>
         <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="RED" height="95.0" layoutX="362.0" layoutY="429.0" opacity="0.23" stroke="BLACK" strokeType="INSIDE" width="229.0" />
@@ -73,14 +73,14 @@
         <Label layoutX="374.0" layoutY="481.0" prefHeight="18.0" prefWidth="206.0" text="Local :  Toronto" />
         <ImageView fitHeight="140.0" fitWidth="229.0" layoutX="363.0" layoutY="295.0" pickOnBounds="true">
             <image>
-                <Image url="@/images/imageStadiums/estadio 16 .png" />
+                <Image url="@../../images/imageStadiums/estadio 16 .png" />
             </image>
         </ImageView>
-        <StackPane layoutX="14.0" layoutY="14.0" prefHeight="121.0" prefWidth="107.0" styleClass="logo_copa26_arredondado" stylesheets="@style.css">
+        <StackPane layoutX="14.0" layoutY="14.0" onMouseClicked="#irParaInicio" prefHeight="121.0" prefWidth="107.0" styleClass="logo_copa26_arredondado" stylesheets="@../../css/style.css">
             <children>
                 <ImageView fitHeight="114.0" fitWidth="115.0" pickOnBounds="true">
                     <image>
-                        <Image url="@/images/imageStadiums/logo.png" />
+                        <Image url="@../../images/imageStadiums/logo.png" />
                     </image>
                     <clip>
                         <Rectangle arcHeight="20.0" arcWidth="20.0" height="100.0" width="100.0" />
@@ -88,7 +88,7 @@
                 </ImageView>
             </children>
         </StackPane>
-        <Button layoutX="1130.0" layoutY="697.0" mnemonicParsing="false" onAction="#mudarTela3" prefHeight="39.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-border-radius: 20; -fx-border-color: Black; -fx-text-fill: Black;" text="Voltar" textFill="#3e3838">
+        <Button layoutX="1130.0" layoutY="697.0" mnemonicParsing="false" onAction="#irParaTela3" prefHeight="39.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-border-radius: 20; -fx-border-color: Black; -fx-text-fill: Black;" text="Voltar" textFill="#3e3838">
             <font>
                 <Font name="System Bold" size="13.0" />
             </font>

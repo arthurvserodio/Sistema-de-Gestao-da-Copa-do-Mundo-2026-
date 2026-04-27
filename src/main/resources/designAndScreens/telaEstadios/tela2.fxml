@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="781.0" prefWidth="1430.0" style="-fx-background-radius: 25;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerMenu">
+<AnchorPane prefHeight="781.0" prefWidth="1430.0" style="-fx-background-radius: 25;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerTelasEstadios">
     <children>
         <HBox prefHeight="39.0" prefWidth="1430.0" spacing="40.0" style="-fx-background-color: #0d0d0d;">
             <padding>
@@ -20,7 +20,7 @@
             <children>
                 <HBox prefHeight="30.0" prefWidth="83.0">
                     <children>
-                        <StackPane prefHeight="104.0" prefWidth="95.0" styleClass="logo_copa26_arredondado" stylesheets="@/css/style.css" />
+                        <StackPane prefHeight="104.0" prefWidth="95.0" styleClass="logo_copa26_arredondado" stylesheets="@../../css/style.css" />
                     </children></HBox>
                 <Label prefHeight="26.0" prefWidth="82.0" text="História" textFill="WHITE">
                     <HBox.margin>
@@ -64,7 +64,7 @@
         </Label>
         <ImageView fitHeight="142.0" fitWidth="229.0" layoutX="72.0" layoutY="293.0" pickOnBounds="true">
             <image>
-                <Image url="@/images/imageStadiums/estadio 7.png" />
+                <Image url="@../../images/imageStadiums/estadio 7.png" />
             </image>
         </ImageView>
         <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#0059ff" height="95.0" layoutX="362.0" layoutY="429.0" opacity="0.23" stroke="BLACK" strokeType="INSIDE" width="229.0" />
@@ -73,7 +73,7 @@
         <Label layoutX="374.0" layoutY="481.0" prefHeight="18.0" prefWidth="206.0" text="Local :  Foxborough, Massachusetts " />
         <ImageView fitHeight="141.0" fitWidth="227.0" layoutX="363.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@/images/imageStadiums/estadio 8 .png" />
+                <Image url="@../../images/imageStadiums/estadio 8 .png" />
             </image>
         </ImageView>
         <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#0059ff" height="95.0" layoutX="643.0" layoutY="429.0" opacity="0.23" stroke="BLACK" strokeType="INSIDE" width="229.0" />
@@ -82,7 +82,7 @@
         <Label layoutX="655.0" layoutY="481.0" prefHeight="18.0" prefWidth="206.0" text="Local :  Filadélfia, Pensilvânia" />
         <ImageView fitHeight="140.0" fitWidth="227.0" layoutX="644.0" layoutY="295.0" pickOnBounds="true">
             <image>
-                <Image url="@/images/imageStadiums/estadio 9.png" />
+                <Image url="@../../images/imageStadiums/estadio 9.png" />
             </image>
         </ImageView>
         <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#0059ff" height="95.0" layoutX="910.0" layoutY="429.0" opacity="0.23" stroke="BLACK" strokeType="INSIDE" width="229.0" />
@@ -91,7 +91,7 @@
         <Label layoutX="922.0" layoutY="481.0" prefHeight="18.0" prefWidth="206.0" text="Local :  Santa Clara, Califórnia" />
         <ImageView fitHeight="140.0" fitWidth="227.0" layoutX="911.0" layoutY="295.0" pickOnBounds="true">
             <image>
-                <Image url="@/images/imageStadiums/estadio 10 .png" />
+                <Image url="@../../images/imageStadiums/estadio 10 .png" />
             </image>
         </ImageView>
         <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#0059ff" height="87.0" layoutX="73.0" layoutY="668.0" opacity="0.23" stroke="BLACK" strokeType="INSIDE" width="229.0" />
@@ -100,19 +100,19 @@
         <Label layoutX="84.0" layoutY="724.0" prefHeight="18.0" prefWidth="206.0" text="Local :  Seattle, Washington" />
         <ImageView fitHeight="129.0" fitWidth="227.0" layoutX="74.0" layoutY="548.0" pickOnBounds="true">
             <image>
-                <Image url="@/images/imageStadiums/estadio 11.png" />
+                <Image url="@../../images/imageStadiums/estadio 11.png" />
             </image>
         </ImageView>
-        <Button layoutX="1208.0" layoutY="705.0" mnemonicParsing="false" onAction="#mudarTela3" prefHeight="39.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-border-radius: 20; -fx-border-color: Black; -fx-text-fill: Black;" text="Avançar" textFill="#3e3838">
+        <Button layoutX="1208.0" layoutY="705.0" mnemonicParsing="false" onAction="#irParaTela3" prefHeight="39.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-border-radius: 20; -fx-border-color: Black; -fx-text-fill: Black;" text="Avançar" textFill="#3e3838">
             <font>
                 <Font name="System Bold" size="13.0" />
             </font>
         </Button>
-        <StackPane layoutX="14.0" layoutY="14.0" prefHeight="121.0" prefWidth="107.0" styleClass="logo_copa26_arredondado" stylesheets="@style.css">
+        <StackPane layoutX="14.0" layoutY="14.0" prefHeight="121.0" prefWidth="107.0" styleClass="logo_copa26_arredondado" stylesheets="@../../css/style.css">
             <children>
-                <ImageView fitHeight="114.0" fitWidth="115.0" pickOnBounds="true">
+                <ImageView fitHeight="114.0" fitWidth="115.0" onMouseClicked="#irParaInicio" pickOnBounds="true">
                     <image>
-                        <Image url="@/images/imageStadiums/logo.png" />
+                        <Image url="@../../images/imageStadiums/logo.png" />
                     </image>
                     <clip>
                         <Rectangle arcHeight="20.0" arcWidth="20.0" height="100.0" width="100.0" />
@@ -120,7 +120,7 @@
                 </ImageView>
             </children>
         </StackPane>
-        <Button layoutX="1052.0" layoutY="704.0" mnemonicParsing="false" onAction="#mudarTela1" prefHeight="39.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-border-radius: 20; -fx-border-color: Black; -fx-text-fill: Black;" text="Voltar" textFill="#3e3838">
+        <Button layoutX="1052.0" layoutY="704.0" mnemonicParsing="false" onAction="#irParaTela1" prefHeight="39.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-border-radius: 20; -fx-border-color: Black; -fx-text-fill: Black;" text="Voltar" textFill="#3e3838">
             <font>
                 <Font name="System Bold" size="13.0" />
             </font>
