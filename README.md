@@ -1,6 +1,6 @@
 # Sistema de Gestão da Copa do Mundo 2026
 Sistema em Java para gerenciamento da Copa do Mundo 2026.
-
+oi
 Este projeto consiste no desenvolvimento de um sistema computacional para apoiar a organização e gestão de um evento esportivo de grande porte, como a Copa do Mundo de 2026. A aplicação centraliza e automatiza processos administrativos e operacionais, proporcionando maior eficiência, organização e confiabilidade.
 ## 👥 Equipe
 - Arthur Vilaça: @arthurvserodio
