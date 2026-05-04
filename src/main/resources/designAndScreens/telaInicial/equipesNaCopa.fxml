@@ -11,11 +11,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerEquipes">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerEquipes">
    <children>
       <Group>
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="#ffffff6d" strokeType="INSIDE" width="1600.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="#ffffff6d" strokeType="INSIDE" width="1440.0" />
             <StackPane layoutX="91.0" layoutY="59.0" onMouseClicked="#irPaginaInicial" prefHeight="150.0" prefWidth="125.0" styleClass="logo_copa26_arredondado" stylesheets="@../../css/style.css">
                <children>
                   <ImageView fitHeight="122.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true">
@@ -45,7 +45,7 @@
                   <Font name="Oswald Medium" size="30.0" />
                </font>
             </Text>
-            <Button layoutX="1457.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
+            <Button layoutX="1297.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
                <font>
                   <Font name="Oswald Medium" size="12.0" />
                </font>
@@ -256,7 +256,7 @@
             </Text>
          </children>
       </Group>
-      <Button layoutX="1415.0" layoutY="800.0" mnemonicParsing="false" onAction="#avancar" styleClass="black_button" stylesheets="@../../css/style.css" text="Avançar">
+      <Button layoutX="1255.0" layoutY="740.0" mnemonicParsing="false" onAction="#avancar" styleClass="black_button" stylesheets="@../../css/style.css" text="Avançar">
          <font>
             <Font name="Oswald Medium" size="12.0" />
          </font>

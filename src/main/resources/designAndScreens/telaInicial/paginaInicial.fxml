@@ -9,15 +9,20 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerMenu">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerMenu">
    <children>
-      <ImageView fitHeight="900.0" fitWidth="1600.0" pickOnBounds="true">
+      <ImageView fitHeight="810.0" fitWidth="1440.0" pickOnBounds="true">
          <image>
             <Image url="@../../images/ChatGPT%20Image%2020%20de%20abr.%20de%202026,%2007_50_05.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="900.0" opacity="0.35" stroke="TRANSPARENT" strokeType="INSIDE" width="1600.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="#ffffff6d" strokeType="INSIDE" width="1600.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="810.0" opacity="0.35" stroke="TRANSPARENT" strokeType="INSIDE" width="1440.0" />
+      <ImageView fitHeight="770.0" fitWidth="1199.0" layoutX="111.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="111.0" AnchorPane.rightAnchor="130.0">
+         <image>
+            <Image url="@../../images/maxresdefault-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="#ffffff6d" strokeType="INSIDE" width="1440.0" />
       <StackPane layoutX="91.0" layoutY="59.0" prefHeight="150.0" prefWidth="125.0" styleClass="logo_copa26_arredondado" stylesheets="@../../css/style.css">
          <children>
             <ImageView fitHeight="122.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true">
@@ -47,22 +52,17 @@
             <Font name="Oswald Medium" size="30.0" />
          </font>
       </Text>
-      <Button layoutX="1447.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
+      <Button layoutX="1297.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
          <font>
             <Font name="Oswald Medium" size="12.0" />
          </font>
       </Button>
-      <ImageView fitHeight="770.0" fitWidth="1199.0" layoutX="204.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="204.0" AnchorPane.rightAnchor="197.0">
-         <image>
-            <Image url="@../../images/maxresdefault-removebg-preview.png" />
-         </image>
-      </ImageView>
-      <Text fill="WHITE" layoutX="299.0" layoutY="643.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sistema de Gestão Da Copa do Mundo de 2026" textAlignment="CENTER">
+      <Text fill="WHITE" layoutX="210.0" layoutY="600.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sistema de Gestão Da Copa do Mundo de 2026" textAlignment="CENTER" wrappingWidth="1014.2400512695312">
          <font>
             <Font name="Oswald Regular" size="60.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="428.0" layoutY="689.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Acompanhe jogos, equipes e classificações em tempo real, com todas as informações organizadas em uma interface moderna e intuitiva. Tenha controle total do campeonato em um só lugar." textAlignment="CENTER" wrappingWidth="763.9412841796875">
+      <Text fill="WHITE" layoutX="350.0" layoutY="650.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Acompanhe jogos, equipes e classificações em tempo real, com todas as informações organizadas em uma interface moderna e intuitiva. Tenha controle total do campeonato em um só lugar." textAlignment="CENTER" wrappingWidth="763.9412841796875">
          <font>
             <Font name="Oswald Regular" size="30.0" />
          </font>

@@ -12,13 +12,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerClassificacao">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1440.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerClassificacao">
    <content>
-      <AnchorPane prefHeight="2300.0" prefWidth="1584.0" styleClass="white" stylesheets="@../../css/style.css">
+      <AnchorPane prefHeight="2300.0" prefWidth="1424.0" styleClass="white" stylesheets="@../../css/style.css">
          <children>
             <Group>
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="#ffffff6d" strokeType="INSIDE" width="1584.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="98.0" stroke="#ffffff6d" strokeType="INSIDE" width="1424.0" />
                   <StackPane layoutX="91.0" layoutY="59.0" prefHeight="150.0" prefWidth="125.0" styleClass="logo_copa26_arredondado" stylesheets="@../../css/style.css">
                      <children>
                         <ImageView fitHeight="122.0" fitWidth="115.0" onMouseClicked="#irPaginaInicial" pickOnBounds="true" preserveRatio="true">
@@ -48,14 +48,14 @@
                         <Font name="Oswald Medium" size="30.0" />
                      </font>
                   </Text>
-                  <Button layoutX="1437.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
+                  <Button layoutX="1297.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
                      <font>
                         <Font name="Oswald Medium" size="12.0" />
                      </font>
                   </Button>
                </children>
             </Group>
-            <ImageView fitHeight="1151.0" fitWidth="801.0" layoutX="406.0" layoutY="219.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="1262.0" fitWidth="985.0" layoutX="265.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../images/ChatGPT%20Image%2024%20de%20abr.%20de%202026,%2016_23_49.png" />
                </image>
@@ -226,7 +226,7 @@
                   </StackPane>
                </children>
             </Group>
-            <Group layoutX="1169.0" layoutY="296.0">
+            <Group layoutX="1009.0" layoutY="296.0">
                <children>
                   <AnchorPane layoutX="11.0" prefHeight="361.0" prefWidth="376.0" styleClass="card-group_stage" stylesheets="@style.css">
                      <children>
@@ -309,7 +309,7 @@
                   </StackPane>
                </children>
             </Group>
-            <Group layoutX="1169.0" layoutY="696.0">
+            <Group layoutX="1009.0" layoutY="696.0">
                <children>
                   <AnchorPane layoutX="11.0" prefHeight="361.0" prefWidth="376.0" styleClass="card-group_stage" stylesheets="@style.css">
                      <children>
@@ -475,7 +475,7 @@
                   </StackPane>
                </children>
             </Group>
-            <Group layoutX="1169.0" layoutY="1096.0">
+            <Group layoutX="1009.0" layoutY="1096.0">
                <children>
                   <AnchorPane layoutX="11.0" prefHeight="361.0" prefWidth="376.0" styleClass="card-group_stage" stylesheets="@style.css">
                      <children>
@@ -558,509 +558,517 @@
                   </StackPane>
                </children>
             </Group>
-            <Group layoutX="198.0" layoutY="1492.0">
+            <Group layoutX="120.0" layoutY="1492.0">
                <children>
-                  <AnchorPane layoutX="11.0" prefHeight="361.0" prefWidth="376.0" styleClass="card-group_stage" stylesheets="@style.css">
+                  <Group>
                      <children>
-                        <Text layoutX="116.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grupo G">
-                           <font>
-                              <Font name="Roboto Condensed Medium" size="30.0" />
-                           </font>
-                        </Text>
-                        <Line endX="153.111083984375" endY="-3.0517578125E-5" layoutX="186.0" layoutY="66.0" startX="-65.99998474121094" startY="-3.0517578125E-5" stroke="#d9d9d9" strokeWidth="2.0" />
-                        <ImageView fitHeight="65.0" fitWidth="90.0" layoutX="35.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/Royal_Belgian_FA_logo_2019.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="53.0" fitWidth="63.0" layoutX="26.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/Egyptian_Football_Association.png" />
-                           </image>
-                        </ImageView>
-                        <Text layoutX="100.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bélgica">
-                           <font>
-                              <Font name="Roboto Condensed ExtraLight" size="22.0" />
-                           </font>
-                        </Text>
-                        <ImageView fitHeight="56.0" fitWidth="57.0" layoutX="36.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/Football_Federation_Islamic_Republic_of_Iran.png" />
-                           </image>
-                        </ImageView>
-                        <Text layoutX="100.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Egito">
-                           <font>
-                              <Font name="Roboto Condensed ExtraLight" size="23.0" />
-                           </font>
-                        </Text>
-                        <Text layoutX="99.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Irã">
-                           <font>
-                              <Font name="Roboto Condensed ExtraLight" size="22.0" />
-                           </font>
-                        </Text>
-                        <ImageView fitHeight="54.0" fitWidth="61.0" layoutX="32.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/New_Zealand_Football.png" />
-                           </image>
-                        </ImageView>
-                        <Text layoutX="100.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nova Zelândia">
-                           <font>
-                              <Font name="Roboto Condensed ExtraLight" size="22.0" />
-                           </font>
-                        </Text>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
-                           </image>
-                        </ImageView>
+                        <AnchorPane layoutX="11.0" prefHeight="361.0" prefWidth="376.0" styleClass="card-group_stage" stylesheets="@style.css">
+                           <children>
+                              <Text layoutX="116.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grupo G">
+                                 <font>
+                                    <Font name="Roboto Condensed Medium" size="30.0" />
+                                 </font>
+                              </Text>
+                              <Line endX="153.111083984375" endY="-3.0517578125E-5" layoutX="186.0" layoutY="66.0" startX="-65.99998474121094" startY="-3.0517578125E-5" stroke="#d9d9d9" strokeWidth="2.0" />
+                              <ImageView fitHeight="65.0" fitWidth="90.0" layoutX="35.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/Royal_Belgian_FA_logo_2019.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="53.0" fitWidth="63.0" layoutX="26.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/Egyptian_Football_Association.png" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="100.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bélgica">
+                                 <font>
+                                    <Font name="Roboto Condensed ExtraLight" size="22.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="56.0" fitWidth="57.0" layoutX="36.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/Football_Federation_Islamic_Republic_of_Iran.png" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="100.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Egito">
+                                 <font>
+                                    <Font name="Roboto Condensed ExtraLight" size="23.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="99.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Irã">
+                                 <font>
+                                    <Font name="Roboto Condensed ExtraLight" size="22.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="54.0" fitWidth="61.0" layoutX="32.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/New_Zealand_Football.png" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="100.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nova Zelândia">
+                                 <font>
+                                    <Font name="Roboto Condensed ExtraLight" size="22.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <StackPane prefHeight="71.0" prefWidth="93.0" styleClass="letra-grupo" stylesheets="@style.css">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="G">
+                                 <font>
+                                    <Font name="Roboto Condensed Black" size="32.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </StackPane>
                      </children>
-                  </AnchorPane>
-                  <StackPane prefHeight="71.0" prefWidth="93.0" styleClass="letra-grupo" stylesheets="@style.css">
+                  </Group>
+                  <Group layoutX="413.0">
                      <children>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="G">
-                           <font>
-                              <Font name="Roboto Condensed Black" size="32.0" />
-                           </font>
-                        </Text>
+                        <AnchorPane layoutX="11.0" prefHeight="361.0" prefWidth="376.0" styleClass="card-group_stage" stylesheets="@style.css">
+                           <children>
+                              <Text layoutX="116.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grupo H">
+                                 <font>
+                                    <Font name="Roboto Condensed Medium" size="30.0" />
+                                 </font>
+                              </Text>
+                              <Line endX="153.111083984375" endY="-3.0517578125E-5" layoutX="186.0" layoutY="66.0" startX="-65.99998474121094" startY="-3.0517578125E-5" stroke="#d9d9d9" strokeWidth="2.0" />
+                              <ImageView fitHeight="65.0" fitWidth="90.0" layoutX="31.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/Spain_National_Football_Team_badge.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="53.0" fitWidth="65.0" layoutX="32.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/Federação_Cabo-Verdiana_de_Futebol.png" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="100.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Espanha">
+                                 <font>
+                                    <Font name="Roboto Condensed ExtraLight" size="22.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="53.0" fitWidth="51.0" layoutX="28.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/SAFF.png" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="100.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cabo Verde">
+                                 <font>
+                                    <Font name="Roboto Condensed ExtraLight" size="23.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="99.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arábia Saudita">
+                                 <font>
+                                    <Font name="Roboto Condensed ExtraLight" size="22.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="54.0" fitWidth="61.0" layoutX="34.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/AUF.png" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="100.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Uruguai">
+                                 <font>
+                                    <Font name="Roboto Condensed ExtraLight" size="22.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <StackPane prefHeight="71.0" prefWidth="93.0" styleClass="letra-grupo" stylesheets="@style.css">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="H">
+                                 <font>
+                                    <Font name="Roboto Condensed Black" size="32.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </StackPane>
                      </children>
-                  </StackPane>
+                  </Group>
+                  <Group layoutX="826.0">
+                     <children>
+                        <AnchorPane layoutX="11.0" prefHeight="361.0" prefWidth="376.0" styleClass="card-group_stage" stylesheets="@style.css">
+                           <children>
+                              <Text layoutX="116.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grupo I">
+                                 <font>
+                                    <Font name="Roboto Condensed Medium" size="30.0" />
+                                 </font>
+                              </Text>
+                              <Line endX="153.111083984375" endY="-3.0517578125E-5" layoutX="186.0" layoutY="66.0" startX="-65.99998474121094" startY="-3.0517578125E-5" stroke="#d9d9d9" strokeWidth="2.0" />
+                              <ImageView fitHeight="65.0" fitWidth="90.0" layoutX="28.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/Logo_Seleção_Francesa_2018.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="53.0" fitWidth="65.0" layoutX="25.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/FSenegalaiseF.png" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="100.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="França">
+                                 <font>
+                                    <Font name="Roboto Condensed ExtraLight" size="22.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="56.0" fitWidth="57.0" layoutX="36.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/Iraq_National_Team_Badge_2021_v2.svg.png" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="100.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senegal">
+                                 <font>
+                                    <Font name="Roboto Condensed ExtraLight" size="23.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="99.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Iraque">
+                                 <font>
+                                    <Font name="Roboto Condensed ExtraLight" size="22.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="54.0" fitWidth="61.0" layoutX="26.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/nor_women.png" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="100.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Noruega">
+                                 <font>
+                                    <Font name="Roboto Condensed ExtraLight" size="22.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <StackPane prefHeight="71.0" prefWidth="93.0" styleClass="letra-grupo" stylesheets="@style.css">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="I">
+                                 <font>
+                                    <Font name="Roboto Condensed Black" size="32.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </Group>
                </children>
             </Group>
-            <Group layoutX="1024.0" layoutY="1892.0">
+            <Group layoutX="120.0" layoutY="1892.0">
                <children>
-                  <AnchorPane layoutX="11.0" prefHeight="361.0" prefWidth="376.0" styleClass="card-group_stage" stylesheets="@style.css">
+                  <Group layoutX="826.0">
                      <children>
-                        <Text layoutX="116.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grupo J">
-                           <font>
-                              <Font name="Roboto Condensed Medium" size="30.0" />
-                           </font>
-                        </Text>
-                        <Line endX="153.111083984375" endY="-3.0517578125E-5" layoutX="186.0" layoutY="66.0" startX="-65.99998474121094" startY="-3.0517578125E-5" stroke="#d9d9d9" strokeWidth="2.0" />
-                        <ImageView fitHeight="57.0" fitWidth="42.0" layoutX="36.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/250px-230px-Afa_logo.svg.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="51.0" fitWidth="56.0" layoutX="33.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/Algeria_National_Football_Team_logo.png" />
-                           </image>
-                        </ImageView>
-                        <Text layoutX="100.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Argentina">
-                           <font>
-                              <Font name="Roboto Condensed ExtraLight" size="22.0" />
-                           </font>
-                        </Text>
-                        <ImageView fitHeight="58.0" fitWidth="44.0" layoutX="31.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/OFB.png" />
-                           </image>
-                        </ImageView>
-                        <Text layoutX="100.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Argélia">
-                           <font>
-                              <Font name="Roboto Condensed ExtraLight" size="23.0" />
-                           </font>
-                        </Text>
-                        <Text layoutX="100.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Áustria">
-                           <font>
-                              <Font name="Roboto Condensed ExtraLight" size="22.0" />
-                           </font>
-                        </Text>
-                        <ImageView fitHeight="61.0" fitWidth="51.0" layoutX="29.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/jordania.png" />
-                           </image>
-                        </ImageView>
-                        <Text layoutX="100.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jordânia">
-                           <font>
-                              <Font name="Roboto Condensed ExtraLight" size="22.0" />
-                           </font>
-                        </Text>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
-                           </image>
-                        </ImageView>
+                        <AnchorPane layoutX="11.0" prefHeight="361.0" prefWidth="376.0" styleClass="card-group_stage" stylesheets="@style.css">
+                           <children>
+                              <Text layoutX="116.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grupo J">
+                                 <font>
+                                    <Font name="Roboto Condensed Medium" size="30.0" />
+                                 </font>
+                              </Text>
+                              <Line endX="153.111083984375" endY="-3.0517578125E-5" layoutX="186.0" layoutY="66.0" startX="-65.99998474121094" startY="-3.0517578125E-5" stroke="#d9d9d9" strokeWidth="2.0" />
+                              <ImageView fitHeight="57.0" fitWidth="42.0" layoutX="36.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/250px-230px-Afa_logo.svg.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="51.0" fitWidth="56.0" layoutX="33.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/Algeria_National_Football_Team_logo.png" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="100.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Argentina">
+                                 <font>
+                                    <Font name="Roboto Condensed ExtraLight" size="22.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="58.0" fitWidth="44.0" layoutX="31.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/OFB.png" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="100.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Argélia">
+                                 <font>
+                                    <Font name="Roboto Condensed ExtraLight" size="23.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="100.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Áustria">
+                                 <font>
+                                    <Font name="Roboto Condensed ExtraLight" size="22.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="61.0" fitWidth="51.0" layoutX="29.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/jordania.png" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="100.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jordânia">
+                                 <font>
+                                    <Font name="Roboto Condensed ExtraLight" size="22.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <StackPane prefHeight="71.0" prefWidth="93.0" styleClass="letra-grupo" stylesheets="@style.css">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="J">
+                                 <font>
+                                    <Font name="Roboto Condensed Black" size="32.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </StackPane>
                      </children>
-                  </AnchorPane>
-                  <StackPane prefHeight="71.0" prefWidth="93.0" styleClass="letra-grupo" stylesheets="@style.css">
+                  </Group>
+                  <Group>
                      <children>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="J">
-                           <font>
-                              <Font name="Roboto Condensed Black" size="32.0" />
-                           </font>
-                        </Text>
+                        <AnchorPane layoutX="11.0" prefHeight="361.0" prefWidth="376.0" styleClass="card-group_stage" stylesheets="@style.css">
+                           <children>
+                              <Text layoutX="116.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grupo K">
+                                 <font>
+                                    <Font name="Roboto Condensed Medium" size="30.0" />
+                                 </font>
+                              </Text>
+                              <Line endX="153.111083984375" endY="-3.0517578125E-5" layoutX="186.0" layoutY="66.0" startX="-65.99998474121094" startY="-3.0517578125E-5" stroke="#d9d9d9" strokeWidth="2.0" />
+                              <ImageView fitHeight="64.0" fitWidth="43.0" layoutX="30.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/Portugal_National_Team_logo.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="53.0" fitWidth="65.0" layoutX="28.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/Fédération_Congolaise_de_Football.png" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="100.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Portugal">
+                                 <font>
+                                    <Font name="Roboto Condensed ExtraLight" size="22.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="53.0" fitWidth="51.0" layoutX="28.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/Uzbekistan_Football_Federation.png" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="100.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RD do Congo">
+                                 <font>
+                                    <Font name="Roboto Condensed ExtraLight" size="23.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="99.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Uzbequistão">
+                                 <font>
+                                    <Font name="Roboto Condensed ExtraLight" size="22.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="54.0" fitWidth="61.0" layoutX="23.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/fcf-seleccion-de-fútbol-de-colombia-logo-0.png" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="100.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Colômbia">
+                                 <font>
+                                    <Font name="Roboto Condensed ExtraLight" size="22.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <StackPane prefHeight="71.0" prefWidth="93.0" styleClass="letra-grupo" stylesheets="@style.css">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="K">
+                                 <font>
+                                    <Font name="Roboto Condensed Black" size="32.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </StackPane>
                      </children>
-                  </StackPane>
+                  </Group>
+                  <Group layoutX="413.0">
+                     <children>
+                        <AnchorPane layoutX="11.0" prefHeight="361.0" prefWidth="376.0" styleClass="card-group_stage" stylesheets="@style.css">
+                           <children>
+                              <Text layoutX="116.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grupo L">
+                                 <font>
+                                    <Font name="Roboto Condensed Medium" size="30.0" />
+                                 </font>
+                              </Text>
+                              <Line endX="153.111083984375" endY="-3.0517578125E-5" layoutX="186.0" layoutY="66.0" startX="-65.99998474121094" startY="-3.0517578125E-5" stroke="#d9d9d9" strokeWidth="2.0" />
+                              <ImageView fitHeight="65.0" fitWidth="90.0" layoutX="28.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/eng_new.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="53.0" fitWidth="65.0" layoutX="28.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/Croatia_football_federation.png" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="100.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inglaterra">
+                                 <font>
+                                    <Font name="Roboto Condensed ExtraLight" size="22.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="56.0" fitWidth="57.0" layoutX="27.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/Ghana_Football_Association.png" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="100.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Croácia">
+                                 <font>
+                                    <Font name="Roboto Condensed ExtraLight" size="23.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="99.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gana">
+                                 <font>
+                                    <Font name="Roboto Condensed ExtraLight" size="22.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="54.0" fitWidth="61.0" layoutX="29.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/panama.png" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="100.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Panamá">
+                                 <font>
+                                    <Font name="Roboto Condensed ExtraLight" size="22.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <StackPane prefHeight="71.0" prefWidth="93.0" styleClass="letra-grupo" stylesheets="@style.css">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="L">
+                                 <font>
+                                    <Font name="Roboto Condensed Black" size="32.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </Group>
                </children>
             </Group>
-            <ImageView fitHeight="379.0" fitWidth="1117.0" layoutX="513.0" layoutY="1113.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="379.0" fitWidth="1117.0" layoutX="427.0" layoutY="1129.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../images/bb45f82a-33e5-48c1-8cb2-cdfaa72b855c.png" />
                </image>
             </ImageView>
-            <Group layoutX="611.0" layoutY="1492.0">
-               <children>
-                  <AnchorPane layoutX="11.0" prefHeight="361.0" prefWidth="376.0" styleClass="card-group_stage" stylesheets="@style.css">
-                     <children>
-                        <Text layoutX="116.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grupo H">
-                           <font>
-                              <Font name="Roboto Condensed Medium" size="30.0" />
-                           </font>
-                        </Text>
-                        <Line endX="153.111083984375" endY="-3.0517578125E-5" layoutX="186.0" layoutY="66.0" startX="-65.99998474121094" startY="-3.0517578125E-5" stroke="#d9d9d9" strokeWidth="2.0" />
-                        <ImageView fitHeight="65.0" fitWidth="90.0" layoutX="31.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/Spain_National_Football_Team_badge.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="53.0" fitWidth="65.0" layoutX="32.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/Federação_Cabo-Verdiana_de_Futebol.png" />
-                           </image>
-                        </ImageView>
-                        <Text layoutX="100.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Espanha">
-                           <font>
-                              <Font name="Roboto Condensed ExtraLight" size="22.0" />
-                           </font>
-                        </Text>
-                        <ImageView fitHeight="53.0" fitWidth="51.0" layoutX="28.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/SAFF.png" />
-                           </image>
-                        </ImageView>
-                        <Text layoutX="100.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cabo Verde">
-                           <font>
-                              <Font name="Roboto Condensed ExtraLight" size="23.0" />
-                           </font>
-                        </Text>
-                        <Text layoutX="99.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arábia Saudita">
-                           <font>
-                              <Font name="Roboto Condensed ExtraLight" size="22.0" />
-                           </font>
-                        </Text>
-                        <ImageView fitHeight="54.0" fitWidth="61.0" layoutX="34.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/AUF.png" />
-                           </image>
-                        </ImageView>
-                        <Text layoutX="100.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Uruguai">
-                           <font>
-                              <Font name="Roboto Condensed ExtraLight" size="22.0" />
-                           </font>
-                        </Text>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </AnchorPane>
-                  <StackPane prefHeight="71.0" prefWidth="93.0" styleClass="letra-grupo" stylesheets="@style.css">
-                     <children>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="H">
-                           <font>
-                              <Font name="Roboto Condensed Black" size="32.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </StackPane>
-               </children>
-            </Group>
-            <Group layoutX="1024.0" layoutY="1492.0">
-               <children>
-                  <AnchorPane layoutX="11.0" prefHeight="361.0" prefWidth="376.0" styleClass="card-group_stage" stylesheets="@style.css">
-                     <children>
-                        <Text layoutX="116.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grupo I">
-                           <font>
-                              <Font name="Roboto Condensed Medium" size="30.0" />
-                           </font>
-                        </Text>
-                        <Line endX="153.111083984375" endY="-3.0517578125E-5" layoutX="186.0" layoutY="66.0" startX="-65.99998474121094" startY="-3.0517578125E-5" stroke="#d9d9d9" strokeWidth="2.0" />
-                        <ImageView fitHeight="65.0" fitWidth="90.0" layoutX="28.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/Logo_Seleção_Francesa_2018.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="53.0" fitWidth="65.0" layoutX="25.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/FSenegalaiseF.png" />
-                           </image>
-                        </ImageView>
-                        <Text layoutX="100.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="França">
-                           <font>
-                              <Font name="Roboto Condensed ExtraLight" size="22.0" />
-                           </font>
-                        </Text>
-                        <ImageView fitHeight="56.0" fitWidth="57.0" layoutX="36.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/Iraq_National_Team_Badge_2021_v2.svg.png" />
-                           </image>
-                        </ImageView>
-                        <Text layoutX="100.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senegal">
-                           <font>
-                              <Font name="Roboto Condensed ExtraLight" size="23.0" />
-                           </font>
-                        </Text>
-                        <Text layoutX="99.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Iraque">
-                           <font>
-                              <Font name="Roboto Condensed ExtraLight" size="22.0" />
-                           </font>
-                        </Text>
-                        <ImageView fitHeight="54.0" fitWidth="61.0" layoutX="26.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/nor_women.png" />
-                           </image>
-                        </ImageView>
-                        <Text layoutX="100.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Noruega">
-                           <font>
-                              <Font name="Roboto Condensed ExtraLight" size="22.0" />
-                           </font>
-                        </Text>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </AnchorPane>
-                  <StackPane prefHeight="71.0" prefWidth="93.0" styleClass="letra-grupo" stylesheets="@style.css">
-                     <children>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="I">
-                           <font>
-                              <Font name="Roboto Condensed Black" size="32.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </StackPane>
-               </children>
-            </Group>
-            <Group layoutX="198.0" layoutY="1892.0">
-               <children>
-                  <AnchorPane layoutX="11.0" prefHeight="361.0" prefWidth="376.0" styleClass="card-group_stage" stylesheets="@style.css">
-                     <children>
-                        <Text layoutX="116.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grupo K">
-                           <font>
-                              <Font name="Roboto Condensed Medium" size="30.0" />
-                           </font>
-                        </Text>
-                        <Line endX="153.111083984375" endY="-3.0517578125E-5" layoutX="186.0" layoutY="66.0" startX="-65.99998474121094" startY="-3.0517578125E-5" stroke="#d9d9d9" strokeWidth="2.0" />
-                        <ImageView fitHeight="64.0" fitWidth="43.0" layoutX="30.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/Portugal_National_Team_logo.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="53.0" fitWidth="65.0" layoutX="28.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/Fédération_Congolaise_de_Football.png" />
-                           </image>
-                        </ImageView>
-                        <Text layoutX="100.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Portugal">
-                           <font>
-                              <Font name="Roboto Condensed ExtraLight" size="22.0" />
-                           </font>
-                        </Text>
-                        <ImageView fitHeight="53.0" fitWidth="51.0" layoutX="28.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/Uzbekistan_Football_Federation.png" />
-                           </image>
-                        </ImageView>
-                        <Text layoutX="100.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RD do Congo">
-                           <font>
-                              <Font name="Roboto Condensed ExtraLight" size="23.0" />
-                           </font>
-                        </Text>
-                        <Text layoutX="99.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Uzbequistão">
-                           <font>
-                              <Font name="Roboto Condensed ExtraLight" size="22.0" />
-                           </font>
-                        </Text>
-                        <ImageView fitHeight="54.0" fitWidth="61.0" layoutX="23.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/fcf-seleccion-de-fútbol-de-colombia-logo-0.png" />
-                           </image>
-                        </ImageView>
-                        <Text layoutX="100.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Colômbia">
-                           <font>
-                              <Font name="Roboto Condensed ExtraLight" size="22.0" />
-                           </font>
-                        </Text>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </AnchorPane>
-                  <StackPane prefHeight="71.0" prefWidth="93.0" styleClass="letra-grupo" stylesheets="@style.css">
-                     <children>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="K">
-                           <font>
-                              <Font name="Roboto Condensed Black" size="32.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </StackPane>
-               </children>
-            </Group>
-            <Group layoutX="611.0" layoutY="1892.0">
-               <children>
-                  <AnchorPane layoutX="11.0" prefHeight="361.0" prefWidth="376.0" styleClass="card-group_stage" stylesheets="@style.css">
-                     <children>
-                        <Text layoutX="116.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grupo L">
-                           <font>
-                              <Font name="Roboto Condensed Medium" size="30.0" />
-                           </font>
-                        </Text>
-                        <Line endX="153.111083984375" endY="-3.0517578125E-5" layoutX="186.0" layoutY="66.0" startX="-65.99998474121094" startY="-3.0517578125E-5" stroke="#d9d9d9" strokeWidth="2.0" />
-                        <ImageView fitHeight="65.0" fitWidth="90.0" layoutX="28.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/eng_new.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="53.0" fitWidth="65.0" layoutX="28.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/Croatia_football_federation.png" />
-                           </image>
-                        </ImageView>
-                        <Text layoutX="100.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inglaterra">
-                           <font>
-                              <Font name="Roboto Condensed ExtraLight" size="22.0" />
-                           </font>
-                        </Text>
-                        <ImageView fitHeight="56.0" fitWidth="57.0" layoutX="27.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/Ghana_Football_Association.png" />
-                           </image>
-                        </ImageView>
-                        <Text layoutX="100.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Croácia">
-                           <font>
-                              <Font name="Roboto Condensed ExtraLight" size="23.0" />
-                           </font>
-                        </Text>
-                        <Text layoutX="99.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gana">
-                           <font>
-                              <Font name="Roboto Condensed ExtraLight" size="22.0" />
-                           </font>
-                        </Text>
-                        <ImageView fitHeight="54.0" fitWidth="61.0" layoutX="29.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/panama.png" />
-                           </image>
-                        </ImageView>
-                        <Text layoutX="100.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Panamá">
-                           <font>
-                              <Font name="Roboto Condensed ExtraLight" size="22.0" />
-                           </font>
-                        </Text>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/f9b7ae21-d91d-40df-8799-1e3a24302aa0.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </AnchorPane>
-                  <StackPane prefHeight="71.0" prefWidth="93.0" styleClass="letra-grupo" stylesheets="@style.css">
-                     <children>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="L">
-                           <font>
-                              <Font name="Roboto Condensed Black" size="32.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </StackPane>
-               </children>
-            </Group>
          </children>
       </AnchorPane>
    </content>

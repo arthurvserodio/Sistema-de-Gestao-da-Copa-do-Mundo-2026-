@@ -27,7 +27,7 @@ public class SceneController {
             Parent root = loader.load();
             //Se não existir uma cena no stage, ele cria uma com o tamanho padrão de 1600x900
             if(stage.getScene()==null){
-                stage.setScene(new Scene(root, 1600, 900));
+                stage.setScene(new Scene(root, 1440, 810));
             }
             //Se já existir uma cena,ele apenas troca o conteudo
             else{stage.getScene().setRoot(root);}
