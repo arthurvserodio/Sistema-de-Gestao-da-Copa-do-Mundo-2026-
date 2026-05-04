@@ -11,11 +11,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerEquipes">
+<AnchorPane prefHeight="900.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerEquipes">
    <children>
       <Group>
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="#ffffff6d" strokeType="INSIDE" width="1710.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="#ffffff6d" strokeType="INSIDE" width="1600.0" />
             <StackPane layoutX="91.0" layoutY="59.0" prefHeight="150.0" prefWidth="125.0" styleClass="logo_copa26_arredondado" stylesheets="@../../css/style.css">
                <children>
                   <ImageView fitHeight="122.0" fitWidth="115.0" onMouseClicked="#irPaginaInicial" pickOnBounds="true" preserveRatio="true">
@@ -45,7 +45,7 @@
                   <Font name="Oswald Medium" size="30.0" />
                </font>
             </Text>
-            <Button layoutX="1567.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
+            <Button layoutX="1457.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
                <font>
                   <Font name="Oswald Medium" size="12.0" />
                </font>
@@ -53,7 +53,7 @@
             <Line endX="51.0" endY="-7.62939453125E-6" layoutX="473.0" layoutY="75.0" startX="-32.111114501953125" startY="-7.62939453125E-6" stroke="WHITE" />
          </children>
       </Group>
-      <Text layoutX="91.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleções Classificadas">
+      <Text layoutX="91.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleções Classificadas">
          <font>
             <Font name="Inter 18pt Medium" size="60.0" />
          </font>
@@ -63,7 +63,7 @@
             <Font name="Oswald Medium" size="12.0" />
          </font>
       </Button>
-      <Group layoutX="91.0" layoutY="350.0">
+      <Group layoutX="71.0" layoutY="280.0">
          <children>
             <Group>
                <children>
@@ -311,15 +311,15 @@
             </Group>
          </children>
       </Group>
-      <Group layoutX="91.0" layoutY="678.0">
+      <Group layoutX="71.0" layoutY="600.0">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7d7d7" height="160.0" layoutY="160.0" stroke="TRANSPARENT" strokeType="INSIDE" width="300.0" />
-            <ImageView fitHeight="160.0" fitWidth="300.0" pickOnBounds="true">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7d7d7" height="135.0" layoutY="160.0" stroke="TRANSPARENT" strokeType="INSIDE" width="300.0" />
+            <ImageView fitHeight="150.0" fitWidth="300.0" layoutY="10.0" pickOnBounds="true">
                <image>
                   <Image url="@../../images/closeup-shot-realistic-flag-uzbekistan-with-interesting-textures.jpg" />
                </image>
             </ImageView>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="160.0" opacity="0.21" stroke="TRANSPARENT" strokeType="INSIDE" width="300.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="150.0" layoutY="10.0" opacity="0.21" stroke="TRANSPARENT" strokeType="INSIDE" width="300.0" />
             <ImageView fitHeight="46.0" fitWidth="38.0" layoutX="11.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../images/Uzbekistan_Football_Federation.png" />

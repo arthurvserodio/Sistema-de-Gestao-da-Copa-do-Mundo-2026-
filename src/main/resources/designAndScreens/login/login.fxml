@@ -15,13 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane
-        fx:controller="controller.ControllerLogin"
-        maxHeight="-Infinity" maxWidth="-Infinity"
-        minHeight="-Infinity" minWidth="-Infinity"
-        style="-fx-background-color: #f5f5f5;"
-        xmlns="http://javafx.com/javafx/21"
-        xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerLogin">
 
     <children>
 
@@ -30,6 +24,46 @@
                 <Image url="@../../images/campo_dark.png" />
             </image>
         </ImageView>
+        <!-- ============ PAINEL DE LOGIN ============ -->
+        <HBox alignment="CENTER" layoutX="0.0" layoutY="100.0" prefHeight="900.0" prefWidth="1710.0">
+
+            <!-- Cartão central -->
+            <StackPane prefHeight="420.0" prefWidth="520.0" style="-fx-background-color: white;                               -fx-background-radius: 18;                               -fx-border-radius: 18;                               -fx-border-color: #d9d9d9;                               -fx-border-width: 1;                               -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.10), 24, 0, 0, 6);">
+
+                <VBox alignment="CENTER" spacing="22.0" style="-fx-padding: 48 56 48 56;">
+
+                    <!-- Título -->
+                    <Label style="-fx-font-size: 26px; -fx-font-family: 'Oswald Medium'; -fx-text-fill: #1a1a1a;" text="Acesse sua conta" />
+
+                    <Label style="-fx-font-size: 13px; -fx-text-fill: #888888; -fx-font-family: 'System';" text="Bem-vindo de volta! Insira seus dados abaixo." />
+
+                    <!-- Campo Usuário -->
+                    <VBox spacing="6.0">
+                        <Label style="-fx-font-size: 13px; -fx-font-family: 'Oswald Medium'; -fx-text-fill: #333333;" text="Usuário" />
+                        <TextField fx:id="campoUsuario" prefHeight="46.0" prefWidth="408.0" promptText="Digite seu usuário" style="-fx-background-radius: 10;                                           -fx-border-radius: 10;                                           -fx-border-color: #d9d9d9;                                           -fx-border-width: 1;                                           -fx-font-size: 14px;                                           -fx-padding: 10 14 10 14;                                           -fx-background-color: #fafafa;" />
+                    </VBox>
+
+                    <!-- Campo Senha -->
+                    <VBox spacing="6.0">
+                        <Label style="-fx-font-size: 13px; -fx-font-family: 'Oswald Medium'; -fx-text-fill: #333333;" text="Senha" />
+                        <PasswordField fx:id="campoSenha" prefHeight="46.0" prefWidth="408.0" promptText="Digite sua senha" style="-fx-background-radius: 10;                                               -fx-border-radius: 10;                                               -fx-border-color: #d9d9d9;                                               -fx-border-width: 1;                                               -fx-font-size: 14px;                                               -fx-padding: 10 14 10 14;                                               -fx-background-color: #fafafa;" />
+                    </VBox>
+
+                    <!-- Mensagem de erro/feedback -->
+                    <Label fx:id="labelMensagem" style="-fx-font-size: 13px; -fx-text-fill: #cc0000;" text="" />
+
+                    <!-- Botão Entrar -->
+                    <Button fx:id="botaoEntrar" onAction="#handleEntrar" prefHeight="48.0" prefWidth="408.0" style="-fx-background-color: #1a1a1a;                                    -fx-background-radius: 30;                                    -fx-text-fill: white;                                    -fx-font-size: 16px;                                    -fx-font-family: 'Oswald Medium';                                    -fx-cursor: hand;" stylesheets="@../../css/style.css" text="Entrar" />
+
+                    <!-- Separador -->
+                    <Label style="-fx-font-size: 13px; -fx-text-fill: #888888;" text="Não tem uma conta?" />
+
+                    <!-- Botão Cadastro -->
+                    <Button fx:id="botaoCadastro" onAction="#handleCadastro" prefHeight="48.0" prefWidth="408.0" style="-fx-cursor: hand;" styleClass="black_button" stylesheets="@../../css/style.css" text="Realizar Cadastro" />
+
+                </VBox>
+            </StackPane>
+        </HBox>
 
         <!-- ============ CABEÇALHO (original) ============ -->
         <Group>
@@ -37,7 +71,7 @@
                 <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="#ffffff6d" strokeType="INSIDE" width="1710.0" />
                 <StackPane layoutX="91.0" layoutY="59.0" prefHeight="150.0" prefWidth="125.0" styleClass="logo_copa26_arredondado" stylesheets="@../../css/style.css">
                     <children>
-                        <ImageView fitHeight="122.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="122.0" fitWidth="115.0" onMouseClicked="#irPaginaInicial" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../images/copa.jpg" />
                             </image>
@@ -71,95 +105,6 @@
                 </Button>
             </children>
         </Group>
-        <!-- ============ PAINEL DE LOGIN ============ -->
-        <HBox alignment="CENTER"
-              layoutX="0.0" layoutY="100.0"
-              prefWidth="1710.0" prefHeight="900.0">
-
-            <!-- Cartão central -->
-            <StackPane prefWidth="520.0" prefHeight="420.0"
-                       style="-fx-background-color: white;
-                              -fx-background-radius: 18;
-                              -fx-border-radius: 18;
-                              -fx-border-color: #d9d9d9;
-                              -fx-border-width: 1;
-                              -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.10), 24, 0, 0, 6);">
-
-                <VBox alignment="CENTER" spacing="22.0"
-                      style="-fx-padding: 48 56 48 56;">
-
-                    <!-- Título -->
-                    <Label text="Acesse sua conta"
-                           style="-fx-font-size: 26px; -fx-font-family: 'Oswald Medium'; -fx-text-fill: #1a1a1a;"/>
-
-                    <Label text="Bem-vindo de volta! Insira seus dados abaixo."
-                           style="-fx-font-size: 13px; -fx-text-fill: #888888; -fx-font-family: 'System';"/>
-
-                    <!-- Campo Usuário -->
-                    <VBox spacing="6.0">
-                        <Label text="Usuário"
-                               style="-fx-font-size: 13px; -fx-font-family: 'Oswald Medium'; -fx-text-fill: #333333;"/>
-                        <TextField fx:id="campoUsuario"
-                                   promptText="Digite seu usuário"
-                                   prefWidth="408.0" prefHeight="46.0"
-                                   style="-fx-background-radius: 10;
-                                          -fx-border-radius: 10;
-                                          -fx-border-color: #d9d9d9;
-                                          -fx-border-width: 1;
-                                          -fx-font-size: 14px;
-                                          -fx-padding: 10 14 10 14;
-                                          -fx-background-color: #fafafa;"/>
-                    </VBox>
-
-                    <!-- Campo Senha -->
-                    <VBox spacing="6.0">
-                        <Label text="Senha"
-                               style="-fx-font-size: 13px; -fx-font-family: 'Oswald Medium'; -fx-text-fill: #333333;"/>
-                        <PasswordField fx:id="campoSenha"
-                                       promptText="Digite sua senha"
-                                       prefWidth="408.0" prefHeight="46.0"
-                                       style="-fx-background-radius: 10;
-                                              -fx-border-radius: 10;
-                                              -fx-border-color: #d9d9d9;
-                                              -fx-border-width: 1;
-                                              -fx-font-size: 14px;
-                                              -fx-padding: 10 14 10 14;
-                                              -fx-background-color: #fafafa;"/>
-                    </VBox>
-
-                    <!-- Mensagem de erro/feedback -->
-                    <Label fx:id="labelMensagem" text=""
-                           style="-fx-font-size: 13px; -fx-text-fill: #cc0000;"/>
-
-                    <!-- Botão Entrar -->
-                    <Button fx:id="botaoEntrar"
-                            text="Entrar"
-                            prefWidth="408.0" prefHeight="48.0"
-                            onAction="#handleEntrar"
-                            stylesheets="@../../css/style.css"
-                            style="-fx-background-color: #1a1a1a;
-                                   -fx-background-radius: 30;
-                                   -fx-text-fill: white;
-                                   -fx-font-size: 16px;
-                                   -fx-font-family: 'Oswald Medium';
-                                   -fx-cursor: hand;"/>
-
-                    <!-- Separador -->
-                    <Label text="Não tem uma conta?"
-                           style="-fx-font-size: 13px; -fx-text-fill: #888888;"/>
-
-                    <!-- Botão Cadastro -->
-                    <Button fx:id="botaoCadastro"
-                            text="Realizar Cadastro"
-                            prefWidth="408.0" prefHeight="48.0"
-                            onAction="#handleCadastro"
-                            styleClass="black_button"
-                            stylesheets="@../../css/style.css"
-                            style="-fx-cursor: hand;"/>
-
-                </VBox>
-            </StackPane>
-        </HBox>
 
     </children>
 </AnchorPane>

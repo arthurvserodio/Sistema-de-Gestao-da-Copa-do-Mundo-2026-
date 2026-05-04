@@ -12,13 +12,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerClassificacao">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerClassificacao">
    <content>
-      <AnchorPane prefHeight="2300.0" styleClass="white" stylesheets="@../../css/style.css">
+      <AnchorPane prefHeight="2300.0" prefWidth="1584.0" styleClass="white" stylesheets="@../../css/style.css">
          <children>
             <Group>
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="#ffffff6d" strokeType="INSIDE" width="1700.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="#ffffff6d" strokeType="INSIDE" width="1584.0" />
                   <StackPane layoutX="91.0" layoutY="59.0" prefHeight="150.0" prefWidth="125.0" styleClass="logo_copa26_arredondado" stylesheets="@../../css/style.css">
                      <children>
                         <ImageView fitHeight="122.0" fitWidth="115.0" onMouseClicked="#irPaginaInicial" pickOnBounds="true" preserveRatio="true">
@@ -48,14 +48,14 @@
                         <Font name="Oswald Medium" size="30.0" />
                      </font>
                   </Text>
-                  <Button layoutX="1537.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
+                  <Button layoutX="1437.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
                      <font>
                         <Font name="Oswald Medium" size="12.0" />
                      </font>
                   </Button>
                </children>
             </Group>
-            <ImageView fitHeight="1221.0" fitWidth="1159.0" layoutX="400.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="1151.0" fitWidth="801.0" layoutX="406.0" layoutY="219.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../images/ChatGPT%20Image%2024%20de%20abr.%20de%202026,%2016_23_49.png" />
                </image>
@@ -226,7 +226,7 @@
                   </StackPane>
                </children>
             </Group>
-            <Group layoutX="1269.0" layoutY="296.0">
+            <Group layoutX="1169.0" layoutY="296.0">
                <children>
                   <AnchorPane layoutX="11.0" prefHeight="361.0" prefWidth="376.0" styleClass="card-group_stage" stylesheets="@style.css">
                      <children>
@@ -309,7 +309,7 @@
                   </StackPane>
                </children>
             </Group>
-            <Group layoutX="1269.0" layoutY="696.0">
+            <Group layoutX="1169.0" layoutY="696.0">
                <children>
                   <AnchorPane layoutX="11.0" prefHeight="361.0" prefWidth="376.0" styleClass="card-group_stage" stylesheets="@style.css">
                      <children>
@@ -475,7 +475,7 @@
                   </StackPane>
                </children>
             </Group>
-            <Group layoutX="1269.0" layoutY="1096.0">
+            <Group layoutX="1169.0" layoutY="1096.0">
                <children>
                   <AnchorPane layoutX="11.0" prefHeight="361.0" prefWidth="376.0" styleClass="card-group_stage" stylesheets="@style.css">
                      <children>
@@ -558,7 +558,7 @@
                   </StackPane>
                </children>
             </Group>
-            <Group layoutX="29.0" layoutY="1496.0">
+            <Group layoutX="198.0" layoutY="1492.0">
                <children>
                   <AnchorPane layoutX="11.0" prefHeight="361.0" prefWidth="376.0" styleClass="card-group_stage" stylesheets="@style.css">
                      <children>
@@ -641,7 +641,7 @@
                   </StackPane>
                </children>
             </Group>
-            <Group layoutX="1269.0" layoutY="1496.0">
+            <Group layoutX="1024.0" layoutY="1892.0">
                <children>
                   <AnchorPane layoutX="11.0" prefHeight="361.0" prefWidth="376.0" styleClass="card-group_stage" stylesheets="@style.css">
                      <children>
@@ -724,12 +724,12 @@
                   </StackPane>
                </children>
             </Group>
-            <ImageView fitHeight="379.0" fitWidth="1117.0" layoutX="548.0" layoutY="1150.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="379.0" fitWidth="1117.0" layoutX="513.0" layoutY="1113.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../images/bb45f82a-33e5-48c1-8cb2-cdfaa72b855c.png" />
                </image>
             </ImageView>
-            <Group layoutX="442.0" layoutY="1496.0">
+            <Group layoutX="611.0" layoutY="1492.0">
                <children>
                   <AnchorPane layoutX="11.0" prefHeight="361.0" prefWidth="376.0" styleClass="card-group_stage" stylesheets="@style.css">
                      <children>
@@ -812,7 +812,7 @@
                   </StackPane>
                </children>
             </Group>
-            <Group layoutX="855.0" layoutY="1496.0">
+            <Group layoutX="1024.0" layoutY="1492.0">
                <children>
                   <AnchorPane layoutX="11.0" prefHeight="361.0" prefWidth="376.0" styleClass="card-group_stage" stylesheets="@style.css">
                      <children>
@@ -895,7 +895,7 @@
                   </StackPane>
                </children>
             </Group>
-            <Group layoutX="442.0" layoutY="1896.0">
+            <Group layoutX="198.0" layoutY="1892.0">
                <children>
                   <AnchorPane layoutX="11.0" prefHeight="361.0" prefWidth="376.0" styleClass="card-group_stage" stylesheets="@style.css">
                      <children>
@@ -978,7 +978,7 @@
                   </StackPane>
                </children>
             </Group>
-            <Group layoutX="855.0" layoutY="1896.0">
+            <Group layoutX="611.0" layoutY="1892.0">
                <children>
                   <AnchorPane layoutX="11.0" prefHeight="361.0" prefWidth="376.0" styleClass="card-group_stage" stylesheets="@style.css">
                      <children>
