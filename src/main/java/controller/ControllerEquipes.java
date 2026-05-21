@@ -3,7 +3,9 @@ package controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -24,10 +26,16 @@ public class ControllerEquipes {
     private VBox listaSelecoes;
 
     @FXML
+    private TextField pesquisa;
+
+    @FXML
     public void initialize() {
-        System.out.println(listaSelecoes);
+        //Lê as seleções que estão cadastradas(dentro do arquivo)
         carregaSelecao();
+        //Mostra as seleções na tela
         mostraSelecao();
+        //Toda vez que for escrito alguma coisa no textField ele chama a função de pesquisa
+        pesquisa.textProperty().addListener((obs, antigo, novo) -> {pesquisarSelecao();});
     }
 
     @FXML
@@ -144,6 +152,25 @@ public class ControllerEquipes {
         for (Selecoes s : ListSelecoes) {
             HBox linha = criarLinha(s);
             listaSelecoes.getChildren().add(linha);
+        }
+    }
+    private void pesquisarSelecao(){
+        String pais = pesquisa.getText().trim().toLowerCase();
+        //Vou pegar a Vbox e destrinchar ela, ou seja, pegar cada Hbox criado
+        for(Node node : listaSelecoes.getChildren()){
+            HBox linha=(HBox)node;
+            //Destrincha os elementos presentes na HBOX(labeis) e pega a primeira referente ao nome da seleção
+            Label nome=(Label) linha.getChildren().get(1);
+            //Verifica se o que foi no textfield está presente em algum nome de seleção, se sim mostra e se não oculta a HBOX
+            //StartWith verifica se o texto digitado está na string, considerando que a ordem importa
+            if (!nome.getText().toLowerCase().startsWith(pais)){
+                linha.setManaged(false);
+                linha.setVisible(false);
+            }
+            else{
+                linha.setManaged(true);
+                linha.setVisible(true);
+            }
         }
     }
 }

@@ -1,10 +1,474 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerHistoria">
   <content>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="5000.0" prefWidth="1000.0" />
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="4200.0" prefWidth="1424.0" styleClass="white" stylesheets="@../../css/style.css">
+         <children>
+            <ImageView fitHeight="837.0" fitWidth="1369.0" layoutX="56.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/ChatGPT%20Image%2011%20de%20mai.%20de%202026,%2017_12_53.png" />
+               </image>
+            </ImageView>
+            <Group>
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="#ffffff6d" strokeType="INSIDE" width="1424.0" />
+                  <StackPane layoutX="91.0" layoutY="59.0" onMouseClicked="#irPaginaInicial" prefHeight="150.0" prefWidth="125.0" styleClass="logo_copa26_arredondado" stylesheets="@../../css/style.css">
+                     <children>
+                        <ImageView fitHeight="122.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/copa.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </StackPane>
+                  <Text fill="WHITE" layoutX="272.0" layoutY="64.0" onMouseClicked="#irParaHistoria" strokeType="OUTSIDE" strokeWidth="0.0" text="História" textAlignment="CENTER">
+                     <font>
+                        <Font name="Oswald Medium" size="30.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="437.0" layoutY="64.0" onMouseClicked="#irParaEquipes" strokeType="OUTSIDE" strokeWidth="0.0" text="Equipes" textAlignment="CENTER">
+                     <font>
+                        <Font name="Oswald Medium" size="30.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="602.0" layoutY="64.0" onMouseClicked="#irParaClassificacao" strokeType="OUTSIDE" strokeWidth="0.0" text="Classificação" textAlignment="CENTER">
+                     <font>
+                        <Font name="Oswald Medium" size="30.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="807.0" layoutY="64.0" onMouseClicked="#irParaEstadios" strokeType="OUTSIDE" strokeWidth="0.0" text="Estádios" textAlignment="CENTER">
+                     <font>
+                        <Font name="Oswald Medium" size="30.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="1297.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
+                     <font>
+                        <Font name="Oswald Medium" size="12.0" />
+                     </font>
+                  </Button>
+                  <Line endX="51.0" endY="-7.62939453125E-6" layoutX="308.0" layoutY="75.0" startX="-32.111114501953125" startY="-7.62939453125E-6" stroke="WHITE" />
+               </children>
+            </Group>
+            <Text layoutX="91.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A MAIOR COMPETIÇÃO">
+               <font>
+                  <Font name="Roboto Condensed Black" size="70.0" />
+               </font>
+            </Text>
+            <Text fill="#c79842" layoutX="91.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DO FUTEBOL">
+               <font>
+                  <Font name="Roboto Condensed Black" size="70.0" />
+               </font>
+            </Text>
+            <Text layoutX="91.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A Copa do Mundo da FIFA é o torneio">
+               <font>
+                  <Font name="Inter 18pt Regular" size="25.0" />
+               </font>
+            </Text>
+            <Text layoutX="91.0" layoutY="530.0" strokeType="OUTSIDE" strokeWidth="0.0" text="de seleções mais prestigiado do planeta,">
+               <font>
+                  <Font name="Inter 18pt Regular" size="25.0" />
+               </font>
+            </Text>
+            <Text layoutX="91.0" layoutY="560.0" strokeType="OUTSIDE" strokeWidth="0.0" text="reunindo as melhores equipes em busca">
+               <font>
+                  <Font name="Inter 18pt Regular" size="25.0" />
+               </font>
+            </Text>
+            <Text layoutX="91.0" layoutY="590.0" strokeType="OUTSIDE" strokeWidth="0.0" text="do título de campeão mundial.">
+               <font>
+                  <Font name="Inter 18pt Regular" size="25.0" />
+               </font>
+            </Text>
+            <Line endX="100.0" layoutX="194.0" layoutY="610.0" startX="-100.0" stroke="#c79842" strokeWidth="2.0" />
+            <Line endX="500.0" layoutX="757.0" layoutY="917.0" startX="-500.0" stroke="#78747496" />
+            <Line endX="-98.99998474121094" endY="2800.0" layoutX="300.0" layoutY="1034.0" startX="-99.0" startY="-101.0" stroke="#c79842" strokeWidth="3.0" />
+            <Circle fill="WHITE" layoutX="201.5" layoutY="1074.0" radius="15.0" stroke="#c79842" strokeType="INSIDE" />
+            <Circle fill="#c79842" layoutX="201.5" layoutY="1074.0" radius="11.0" stroke="WHITE" strokeType="INSIDE" />
+            <Text fill="#c79842" layoutX="257.0" layoutY="1085.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1928">
+               <font>
+                  <Font name="Roboto Condensed Black" size="40.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="1000.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A IDEIA">
+               <font>
+                  <Font name="Roboto Condensed Black" size="40.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="1054.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A ideia de criar uma Copa do Mundo de seleções">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="1084.0" strokeType="OUTSIDE" strokeWidth="0.0" text="surgiu durante um congresso da FIFA em 1928,">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="1114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="proposto pelo presidente Jules Rimet,com o">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="1144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="objetivo de promover o futebol internacionalmente.">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="244.0" fitWidth="402.0" layoutX="980.0" layoutY="955.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/ChatGPT%20Image%2013%20de%20mai.%20de%202026,%2007_33_05.png" />
+               </image>
+            </ImageView>
+            <Line endX="500.0" layoutX="757.0" layoutY="1235.0" startX="-500.0" stroke="#78747496" />
+            <Line endX="500.0" layoutX="757.0" layoutY="1553.0" startX="-500.0" stroke="#78747496" />
+            <ImageView fitHeight="244.0" fitWidth="370.0" layoutX="980.0" layoutY="1270.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../images/ChatGPT%20Image%2013%20de%20mai.%20de%202026,%2008_54_27.png" />
+               </image>
+            </ImageView>
+            <Circle fill="WHITE" layoutX="201.5" layoutY="1380.0" radius="15.0" stroke="#c79842" strokeType="INSIDE" />
+            <Circle fill="#c79842" layoutX="201.5" layoutY="1380.0" radius="11.0" stroke="WHITE" strokeType="INSIDE" />
+            <Text fill="#c79842" layoutX="257.0" layoutY="1395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1930">
+               <font>
+                  <Font name="Roboto Condensed Black" size="40.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="1320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A PRIMEIRA COPA">
+               <font>
+                  <Font name="Roboto Condensed Black" size="40.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="1370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A primeira edição foi realizada no Uruguai,em 1930,">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="1400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="com 13 seleções convidadas.">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="1430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O Uruguai se consagrou campeão ao vencer">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="1460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="a Argentina na final por 4 a 2 no estádio">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="1490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Centenário,em Montevidéu.">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Line endX="500.0" layoutX="757.0" layoutY="1871.0" startX="-500.0" stroke="#78747496" />
+            <ImageView fitHeight="244.0" fitWidth="370.0" layoutX="980.0" layoutY="1580.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../images/1797642475-maracana-palco-da-tragedia-na-copa-do-mundo-de-1950.jpg" />
+               </image>
+            </ImageView>
+            <Circle fill="WHITE" layoutX="201.5" layoutY="1686.0" radius="15.0" stroke="#c79842" strokeType="INSIDE" />
+            <Circle fill="#c79842" layoutX="201.5" layoutY="1686.0" radius="11.0" stroke="WHITE" strokeType="INSIDE" />
+            <Text fill="#c79842" layoutX="257.0" layoutY="1700.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1946">
+               <font>
+                  <Font name="Roboto Condensed Black" size="40.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="1630.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PÓS GUERRA">
+               <font>
+                  <Font name="Roboto Condensed Black" size="40.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="1680.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Devido à Segunda Guerra Mundial, as edições">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="1710.0" strokeType="OUTSIDE" strokeWidth="0.0" text="de 1942 e 1946 foram canceladas. O torneio">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="1740.0" strokeType="OUTSIDE" strokeWidth="0.0" text="foi retomado em 1950,no Brasil,marcando">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="1770.0" strokeType="OUTSIDE" strokeWidth="0.0" text="o início de uma nova era para o futebol mundial.">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Line endX="500.0" layoutX="757.0" layoutY="2189.0" startX="-500.0" stroke="#78747496" />
+            <ImageView fitHeight="244.0" fitWidth="370.0" layoutX="980.0" layoutY="1900.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../images/WhatsApp-Image-2022-12-29-at-16.25.56.jpeg" />
+               </image>
+            </ImageView>
+            <Circle fill="WHITE" layoutX="201.5" layoutY="1992.0" radius="15.0" stroke="#c79842" strokeType="INSIDE" />
+            <Circle fill="#c79842" layoutX="201.5" layoutY="1992.0" radius="11.0" stroke="WHITE" strokeType="INSIDE" />
+            <Text fill="#c79842" layoutX="257.0" layoutY="2005.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1958">
+               <font>
+                  <Font name="Roboto Condensed Black" size="40.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="1960.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O NASCIMENTO DO REI PELÉ">
+               <font>
+                  <Font name="Roboto Condensed Black" size="40.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="2010.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A Copa de 1958, realizada na Suécia,viu o ">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="2040.0" strokeType="OUTSIDE" strokeWidth="0.0" text="surgimento de um jovem Pelé, de apenas 17">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="2070.0" strokeType="OUTSIDE" strokeWidth="0.0" text="anos,que encantou o mundo e ajudou o Brasil">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="2100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="a conquistar o seu primeiro título mundial.">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Line endX="500.0" layoutX="757.0" layoutY="2507.0" startX="-500.0" stroke="#78747496" />
+            <ImageView fitHeight="244.0" fitWidth="370.0" layoutX="980.0" layoutY="2230.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../images/pelé.png" />
+               </image>
+            </ImageView>
+            <Circle fill="WHITE" layoutX="201.5" layoutY="2320.0" radius="15.0" stroke="#c79842" strokeType="INSIDE" />
+            <Circle fill="#c79842" layoutX="201.5" layoutY="2320.0" radius="11.0" stroke="WHITE" strokeType="INSIDE" />
+            <Text fill="#c79842" layoutX="257.0" layoutY="2335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1970">
+               <font>
+                  <Font name="Roboto Condensed Black" size="40.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="2290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O FUTEBOL ARTE">
+               <font>
+                  <Font name="Roboto Condensed Black" size="40.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="2340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A Copa de 1970, realizado no México, marcou a consagração ">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="2370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="da seleção brasileira como uma das maiores da história.">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="2400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liderado por Pelé, o Brasil encantou o mundo com um futebol">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="2430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ofensivo e conquistou o tricampeonato mundial após">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="2460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="vencer a Itália na final por 4 a 1.">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Line endX="500.0" layoutX="757.0" layoutY="2825.0" startX="-500.0" stroke="#78747496" />
+            <ImageView fitHeight="244.0" fitWidth="370.0" layoutX="980.0" layoutY="2550.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../images/MANO-DE-DIOS.jpg" />
+               </image>
+            </ImageView>
+            <Text layoutX="400.0" layoutY="2610.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A COPA DE MARADONA">
+               <font>
+                  <Font name="Roboto Condensed Black" size="40.0" />
+               </font>
+            </Text>
+            <Circle fill="WHITE" layoutX="201.5" layoutY="2626.0" radius="15.0" stroke="#c79842" strokeType="INSIDE" />
+            <Circle fill="#c79842" layoutX="201.5" layoutY="2626.0" radius="11.0" stroke="WHITE" strokeType="INSIDE" />
+            <Text fill="#c79842" layoutX="257.0" layoutY="2645.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1986">
+               <font>
+                  <Font name="Roboto Condensed Black" size="40.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="2660.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Na Copa do Mundo de 1986,no México, Diego Maradona">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="2690.0" strokeType="OUTSIDE" strokeWidth="0.0" text="protagonizou uma das atuações mais marcantes do futebol">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="2720.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O craque argentino comandou sua seleção até o título e">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="2750.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ficou eternizado pelo gol &quot;Mão de Deus&quot; contra a Inglaterra.">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Line endX="500.0" layoutX="757.0" layoutY="3143.0" startX="-500.0" stroke="#78747496" />
+            <ImageView fitHeight="244.0" fitWidth="370.0" layoutX="980.0" layoutY="2870.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../images/Captura%20de%20tela%202026-05-13%20101457.png" />
+               </image>
+            </ImageView>
+            <Circle fill="WHITE" layoutX="201.5" layoutY="2952.0" radius="15.0" stroke="#c79842" strokeType="INSIDE" />
+            <Circle fill="#c79842" layoutX="201.5" layoutY="2952.0" radius="11.0" stroke="WHITE" strokeType="INSIDE" />
+            <Text fill="#c79842" layoutX="257.0" layoutY="2965.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1994">
+               <font>
+                  <Font name="Roboto Condensed Black" size="40.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="2930.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O TETRA BRASILEIRO">
+               <font>
+                  <Font name="Roboto Condensed Black" size="40.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="2980.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Após 24 anos sem conquistar a Copa do Mundo, o Brasil">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="3010.0" strokeType="OUTSIDE" strokeWidth="0.0" text="voltou ao topo em 1994, nos Estados Unidos. Com uma">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="3040.0" strokeType="OUTSIDE" strokeWidth="0.0" text="equipe liderada por Romário e Bebeto, a seleção venceu">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="3070.0" strokeType="OUTSIDE" strokeWidth="0.0" text="a Itália nos pênaltis e conquistou o tetra mundial.">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Line endX="500.0" layoutX="757.0" layoutY="3461.0" startX="-500.0" stroke="#78747496" />
+            <ImageView fitHeight="244.0" fitWidth="370.0" layoutX="980.0" layoutY="3190.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../images/3131085_f7561abd68dadfd.jpg" />
+               </image>
+            </ImageView>
+            <Text layoutX="400.0" layoutY="3250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O PENTACAMPEONATO">
+               <font>
+                  <Font name="Roboto Condensed Black" size="40.0" />
+               </font>
+            </Text>
+            <Circle fill="WHITE" layoutX="201.5" layoutY="3282.0" radius="15.0" stroke="#c79842" strokeType="INSIDE" />
+            <Circle fill="#c79842" layoutX="201.5" layoutY="3282.0" radius="11.0" stroke="WHITE" strokeType="INSIDE" />
+            <Text fill="#c79842" layoutX="257.0" layoutY="3295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2002">
+               <font>
+                  <Font name="Roboto Condensed Black" size="40.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="3300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Na Copa de 2002, realizada na Coreia do Sul e no Japão,">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="3330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="o Brasil conquistou o histórico pentacampeonato. Liderado">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="3360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="por Ronaldo,Rivaldo e Ronaldinho,o Brasil venceu a Alemanha">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="3390.0" strokeType="OUTSIDE" strokeWidth="0.0" text="por 2 a 0, com dois gols de Ronaldo.">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Line endX="500.0" layoutX="757.0" layoutY="3779.0" startX="-500.0" stroke="#78747496" />
+            <ImageView fitHeight="244.0" fitWidth="370.0" layoutX="980.0" layoutY="3510.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../images/Captura%20de%20tela%202026-05-13%20103847.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="400.0" layoutY="3570.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A REDENÇÃO DE MESSI">
+               <font>
+                  <Font name="Roboto Condensed Black" size="40.0" />
+               </font>
+            </Text>
+            <Circle fill="WHITE" layoutX="201.5" layoutY="3602.0" radius="15.0" stroke="#c79842" strokeType="INSIDE" />
+            <Circle fill="#c79842" layoutX="201.5" layoutY="3602.0" radius="11.0" stroke="WHITE" strokeType="INSIDE" />
+            <Text fill="#c79842" layoutX="257.0" layoutY="3615.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2022">
+               <font>
+                  <Font name="Roboto Condensed Black" size="40.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="3620.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Na Copa de 2022, no Catar, marcou a consagração de Lionel">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="3650.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Messi. Após uma final histórica contra a França, decidida">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="3680.0" strokeType="OUTSIDE" strokeWidth="0.0" text="nos pênaltis, a Argentina conquistou seu terceiro título">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="400.0" layoutY="3710.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mundial.">
+               <font>
+                  <Font name="Inter 18pt Regular" size="20.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="115.0" layoutY="3973.0" prefHeight="112.0" prefWidth="1229.0" styleClass="card-group_stage" stylesheets="@../../css/style.css" AnchorPane.topAnchor="3973.0">
+               <children>
+                  <Text fill="#c79842" layoutX="150.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;">
+                     <font>
+                        <Font name="Roboto Condensed Black" size="96.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="370.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A Copa é mais do que um torneio,">
+                     <font>
+                        <Font name="Inter 18pt Regular" size="27.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="310.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="É a celebração do futebol que une o mundo.">
+                     <font>
+                        <Font name="Inter 18pt Regular" size="27.0" />
+                     </font>
+                  </Text>
+                  <Line endX="100.0" layoutX="180.0" layoutY="82.0" startX="43.666656494140625" startY="1.6021728515625E-4" stroke="#c79842" strokeWidth="2.0" />
+                  <Line endX="100.0" layoutX="850.0" layoutY="82.0" startX="43.666656494140625" startY="1.6021728515625E-4" stroke="#c79842" strokeWidth="2.0" />
+               </children>
+            </AnchorPane>
+            <Button layoutX="666.0" layoutY="3850.0" mnemonicParsing="false" onAction="#irParaCampeoes" styleClass="golden_button" stylesheets="@../../css/style.css" text="CAMPEÕES" textFill="#c79842" />
+         </children></AnchorPane>
   </content>
 </ScrollPane>

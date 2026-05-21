@@ -108,7 +108,7 @@
                      </font>
                   </Label>
                </children></AnchorPane>
-            <TextField layoutX="20.0" layoutY="15.0" prefHeight="33.0" prefWidth="339.0" promptText="Pesquisar Seleção..." styleClass="textfield_equipes" stylesheets="@../../css/style.css" />
+            <TextField fx:id="pesquisa" layoutX="20.0" layoutY="15.0" prefHeight="33.0" prefWidth="339.0" promptText="Pesquisar Seleção..." styleClass="textfield_equipes" stylesheets="@../../css/style.css" />
             <ImageView fitHeight="55.0" fitWidth="82.0" layoutX="4.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../images/ChatGPT%20Image%209%20de%20mai.%20de%202026,%2018_28_43.png" />
