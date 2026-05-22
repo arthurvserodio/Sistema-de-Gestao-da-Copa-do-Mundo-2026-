@@ -10,6 +10,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import services.files.UsuarioFile;
 import users.Usuario;
 
 import java.io.BufferedReader;
@@ -40,28 +41,10 @@ public class ControllerUsuarios {
         colStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
 
         // Carrega os dados do CSV na tabela
-        tabelaUsuarios.setItems(carregarUsuarios());
+        tabelaUsuarios.setItems(UsuarioFile.getInstancia().listarTodos());
     }
 
-    private ObservableList<Usuario> carregarUsuarios() {
-        ObservableList<Usuario> lista = FXCollections.observableArrayList();
 
-        try (
-                InputStream is = getClass().getResourceAsStream("/database/usuarios.csv");
-                BufferedReader reader = new BufferedReader(new InputStreamReader(is))
-        ) {
-            String linha;
-            while ((linha = reader.readLine()) != null) {
-                String[] colunas = linha.split(",");
-                // colunas[0] = nome, colunas[1] = funcao, colunas[2] = pais, colunas[3]=status, colunas[4]=senha
-                lista.add(new Usuario(colunas[0], colunas[1], colunas[2], colunas[3], colunas[4]));
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return lista;
-    }
 
     @FXML
     //Muda para tela de inicio

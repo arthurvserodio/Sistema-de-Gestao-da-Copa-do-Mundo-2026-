@@ -37,6 +37,8 @@ public class Usuario {
         return funcao;
     }
 
+    public String getSenha(){ return senha; }
+
     public void setFuncao(Funcao funcao) {
         this.funcao = funcao;
     }

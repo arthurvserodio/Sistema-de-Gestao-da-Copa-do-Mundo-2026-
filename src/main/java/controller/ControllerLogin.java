@@ -1,5 +1,6 @@
 package controller;
 
+import exceptions.LoginInvalidoException;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -12,9 +13,13 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import services.ValidaLogin;
 import users.Administrador;
+import users.Sessao;
 
 import java.io.*;
+
+import Enums.Funcao;
 
 public class ControllerLogin {
     //Volta para a pagina inicial de menu clicando no logo da copa
@@ -70,46 +75,23 @@ public class ControllerLogin {
         String usuario = campoUsuario.getText().trim();
         String senha   = campoSenha.getText().trim();
 
-        // Validação básica de campos vazios
         if (usuario.isEmpty() || senha.isEmpty()) {
             mostrarErro("Preencha todos os campos.");
             return;
         }
 
-        //tentando achar o usuario digitado no arquivo:
+        try {
+            ValidaLogin.validar(usuario,senha);
+            mostrarSucesso("Login feito com sucesso");
 
-        try (
-                InputStream is = getClass().getResourceAsStream("/database/usuarios.csv");
-                BufferedReader reader = new BufferedReader(new InputStreamReader(is))
-        ) {
-            String linha;
-            boolean find=false;
-            String funcao="ARBITRO";
-            while ((linha = reader.readLine()) != null) {
-                String[] colunas = linha.split(",");
-                if(usuario.equals(colunas[0]) && senha.equals(colunas[4])){
-                    find=true;
-                    funcao=colunas[1];
-                    break;
-                }
-            }
-            if(find){
-                mostrarSucesso("Login realizado com sucesso!");
-
-                if(funcao.equals("ADMINISTRADOR")){
-
-                    SceneController.mudaDeTela( "/designAndScreens/telasAdministrador/telaPrincipalAdministrador.fxml");
-                }
-                else{
-                    SceneController.mudaDeTela( "/designAndScreens/telaInicial/paginaInicial.fxml");
-                }
+            if(Sessao.getInstancia().getFuncaoLogado()==Funcao.ADMINISTRADOR){
+                SceneController.mudaDeTela( "/designAndScreens/telasAdministrador/telaPrincipalAdministrador.fxml");
             }
             else{
-                mostrarErro("Usuário ou senha inválidos.");
+                SceneController.mudaDeTela( "/designAndScreens/telaInicial/paginaInicial.fxml");
             }
-
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (LoginInvalidoException e) {
+            mostrarErro("Login ou senha inválidas");
         }
 
 
