@@ -38,7 +38,7 @@ public class ControllerClassificacao {
     @FXML
     //Gustavo ta fazendo, depois adiciona o trocaTela + fxml
     private void irParaEstadios(MouseEvent e) {
-        SceneController.mudaDeTela( "/designAndScreens/telaEstadios/tela1.0.fxml");
+        SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioAdm.fxml");
     }
     @FXML
     //Helena ta fazendo, depois adiciona o trocaTela + fxml

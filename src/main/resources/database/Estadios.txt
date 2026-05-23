@@ -1,0 +1,3 @@
+Maracanã;78838;Rio de Janeiro
+Morumbi;67052;São Paulo
+Mineirão;61846;Belo Horizonte

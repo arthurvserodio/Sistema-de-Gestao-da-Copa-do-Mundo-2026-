@@ -76,7 +76,7 @@ public class ControllerUsuarios {
         SceneController.mudaDeTela( "/designAndScreens/telaInicial/classificacao.fxml");
     }
     @FXML
-    private void irParaEstadios(MouseEvent e) { SceneController.mudaDeTela( "/designAndScreens/telaEstadios/tela1.0.fxml");
+    private void irParaEstadios(MouseEvent e) { SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioNormal.fxml");
     }
     @FXML
     private void irParaLogin(ActionEvent e) {
@@ -85,7 +85,7 @@ public class ControllerUsuarios {
 
     @FXML
     private void irParaArbitros(MouseEvent e){
-        SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitro.fxml");
+        SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroNormal.fxml");
     }
 
     @FXML

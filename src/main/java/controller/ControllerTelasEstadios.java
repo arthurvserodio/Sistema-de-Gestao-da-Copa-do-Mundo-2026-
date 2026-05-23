@@ -1,71 +1,182 @@
 package controller;
 
+import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.MenuButton;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.util.Duration;
+import services.files.EstadioFile;
 import stadiumAndRefeering.Estadio;
 import users.Sessao;
 import users.Usuario;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class ControllerTelasEstadios {
     @FXML private AnchorPane painelPrincipal;
     @FXML private TableView<Estadio> tabelaEstadios;
     @FXML private TableColumn<Estadio, String> colNome;
-    @FXML private TableColumn<Estadio, String> colCapacidade;
-    @FXML private TableColumn<Estadio, Integer> colLocal;
+    @FXML private TableColumn<Estadio, String> colLocal;
+    @FXML private TableColumn<Estadio, Integer> colCapacidade; // Coluna mapeada como Integer/int
     @FXML private Button botaoLogin;
     @FXML private MenuButton menuUsuario;
+    @FXML private Label labelMensagem;
+    @FXML private TextField txtNome;
+    @FXML private TextField txtLocal;
+    @FXML private TextField txtCapacidade;
+    @FXML private TextField txtBusca;
 
-// Metodo para pegar valores das classes e mandar para o java fx:
+    private final EstadioFile estadioFile = EstadioFile.getInstance();
+
+    @FXML
     public void initialize() {
-
+        // Vincula as colunas aos métodos da classe Estadio
         colNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
         colCapacidade.setCellValueFactory(new PropertyValueFactory<>("capacidade"));
         colLocal.setCellValueFactory(new PropertyValueFactory<>("local"));
 
-        //teste:
-        ObservableList<Estadio> lista = FXCollections.observableArrayList(
-                new Estadio("Maracanã", 78838, "Rio de Janeiro"),
-                new Estadio("Lusail Stadium", 88966, "Catar"),
-                new Estadio("Azteca", 87523, "México")
-        );
-        for (int i = 1; i <= 50; i++) {
-            lista.add(new Estadio("Estádio " + i, 50000, "Cidade " + i));
-        }
+        atualizarTabela();
 
-
-        tabelaEstadios.setItems(lista);
-
-        // Lógica para deselecionar ao clicar na área vazia da tabela
+        // Logica para marcar como selecionado
         painelPrincipal.setOnMouseClicked(event -> {
             tabelaEstadios.getSelectionModel().clearSelection();
         });
-
+/// Parte da Helena
         Usuario u = Sessao.getInstancia().getUsuarioLogado();
         if (u != null) {
-            menuUsuario.setText(u.getNome() );
+            menuUsuario.setText(u.getNome());
             menuUsuario.setVisible(true);
             botaoLogin.setVisible(false);
         } else {
             botaoLogin.setVisible(true);
             menuUsuario.setVisible(false);
         }
+    }
+
+    // Mostrar tabela
+    private void atualizarTabela() {
+        List<Estadio> lista = estadioFile.getListaEstadios();
+        tabelaEstadios.setItems(FXCollections.observableArrayList(lista));
 
     }
 
+    //Adicionar
+    @FXML
+    private void handleAdicionar(ActionEvent e) {
+        try {
+            String nome = txtNome.getText().trim();
+            String local = txtLocal.getText().trim();
+            String capacidadeStr = txtCapacidade.getText().trim();
+
+            if (nome.isEmpty() || local.isEmpty() || capacidadeStr.isEmpty()) {
+                throw new IllegalArgumentException("Todos os campos devem ser preenchidos.");
+            }
+
+            int capacidade;
+            try {
+
+                capacidade = Integer.parseInt(capacidadeStr);
+                if (capacidade < 0) {
+                    throw new IllegalArgumentException("A capacidade deve ser um número positivo.");
+                }
+            } catch (NumberFormatException erro) {
+                throw new IllegalArgumentException("O campo capacidade deve conter\n " +
+                        "apenas números inteiros.");
+            }
+
+            // Envia o int corretamente no segundo parâmetro
+            Estadio novoEstadio = new Estadio(nome, capacidade, local);
+            estadioFile.getListaEstadios().add(novoEstadio);
+
+            estadioFile.salvarNoTxt();
+            mostrarSucesso("Estádio cadastrado com sucesso!");
+
+            txtNome.clear();
+            txtLocal.clear();
+            txtCapacidade.clear();
+
+            atualizarTabela();
+
+        } catch (IllegalArgumentException erro) {
+            mostrarErro(erro.getMessage());
+        }
+    }
+
+    //Remover
+    @FXML
+    private void handleRemover(ActionEvent e) {
+        Estadio selecionado = tabelaEstadios.getSelectionModel().getSelectedItem();
+
+        if (selecionado == null) {
+            mostrarErro("Por favor, selecione um estádio \n " +
+                    "na tabela para remover.");
+            return;
+        }
+
+        estadioFile.getListaEstadios().remove(selecionado);
+        estadioFile.salvarNoTxt();
+
+        mostrarSucesso("Estádio removido com sucesso!");
+        tabelaEstadios.getSelectionModel().clearSelection();
+        atualizarTabela();
+    }
 
     @FXML
-    private void irParaTela1(ActionEvent e) {
-        SceneController.mudaDeTela( "/designAndScreens/telaEstadios/tela1.fxml");
+    private void handlePesquisar(MouseEvent event) {
+        String termo = txtBusca.getText().toLowerCase().trim();
+
+        List<Estadio> resultadoFiltrado = estadioFile.getListaEstadios().stream()
+                .filter(estadio -> estadio.getNome().toLowerCase().contains(termo) ||
+                        estadio.getLocal().toLowerCase().contains(termo))
+                .collect(Collectors.toList());
+
+        tabelaEstadios.setItems(FXCollections.observableArrayList(resultadoFiltrado));
     }
+
+    // Mensagens de erro e sucesso :
+    private void mostrarErro(String str) {
+        labelMensagem.setText(str);
+        labelMensagem.setStyle("-fx-text-fill: #d32f2f; -fx-font-size: 14px; -fx-font-weight: bold;");
+        labelMensagem.setOpacity(1.0);
+
+        tornarMensagemTemporaria();
+    }
+
+    private void mostrarSucesso(String str) {
+        labelMensagem.setText(str);
+        labelMensagem.setStyle("-fx-text-fill: #388e3c; -fx-font-size: 14px; -fx-font-weight: bold;");
+        labelMensagem.setOpacity(1.0);
+
+        tornarMensagemTemporaria();
+    }
+
+   /// Funçao para mensagem aparecer e sumir da tela
+    private void tornarMensagemTemporaria() {
+
+        FadeTransition fade = new FadeTransition(Duration.seconds(1.0), labelMensagem);
+        fade.setFromValue(1.0); // Totalmente visível
+        fade.setToValue(0.0);   // Totalmente invisível
+
+
+        fade.setDelay(Duration.seconds(2.0));
+
+
+        fade.setOnFinished(event -> labelMensagem.setText(""));
+
+        fade.play(); // Inicia o temporizador/efeito
+    }
+
+
+
+
+
+
 
     @FXML
     //Passa para tela de login
@@ -95,6 +206,7 @@ public class ControllerTelasEstadios {
         SceneController.mudaDeTela( "/designAndScreens/telaInicial/equipesNaCopa.fxml");
     }
 
+
     @FXML
     //Passa para tela de história
     private void irParaHistoria(MouseEvent e){
@@ -106,6 +218,8 @@ public class ControllerTelasEstadios {
         Sessao.getInstancia().logout();
         SceneController.mudaDeTela( "/designAndScreens/telaInicial/paginaInicial.fxml");
     }
+
+
 
 
 

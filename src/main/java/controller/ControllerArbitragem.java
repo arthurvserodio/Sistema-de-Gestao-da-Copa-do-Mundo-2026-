@@ -98,7 +98,7 @@ public class ControllerArbitragem {
     }
     @FXML
 
-    private void irParaEstadios(MouseEvent e) { SceneController.mudaDeTela( "/designAndScreens/telaEstadios/tela1.0.fxml");
+    private void irParaEstadios(MouseEvent e) { SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioNormal.fxml");
     }
 
     @FXML

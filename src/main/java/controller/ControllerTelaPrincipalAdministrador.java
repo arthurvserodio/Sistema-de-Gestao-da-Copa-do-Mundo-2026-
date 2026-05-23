@@ -37,7 +37,7 @@ public class ControllerTelaPrincipalAdministrador {
     }
     @FXML
 
-    private void irParaEstadios(MouseEvent e) { SceneController.mudaDeTela( "/designAndScreens/telaEstadios/tela1.0.fxml");
+    private void irParaEstadios(MouseEvent e) { SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioAdm.fxml");
     }
     @FXML
 
@@ -51,7 +51,7 @@ public class ControllerTelaPrincipalAdministrador {
     }
     @FXML
     private void irParaArbitros(MouseEvent e){
-        SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitro.fxml");
+        SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroAdm.fxml");
     }
 
     @FXML
