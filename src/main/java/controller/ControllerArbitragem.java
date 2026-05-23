@@ -4,12 +4,15 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.MenuButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import users.Arbitro;
+import users.Sessao;
 import users.Usuario;
 
 
@@ -19,6 +22,8 @@ public class ControllerArbitragem {
     @FXML private TableColumn<Arbitro, String> colNome;
     @FXML private TableColumn<Arbitro, String> colNacionalidade;
     @FXML private TableColumn<Arbitro, Integer> colExperiencia;
+    @FXML private Button botaoLogin;
+    @FXML private MenuButton menuUsuario;
     public void initialize() {
 
         colNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
@@ -34,6 +39,16 @@ public class ControllerArbitragem {
         painelPrincipal.setOnMouseClicked(event -> {
             tabela.getSelectionModel().clearSelection();
         });
+
+        Usuario u = Sessao.getInstancia().getUsuarioLogado();
+        if (u != null) {
+            menuUsuario.setText(u.getNome() );
+            menuUsuario.setVisible(true);
+            botaoLogin.setVisible(false);
+        } else {
+            botaoLogin.setVisible(true);
+            menuUsuario.setVisible(false);
+        }
 
     }
 
@@ -85,4 +100,12 @@ public class ControllerArbitragem {
 
     private void irParaEstadios(MouseEvent e) { SceneController.mudaDeTela( "/designAndScreens/telaEstadios/tela1.0.fxml");
     }
+
+    @FXML
+    private void onLogout(ActionEvent e){
+        Sessao.getInstancia().logout();
+        SceneController.mudaDeTela( "/designAndScreens/telaInicial/paginaInicial.fxml");
+    }
+
+
 }

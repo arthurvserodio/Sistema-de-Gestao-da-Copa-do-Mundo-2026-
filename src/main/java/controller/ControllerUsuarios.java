@@ -4,13 +4,11 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import services.files.UsuarioFile;
+import users.Sessao;
 import users.Usuario;
 
 import java.io.BufferedReader;
@@ -30,6 +28,8 @@ public class ControllerUsuarios {
     @FXML private TextField status;
     @FXML private TextField pais;
     @FXML private PasswordField senha;
+    @FXML private Button botaoLogin;
+    @FXML private MenuButton menuUsuario;
 
 
     @FXML
@@ -42,6 +42,16 @@ public class ControllerUsuarios {
 
         // Carrega os dados do CSV na tabela
         tabelaUsuarios.setItems(UsuarioFile.getInstancia().listarTodos());
+
+        Usuario u = Sessao.getInstancia().getUsuarioLogado();
+        if (u != null) {
+            menuUsuario.setText(u.getNome() );
+            menuUsuario.setVisible(true);
+            botaoLogin.setVisible(false);
+        } else {
+            botaoLogin.setVisible(true);
+            menuUsuario.setVisible(false);
+        }
     }
 
 
@@ -74,6 +84,11 @@ public class ControllerUsuarios {
     }
 
     @FXML
+    private void irParaArbitros(MouseEvent e){
+        SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitro.fxml");
+    }
+
+    @FXML
     private void adicionarUsuario(ActionEvent e){
         //implementar chamar metodo adicionar que pertencera a classe do administrador
 
@@ -83,4 +98,15 @@ public class ControllerUsuarios {
     private void removerUsuario(ActionEvent e){
         //implementar chamar metodo remover que pertencera a classe do administrador
     }
+
+
+
+    @FXML
+    private void onLogout(ActionEvent e){
+        Sessao.getInstancia().logout();
+        SceneController.mudaDeTela( "/designAndScreens/telaInicial/paginaInicial.fxml");
+    }
+
+
+
 }

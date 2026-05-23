@@ -2,7 +2,11 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.MenuButton;
 import javafx.scene.input.MouseEvent;
+import users.Sessao;
+import users.Usuario;
 
 public class ControllerHistoria {
     //Volta para a pagina inicial de menu clicando no logo da copa
@@ -38,5 +42,28 @@ public class ControllerHistoria {
     //Passa da História para a tela de campeoes da copa
     private void irParaCampeoes(ActionEvent e) {SceneController.mudaDeTela( "/designAndScreens/telaInicial/campeoes.fxml");
     }
+
+    @FXML
+    private void onLogout(ActionEvent e){
+        Sessao.getInstancia().logout();
+        SceneController.mudaDeTela( "/designAndScreens/telaInicial/paginaInicial.fxml");
+    }
+
+    @FXML private Button botaoLogin;
+    @FXML private MenuButton menuUsuario;
+
+    public void initialize() {
+        Usuario u = Sessao.getInstancia().getUsuarioLogado();
+        if (u != null) {
+            menuUsuario.setText(u.getNome() );
+            menuUsuario.setVisible(true);
+            botaoLogin.setVisible(false);
+        } else {
+            botaoLogin.setVisible(true);
+            menuUsuario.setVisible(false);
+        }
+    }
+
+
 }
 

@@ -4,7 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuButton;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -15,6 +17,8 @@ import javafx.scene.layout.VBox;
 import javafx.scene.shape.Line;
 import nationsAndPlayers.nations.Campeoes;
 import nationsAndPlayers.nations.Selecoes;
+import users.Sessao;
+import users.Usuario;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -23,6 +27,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ControllerCampeoes {
+
+    @FXML private Button botaoLogin;
+    @FXML private MenuButton menuUsuario;
+
+
     //A lista erá usada para armazenar os campeoes lidos do arquivo
     private List<Campeoes> ListCampeoes = new ArrayList<>();
     @FXML
@@ -36,6 +45,16 @@ public class ControllerCampeoes {
         mostraCampeoes();
         cardCampeoes.setHgap(50);   // espaço horizontal entre cards
         cardCampeoes.setVgap(50);   // espaço vertical entre linhas
+
+        Usuario u = Sessao.getInstancia().getUsuarioLogado();
+        if (u != null) {
+            menuUsuario.setText(u.getNome() );
+            menuUsuario.setVisible(true);
+            botaoLogin.setVisible(false);
+        } else {
+            botaoLogin.setVisible(true);
+            menuUsuario.setVisible(false);
+        }
     }
     //Volta para a pagina inicial de menu clicando no logo da copa
     @FXML
@@ -80,6 +99,14 @@ public class ControllerCampeoes {
             e.printStackTrace();
         }
     }
+
+
+    @FXML
+    private void onLogout(ActionEvent e){
+        Sessao.getInstancia().logout();
+        SceneController.mudaDeTela( "/designAndScreens/telaInicial/paginaInicial.fxml");
+    }
+
     private AnchorPane criaCard(Campeoes campeao){
         //Cria o card no formato de anchorPanel
         AnchorPane card = new AnchorPane();

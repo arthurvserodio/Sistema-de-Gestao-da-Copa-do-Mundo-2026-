@@ -10,6 +10,8 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.MenuButton?>
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerTelaPrincipalAdministrador">
     <children>
         <Group>
@@ -54,11 +56,21 @@
                         <Font name="Oswald Medium" size="30.0" />
                     </font>
                 </Text>
-                <Button layoutX="1567.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
+                <Button fx:id="botaoLogin" layoutX="1297.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
                     <font>
                         <Font name="Oswald Medium" size="12.0" />
                     </font>
                 </Button>
+
+                <MenuButton fx:id="menuUsuario" layoutX="1297.0" layoutY="27.0" mnemonicParsing="false" maxWidth="150" prefWidth="150" visible="false" styleClass="white_button" stylesheets="@../../css/style.css">
+                    <font>
+                        <Font name="Oswald Medium" size="12.0" />
+                    </font>
+                    <items>
+                        <MenuItem text="Logout" onAction="#onLogout" />
+                        <MenuItem text="Cancelar" />
+                    </items>
+                </MenuButton>
             <Text fill="WHITE" layoutX="1107.0" layoutY="63.0" onMouseClicked="#irParaArbitros" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER">
                <font>
                   <Font name="Oswald Medium" size="30.0" />

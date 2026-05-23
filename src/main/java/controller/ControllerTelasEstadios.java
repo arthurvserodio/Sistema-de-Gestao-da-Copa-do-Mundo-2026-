@@ -2,6 +2,8 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.MenuButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.collections.FXCollections;
@@ -10,6 +12,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import stadiumAndRefeering.Estadio;
+import users.Sessao;
+import users.Usuario;
 
 public class ControllerTelasEstadios {
     @FXML private AnchorPane painelPrincipal;
@@ -17,6 +21,8 @@ public class ControllerTelasEstadios {
     @FXML private TableColumn<Estadio, String> colNome;
     @FXML private TableColumn<Estadio, String> colCapacidade;
     @FXML private TableColumn<Estadio, Integer> colLocal;
+    @FXML private Button botaoLogin;
+    @FXML private MenuButton menuUsuario;
 
 // Metodo para pegar valores das classes e mandar para o java fx:
     public void initialize() {
@@ -42,6 +48,16 @@ public class ControllerTelasEstadios {
         painelPrincipal.setOnMouseClicked(event -> {
             tabelaEstadios.getSelectionModel().clearSelection();
         });
+
+        Usuario u = Sessao.getInstancia().getUsuarioLogado();
+        if (u != null) {
+            menuUsuario.setText(u.getNome() );
+            menuUsuario.setVisible(true);
+            botaoLogin.setVisible(false);
+        } else {
+            botaoLogin.setVisible(true);
+            menuUsuario.setVisible(false);
+        }
 
     }
 
@@ -84,6 +100,15 @@ public class ControllerTelasEstadios {
     private void irParaHistoria(MouseEvent e){
         SceneController.mudaDeTela("/designAndScreens/telaInicial/historia.fxml");
     }
+
+    @FXML
+    private void onLogout(ActionEvent e){
+        Sessao.getInstancia().logout();
+        SceneController.mudaDeTela( "/designAndScreens/telaInicial/paginaInicial.fxml");
+    }
+
+
+
 
 }
 

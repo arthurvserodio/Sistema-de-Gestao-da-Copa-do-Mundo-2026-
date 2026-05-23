@@ -7,8 +7,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.MenuButton;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import users.Sessao;
+import users.Usuario;
 
 public class ControllerMenu {
     //Passa do Menu para a página que conta a historia da copa
@@ -35,4 +39,27 @@ public class ControllerMenu {
     private void irParaLogin(ActionEvent e) {
         SceneController.mudaDeTela( "/designAndScreens/login/login.fxml");
     }
+
+    @FXML
+    private void onLogout(ActionEvent e){
+        Sessao.getInstancia().logout();
+        SceneController.mudaDeTela( "/designAndScreens/telaInicial/paginaInicial.fxml");
+    }
+
+    @FXML private Button botaoLogin;
+    @FXML private MenuButton menuUsuario;
+
+    public void initialize() {
+        Usuario u = Sessao.getInstancia().getUsuarioLogado();
+        if (u != null) {
+            menuUsuario.setText(u.getNome() );
+            menuUsuario.setVisible(true);
+            botaoLogin.setVisible(false);
+        } else {
+            botaoLogin.setVisible(true);
+            menuUsuario.setVisible(false);
+        }
+    }
+
+
 }

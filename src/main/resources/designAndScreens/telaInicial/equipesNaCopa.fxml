@@ -16,6 +16,8 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1440.0" styleClass="gray" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerEquipes">
    <children>
       <Group>
@@ -50,11 +52,20 @@
                   <Font name="Oswald Medium" size="30.0" />
                </font>
             </Text>
-            <Button layoutX="1297.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
+            <Button fx:id="botaoLogin" layoutX="1297.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
                <font>
                   <Font name="Oswald Medium" size="12.0" />
                </font>
             </Button>
+            <MenuButton fx:id="menuUsuario" layoutX="1297.0" layoutY="27.0" mnemonicParsing="false" maxWidth="150" prefWidth="150" visible="false" styleClass="white_button" stylesheets="@../../css/style.css">
+               <font>
+                  <Font name="Oswald Medium" size="12.0" />
+               </font>
+               <items>
+                  <MenuItem text="Logout" onAction="#onLogout" />
+                  <MenuItem text="Cancelar" />
+               </items>
+            </MenuButton>
             <Line endX="51.0" endY="-7.62939453125E-6" layoutX="472.0" layoutY="75.0" startX="-32.111114501953125" startY="-7.62939453125E-6" stroke="WHITE" />
          </children>
       </Group>

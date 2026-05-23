@@ -16,7 +16,7 @@ public class ValidaLogin {
 
         for (Usuario u : usuarios) {
             if (u.getNome().equals(login) && u.getSenha().equals(senha)) {
-                Sessao.getInstancia().login(u);
+                Sessao.getInstancia().login(u); //cria a instancia de primeira
                 return;
             }
         }

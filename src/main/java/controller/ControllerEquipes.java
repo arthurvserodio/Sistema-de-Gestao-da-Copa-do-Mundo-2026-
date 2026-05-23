@@ -4,7 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuButton;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -12,6 +14,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import nationsAndPlayers.nations.Selecoes;
+import users.Sessao;
+import users.Usuario;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -21,6 +25,9 @@ import java.util.List;
 
 
 public class ControllerEquipes {
+    @FXML private Button botaoLogin;
+    @FXML private MenuButton menuUsuario;
+
     private List<Selecoes> ListSelecoes = new ArrayList<>();
     @FXML
     private VBox listaSelecoes;
@@ -36,6 +43,15 @@ public class ControllerEquipes {
         mostraSelecao();
         //Toda vez que for escrito alguma coisa no textField ele chama a função de pesquisa
         pesquisa.textProperty().addListener((obs, antigo, novo) -> {pesquisarSelecao();});
+        Usuario u = Sessao.getInstancia().getUsuarioLogado();
+        if (u != null) {
+            menuUsuario.setText(u.getNome() );
+            menuUsuario.setVisible(true);
+            botaoLogin.setVisible(false);
+        } else {
+            botaoLogin.setVisible(true);
+            menuUsuario.setVisible(false);
+        }
     }
 
     @FXML
@@ -80,6 +96,14 @@ public class ControllerEquipes {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+
+
+    @FXML
+    private void onLogout(ActionEvent e){
+        Sessao.getInstancia().logout();
+        SceneController.mudaDeTela( "/designAndScreens/telaInicial/paginaInicial.fxml");
     }
 
     private HBox criarLinha(Selecoes selecao) {

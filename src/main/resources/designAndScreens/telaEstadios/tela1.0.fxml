@@ -18,6 +18,8 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <AnchorPane fx:id="painelPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerTelasEstadios">
     <children>
       <ImageView fitHeight="708.0" fitWidth="1445.0" layoutX="-5.0" layoutY="93.0" pickOnBounds="true">
@@ -55,11 +57,20 @@
                 <Font name="Oswald Medium" size="30.0" />
             </font>
         </Text>
-        <Button layoutX="1297.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
+        <Button fx:id="botaoLogin" layoutX="1297.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
             <font>
                 <Font name="Oswald Medium" size="12.0" />
             </font>
         </Button>
+        <MenuButton fx:id="menuUsuario" layoutX="1297.0" layoutY="27.0" mnemonicParsing="false" maxWidth="150" prefWidth="150" visible="false" styleClass="white_button" stylesheets="@../../css/style.css">
+            <font>
+                <Font name="Oswald Medium" size="12.0" />
+            </font>
+            <items>
+                <MenuItem text="Logout" onAction="#onLogout" />
+                <MenuItem text="Cancelar" />
+            </items>
+        </MenuButton>
       <VBox layoutX="347.0" layoutY="96.0" prefHeight="493.0" prefWidth="670.0">
          <children>
             <TableView fx:id="tabelaEstadios" prefHeight="480.0" prefWidth="670.0" stylesheets="@../../css/style2.css">
