@@ -138,3 +138,52 @@
     -fx-pref-width: 83;
     -fx-pref-height: 112;
 }
+.choice-box {
+    -fx-background-color: white;
+    -fx-border-color: #E5E5E5;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 0 0 0 30;
+    -fx-font-size: 13px;
+    -fx-pref-height: 45;
+    -fx-font-family: "Inter 18pt";
+}
+.choice-box .arrow {
+    -fx-background-color: #C89B2C;
+}
+.text-fieldCadastroPartida{
+    -fx-background-color: white;
+    -fx-border-color: #E5E5E5;
+    -fx-border-width: 1;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-padding: 0 0 0 30;
+    -fx-font-size: 10px;
+    -fx-font-family: "Inter 18pt";
+    -fx-text-fill: #c7c7c7;
+    -fx-pref-height: 45;
+    -fx-text-fill: #333333;
+    -fx-prompt-text-fill: #A0A0A0;
+}
+.botao-cancelar {
+    -fx-background-color: white;
+    -fx-border-color: #b98d34;
+    -fx-border-width: 1;
+    -fx-background-radius: 12;
+    -fx-border-radius: 10;
+    -fx-text-fill: #b98d34;
+    -fx-font-family: "Roboto Condensed Black";
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-pref-width: 191;
+    -fx-pref-height: 38;
+}
+.botao-salvar {
+    -fx-background-color: linear-gradient(to right, #D4AA3A, #C89B2C);
+    -fx-background-radius: 10;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-family: "Roboto Condensed Black";
+    -fx-pref-width: 191;
+    -fx-pref-height: 38;
+}
