@@ -1,5 +1,6 @@
 package controller;
 
+import Enums.Funcao;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
@@ -13,6 +14,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import nationsAndPlayers.nations.Selecoes;
 import users.Sessao;
 import users.Usuario;
@@ -35,6 +37,11 @@ public class ControllerEquipes {
     @FXML
     private TextField pesquisa;
 
+    @FXML private Text botaoUsuario;
+
+    @FXML private Text botaoArbitro;
+
+
     @FXML
     public void initialize() {
         //Lê as seleções que estão cadastradas(dentro do arquivo)
@@ -48,6 +55,10 @@ public class ControllerEquipes {
             menuUsuario.setText(u.getNome() );
             menuUsuario.setVisible(true);
             botaoLogin.setVisible(false);
+            if(u.getFuncao() == Funcao.ADMINISTRADOR){
+                botaoUsuario.setVisible(true);
+                botaoArbitro.setVisible(true);
+            }
         } else {
             botaoLogin.setVisible(true);
             menuUsuario.setVisible(false);
@@ -82,6 +93,15 @@ public class ControllerEquipes {
     @FXML //Helena ta fazendo, depois adiciona o trocaTela + fxml
     private void irParaLogin(ActionEvent e) {
         SceneController.mudaDeTela("/designAndScreens/login/login.fxml");
+    }
+
+    @FXML
+    private void irParaUsuarios(MouseEvent e){
+        SceneController.mudaDeTela( "/designAndScreens/telasAdministrador/usuarios.fxml");
+    }
+    @FXML
+    private void irParaArbitros(MouseEvent e){
+        SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroAdm.fxml");
     }
 
     private void carregaSelecao() {

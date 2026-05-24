@@ -52,6 +52,16 @@
                   <Font name="Oswald Medium" size="30.0" />
                </font>
             </Text>
+            <Text fx:id="botaoUsuario" fill="WHITE" layoutX="970.0" layoutY="64.0" onMouseClicked="#irParaUsuarios" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuários" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font name="Oswald Medium" size="30.0" />
+               </font>
+            </Text>
+            <Text fx:id="botaoArbitro" fill="WHITE" layoutX="1107.0" layoutY="63.0" onMouseClicked="#irParaArbitros" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font name="Oswald Medium" size="30.0" />
+               </font>
+            </Text>
             <Button fx:id="botaoLogin" layoutX="1297.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
                <font>
                   <Font name="Oswald Medium" size="12.0" />
