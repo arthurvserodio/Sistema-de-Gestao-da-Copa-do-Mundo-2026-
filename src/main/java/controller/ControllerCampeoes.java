@@ -1,5 +1,6 @@
 package controller;
 
+import builder.CampeoesBuilder;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
@@ -17,6 +18,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.shape.Line;
 import nationsAndPlayers.nations.Campeoes;
 import nationsAndPlayers.nations.Selecoes;
+import services.matches.CarregaArquivoService;
 import users.Sessao;
 import users.Usuario;
 
@@ -40,7 +42,7 @@ public class ControllerCampeoes {
     @FXML
     public void initialize() {
         //Lê os campeões que estão cadastrados(dentro do arquivo)
-        carregaCampeoes();
+        ListCampeoes= CarregaArquivoService.carregaArquivo("/database/Campeoes.txt",partes->new CampeoesBuilder().selecao(partes[0]).ano(partes[1]).local(partes[2]).build());
         //Mostra o card do campeao
         mostraCampeoes();
         cardCampeoes.setHgap(50);   // espaço horizontal entre cards
@@ -86,20 +88,6 @@ public class ControllerCampeoes {
     private void irParaLogin(ActionEvent e) {
         SceneController.mudaDeTela("/designAndScreens/login/login.fxml");
     }
-    private void carregaCampeoes() {
-        try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/database/Campeoes.txt")));
-            String linha;
-            while ((linha = br.readLine()) != null) {
-                String[] partes = linha.split(";");
-                Campeoes s = new Campeoes(partes[0], partes[1], partes[2]);
-                ListCampeoes.add(s);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
 
     @FXML
     private void onLogout(ActionEvent e){

@@ -14,6 +14,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import nationsAndPlayers.nations.Selecoes;
+import services.matches.CarregaArquivoService;
 import users.Sessao;
 import users.Usuario;
 
@@ -37,8 +38,8 @@ public class ControllerEquipes {
 
     @FXML
     public void initialize() {
-        //Lê as seleções que estão cadastradas(dentro do arquivo)
-        carregaSelecao();
+        //Lê as seleções que estão cadastradas(dentro do arquivo) usando o serviço CarregaArquivoService
+        ListSelecoes = CarregaArquivoService.carregaArquivo("/database/SelecoesNaCopa.txt",parte->new Selecoes(parte[0],parte[1],parte[2],parte[3],parte[4]));
         //Mostra as seleções na tela
         mostraSelecao();
         //Toda vez que for escrito alguma coisa no textField ele chama a função de pesquisa
@@ -82,20 +83,6 @@ public class ControllerEquipes {
     @FXML //Helena ta fazendo, depois adiciona o trocaTela + fxml
     private void irParaLogin(ActionEvent e) {
         SceneController.mudaDeTela("/designAndScreens/login/login.fxml");
-    }
-
-    private void carregaSelecao() {
-        try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/database/SelecoesNaCopa.txt")));
-            String linha;
-            while ((linha = br.readLine()) != null) {
-                String[] partes = linha.split(";");
-                Selecoes s = new Selecoes(partes[0], partes[1], partes[2], partes[3], partes[4]);
-                ListSelecoes.add(s);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
 
