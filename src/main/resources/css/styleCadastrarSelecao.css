@@ -1,0 +1,39 @@
+.root {
+    -fx-font-family: "Segoe UI";
+}
+
+.label {
+    -fx-text-fill: #cccccc;
+}
+
+.preview-text {
+    -fx-text-fill: #888888;
+}
+
+.nav-item {
+    -fx-text-fill: #aaaaaa;
+    -fx-font-size: 14px;
+}
+
+.nav-item-active {
+    -fx-text-fill: gold;
+    -fx-font-size: 14px;
+}
+
+.btn-primary {
+    -fx-background-color: gold;
+    -fx-text-fill: black;
+    -fx-background-radius: 8;
+}
+
+.btn-secondary {
+    -fx-background-color: #2a2a2a;
+    -fx-text-fill: white;
+}
+
+.btn-outline {
+    -fx-background-color: transparent;
+    -fx-border-color: gold;
+    -fx-text-fill: gold;
+    -fx-border-radius: 20;
+}

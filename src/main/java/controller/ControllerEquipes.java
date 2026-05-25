@@ -3,8 +3,11 @@ package controller;
 import Enums.Funcao;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
@@ -15,11 +18,14 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import nationsAndPlayers.nations.Selecoes;
 import users.Sessao;
 import users.Usuario;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -29,6 +35,7 @@ import java.util.List;
 public class ControllerEquipes {
     @FXML private Button botaoLogin;
     @FXML private MenuButton menuUsuario;
+    @FXML private Button botaoCadastrarSelecao;
 
     private List<Selecoes> ListSelecoes = new ArrayList<>();
     @FXML
@@ -58,6 +65,7 @@ public class ControllerEquipes {
             if(u.getFuncao() == Funcao.ADMINISTRADOR){
                 botaoUsuario.setVisible(true);
                 botaoArbitro.setVisible(true);
+                botaoCadastrarSelecao.setVisible(true);
             }
         } else {
             botaoLogin.setVisible(true);
@@ -103,6 +111,22 @@ public class ControllerEquipes {
     private void irParaArbitros(MouseEvent e){
         SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroAdm.fxml");
     }
+    @FXML
+    private void irParaCadastroDeSelecoes(MouseEvent e){
+
+        try{
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/designAndScreens/telasAdministrador/telaCadastrarSelecao.fxml"));
+        Parent root = loader.load();
+
+        Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setScene(new Scene(root));
+        stage.showAndWait();
+        }catch(IOException ex){
+            System.err.println("Falha ao abrir o telaCadastrarSelecao: " + ex.getMessage());
+        }
+    }
 
     private void carregaSelecao() {
         try {
@@ -143,6 +167,19 @@ public class ControllerEquipes {
         if(is != null){
             Image imagem=new Image(is);
             logoSelecao = new ImageView(imagem);
+            logoSelecao.setOnMouseClicked(event ->{
+                try{
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/designAndScreens/telaJogadores/jogadores.fxml"));
+                    Parent tela = loader.load();
+                    ControllerJogadores controller = loader.getController();
+                    controller.setSelecoes(selecao);
+                    ImageView source = (ImageView) event.getSource();
+                    Stage stage = (Stage) source.getScene().getWindow();
+                    stage.setScene(new Scene(tela));
+                } catch(IOException e){
+                    e.printStackTrace();
+                }
+            });
         }
         else {
             Image imagemPadrao = new Image(getClass().getResourceAsStream("/images/brasil.png"));
