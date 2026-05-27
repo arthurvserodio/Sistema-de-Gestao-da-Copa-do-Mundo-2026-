@@ -1,12 +1,15 @@
 package controller;
 
+import exceptions.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import services.UsuarioService;
 import services.files.UsuarioFile;
 import users.Sessao;
 import users.Usuario;
@@ -28,8 +31,17 @@ public class ControllerUsuarios {
     @FXML private TextField status;
     @FXML private TextField pais;
     @FXML private PasswordField senha;
+    @FXML private PasswordField senha2;
     @FXML private Button botaoLogin;
     @FXML private MenuButton menuUsuario;
+    @FXML private CheckMenuItem checkNome;
+    @FXML private CheckMenuItem checkFuncao;
+    @FXML private CheckMenuItem checkPais;
+    @FXML private CheckMenuItem checkStatus;
+    @FXML private TextField campoPesquisa;
+
+
+
 
 
     @FXML
@@ -52,6 +64,43 @@ public class ControllerUsuarios {
             botaoLogin.setVisible(true);
             menuUsuario.setVisible(false);
         }
+
+        //o listener fica sempre verificando para ver se tem alguma mudanca, se houver, executa filtrar
+        campoPesquisa.textProperty().addListener((obs, antigo, novo) -> filtrar());
+        checkNome.selectedProperty().addListener((obs, antigo, novo) -> filtrar());
+        checkFuncao.selectedProperty().addListener((obs, antigo, novo) -> filtrar());
+        checkPais.selectedProperty().addListener((obs, antigo, novo) -> filtrar());
+        checkStatus.selectedProperty().addListener((obs, antigo, novo) -> filtrar());
+
+
+    }
+
+    private void filtrar() {
+        String texto = campoPesquisa.getText().toLowerCase();
+        ObservableList<Usuario> listaFiltrada = FXCollections.observableArrayList(); //cria lista vazia
+
+        for (Usuario u : UsuarioFile.getInstancia().listarTodos()) {
+            boolean encontrou = false;
+
+            if (checkNome.isSelected() && u.getNome().toLowerCase().contains(texto)) encontrou = true;
+            if (checkFuncao.isSelected() && u.getFuncao().toString().toLowerCase().contains(texto)) encontrou = true;
+            if (checkPais.isSelected() && u.getPais().toLowerCase().contains(texto)) encontrou = true;
+            if (checkStatus.isSelected() && u.getStatus().toLowerCase().contains(texto)) encontrou = true;
+
+            // se nenhum criterio selecionado, pesquisa em todos
+            if (!checkNome.isSelected() && !checkFuncao.isSelected() && !checkPais.isSelected() && !checkStatus.isSelected()) {
+                if (u.getNome().toLowerCase().contains(texto) ||
+                        u.getFuncao().toString().toLowerCase().contains(texto) ||
+                        u.getPais().toLowerCase().contains(texto) ||
+                        u.getStatus().toLowerCase().contains(texto)) {
+                    encontrou = true;
+                }
+            }
+
+            if (encontrou) listaFiltrada.add(u);
+        }
+
+        tabelaUsuarios.setItems(listaFiltrada);
     }
 
 
@@ -90,15 +139,63 @@ public class ControllerUsuarios {
 
     @FXML
     private void adicionarUsuario(ActionEvent e){
-        //implementar chamar metodo adicionar que pertencera a classe do administrador
+        String nome_s = nome.getText().trim();
+        String funcao_s = funcao.getText().trim();
+        String status_s = status.getText().trim();
+        String pais_s = pais.getText().trim();
+        String senha_s = senha.getText().trim();
+        String senha2_s = senha2.getText().trim();
+        try{
+            UsuarioService.adicionarUsuario(nome_s, funcao_s, status_s, pais_s, senha_s, senha2_s);
+            mostrarSucesso("Usuário cadastrado!");
+        }
+        catch(CamposVaziosException a ){
+            mostrarErro("Preencha todos os campos");
+            return;
+        }
+        catch(UsuarioExisteException a){
+            mostrarErro("O usuario inserido já existe");
+            return;
+        }
+        catch(SenhasDiferemException a){
+            mostrarErro("As senhas diferem");
+        }
+        catch(FuncaoInvalidaException a){
+            mostrarErro("A função é inexistente");
+
+        }
+        catch(StatusInvalidoException a){
+            mostrarErro("O status é inválido");
+        }
 
     }
 
     @FXML
-    private void removerUsuario(ActionEvent e){
-        //implementar chamar metodo remover que pertencera a classe do administrador
-    }
+    private void removerUsuario() {
+        try {
+            Usuario selecionado = tabelaUsuarios.getSelectionModel().getSelectedItem();
 
+            if (selecionado == null) {
+                throw new NenhumUsuarioSelecionadoException("Nenhum usuário foi selecionado");
+            }
+
+            UsuarioService.removerUsuario(selecionado);
+
+        } catch (NenhumUsuarioSelecionadoException e) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Atenção");
+            alert.setHeaderText(null);
+            alert.setContentText(e.getMessage());
+            alert.showAndWait();
+        }
+        catch(RemoveSiMesmoException e){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Atenção");
+            alert.setHeaderText(null);
+            alert.setContentText(e.getMessage());
+            alert.showAndWait();
+        }
+    }
 
 
     @FXML
@@ -107,6 +204,17 @@ public class ControllerUsuarios {
         SceneController.mudaDeTela( "/designAndScreens/telaInicial/paginaInicial.fxml");
     }
 
+    @FXML
+    private Label labelMensagem;
 
+    private void mostrarErro(String mensagem) {
+        labelMensagem.setStyle("-fx-font-size: 13px; -fx-text-fill: #cc0000;");
+        labelMensagem.setText(mensagem);
+    }
+
+    private void mostrarSucesso(String mensagem) {
+        labelMensagem.setStyle("-fx-font-size: 13px; -fx-text-fill: #1a7a1a;");
+        labelMensagem.setText(mensagem);
+    }
 
 }

@@ -47,10 +47,14 @@
         -fx-cursor: hand;
 }
 
+
+
 .button-add:hover {
     -fx-background-color: #27ae60;
     -fx-text-fill: white;
 }
+
+
 .button-remove:hover {
     -fx-background-color: #d63031;
 }
@@ -62,4 +66,25 @@
 .button-add:pressed {
     -fx-scale-x: 0.95;
     -fx-scale-y: 0.95;
+}
+
+.button-adicionar {
+    -fx-background-color: rgba(0, 255, 0, 0.1);
+    -fx-text-fill: #00b894;
+    -fx-border-color: #00b894;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+}
+
+.button-adicionar .label {
+    -fx-text-fill: #00b894;
+}
+
+.button-adicionar:hover {
+    -fx-background-color: #00b894;
+}
+
+.button-adicionar:hover .label {
+    -fx-text-fill: white;
 }

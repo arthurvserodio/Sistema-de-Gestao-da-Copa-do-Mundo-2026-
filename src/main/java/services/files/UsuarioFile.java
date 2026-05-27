@@ -51,7 +51,50 @@ public class UsuarioFile {
         return lista;
     }
 
-    private void salvarCSV() {
-        // reescreve o arquivo inteiro com o cache atual
+    public void adicionarCSV(Usuario u) {
+        // adiciona no cache
+        listarTodos().add(u);
+
+        // adiciona no arquivo
+        try {
+            java.net.URL url = getClass().getResource("/database/usuarios.csv"); //pega o caminnho
+            java.io.File arquivo = new java.io.File(url.toURI()); //transforma para File
+
+            try (java.io.FileWriter fw = new java.io.FileWriter(arquivo, true); //o true faz ele escrever no final e nao apagar o que tinha antes
+                 java.io.BufferedWriter bw = new java.io.BufferedWriter(fw)) {
+                bw.newLine();
+                bw.write(u.getNome() + "," + u.getFuncao() + "," + u.getPais() + "," + u.getStatus() + "," + u.getSenha());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void removerCSV(Usuario u) {
+        // remove do cache
+        listarTodos().removeIf(usuario -> usuario.getNome().equals(u.getNome()));
+
+        // reescreve o arquivo inteiro sem o usuario removido
+        try {
+            java.net.URL url = getClass().getResource("/database/usuarios.csv");
+            java.io.File arquivo = new java.io.File(url.toURI());
+
+            try (java.io.FileWriter fw = new java.io.FileWriter(arquivo, false); // false apaga e reescreve tudo
+                 java.io.BufferedWriter bw = new java.io.BufferedWriter(fw)) {
+                for (int i = 0; i < cache.size(); i++) {
+                    Usuario atual = cache.get(i);
+                    bw.write(atual.getNome() + "," + atual.getFuncao() + "," + atual.getPais() + "," + atual.getStatus() + "," + atual.getSenha());
+                    if (i < cache.size() - 1) {
+                        bw.newLine();
+                    }
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void editarCSV(){
+
     }
 }

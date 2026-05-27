@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<?import javafx.scene.shape.Circle?>
+<StackPane xmlns:fx="http://javafx.com/fxml" stylesheets="@../../css/styleCadastrarSelecao.css">
+
+    <!-- Fundo principal -->
+    <BorderPane style="-fx-background-color: #0d0d0d;">
+
+        <!-- CONTEÚDO -->
+        <center>
+            <HBox spacing="40" style="-fx-padding: 40;">
+
+                <!-- FORMULÁRIO -->
+                <VBox spacing="20" prefWidth="600"
+                      style="-fx-background-color: #121212; -fx-padding: 25; -fx-background-radius: 10;">
+
+                    <Label text="Cadastrar Seleção"
+                           style="-fx-text-fill: white; -fx-font-size: 24px;"/>
+
+                    <Label text="Preencha as informações da seleção"
+                           style="-fx-text-fill: #aaaaaa;"/>
+
+                    <!-- Nome + Sigla -->
+                    <HBox spacing="15">
+                        <VBox spacing="5">
+                            <Label text="Nome da Seleção" styleClass="label"/>
+                            <TextField promptText="Ex: Brasil"/>
+                        </VBox>
+                    </HBox>
+
+                    <!-- Combos -->
+                    <HBox spacing="15">
+                        <VBox spacing="5">
+                            <Label text="Grupo" styleClass="label"/>
+                            <ComboBox promptText="Grupo"/>
+                        </VBox>
+                    </HBox>
+
+                    <!-- Info adicionais -->
+                    <Separator/>
+
+                    <HBox spacing="15">
+                        <VBox spacing="5">
+                            <Label text="Técnico" styleClass="label"/>
+                            <TextField/>
+                        </VBox>
+
+                        <VBox spacing="5">
+                            <Label text="Ano de Fundação" styleClass="label"/>
+                            <TextField/>
+                        </VBox>
+                    </HBox>
+
+                    <VBox spacing="5">
+                        <Label text="País" styleClass="label"/>
+                        <ComboBox/>
+                    </VBox>
+
+                    <VBox spacing="5">
+                        <Label text="Escudo" styleClass="label"/>
+                        <Button text="Upload imagem" styleClass="btn-outline"/>
+                    </VBox>
+
+                    <!-- Botões -->
+                    <HBox spacing="15">
+                        <Button text="Cancelar" styleClass="btn-secondary"/>
+                        <Button text="Salvar Seleção" styleClass="btn-primary"/>
+                    </HBox>
+
+                </VBox>
+
+                <!-- PREVIEW -->
+                <VBox spacing="15" prefWidth="300"
+                      style="-fx-background-color: #121212; -fx-padding: 20; -fx-background-radius: 10;"
+                      alignment="TOP_CENTER">
+
+                    <Label text="Pré-visualização"
+                           style="-fx-text-fill: gold; -fx-font-size: 16px;"/>
+
+                    <Circle radius="50" style="-fx-fill: #1e1e1e;"/>
+
+                    <Label text="Nome da Seleção"
+                           style="-fx-text-fill: white;"/>
+
+                    <Label text="SIG"
+                           style="-fx-text-fill: gold;"/>
+
+                    <Separator/>
+
+                    <Label text="Confederação" styleClass="preview-text"/>
+                    <Label text="Grupo" styleClass="preview-text"/>
+                    <Label text="País" styleClass="preview-text"/>
+                    <Label text="Fundação" styleClass="preview-text"/>
+                    <Label text="Técnico" styleClass="preview-text"/>
+
+                </VBox>
+
+            </HBox>
+        </center>
+
+    </BorderPane>
+
+</StackPane>

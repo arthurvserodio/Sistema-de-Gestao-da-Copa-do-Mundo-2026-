@@ -21,7 +21,7 @@
          </image>
       </ImageView>
        <ImageView fx:id="logo" fitHeight="143.0" fitWidth="172.0" layoutX="45.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true" />
-      <Label layoutX="220.0" layoutY="231.0" prefHeight="96.0" prefWidth="345.0" text="LISTA DE" textFill="WHITE">
+      <Label layoutX="220.0" layoutY="231.0" prefHeight="96.0" prefWidth="345.0" text="LISTA DE" textFill="#e7dfdf">
          <font>
             <Font name="Franklin Gothic Demi" size="83.0" />
          </font>
@@ -38,5 +38,10 @@
             <TableColumn prefWidth="75.0" text="Idade" />
         </columns>
       </TableView>
+      <ImageView fitHeight="37.0" fitWidth="38.0" layoutX="31.0" layoutY="23.0" onMouseClicked="#irParaEquipes" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/setinha_de_voltar.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

@@ -1,10 +1,12 @@
 package controller;
 
+import Enums.Funcao;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuButton;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 import users.Sessao;
 import users.Usuario;
 
@@ -44,6 +46,15 @@ public class ControllerHistoria {
     }
 
     @FXML
+    private void irParaUsuarios(MouseEvent e){
+        SceneController.mudaDeTela( "/designAndScreens/telasAdministrador/usuarios.fxml");
+    }
+    @FXML
+    private void irParaArbitros(MouseEvent e){
+        SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroAdm.fxml");
+    }
+
+    @FXML
     private void onLogout(ActionEvent e){
         Sessao.getInstancia().logout();
         SceneController.mudaDeTela( "/designAndScreens/telaInicial/paginaInicial.fxml");
@@ -51,6 +62,8 @@ public class ControllerHistoria {
 
     @FXML private Button botaoLogin;
     @FXML private MenuButton menuUsuario;
+    @FXML private Text botaoUsuario;
+    @FXML private Text botaoArbitro;
 
     public void initialize() {
         Usuario u = Sessao.getInstancia().getUsuarioLogado();
@@ -58,9 +71,14 @@ public class ControllerHistoria {
             menuUsuario.setText(u.getNome() );
             menuUsuario.setVisible(true);
             botaoLogin.setVisible(false);
+            if(u.getFuncao() == Funcao.ADMINISTRADOR){
+                botaoUsuario.setVisible(true);
+                botaoArbitro.setVisible(true);
+            }
         } else {
             botaoLogin.setVisible(true);
             menuUsuario.setVisible(false);
+
         }
     }
 
