@@ -20,4 +20,10 @@ public class Arbitro extends Usuario {
     public void setExperiencia(int experiencia) {
         this.experiencia = experiencia;
     }
+
+    //ToString será necessário para o Combobox do cadastro de Partida
+    @Override
+    public String toString(){
+        return getNome();
+    }
 }

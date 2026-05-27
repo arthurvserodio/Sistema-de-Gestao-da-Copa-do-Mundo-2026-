@@ -27,4 +27,8 @@ public class Estadio {
     public String getNome() { return nome; }
     public int getCapacidade() { return capacidade; }
     public String getLocal() { return local; }
+    //ToString será necessário para o Combobox do cadastro de Partida
+    public String toString(){
+        return nome;
+    }
 }

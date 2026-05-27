@@ -53,4 +53,10 @@ public class Selecoes {
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
+
+    //ToString será necessário para o Combobox do cadastro de Partida
+    @Override
+    public String toString(){
+        return nome;
+    }
 }
