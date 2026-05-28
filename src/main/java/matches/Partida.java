@@ -9,11 +9,13 @@ import nationsAndPlayers.players.Tecnico;
 import stadiumAndRefeering.Estadio;
 import users.Arbitro;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class Partida {
-    private LocalDateTime data;
+    private LocalDate data;
+    private String horario;
     private int publico;
     //Gustavo
     private Estadio estadio;
@@ -38,8 +40,9 @@ public class Partida {
     private Escalacao escalacaoCasa;
     private Escalacao escalacaoVisitante;
 
-    public Partida(LocalDateTime data, int publico, Estadio estadio, Arbitro arbitro, Jogadores MVP, Selecoes selecaoCasa, Selecoes selecaoVisitante, Tecnico tecnicoCasa, Tecnico tecnicoVisitante, Fase fase, StatusPartida status, int golsCasa, int golsVisitante, EstatisticaPartida estatistica, ArrayList<EventosOcorridos> eventos, Escalacao escalacaoCasa, Escalacao escalacaoVisitante) {
+    public Partida(LocalDate data,String horario, int publico, Estadio estadio, Arbitro arbitro, Jogadores MVP, Selecoes selecaoCasa, Selecoes selecaoVisitante, Tecnico tecnicoCasa, Tecnico tecnicoVisitante, Fase fase, StatusPartida status, int golsCasa, int golsVisitante, EstatisticaPartida estatistica, ArrayList<EventosOcorridos> eventos, Escalacao escalacaoCasa, Escalacao escalacaoVisitante) {
         this.data = data;
+        this.horario=horario;
         this.publico = publico;
         this.estadio = estadio;
         this.arbitro = arbitro;
@@ -56,5 +59,8 @@ public class Partida {
         this.eventos = eventos;
         this.escalacaoCasa = escalacaoCasa;
         this.escalacaoVisitante = escalacaoVisitante;
+    }
+    public LocalDate getData() {
+        return data;
     }
 }

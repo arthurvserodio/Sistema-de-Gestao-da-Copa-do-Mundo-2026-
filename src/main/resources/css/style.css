@@ -187,3 +187,23 @@
     -fx-pref-width: 191;
     -fx-pref-height: 38;
 }
+.date-picker {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 12;
+    -fx-border-color: #d9d9d9;
+    -fx-border-radius: 12;
+    -fx-padding: 5;
+    -fx-pref-height: 45;
+}
+.date-picker .text-field {
+
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-family:"Inter 18pt";
+    -fx-font-size: 10px;
+    -fx-prompt-text-fill: #999999;
+}
+.date-picker .arrow-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 20;
+}

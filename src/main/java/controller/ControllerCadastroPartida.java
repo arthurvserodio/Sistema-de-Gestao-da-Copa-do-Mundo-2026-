@@ -4,8 +4,7 @@ import builder.ArbitroBuilder;
 import builder.EstadioBuilder;
 import builder.SelecaoBuilder;
 import javafx.fxml.FXML;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.*;
 import nationsAndPlayers.nations.Selecoes;
 import services.matches.CadastroPartidaService;
 import services.matches.CarregaArquivoService;
@@ -33,6 +32,9 @@ public class ControllerCadastroPartida {
     private ComboBox<Estadio> choiceEstadio;
 
     @FXML
+    private DatePicker Data; //Data digitada no Cadastro
+
+    @FXML
     private ComboBox<String> choiceFase;
 
     @FXML
@@ -40,15 +42,19 @@ public class ControllerCadastroPartida {
 
     @FXML
     public void initialize() {
+        //Desabilita os campos choiceArbitro e choiceEstadio até que o usuario coloque uma data
+        choiceArbitro.setDisable(true);
+        choiceEstadio.setDisable(true);
+        choiceArbitro.setPromptText("Escolha uma data primeiro");
+        choiceEstadio.setPromptText("Escolha uma data primeiro");
         //Lendo dos arquivos para obter as Seleções, Árbitros e Estádios
         ListSelecoes = CarregaArquivoService.carregaArquivo("/database/SelecoesNaCopa.txt", parte->new SelecaoBuilder().nome(parte[0]).grupo(parte[1]).build());
-        ListArbitros=CarregaArquivoService.carregaArquivo("/database/arbitrosNaCopa",parte->new ArbitroBuilder().nome(parte[0]).build());
+        ListArbitros = CarregaArquivoService.carregaArquivo("/database/arbitrosNaCopa.txt", parte->new ArbitroBuilder().nome(parte[0]).build());
         ListEstadio=CarregaArquivoService.carregaArquivo("/database/Estadios.txt", parte->new EstadioBuilder().nome(parte[0]).build());
         //Colocando No ChoiceBox
         choiceSelecao1.getItems().addAll(ListSelecoes);
         choiceSelecao2.getItems().addAll(ListSelecoes);
         choiceArbitro.getItems().addAll(ListArbitros);
-        choiceEstadio.getItems().addAll(ListEstadio);
         choiceFase.getItems().addAll("Fase De Grupos", "Playoffs","Oitavas-de-finais","Quartas-de-finais","Semi-final","Final");
         choiceGrupo.getItems().addAll("Fase De Grupos", "Playoffs","Oitavas-de-finais","Quartas-de-finais","Semi-final","Final");
         //Atualiza a ComboBox das seleções caso esteja na Fase De Grupos
@@ -62,5 +68,24 @@ public class ControllerCadastroPartida {
             if(choiceSelecao1.getValue()==null){
                 partidaService.atualizarComboBox(choiceSelecao1, choiceSelecao2, ListSelecoes);
             }});
+        //Toda vez que for escrito alguma coisa no text ele chama a função de verificar os estadios disponiveis
+        Data.valueProperty().addListener((obs, antigo, novo) -> {
+            if(novo==null) {
+                return;
+            }
+            choiceEstadio.setValue(null);
+            choiceEstadio.getSelectionModel().clearSelection();
+            choiceEstadio.getEditor().clear();
+
+            choiceArbitro.setValue(null);
+            choiceArbitro.getSelectionModel().clearSelection();
+            choiceArbitro.getEditor().clear();
+            // Libera ComboBox
+            choiceArbitro.setDisable(false);
+            choiceEstadio.setDisable(false);
+            choiceArbitro.setPromptText("Selecione um árbitro");
+            choiceEstadio.setPromptText("Selecione um estádio");
+            partidaService.estadiosDisponivel(ListEstadio, novo,choiceEstadio);
+            partidaService.arbitroDisponivel(ListArbitros,novo,choiceArbitro);});
     }
 }
