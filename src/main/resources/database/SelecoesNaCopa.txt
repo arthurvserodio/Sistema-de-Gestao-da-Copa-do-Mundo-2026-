@@ -38,3 +38,4 @@ Chile;F;40;9;0
 Colômbia;H;17;6;0
 Peru;A;35;5;0
 Paraguai;C;53;8;0
+gustavo;T;14;14;3
