@@ -14,7 +14,9 @@ public class Usuario {
 
     public Usuario(String nome, String funcao, String pais, String status, String senha) {
         this.nome = nome;
-        this.funcao = Funcao.valueOf(funcao);
+        if(funcao!=null){
+            this.funcao = Funcao.valueOf(funcao);
+        }
         this.pais = pais;
         this.status = status;
         this.senha = senha;
