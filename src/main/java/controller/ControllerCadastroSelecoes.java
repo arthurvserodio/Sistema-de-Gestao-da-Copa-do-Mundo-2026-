@@ -4,9 +4,20 @@ import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.layout.HBox;
+import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Circle;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 import nationsAndPlayers.nations.Selecoes;
 import services.files.SelecoesFile;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 
 public class ControllerCadastroSelecoes {
 
@@ -15,6 +26,7 @@ public class ControllerCadastroSelecoes {
     @FXML private TextField grupoSelecaoCadastrada;
     @FXML private TextField participacaoSelecaoCadastrada;
     @FXML private TextField titulosSelecaoCadastrada;
+    @FXML private Circle visualizacaoImagemDaSelecaoCadastrada;
     @FXML private Label mensagemCamposIncompletos;
 
     private final SelecoesFile selecaoFile = SelecoesFile.getInstance();
@@ -36,6 +48,9 @@ public class ControllerCadastroSelecoes {
             selecaoFile.getListaSelecoes().add(novaSelecao);
             selecaoFile.salvarNoTxt();
 
+            /*chama o metodo do controller de mudar a tela para chamar o iniciatilize que chama o mostraSelecao para atualizar a lista*/
+            SceneController.mudaDeTela("/designAndScreens/telaInicial/equipesNaCopa.fxml");
+
             nomeSelecaoCadastrada.clear();
             rankingSelecaoCadastrada.clear();
             grupoSelecaoCadastrada.clear();
@@ -44,8 +59,37 @@ public class ControllerCadastroSelecoes {
         }catch(IllegalArgumentException e){
             mostrarErro(e.getMessage());
         }
-
     }
+
+    @FXML
+    private void adicionarImagemDaSelecaoCadastrada(){
+        FileChooser arquivoAdicionado = new FileChooser();
+
+        arquivoAdicionado.getExtensionFilters().add(
+                new FileChooser.ExtensionFilter("Imagens", "*.png")
+        );
+
+        Stage stage = (Stage) visualizacaoImagemDaSelecaoCadastrada.getScene().getWindow();
+        File file = arquivoAdicionado.showOpenDialog(stage);
+        if(file != null){
+            Image imagem = new Image(file.toURI().toString());
+            visualizacaoImagemDaSelecaoCadastrada.setFill(new ImagePattern(imagem));
+            /*logica de salvar a imagem no diretorio*/
+                try{
+                    File destino = new File("target/classes/images/" + nomeSelecaoCadastrada.getText().toLowerCase() + ".png");
+                    System.out.println(destino.getAbsolutePath());
+                    Files.copy(file.toPath(), destino.toPath(), StandardCopyOption.REPLACE_EXISTING);
+                }catch(IOException e){
+                    e.printStackTrace();
+                }
+
+                /*printando para debugacao*/
+                for (Selecoes s : SelecoesFile.getInstance().getListaSelecoes()) { //alteracao para usar a lista final do SelecoesFile
+                    System.out.println(s.getNome());
+                }
+            }
+        }
+
 
     private void mostrarErro(String str) {
         mensagemCamposIncompletos.setText(str);

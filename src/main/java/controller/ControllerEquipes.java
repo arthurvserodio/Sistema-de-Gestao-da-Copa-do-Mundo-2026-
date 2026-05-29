@@ -21,14 +21,12 @@ import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import nationsAndPlayers.nations.Selecoes;
+import services.files.SelecoesFile;
 import services.matches.CarregaArquivoService;
 import users.Sessao;
 import users.Usuario;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,7 +36,6 @@ public class ControllerEquipes {
     @FXML private MenuButton menuUsuario;
     @FXML private Button botaoCadastrarSelecao;
 
-    private List<Selecoes> ListSelecoes = new ArrayList<>();
     @FXML
     private VBox listaSelecoes;
 
@@ -52,8 +49,7 @@ public class ControllerEquipes {
 
     @FXML
     public void initialize() {
-        //Lê as seleções que estão cadastradas(dentro do arquivo) usando o serviço CarregaArquivoService
-        ListSelecoes = CarregaArquivoService.carregaArquivo("/database/SelecoesNaCopa.txt",parte->new Selecoes(parte[0],parte[1],parte[2],parte[3],parte[4]));
+        SelecoesFile.getInstance().getListaSelecoes();
         //Mostra as seleções na tela
         mostraSelecao();
         //Toda vez que for escrito alguma coisa no textField ele chama a função de pesquisa
@@ -147,11 +143,14 @@ public class ControllerEquipes {
                 -fx-padding: 10 20 10 20;
                 """);
         //Tem que ver como faz o upload de imagem, mas deixa para depois
-        String caminhoImagem = "/images/" + selecao.getNome().toLowerCase().replace(" ", "_") + ".png";
-        InputStream is = getClass().getResourceAsStream(caminhoImagem);
+        /*refatoracao para upload de imagens*/
+        File is = new File("target/classes/images/" + selecao.getNome().toLowerCase().replace(" ", "_") + ".png");
+        System.out.println(is.getAbsolutePath());
+
         ImageView logoSelecao;
-        if(is != null){
-            Image imagem=new Image(is);
+        if(is.exists()){
+            System.out.println("Achei");
+            Image imagem=new Image(is.toURI().toString());
             logoSelecao = new ImageView(imagem);
             logoSelecao.setOnMouseClicked(event ->{
                 try{
@@ -168,6 +167,7 @@ public class ControllerEquipes {
             });
         }
         else {
+            System.out.println("Nao achei");
             Image imagemPadrao = new Image(getClass().getResourceAsStream("/images/brasil.png"));
             logoSelecao = new ImageView(imagemPadrao);
         }
@@ -216,7 +216,8 @@ public class ControllerEquipes {
     }
 
     private void mostraSelecao() {
-        for (Selecoes s : ListSelecoes) {
+        listaSelecoes.getChildren().clear(); //limpa a tela para nao sobrepor visuais que serão atualizados
+        for (Selecoes s : SelecoesFile.getInstance().getListaSelecoes()) { //alteracao para usar a lista final do SelecoesFile
             HBox linha = criarLinha(s);
             listaSelecoes.getChildren().add(linha);
         }
