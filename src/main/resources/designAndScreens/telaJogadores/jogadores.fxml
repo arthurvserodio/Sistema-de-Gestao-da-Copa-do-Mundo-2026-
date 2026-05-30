@@ -32,11 +32,11 @@
             <Font name="Franklin Gothic Demi" size="83.0" />
          </font>
       </Label>
-      <TableView layoutX="858.0" layoutY="251.0" prefHeight="200.0" prefWidth="398.0">
+      <TableView fx:id="tabelaJogadores" layoutX="858.0" layoutY="251.0" prefHeight="200.0" prefWidth="398.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Jogador" />
-          <TableColumn prefWidth="75.0" text="Posição" />
-            <TableColumn prefWidth="75.0" text="Idade" />
+          <TableColumn prefWidth="75.0" text="Jogador" fx:id="jogadorColuna"/>
+          <TableColumn prefWidth="75.0" text="Posição" fx:id="posicaoColuna"/>
+            <TableColumn prefWidth="75.0" text="Idade" fx:id="idadeColuna"/>
         </columns>
       </TableView>
       <ImageView fitHeight="37.0" fitWidth="38.0" layoutX="31.0" layoutY="23.0" onMouseClicked="#irParaEquipes" pickOnBounds="true" preserveRatio="true">

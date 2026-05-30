@@ -3,7 +3,6 @@ package controller;
 import builder.CampeoesBuilder;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -14,17 +13,13 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
 import javafx.scene.shape.Line;
 import nationsAndPlayers.nations.Campeoes;
-import nationsAndPlayers.nations.Selecoes;
 import services.matches.CarregaArquivoService;
 import users.Sessao;
 import users.Usuario;
 
-import java.io.BufferedReader;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -128,7 +123,7 @@ public class ControllerCampeoes {
             logoSelecao = new ImageView(imagem);
         }
         else {
-            Image imagemPadrao = new Image(getClass().getResourceAsStream("/images/brasil.png"));
+            Image imagemPadrao = new Image(getClass().getResourceAsStream("/images/Logos/brasil.png"));
             logoSelecao = new ImageView(imagemPadrao);
         }
         logoSelecao.setPreserveRatio(true);

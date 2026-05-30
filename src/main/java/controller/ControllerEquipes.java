@@ -22,13 +22,10 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import nationsAndPlayers.nations.Selecoes;
 import services.files.SelecoesFile;
-import services.matches.CarregaArquivoService;
 import users.Sessao;
 import users.Usuario;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class ControllerEquipes {
@@ -144,7 +141,7 @@ public class ControllerEquipes {
                 """);
         //Tem que ver como faz o upload de imagem, mas deixa para depois
         /*refatoracao para upload de imagens*/
-        File is = new File("target/classes/images/" + selecao.getNome().toLowerCase().replace(" ", "_") + ".png");
+        File is = new File("target/classes/images/Logos/" + selecao.getNome().toLowerCase().replace(" ", "_") + ".png");
         System.out.println(is.getAbsolutePath());
 
         ImageView logoSelecao;
@@ -168,7 +165,7 @@ public class ControllerEquipes {
         }
         else {
             System.out.println("Nao achei");
-            Image imagemPadrao = new Image(getClass().getResourceAsStream("/images/brasil.png"));
+            Image imagemPadrao = new Image(getClass().getResourceAsStream("/images/Logos/brasil.png"));
             logoSelecao = new ImageView(imagemPadrao);
         }
         logoSelecao.setPreserveRatio(true);

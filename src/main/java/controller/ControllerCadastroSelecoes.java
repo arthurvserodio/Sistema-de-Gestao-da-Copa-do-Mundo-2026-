@@ -76,7 +76,7 @@ public class ControllerCadastroSelecoes {
             visualizacaoImagemDaSelecaoCadastrada.setFill(new ImagePattern(imagem));
             /*logica de salvar a imagem no diretorio*/
                 try{
-                    File destino = new File("target/classes/images/" + nomeSelecaoCadastrada.getText().toLowerCase() + ".png");
+                    File destino = new File("target/classes/images/Logos/" + nomeSelecaoCadastrada.getText().toLowerCase() + ".png");
                     System.out.println(destino.getAbsolutePath());
                     Files.copy(file.toPath(), destino.toPath(), StandardCopyOption.REPLACE_EXISTING);
                 }catch(IOException e){
