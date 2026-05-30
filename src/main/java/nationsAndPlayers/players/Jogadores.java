@@ -4,15 +4,13 @@ import nationsAndPlayers.nations.Selecoes;
 
 public class Jogadores {
     private String nome;
-    private int capacidade;
     private int idade;
     private Selecoes selecao;
     private boolean lesionado;
     private boolean suspenso;
 
-    public Jogadores(String nome, int capacidade, int idade, Selecoes selecao, boolean lesionado, boolean suspenso) {
+    public Jogadores(String nome, int idade, Selecoes selecao, boolean lesionado, boolean suspenso) {
         this.nome = nome;
-        this.capacidade = capacidade;
         this.idade = idade;
         this.selecao = selecao;
         this.lesionado = lesionado;
@@ -25,14 +23,6 @@ public class Jogadores {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public int getCapacidade() {
-        return capacidade;
-    }
-
-    public void setCapacidade(int capacidade) {
-        this.capacidade = capacidade;
     }
 
     public int getIdade() {

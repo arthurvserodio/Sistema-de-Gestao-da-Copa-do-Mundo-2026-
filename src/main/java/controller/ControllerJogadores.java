@@ -3,16 +3,22 @@ package controller;
 import Enums.Funcao;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import nationsAndPlayers.nations.Selecoes;
 import services.files.SelecoesFile;
 import users.Sessao;
 import users.Usuario;
 
+import java.io.IOException;
 import java.io.InputStream;
 
 public class ControllerJogadores {
@@ -59,5 +65,20 @@ public class ControllerJogadores {
         SceneController.mudaDeTela("/designAndScreens/telaInicial/equipesNaCopa.fxml");
     }
 
+    @FXML
+    private void irParaCadastrarJogadores(ActionEvent e) {
+        try{
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/designAndScreens/telasAdministrador/telaCadastrarJogadores.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        }catch(IOException ex){
+            System.err.println("Falha ao abrir o telaCadastrarJogadores: " + ex.getMessage());
+        }
+    }
 
 }

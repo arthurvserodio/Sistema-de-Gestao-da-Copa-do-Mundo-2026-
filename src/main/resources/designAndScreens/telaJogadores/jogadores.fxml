@@ -44,7 +44,7 @@
             <Image url="@../../images/setinha_de_voltar.png" />
          </image>
       </ImageView>
-      <Button layoutX="879.0" layoutY="470.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="146.0" visible="false" text="Adicionar Jogador" fx:id="botaoAdicionarJogador" />
+      <Button layoutX="879.0" layoutY="470.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="146.0" visible="false" text="Adicionar Jogador" fx:id="botaoAdicionarJogador" onAction="#irParaCadastrarJogadores"/>
       <Button layoutX="1080.0" layoutY="470.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="146.0" visible="false" text="Remover Jogador" fx:id="botaoRemoverJogador"/>
    </children>
 </AnchorPane>
