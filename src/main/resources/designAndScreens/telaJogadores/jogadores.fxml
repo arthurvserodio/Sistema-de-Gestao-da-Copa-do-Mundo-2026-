@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -31,11 +32,11 @@
             <Font name="Franklin Gothic Demi" size="83.0" />
          </font>
       </Label>
-      <TableView layoutX="858.0" layoutY="251.0" prefHeight="200.0" prefWidth="398.0">
+      <TableView fx:id="tabelaJogadores" layoutX="858.0" layoutY="251.0" prefHeight="200.0" prefWidth="398.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Jogador" />
-          <TableColumn prefWidth="75.0" text="Posição" />
-            <TableColumn prefWidth="75.0" text="Idade" />
+          <TableColumn prefWidth="75.0" text="Jogador" fx:id="jogadorColuna"/>
+          <TableColumn prefWidth="75.0" text="Posição" fx:id="posicaoColuna"/>
+            <TableColumn prefWidth="75.0" text="Idade" fx:id="idadeColuna"/>
         </columns>
       </TableView>
       <ImageView fitHeight="37.0" fitWidth="38.0" layoutX="31.0" layoutY="23.0" onMouseClicked="#irParaEquipes" pickOnBounds="true" preserveRatio="true">
@@ -43,5 +44,7 @@
             <Image url="@../../images/setinha_de_voltar.png" />
          </image>
       </ImageView>
+      <Button layoutX="879.0" layoutY="470.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="146.0" visible="false" text="Adicionar Jogador" fx:id="botaoAdicionarJogador" onAction="#irParaCadastrarJogadores"/>
+      <Button layoutX="1080.0" layoutY="470.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="146.0" visible="false" text="Remover Jogador" fx:id="botaoRemoverJogador"/>
    </children>
 </AnchorPane>
