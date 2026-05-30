@@ -1,5 +1,6 @@
 package controller;
 
+import Enums.Funcao;
 import exceptions.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -124,9 +125,19 @@ public class ControllerUsuarios {
     private void irParaClassificacao(MouseEvent e) {
         SceneController.mudaDeTela( "/designAndScreens/telaInicial/classificacao.fxml");
     }
+
     @FXML
-    private void irParaEstadios(MouseEvent e) { SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioNormal.fxml");
+
+    private void irParaEstadios(MouseEvent e) {
+        Usuario u = Sessao.getInstancia().getUsuarioLogado();
+        if(u.getFuncao() != Funcao.ARBITRO){
+            SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioAdm.fxml");
+        }
+        else{
+            SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioNormal.fxml");
+        }
     }
+
     @FXML
     private void irParaLogin(ActionEvent e) {
         SceneController.mudaDeTela( "/designAndScreens/login/login.fxml");
@@ -134,7 +145,7 @@ public class ControllerUsuarios {
 
     @FXML
     private void irParaArbitros(MouseEvent e){
-        SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroNormal.fxml");
+        SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroAdm.fxml");
     }
 
     @FXML

@@ -32,9 +32,15 @@ public class ControllerHistoria {
         SceneController.mudaDeTela( "/designAndScreens/telaInicial/classificacao.fxml");
     }
     @FXML
-    //Passa da História para a tela de estádios presentes na copa
+
     private void irParaEstadios(MouseEvent e) {
-        SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioAdm.fxml");
+        Usuario u = Sessao.getInstancia().getUsuarioLogado();
+        if(u.getFuncao() != Funcao.ARBITRO){
+            SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioAdm.fxml");
+        }
+        else{
+            SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioNormal.fxml");
+        }
     }
     @FXML
     //Passa da História para a tela de login
@@ -51,7 +57,13 @@ public class ControllerHistoria {
     }
     @FXML
     private void irParaArbitros(MouseEvent e){
-        SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroAdm.fxml");
+        Usuario u = Sessao.getInstancia().getUsuarioLogado();
+        if(u.getFuncao() != Funcao.ARBITRO){
+            SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroAdm.fxml");
+        }
+        else{
+            SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroNormal.fxml");
+        }
     }
 
     @FXML
@@ -73,7 +85,6 @@ public class ControllerHistoria {
             botaoLogin.setVisible(false);
             if(u.getFuncao() == Funcao.ADMINISTRADOR){
                 botaoUsuario.setVisible(true);
-                botaoArbitro.setVisible(true);
             }
         } else {
             botaoLogin.setVisible(true);

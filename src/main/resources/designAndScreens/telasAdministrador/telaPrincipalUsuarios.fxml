@@ -12,7 +12,7 @@
 
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.MenuButton?>
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerTelaPrincipalAdministrador">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerTelaPrincipalUsuarios">
     <children>
         <Group>
             <children>
@@ -51,7 +51,12 @@
                         <Font name="Oswald Medium" size="30.0" />
                     </font>
                 </Text>
-                <Text fill="WHITE" layoutX="970.0" layoutY="64.0" onMouseClicked="#irParaUsuarios" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuários" textAlignment="CENTER">
+                <Text fx:id="botaoUsuario" fill="WHITE" layoutX="970.0" layoutY="64.0" onMouseClicked="#irParaUsuarios" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuários" textAlignment="CENTER" visible="false">
+                    <font>
+                        <Font name="Oswald Medium" size="30.0" />
+                    </font>
+                </Text>
+                <Text fx:id="botaoArbitro" fill="WHITE" layoutX="1107.0" layoutY="63.0" onMouseClicked="#irParaArbitros" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER" >
                     <font>
                         <Font name="Oswald Medium" size="30.0" />
                     </font>
@@ -71,11 +76,6 @@
                         <MenuItem text="Cancelar" />
                     </items>
                 </MenuButton>
-            <Text fill="WHITE" layoutX="1107.0" layoutY="63.0" onMouseClicked="#irParaArbitros" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER">
-               <font>
-                  <Font name="Oswald Medium" size="30.0" />
-               </font>
-            </Text>
             </children>
         </Group>
 

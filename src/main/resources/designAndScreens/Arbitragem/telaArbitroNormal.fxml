@@ -73,6 +73,11 @@
                 <Font name="Oswald Medium" size="30.0" />
             </font>
         </Text>
+        <Text fx:id="botaoUsuario" fill="WHITE" layoutX="970.0" layoutY="64.0" onMouseClicked="#irParaUsuarios" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuários" textAlignment="CENTER" visible="false">
+            <font>
+                <Font name="Oswald Medium" size="30.0" />
+            </font>
+        </Text>
         <Button fx:id="botaoLogin" layoutX="1297.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
             <font>
                 <Font name="Oswald Medium" size="12.0" />
@@ -103,11 +108,6 @@
                 <Image url="@../../images/ChatGPT%20Image%209%20de%20mai.%20de%202026,%2018_28_43.png" />
             </image>
         </ImageView>
-        <Text fill="WHITE" layoutX="943.0" layoutY="63.0" onMouseClicked="#irParaUsuarios" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuários" textAlignment="CENTER">
-            <font>
-                <Font name="Oswald Medium" size="30.0" />
-            </font>
-        </Text>
         <Text fill="WHITE" layoutX="1078.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER" underline="true">
             <font>
                 <Font name="Oswald Medium" size="30.0" />

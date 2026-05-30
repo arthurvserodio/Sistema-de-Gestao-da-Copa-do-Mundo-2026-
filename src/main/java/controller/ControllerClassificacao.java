@@ -37,11 +37,19 @@ public class ControllerClassificacao {
     private void irParaClassificacao(MouseEvent e) {
         SceneController.mudaDeTela( "/designAndScreens/telaInicial/classificacao.fxml");
     }
+
     @FXML
-    //Gustavo ta fazendo, depois adiciona o trocaTela + fxml
+
     private void irParaEstadios(MouseEvent e) {
-        SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioAdm.fxml");
+        Usuario u = Sessao.getInstancia().getUsuarioLogado();
+        if(u.getFuncao()!= Funcao.ARBITRO){
+            SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioAdm.fxml");
+        }
+        else{
+            SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioNormal.fxml");
+        }
     }
+
     @FXML
     //Helena ta fazendo, depois adiciona o trocaTela + fxml
     private void irParaLogin(ActionEvent e) {SceneController.mudaDeTela( "/designAndScreens/login/login.fxml");
@@ -51,9 +59,16 @@ public class ControllerClassificacao {
     private void irParaUsuarios(MouseEvent e){
         SceneController.mudaDeTela( "/designAndScreens/telasAdministrador/usuarios.fxml");
     }
+
     @FXML
     private void irParaArbitros(MouseEvent e){
-        SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroAdm.fxml");
+        Usuario u = Sessao.getInstancia().getUsuarioLogado();
+        if(u.getFuncao()!= Funcao.ARBITRO){
+            SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroAdm.fxml");
+        }
+        else{
+            SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroNormal.fxml");
+        }
     }
 
     @FXML private Button botaoLogin;
@@ -69,7 +84,6 @@ public class ControllerClassificacao {
             botaoLogin.setVisible(false);
             if(u.getFuncao() == Funcao.ADMINISTRADOR){
                 botaoUsuario.setVisible(true);
-                botaoArbitro.setVisible(true);
             }
         } else {
             botaoLogin.setVisible(true);
