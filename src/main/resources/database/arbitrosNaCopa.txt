@@ -1,6 +1,1 @@
-Daronco;
-Messi;
-Neymar;
-Cristiano;
-Gustavo;
-Arthur;
+Daronco;Brasileiro;4

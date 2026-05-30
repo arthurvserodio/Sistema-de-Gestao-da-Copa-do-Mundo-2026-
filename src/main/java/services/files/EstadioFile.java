@@ -15,12 +15,12 @@ import java.util.List;
         private final List<Estadio> listaEstadios;
 
 
-
+      // private para new uma classe iinstanciar um objeto
         private EstadioFile() {
             this.listaEstadios = carregarDadosDoTxt();
         }
 
-        /// INstancia para abrir só uma vez
+        /// Instancia para abrir só uma vez
         public static synchronized EstadioFile getInstance() {
             if (instancia == null) {
                 instancia = new EstadioFile();
@@ -36,13 +36,14 @@ import java.util.List;
         private List<Estadio> carregarDadosDoTxt() {
             List<Estadio> estadios = new ArrayList<>();
             try (BufferedReader br = new BufferedReader(
+                    // Metodo para fazer a leitura do arquivo
                     new InputStreamReader(getClass().getResourceAsStream("/database/Estadios.txt")))) {
 
                 String linha;
                 while ((linha = br.readLine()) != null) {
                     String[] partes = linha.split(";");
-                    if (partes.length >= 3) {
-                        String nome = partes[0];
+                            if (partes.length >= 3) {
+                String nome = partes[0];
                         int capacidade = Integer.parseInt(partes[1].trim());
                         String local = partes[2];
                         estadios.add(new Estadio(nome, capacidade, local));
@@ -58,13 +59,13 @@ import java.util.List;
 
 /// Salva no disco :
         public void salvarNoTxt() {
-            File arquivo = new File("/database/Estadios.txt");
+            File arquivo = new File("src/main/resources/database/Estadios.txt");
             arquivo.getParentFile().mkdirs(); // cria a pasta se não existir
 
             try (BufferedWriter bw = new BufferedWriter(new FileWriter(arquivo))) {
                 for (Estadio e : listaEstadios) {
                     bw.write(e.getNome() + ";" + e.getCapacidade() + ";" + e.getLocal());
-                    bw.newLine();
+                    bw.newLine();// pula uma linha para não ficar tudo junto
                 }
             } catch (IOException e) {
                 System.err.println("Erro ao salvar: " + e.getMessage());

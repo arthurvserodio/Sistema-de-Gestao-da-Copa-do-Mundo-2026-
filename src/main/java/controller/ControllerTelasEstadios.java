@@ -23,7 +23,7 @@ public class ControllerTelasEstadios {
     @FXML private TableView<Estadio> tabelaEstadios;
     @FXML private TableColumn<Estadio, String> colNome;
     @FXML private TableColumn<Estadio, String> colLocal;
-    @FXML private TableColumn<Estadio, Integer> colCapacidade; // Coluna mapeada como Integer/int
+    @FXML private TableColumn<Estadio, Integer> colCapacidade;
     @FXML private Button botaoLogin;
     @FXML private MenuButton menuUsuario;
     @FXML private Label labelMensagem;

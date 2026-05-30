@@ -32,7 +32,7 @@ public class ControllerMenu {
     }
     @FXML
     //Gustavo ta fazendo, depois adiciona o trocaTela + fxml
-    private void irParaEstadios(MouseEvent e) { SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioAdm.fxml");
+    private void irParaEstadios(MouseEvent e) { SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioNormal.fxml");
     }
     @FXML
     //Helena ta fazendo, depois adiciona o trocaTela + fxml
