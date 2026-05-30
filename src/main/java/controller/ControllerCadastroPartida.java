@@ -5,12 +5,15 @@ import builder.EstadioBuilder;
 import builder.SelecaoBuilder;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import matches.Partida;
 import nationsAndPlayers.nations.Selecoes;
 import services.matches.CadastroPartidaService;
 import services.matches.CarregaArquivoService;
 import stadiumAndRefeering.Estadio;
 import users.Arbitro;
 
+import java.time.LocalTime;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +21,7 @@ public class ControllerCadastroPartida {
     private List<Selecoes> ListSelecoes = new ArrayList<>();
     private List<Arbitro> ListArbitros = new ArrayList<>();
     private List<Estadio> ListEstadio = new ArrayList<>();
+    private List<Partida> ListPartida = new ArrayList<>();
     private CadastroPartidaService partidaService = new CadastroPartidaService();
     @FXML
     private ComboBox<Selecoes> choiceSelecao1;
@@ -39,6 +43,12 @@ public class ControllerCadastroPartida {
 
     @FXML
     private ComboBox<String> choiceGrupo;
+
+    @FXML
+    private Button salvarPartida;
+
+    @FXML
+    private TextField horario;
 
     @FXML
     public void initialize() {
@@ -87,5 +97,36 @@ public class ControllerCadastroPartida {
             choiceEstadio.setPromptText("Selecione um estádio");
             partidaService.estadiosDisponivel(ListEstadio, novo,choiceEstadio);
             partidaService.arbitroDisponivel(ListArbitros,novo,choiceArbitro);});
+        //Verifica o horário da partida
+        salvarPartida.setOnAction(s->{
+            //Verificar se tem algum campo vazio
+            if(choiceSelecao1.getValue()==null || choiceSelecao2.getValue()==null || choiceArbitro.getValue()==null || choiceEstadio.getValue()==null || choiceFase.getValue()==null || choiceGrupo.getValue()==null || Data.getValue()==null || horario.getText().isBlank()){
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Atenção");
+                alert.setHeaderText(null);
+                alert.setContentText("Preencha todos os campos!");
+                alert.showAndWait();
+                return;
+            }
+            //Verifica se a Partida já não foi criada
+            if(partidaService.partidaJaExiste(choiceSelecao1.getValue(),choiceSelecao2.getValue(),ListPartida)){
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Atenção");
+                alert.setHeaderText(null);
+                alert.setContentText("Essa partida já foi cadastrada!");
+                alert.showAndWait();
+                return;
+            }
+            try{
+                LocalTime horarioValido= LocalTime.parse(horario.getText());
+            }
+            catch(DateTimeParseException e){
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Atenção");
+                alert.setHeaderText(null);
+                alert.setContentText("Horário inválido! Use HH:mm");
+                alert.showAndWait();
+            }
+        });
     }
 }

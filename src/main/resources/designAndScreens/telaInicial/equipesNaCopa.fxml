@@ -18,7 +18,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1440.0" styleClass="gray" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerEquipes">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1440.0" styleClass="gray" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerEquipes">
    <children>
       <Group>
          <children>
@@ -48,16 +48,6 @@
                </font>
             </Text>
             <Text fill="WHITE" layoutX="807.0" layoutY="64.0" onMouseClicked="#irParaEstadios" strokeType="OUTSIDE" strokeWidth="0.0" text="Estádios" textAlignment="CENTER">
-               <font>
-                  <Font name="Oswald Medium" size="30.0" />
-               </font>
-            </Text>
-            <Text fx:id="botaoUsuario" fill="WHITE" layoutX="970.0" layoutY="64.0" onMouseClicked="#irParaUsuarios" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuários" textAlignment="CENTER" visible="false">
-               <font>
-                  <Font name="Oswald Medium" size="30.0" />
-               </font>
-            </Text>
-            <Text fx:id="botaoArbitro" fill="WHITE" layoutX="1107.0" layoutY="63.0" onMouseClicked="#irParaArbitros" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER" visible="false">
                <font>
                   <Font name="Oswald Medium" size="30.0" />
                </font>
@@ -144,7 +134,6 @@
                   </AnchorPane>
                </content>
             </ScrollPane>
-            <Button fx:id="botaoCadastrarSelecao" layoutX="505.0" layoutY="21.0" mnemonicParsing="false" text="Cadastrar Seleção" visible="false" onMouseClicked="#irParaCadastroDeSelecoes"/>
          </children>
       </AnchorPane>
    </children>

@@ -1,6 +1,7 @@
 package services.matches;
 
 import javafx.scene.control.ComboBox;
+import matches.Partida;
 import nationsAndPlayers.nations.Selecoes;
 import stadiumAndRefeering.Estadio;
 import users.Arbitro;
@@ -41,5 +42,16 @@ public class CadastroPartidaService {
                 disponiveis.getItems().add(a);
             }
         }
+    }
+    //Verifica se a partida que está sendo cadastrada já existe
+    public boolean partidaJaExiste(Selecoes s1, Selecoes s2, List<Partida> jogos){
+        for(Partida p : jogos){
+            boolean mesmaOrdem= p.getSelecaoCasa().equals(s1) && p.getSelecaoVisitante().equals(s2); //Verifica se o usuario colocou as seleções na mesma Ordem
+            boolean inverteOrdem= p.getSelecaoCasa().equals(s2) && p.getSelecaoVisitante().equals(s1); //Verifica se colocou as seleções em ordem invertida
+            if(mesmaOrdem || inverteOrdem){
+                return true;
+            }
+        }
+        return false;
     }
 }

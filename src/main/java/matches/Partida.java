@@ -63,4 +63,11 @@ public class Partida {
     public LocalDate getData() {
         return data;
     }
+    public Selecoes getSelecaoCasa() {
+        return selecaoCasa;
+    }
+
+    public Selecoes getSelecaoVisitante() {
+        return selecaoVisitante;
+    }
 }
