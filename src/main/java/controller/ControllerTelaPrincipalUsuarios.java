@@ -1,20 +1,16 @@
 package controller;
 
+import Enums.Funcao;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuButton;
 import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
+import javafx.scene.text.Text;
 import users.Sessao;
 import users.Usuario;
 
-public class ControllerTelaPrincipalAdministrador {
+public class ControllerTelaPrincipalUsuarios {
 
     @FXML
     private void irPaginaInicial(MouseEvent e){
@@ -37,7 +33,14 @@ public class ControllerTelaPrincipalAdministrador {
     }
     @FXML
 
-    private void irParaEstadios(MouseEvent e) { SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioAdm.fxml");
+    private void irParaEstadios(MouseEvent e) {
+        Usuario u = Sessao.getInstancia().getUsuarioLogado();
+        if(u.getFuncao() != Funcao.ARBITRO){
+            SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioAdm.fxml");
+        }
+        else{
+            SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioNormal.fxml");
+        }
     }
     @FXML
 
@@ -51,7 +54,13 @@ public class ControllerTelaPrincipalAdministrador {
     }
     @FXML
     private void irParaArbitros(MouseEvent e){
-        SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroAdm.fxml");
+        Usuario u = Sessao.getInstancia().getUsuarioLogado();
+        if(u.getFuncao() != Funcao.ARBITRO){
+            SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroAdm.fxml");
+        }
+        else{
+            SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroNormal.fxml");
+        }
     }
 
     @FXML
@@ -62,6 +71,7 @@ public class ControllerTelaPrincipalAdministrador {
 
     @FXML private Button botaoLogin;
     @FXML private MenuButton menuUsuario;
+    @FXML private Text botaoUsuario;
 
     public void initialize() {
         Usuario u = Sessao.getInstancia().getUsuarioLogado();
@@ -69,6 +79,9 @@ public class ControllerTelaPrincipalAdministrador {
             menuUsuario.setText(u.getNome() );
             menuUsuario.setVisible(true);
             botaoLogin.setVisible(false);
+            if(u.getFuncao()== Funcao.ADMINISTRADOR){
+                botaoUsuario.setVisible(true);
+            }
         } else {
             botaoLogin.setVisible(true);
             menuUsuario.setVisible(false);

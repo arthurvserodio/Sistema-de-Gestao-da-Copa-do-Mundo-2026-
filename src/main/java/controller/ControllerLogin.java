@@ -2,22 +2,14 @@ package controller;
 
 import exceptions.LoginInvalidoException;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
 import services.ValidaLogin;
-import users.Administrador;
 import users.Sessao;
-
-import java.io.*;
 
 import Enums.Funcao;
 
@@ -83,13 +75,7 @@ public class ControllerLogin {
         try {
             ValidaLogin.validar(usuario,senha);
             mostrarSucesso("Login feito com sucesso");
-
-            if(Sessao.getInstancia().getFuncaoLogado()==Funcao.ADMINISTRADOR){
-                SceneController.mudaDeTela( "/designAndScreens/telasAdministrador/telaPrincipalAdministrador.fxml");
-            }
-            else{
-                SceneController.mudaDeTela( "/designAndScreens/telaInicial/paginaInicial.fxml");
-            }
+            SceneController.mudaDeTela("/designAndScreens/telasAdministrador/telaPrincipalUsuarios.fxml");
         } catch (LoginInvalidoException e) {
             mostrarErro("Login ou senha inválidas");
         }

@@ -1,5 +1,6 @@
 package controller;
 
+import Enums.Funcao;
 import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,6 +10,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.text.Text;
 import javafx.util.Duration;
 import services.files.EstadioFile;
 import stadiumAndRefeering.Estadio;
@@ -31,6 +33,7 @@ public class ControllerTelasEstadios {
     @FXML private TextField txtLocal;
     @FXML private TextField txtCapacidade;
     @FXML private TextField txtBusca;
+    @FXML private Text botaoUsuario;
 
     private final EstadioFile estadioFile = EstadioFile.getInstance();
 
@@ -53,6 +56,9 @@ public class ControllerTelasEstadios {
             menuUsuario.setText(u.getNome());
             menuUsuario.setVisible(true);
             botaoLogin.setVisible(false);
+            if(u.getFuncao()==Funcao.ADMINISTRADOR){
+                botaoUsuario.setVisible(true);
+            }
         } else {
             botaoLogin.setVisible(true);
             menuUsuario.setVisible(false);
@@ -220,7 +226,20 @@ public class ControllerTelasEstadios {
     }
 
 
-
+    @FXML
+    private void irParaUsuarios(MouseEvent e){
+        SceneController.mudaDeTela( "/designAndScreens/telasAdministrador/usuarios.fxml");
+    }
+    @FXML
+    private void irParaArbitros(MouseEvent e){
+        Usuario u = Sessao.getInstancia().getUsuarioLogado();
+        if(u.getFuncao() != Funcao.ARBITRO){
+            SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroAdm.fxml");
+        }
+        else{
+            SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroNormal.fxml");
+        }
+    }
 
 
 

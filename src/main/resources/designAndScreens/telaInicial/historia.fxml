@@ -61,7 +61,7 @@
                         <Font name="Oswald Medium" size="30.0" />
                      </font>
                   </Text>
-                  <Text fx:id="botaoArbitro" fill="WHITE" layoutX="1107.0" layoutY="63.0" onMouseClicked="#irParaArbitros" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER" visible="false">
+                  <Text fx:id="botaoArbitro" fill="WHITE" layoutX="1107.0" layoutY="63.0" onMouseClicked="#irParaArbitros" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER" >
                      <font>
                         <Font name="Oswald Medium" size="30.0" />
                      </font>
