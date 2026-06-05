@@ -2,6 +2,8 @@
 
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -12,8 +14,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
 <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1440.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerClassificacao">
    <content>
       <AnchorPane prefHeight="2300.0" prefWidth="1424.0" styleClass="white" stylesheets="@../../css/style.css">
@@ -55,7 +55,7 @@
                         <Font name="Oswald Medium" size="30.0" />
                      </font>
                   </Text>
-                  <Text fx:id="botaoArbitro" fill="WHITE" layoutX="1107.0" layoutY="63.0" onMouseClicked="#irParaArbitros" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER" >
+                  <Text fx:id="botaoArbitro" fill="WHITE" layoutX="963.0" layoutY="64.0" onMouseClicked="#irParaArbitros" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER">
                      <font>
                         <Font name="Oswald Medium" size="30.0" />
                      </font>
@@ -65,12 +65,12 @@
                         <Font name="Oswald Medium" size="12.0" />
                      </font>
                   </Button>
-                  <MenuButton fx:id="menuUsuario" layoutX="1297.0" layoutY="27.0" mnemonicParsing="false" maxWidth="150" prefWidth="150" visible="false" styleClass="white_button" stylesheets="@../../css/style.css">
+                  <MenuButton fx:id="menuUsuario" layoutX="1297.0" layoutY="27.0" maxWidth="150" mnemonicParsing="false" prefWidth="150" styleClass="white_button" stylesheets="@../../css/style.css" visible="false">
                      <font>
                         <Font name="Oswald Medium" size="12.0" />
                      </font>
                      <items>
-                        <MenuItem text="Logout" onAction="#onLogout" />
+                        <MenuItem onAction="#onLogout" text="Logout" />
                         <MenuItem text="Cancelar" />
                      </items>
                   </MenuButton>

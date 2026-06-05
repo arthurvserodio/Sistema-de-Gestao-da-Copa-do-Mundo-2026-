@@ -68,12 +68,12 @@
                 <Font name="Oswald Medium" size="30.0" />
             </font>
         </Text>
-        <Text fill="WHITE" layoutX="602.0" layoutY="64.0" onMouseClicked="#irParaClassificacao" strokeType="OUTSIDE" strokeWidth="0.0" text="Classificação" textAlignment="CENTER">
+        <Text fill="WHITE" layoutX="605.0" layoutY="65.0" onMouseClicked="#irParaClassificacao" strokeType="OUTSIDE" strokeWidth="0.0" text="Classificação" textAlignment="CENTER">
             <font>
                 <Font name="Oswald Medium" size="30.0" />
             </font>
         </Text>
-        <Text fill="WHITE" layoutX="807.0" layoutY="64.0" onMouseClicked="#irParaEstadios" strokeType="OUTSIDE" strokeWidth="0.0" text="Estádios" textAlignment="CENTER">
+        <Text fill="WHITE" layoutX="799.0" layoutY="65.0" onMouseClicked="#irParaEstadios" strokeType="OUTSIDE" strokeWidth="0.0" text="Estádios" textAlignment="CENTER" wrappingWidth="109.47002410888672">
             <font>
                 <Font name="Oswald Medium" size="30.0" />
             </font>
@@ -165,7 +165,7 @@
             <Image url="@../../images/ChatGPT%20Image%209%20de%20mai.%20de%202026,%2018_28_43.png" />
          </image>
       </ImageView>
-      <Text fill="WHITE" layoutX="1078.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER" underline="true">
+      <Text fill="WHITE" layoutX="951.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER" underline="true">
          <font>
             <Font name="Oswald Medium" size="30.0" />
          </font>

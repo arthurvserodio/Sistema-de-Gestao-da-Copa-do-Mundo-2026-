@@ -57,7 +57,7 @@
                 <Font name="Oswald Medium" size="30.0" />
             </font>
         </Text>
-        <Text fx:id="botaoArbitro" fill="WHITE" layoutX="1107.0" layoutY="63.0" onMouseClicked="#irParaArbitros" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER" >
+        <Text fx:id="botaoArbitro" fill="WHITE" layoutX="1107.0" layoutY="63.0" onMouseClicked="#irParaArbitros" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER">
             <font>
                 <Font name="Oswald Medium" size="30.0" />
             </font>
@@ -90,7 +90,7 @@
                 </TableView>
             </children>
         </VBox>
-        <TextField fx:id="txtbuscar" layoutX="601.0" layoutY="591.0" prefHeight="32.0" prefWidth="229.0" styleClass="textfield_equipes" stylesheets="@../../css/style.css" />
+        <TextField fx:id="txtBusca" layoutX="601.0" layoutY="591.0" prefHeight="32.0" prefWidth="229.0" styleClass="textfield_equipes" stylesheets="@../../css/style.css" />
         <ImageView fitHeight="71.0" fitWidth="108.0" layoutX="570.0" layoutY="575.0" onMouseClicked="#handlePesquisar" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../images/ChatGPT%20Image%209%20de%20mai.%20de%202026,%2018_28_43.png" />

@@ -90,6 +90,19 @@ public class ControllerArbitragem {
             if (nome.isEmpty() || str.isEmpty() || nacionalidade.isEmpty()) {
                 throw new IllegalArgumentException("Todos os campos devem ser preenchidos.");
             }
+            for(char c : nacionalidade.toCharArray() ){
+                if(Character.isDigit(c)){
+                    throw new IllegalArgumentException("Nacionalidade deve conter apenas letras.");
+                }
+
+            }
+
+            for(char c : nome.toCharArray() ){
+                if(Character.isDigit(c)){
+                    throw new IllegalArgumentException("Nome deve conter apenas letras.");
+                }
+
+            }
 
             int experiencia;
             try {
