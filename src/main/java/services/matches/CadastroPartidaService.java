@@ -1,5 +1,6 @@
 package services.matches;
 
+import exceptions.IllegalIntervaloEntrePartidaException;
 import javafx.scene.control.ComboBox;
 import matches.Partida;
 import nationsAndPlayers.nations.Selecoes;
@@ -8,7 +9,9 @@ import users.Arbitro;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.chrono.ChronoLocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 public class CadastroPartidaService {
@@ -49,9 +52,20 @@ public class CadastroPartidaService {
             boolean mesmaOrdem= p.getSelecaoCasa().equals(s1) && p.getSelecaoVisitante().equals(s2); //Verifica se o usuario colocou as seleções na mesma Ordem
             boolean inverteOrdem= p.getSelecaoCasa().equals(s2) && p.getSelecaoVisitante().equals(s1); //Verifica se colocou as seleções em ordem invertida
             if(mesmaOrdem || inverteOrdem){
-                return true;
+                return true; //A partida já existe e não podera ser cadastrada outra
             }
         }
-        return false;
+        return false; //A partida não existe, pode cadastrar
+    }
+    //Verifica se o cadastro respeita o intervalo de 72H para uma nova partida de uma seleção estabelecido pela FIFA
+    public void validarIntervalo(Selecoes s, LocalDate novaData, List<Partida> jogos) throws IllegalIntervaloEntrePartidaException {
+        for(Partida p : jogos){
+            if(p.getSelecaoCasa().equals(s) || p.getSelecaoVisitante().equals(s)){
+                long dias = Math.abs(ChronoUnit.DAYS.between(p.getData(),novaData));
+                if(dias<3){
+                    throw new IllegalIntervaloEntrePartidaException(s.getNome() + " jogou no dia " + p.getData() + ". O jogo não poderá ser realizado na data: " + novaData + ", pois a seleção precisa de 3 dias de descanso");
+                }
+            }
+        }
     }
 }

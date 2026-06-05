@@ -1,10 +1,12 @@
 package Enums;
 
 public enum Fase {
-    FASEDEGRUPOS,
+    NAOCOMECO,
+    FASE_DE_GRUPOS,
     PLAYOFFS,
     OITAVAS,
     QUARTAS,
     SEMIFINAL,
-    FINAL
+    FINAL,
+    FINALIZADO
 }

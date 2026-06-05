@@ -1,10 +1,13 @@
 package controller;
 
+import Enums.Fase;
 import builder.ArbitroBuilder;
 import builder.EstadioBuilder;
 import builder.SelecaoBuilder;
+import exceptions.IllegalIntervaloEntrePartidaException;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import matches.EstadoDaCopa;
 import matches.Partida;
 import nationsAndPlayers.nations.Selecoes;
 import services.matches.CadastroPartidaService;
@@ -12,6 +15,7 @@ import services.matches.CarregaArquivoService;
 import stadiumAndRefeering.Estadio;
 import users.Arbitro;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
@@ -23,6 +27,7 @@ public class ControllerCadastroPartida {
     private List<Estadio> ListEstadio = new ArrayList<>();
     private List<Partida> ListPartida = new ArrayList<>();
     private CadastroPartidaService partidaService = new CadastroPartidaService();
+    private EstadoDaCopa faseAtual; //Verificação de qual fase está a copa
     @FXML
     private ComboBox<Selecoes> choiceSelecao1;
 
@@ -52,6 +57,12 @@ public class ControllerCadastroPartida {
 
     @FXML
     public void initialize() {
+        //ATENÇÃO, TENHO QUE RETIRAR ISSO MAIS TARDE
+        faseAtual = new EstadoDaCopa(
+                Fase.OITAVAS,
+                LocalDate.of(2026,6,11),
+                LocalDate.of(2026,6,27)
+        );
         //Desabilita os campos choiceArbitro e choiceEstadio até que o usuario coloque uma data
         choiceArbitro.setDisable(true);
         choiceEstadio.setDisable(true);
@@ -63,20 +74,36 @@ public class ControllerCadastroPartida {
         ListEstadio=CarregaArquivoService.carregaArquivo("/database/Estadios.txt", parte->new EstadioBuilder().nome(parte[0]).build());
         //Colocando No ChoiceBox
         choiceSelecao1.getItems().addAll(ListSelecoes);
-        choiceSelecao2.getItems().addAll(ListSelecoes);
         choiceArbitro.getItems().addAll(ListArbitros);
-        choiceFase.getItems().addAll("Fase De Grupos", "Playoffs","Oitavas-de-finais","Quartas-de-finais","Semi-final","Final");
-        choiceGrupo.getItems().addAll("Fase De Grupos", "Playoffs","Oitavas-de-finais","Quartas-de-finais","Semi-final","Final");
+        choiceFase.getItems().add(faseAtual.toString());
+        if(faseAtual.getFaseAtual()==Fase.FASE_DE_GRUPOS){
+            choiceGrupo.getItems().addAll("A", "B","C","D","E","F","G","H","I","J","K","L");
+        }
+        else{choiceGrupo.setDisable(true);}
         //Atualiza a ComboBox das seleções caso esteja na Fase De Grupos
         //Qualquer mudança feita na comboBox 1
         choiceSelecao1.getSelectionModel().selectedItemProperty().addListener((obs, antigo, novo) -> {
-            if(choiceSelecao2.getValue()==null){
+            choiceSelecao2.setValue(null);
+            choiceSelecao2.getSelectionModel().clearSelection();
+            if(choiceSelecao2.getValue()==null && faseAtual.getFaseAtual()==Fase.FASE_DE_GRUPOS){
+                //Só vai deixar o grupo da seleção escolhida na combobox de Grupo
+                Selecoes escolhida= choiceSelecao1.getValue();
+                choiceGrupo.getItems().clear();
+                choiceGrupo.getItems().add(escolhida.getGrupo());
+                //Atualiza a outro combobox para ser as seleções presentes no mesmo grupo
                 partidaService.atualizarComboBox(choiceSelecao1, choiceSelecao2, ListSelecoes);
-            }});
-        //Qualquer mudança feita na comboBox 2
-        choiceSelecao2.getSelectionModel().selectedItemProperty().addListener((obs, antigo, novo) -> {
-            if(choiceSelecao1.getValue()==null){
-                partidaService.atualizarComboBox(choiceSelecao1, choiceSelecao2, ListSelecoes);
+            }
+        });
+        //Impede que o usuário escolha uma data fora do escopo da fase atual
+        Data.setDayCellFactory(dp -> new DateCell() {
+            @Override
+            public void updateItem(LocalDate item, boolean empty) {
+                super.updateItem(item, empty);
+                if (empty) {
+                    return;
+                }
+                setDisable(
+                        item.isBefore(faseAtual.getInicio()) || item.isAfter(faseAtual.getFim()));
             }});
         //Toda vez que for escrito alguma coisa no text ele chama a função de verificar os estadios disponiveis
         Data.valueProperty().addListener((obs, antigo, novo) -> {
@@ -100,7 +127,7 @@ public class ControllerCadastroPartida {
         //Verifica o horário da partida
         salvarPartida.setOnAction(s->{
             //Verificar se tem algum campo vazio
-            if(choiceSelecao1.getValue()==null || choiceSelecao2.getValue()==null || choiceArbitro.getValue()==null || choiceEstadio.getValue()==null || choiceFase.getValue()==null || choiceGrupo.getValue()==null || Data.getValue()==null || horario.getText().isBlank()){
+            if(choiceSelecao1.getValue()==null || choiceSelecao2.getValue()==null || choiceArbitro.getValue()==null || choiceEstadio.getValue()==null || choiceFase.getValue()==null || (choiceGrupo.getValue()==null && faseAtual.getFaseAtual()==Fase.FASE_DE_GRUPOS) || Data.getValue()==null || horario.getText().isBlank()){
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Atenção");
                 alert.setHeaderText(null);
@@ -126,6 +153,19 @@ public class ControllerCadastroPartida {
                 alert.setHeaderText(null);
                 alert.setContentText("Horário inválido! Use HH:mm");
                 alert.showAndWait();
+                return;
+            }
+            //Verifica se as seleções selecionada podem jogar naquela data
+            try {
+                partidaService.validarIntervalo(choiceSelecao1.getValue(),Data.getValue(),ListPartida);
+                partidaService.validarIntervalo(choiceSelecao2.getValue(),Data.getValue(),ListPartida);
+            } catch (IllegalIntervaloEntrePartidaException e) {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Atenção");
+                alert.setHeaderText(null);
+                alert.setContentText(e.getMessage());
+                alert.showAndWait();
+                return;
             }
         });
     }
