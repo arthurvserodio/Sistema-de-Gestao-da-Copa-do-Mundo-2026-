@@ -70,7 +70,7 @@ public class ControllerCadastroPartida {
         choiceEstadio.setPromptText("Escolha uma data primeiro");
         //Lendo dos arquivos para obter as Seleções, Árbitros e Estádios
         ListSelecoes = CarregaArquivoService.carregaArquivo("/database/SelecoesNaCopa.txt", parte->new SelecaoBuilder().nome(parte[0]).grupo(parte[1]).build());
-        ListArbitros = CarregaArquivoService.carregaArquivo("/database/arbitrosNaCopa.txt", parte->new ArbitroBuilder().nome(parte[0]).build());
+        ListArbitros = CarregaArquivoService.carregaArquivo("/database/arbitrosNaCopa.txt", parte->new ArbitroBuilder().nome(parte[0]).pais(parte[1]).build());
         ListEstadio=CarregaArquivoService.carregaArquivo("/database/Estadios.txt", parte->new EstadioBuilder().nome(parte[0]).build());
         //Colocando No ChoiceBox
         choiceSelecao1.getItems().addAll(ListSelecoes);
@@ -123,7 +123,7 @@ public class ControllerCadastroPartida {
             choiceArbitro.setPromptText("Selecione um árbitro");
             choiceEstadio.setPromptText("Selecione um estádio");
             partidaService.estadiosDisponivel(ListEstadio, novo,choiceEstadio);
-            partidaService.arbitroDisponivel(ListArbitros,novo,choiceArbitro);});
+            partidaService.arbitroDisponivel(ListArbitros,novo,choiceArbitro,choiceSelecao1.getValue().getNome(),choiceSelecao2.getValue().getNome());});
         //Verifica o horário da partida
         salvarPartida.setOnAction(s->{
             //Verificar se tem algum campo vazio
@@ -135,6 +135,8 @@ public class ControllerCadastroPartida {
                 alert.showAndWait();
                 return;
             }
+
+
             //Verifica se a Partida já não foi criada
             if(partidaService.partidaJaExiste(choiceSelecao1.getValue(),choiceSelecao2.getValue(),ListPartida)){
                 Alert alert = new Alert(Alert.AlertType.WARNING);

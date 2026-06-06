@@ -70,4 +70,7 @@ public class Partida {
     public Selecoes getSelecaoVisitante() {
         return selecaoVisitante;
     }
+
+
+
 }

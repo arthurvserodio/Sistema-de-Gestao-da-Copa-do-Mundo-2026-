@@ -5,6 +5,7 @@ import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
@@ -47,41 +48,10 @@ public class ControllerDesignacaoArbitro {
             menuUsuario.setVisible(false);
         }
 
-    }
 
+        colArbitros.setCellValueFactory(new PropertyValueFactory<>("nomeArbitro"));
+        colPartida.setCellValueFactory(new PropertyValueFactory<>("nomePartida"));
 
-
-    // Mensagens de erro e sucesso :
-    private void mostrarErro(String str) {
-        labelMensagem.setText(str);
-        labelMensagem.setStyle("-fx-text-fill: #d32f2f; -fx-font-size: 14px; -fx-font-weight: bold;");
-        labelMensagem.setOpacity(1.0);
-
-        tornarMensagemTemporaria();
-    }
-
-    private void mostrarSucesso(String str) {
-        labelMensagem.setText(str);
-        labelMensagem.setStyle("-fx-text-fill: #388e3c; -fx-font-size: 14px; -fx-font-weight: bold;");
-        labelMensagem.setOpacity(1.0);
-
-        tornarMensagemTemporaria();
-    }
-
-    /// Funçao para mensagem aparecer e sumir da tela
-    private void tornarMensagemTemporaria() {
-
-        FadeTransition fade = new FadeTransition(Duration.seconds(1.0), labelMensagem);
-        fade.setFromValue(1.0); // Totalmente visível
-        fade.setToValue(0.0);   // Totalmente invisível
-
-
-        fade.setDelay(Duration.seconds(2.0));
-
-
-        fade.setOnFinished(event -> labelMensagem.setText(""));
-
-        fade.play(); // Inicia o temporizador/efeito
     }
 
 
