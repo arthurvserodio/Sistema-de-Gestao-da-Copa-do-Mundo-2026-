@@ -165,7 +165,7 @@
             <Image url="@../../images/ChatGPT%20Image%209%20de%20mai.%20de%202026,%2018_28_43.png" />
          </image>
       </ImageView>
-      <Text fill="WHITE" layoutX="951.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER" underline="true">
+      <Text fill="WHITE" layoutX="1107.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER" underline="true">
          <font>
             <Font name="Oswald Medium" size="30.0" />
          </font>

@@ -33,6 +33,12 @@ public class ControllerUsuarios {
     @FXML private TextField pais;
     @FXML private PasswordField senha;
     @FXML private PasswordField senha2;
+    @FXML private TextField nomeEdit;
+    @FXML private TextField funcaoEdit;
+    @FXML private TextField statusEdit;
+    @FXML private TextField paisEdit;
+    @FXML private PasswordField senhaEdit;
+    @FXML private PasswordField senha2Edit;
     @FXML private Button botaoLogin;
     @FXML private MenuButton menuUsuario;
     @FXML private CheckMenuItem checkNome;
@@ -40,6 +46,7 @@ public class ControllerUsuarios {
     @FXML private CheckMenuItem checkPais;
     @FXML private CheckMenuItem checkStatus;
     @FXML private TextField campoPesquisa;
+    @FXML private MenuButton menuEditar;
 
 
 
@@ -73,6 +80,36 @@ public class ControllerUsuarios {
         checkPais.selectedProperty().addListener((obs, antigo, novo) -> filtrar());
         checkStatus.selectedProperty().addListener((obs, antigo, novo) -> filtrar());
 
+        //detecta quando o menuEditar for aberto pra ja iniciar os fields com o valor do selecionado
+        menuEditar.showingProperty().addListener((obs, antigo, novo) -> {
+            if (novo) {
+                try{
+                    Usuario selecionado = tabelaUsuarios.getSelectionModel().getSelectedItem();
+
+                    if(selecionado==null){
+                        throw new NenhumUsuarioSelecionadoException("Nenhum usuário foi selecionado");
+                    }
+
+                    //inicializa os fields com os dados do usuario selecionado
+
+                    nomeEdit.setText(selecionado.getNome());
+                    funcaoEdit.setText(selecionado.getFuncao().toString());
+                    paisEdit.setText(selecionado.getPais());
+                    statusEdit.setText(selecionado.getStatus());
+                    senhaEdit.setText(selecionado.getSenha());
+                    senha2Edit.setText(selecionado.getSenha());
+
+                }catch (NenhumUsuarioSelecionadoException e) {
+                    Alert alert = new Alert(Alert.AlertType.WARNING);
+                    alert.setTitle("Atenção");
+                    alert.setHeaderText(null);
+                    alert.setContentText(e.getMessage());
+                    alert.showAndWait();
+                    menuEditar.hide(); //nao abre o menu se nao tiver selecionado
+                }
+
+            }
+        });
 
     }
 
@@ -159,6 +196,7 @@ public class ControllerUsuarios {
         try{
             UsuarioService.adicionarUsuario(nome_s, funcao_s, status_s, pais_s, senha_s, senha2_s);
             mostrarSucesso("Usuário cadastrado!");
+            tabelaUsuarios.setItems(UsuarioFile.getInstancia().listarTodos());
         }
         catch(CamposVaziosException a ){
             mostrarErro("Preencha todos os campos");
@@ -191,6 +229,8 @@ public class ControllerUsuarios {
             }
 
             UsuarioService.removerUsuario(selecionado);
+            campoPesquisa.clear();
+            tabelaUsuarios.setItems(UsuarioFile.getInstancia().listarTodos());
 
         } catch (NenhumUsuarioSelecionadoException e) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -208,6 +248,45 @@ public class ControllerUsuarios {
         }
     }
 
+    @FXML
+    private void editarUsuario(){
+
+        String nomeEdit_s = nomeEdit.getText().trim();
+        String funcaoEdit_s = funcaoEdit.getText().trim();
+        String statusEdit_s = statusEdit.getText().trim();
+        String paisEdit_s = paisEdit.getText().trim();
+        String senhaEdit_s = senhaEdit.getText().trim();
+        String senha2Edit_s = senha2Edit.getText().trim();
+
+        try{
+            //so vai clicar aqui se tiver selecionado usuario
+            Usuario selecionado = tabelaUsuarios.getSelectionModel().getSelectedItem();
+            UsuarioService.editarUsuario(selecionado,nomeEdit_s, funcaoEdit_s, statusEdit_s, paisEdit_s, senhaEdit_s, senha2Edit_s);
+            mostrarSucessoEdit("Usuário editado!");
+            campoPesquisa.clear();
+            tabelaUsuarios.refresh(); //constroi a tebela de novo a partir dos objetos
+        } catch(CamposVaziosException a ){
+            mostrarErroEdit("Preencha todos os campos");
+        }
+        catch(UsuarioExisteException a){
+            mostrarErroEdit("O usuario inserido já existe");
+        }
+        catch(SenhasDiferemException a){
+            mostrarErroEdit("As senhas diferem");
+        }
+        catch(FuncaoInvalidaException a){
+            mostrarErroEdit("A função é inexistente");
+
+        }
+        catch(StatusInvalidoException a){
+            mostrarErroEdit("O status é inválido");
+        }
+
+
+
+    }
+
+
 
     @FXML
     private void onLogout(ActionEvent e){
@@ -218,6 +297,9 @@ public class ControllerUsuarios {
     @FXML
     private Label labelMensagem;
 
+    @FXML
+    private Label labelMensagemEdit;
+
     private void mostrarErro(String mensagem) {
         labelMensagem.setStyle("-fx-font-size: 13px; -fx-text-fill: #cc0000;");
         labelMensagem.setText(mensagem);
@@ -226,6 +308,16 @@ public class ControllerUsuarios {
     private void mostrarSucesso(String mensagem) {
         labelMensagem.setStyle("-fx-font-size: 13px; -fx-text-fill: #1a7a1a;");
         labelMensagem.setText(mensagem);
+    }
+
+    private void mostrarErroEdit(String mensagem) {
+        labelMensagemEdit.setStyle("-fx-font-size: 13px; -fx-text-fill: #cc0000;");
+        labelMensagemEdit.setText(mensagem);
+    }
+
+    private void mostrarSucessoEdit(String mensagem) {
+        labelMensagemEdit.setStyle("-fx-font-size: 13px; -fx-text-fill: #1a7a1a;");
+        labelMensagemEdit.setText(mensagem);
     }
 
 }

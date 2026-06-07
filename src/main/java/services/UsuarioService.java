@@ -45,5 +45,39 @@ public class UsuarioService {
         UsuarioFile.getInstancia().removerCSV(u);
     }
 
+    public static void editarUsuario(Usuario u, String nome, String funcao, String status, String pais, String senha, String senha2) throws CamposVaziosException, UsuarioExisteException, SenhasDiferemException, FuncaoInvalidaException, StatusInvalidoException{
+        if(nome.isEmpty() || funcao.isEmpty() || status.isEmpty() || pais.isEmpty() || senha.isEmpty() || senha2.isEmpty()){
+            throw new CamposVaziosException("Preencha todos os campos");
+        }
+
+        for (Usuario existente : UsuarioFile.getInstancia().listarTodos()) {
+            if (existente.getNome().equals(nome) && existente!=u) { //nome so pode ser iual se for o dele mesmo
+                throw new UsuarioExisteException("Usuário com esse nome já existe.");
+            }
+        }
+
+        if(!senha.equals(senha2)){
+            throw new SenhasDiferemException("As senhas são diferentes");
+        }
+
+        if(!funcao.equalsIgnoreCase("ORGANIZADOR") && !funcao.equalsIgnoreCase("ADMINISTRADOR") && !funcao.equalsIgnoreCase("ARBITRO")){
+            throw new FuncaoInvalidaException("Funcao invalida");
+        }
+
+        if(!status.equalsIgnoreCase("ATIVO") && !status.equalsIgnoreCase("INATIVO")){
+            throw new StatusInvalidoException("Status invalido");
+        }
+
+        //altera dados todos
+        u.setNome(nome);
+        u.setPais(pais);
+        u.setStatus(status);
+        u.setSenha(senha);
+        u.setFuncao(Funcao.valueOf(funcao));
+
+        //altera no arquivo
+        UsuarioFile.getInstancia().editarCSV();
+    }
+
 
 }

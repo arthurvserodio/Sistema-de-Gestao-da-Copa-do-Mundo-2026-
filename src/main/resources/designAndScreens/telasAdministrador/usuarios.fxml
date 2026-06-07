@@ -151,6 +151,47 @@
                 </CustomMenuItem>
             </items>
         </MenuButton>
+        <MenuButton fx:id="menuEditar" layoutX="724.0" layoutY="650.0" minHeight="18.0" minWidth="45.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="156.0" styleClass="button-editar" text="Editar">
+            <font>
+                <Font name="Oswald Medium" size="12.0" />
+            </font>
+            <stylesheets>
+                <URL value="@../../css/style.css" />
+                <URL value="@../../css/style3.css" />
+            </stylesheets>
+            <items>
+                <CustomMenuItem hideOnClick="false">
+                    <content>
+                        <VBox spacing="10.0" prefWidth="250" style="-fx-padding: 15; -fx-background-color: white;" >
+                            <Label text="Edição de Usuário" style="-fx-font-size: 14; -fx-font-weight: bold;"/>
+
+                            <Label text="Nome" />
+                            <TextField fx:id="nomeEdit" promptText="Nome" />
+
+                            <Label text="Função (Administrador, Organizador, Arbitro)" wrapText="true" maxWidth="220" />
+                            <TextField fx:id="funcaoEdit" promptText="Função" />
+
+                            <Label text="Status (Ativo, Inativo)" />
+                            <TextField fx:id="statusEdit" promptText="Status"  />
+
+                            <Label text="País" />
+                            <TextField fx:id="paisEdit" promptText="País" />
+
+                            <Label text="Senha" />
+                            <PasswordField fx:id="senhaEdit" promptText="Senha" />
+
+                            <Label text="Repetir Senha" />
+                            <PasswordField fx:id="senha2Edit" promptText="Repetir senha" />
+
+                            <!-- Mensagem de erro/feedback -->
+                            <Label fx:id="labelMensagemEdit" wrapText="true" style="-fx-font-size: 13px; -fx-text-fill: #cc0000;" text="" />
+
+                            <Button mnemonicParsing="false" onAction="#editarUsuario" text="Editar" styleClass="button-editar" maxWidth="Infinity"/>
+                        </VBox>
+                    </content>
+                </CustomMenuItem>
+            </items>
+        </MenuButton>
     </children>
 
 </AnchorPane>
