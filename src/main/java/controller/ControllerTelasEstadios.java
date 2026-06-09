@@ -80,8 +80,24 @@ public class ControllerTelasEstadios {
             String local = txtLocal.getText().trim();
             String capacidadeStr = txtCapacidade.getText().trim();
 
+
+
             if (nome.isEmpty() || local.isEmpty() || capacidadeStr.isEmpty()) {
                 throw new IllegalArgumentException("Todos os campos devem ser preenchidos.");
+            };
+
+            for(char c : local.toCharArray() ){
+                if(Character.isDigit(c)){
+                    throw new IllegalArgumentException("Local  deve conter apenas letras.");
+                }
+
+            }
+
+            for(char c : nome.toCharArray() ){
+                if(Character.isDigit(c)){
+                    throw new IllegalArgumentException("Nome deve conter apenas letras.");
+                }
+
             }
 
             int capacidade;
@@ -139,7 +155,7 @@ public class ControllerTelasEstadios {
 
         List<Estadio> resultadoFiltrado = estadioFile.getListaEstadios().stream()
                 .filter(estadio -> estadio.getNome().toLowerCase().contains(termo) ||
-                        estadio.getLocal().toLowerCase().contains(termo))
+                        estadio.getLocal().toLowerCase().contains(termo) || String.valueOf(estadio.getCapacidade()).equals(termo))
                 .collect(Collectors.toList());
 
         tabelaEstadios.setItems(FXCollections.observableArrayList(resultadoFiltrado));

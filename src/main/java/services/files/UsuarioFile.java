@@ -95,6 +95,23 @@ public class UsuarioFile {
     }
 
     public void editarCSV(){
+        // reescreve o arquivo inteiro com o usuario editado
+        try {
+            java.net.URL url = getClass().getResource("/database/usuarios.csv");
+            java.io.File arquivo = new java.io.File(url.toURI());
 
+            try (java.io.FileWriter fw = new java.io.FileWriter(arquivo, false); // false apaga e reescreve tudo
+                 java.io.BufferedWriter bw = new java.io.BufferedWriter(fw)) {
+                for (int i = 0; i < cache.size(); i++) {
+                    Usuario atual = cache.get(i);
+                    bw.write(atual.getNome() + "," + atual.getFuncao() + "," + atual.getPais() + "," + atual.getStatus() + "," + atual.getSenha());
+                    if (i < cache.size() - 1) {
+                        bw.newLine();
+                    }
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

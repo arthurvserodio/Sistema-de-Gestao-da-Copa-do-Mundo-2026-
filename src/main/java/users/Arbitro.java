@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Arbitro extends Usuario {
     private int experiencia;
-    private List<Partida> apitando=new ArrayList<>(); //Usado para armazenar as partidas que um árbitro irá apitar
+    private List<Partida> apitando= new ArrayList<>(); //Usado para armazenar as partidas que um árbitro irá apitar
     public Arbitro(String nome, String funcao, String pais, String status, String senha, int experiencia) {
         super(nome, funcao, pais, status, senha);
         this.experiencia = experiencia;

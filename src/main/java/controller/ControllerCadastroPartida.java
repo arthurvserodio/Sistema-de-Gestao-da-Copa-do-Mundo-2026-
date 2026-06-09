@@ -76,7 +76,7 @@ public class ControllerCadastroPartida {
         choiceEstadio.setPromptText("Escolha uma data primeiro");
         //Lendo dos arquivos para obter as Seleções, Árbitros e Estádios
         ListSelecoes = CarregaArquivoService.carregaArquivo("/database/SelecoesNaCopa.txt", parte->new SelecaoBuilder().nome(parte[0]).grupo(parte[1]).build());
-        ListArbitros = CarregaArquivoService.carregaArquivo("/database/arbitrosNaCopa.txt", parte->new ArbitroBuilder().nome(parte[0]).build());
+        ListArbitros = CarregaArquivoService.carregaArquivo("/database/arbitrosNaCopa.txt", parte->new ArbitroBuilder().nome(parte[0]).pais(parte[1]).build());
         ListEstadio=CarregaArquivoService.carregaArquivo("/database/Estadios.txt", parte->new EstadioBuilder().nome(parte[0]).build());
         if(faseAtual.getFaseAtual()==Fase.FASE_DE_GRUPOS){
             ListPartida = CarregaArquivoService.carregaArquivo("/database/partida_grupo.txt",parte->new PartidaGrupoBuilder().id(Integer.parseInt(parte[0])).data(LocalDate.parse(parte[2])).horario(parte[3]).estadio(CadastroPartidaService.buscaPeloNome(ListEstadio,Estadio::getNome,parte[4])).arbitro(CadastroPartidaService.buscaPeloNome(ListArbitros,Arbitro::getNome,parte[5])).grupo(parte[6]).Casa(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[7])).Visitante(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[8])).fase(Fase.valueOf(parte[9])).status(StatusPartida.valueOf(parte[10])).build());
@@ -142,7 +142,7 @@ public class ControllerCadastroPartida {
             choiceArbitro.setPromptText("Selecione um árbitro");
             choiceEstadio.setPromptText("Selecione um estádio");
             partidaService.estadiosDisponivel(ListEstadio, novo,choiceEstadio);
-            partidaService.arbitroDisponivel(ListArbitros,novo,choiceArbitro);});
+            partidaService.arbitroDisponivel(ListArbitros,novo,choiceArbitro,choiceSelecao1.getValue().getNome(),choiceSelecao2.getValue().getNome());});
         //Verifica o horário da partida
         salvarPartida.setOnAction(s->{
             //Verificar se tem algum campo vazio
@@ -154,6 +154,8 @@ public class ControllerCadastroPartida {
                 alert.showAndWait();
                 return;
             }
+
+
             //Verifica se a Partida já não foi criada
             if(partidaService.partidaJaExiste(choiceSelecao1.getValue(),choiceSelecao2.getValue(),ListPartida)){
                 Alert alert = new Alert(Alert.AlertType.WARNING);

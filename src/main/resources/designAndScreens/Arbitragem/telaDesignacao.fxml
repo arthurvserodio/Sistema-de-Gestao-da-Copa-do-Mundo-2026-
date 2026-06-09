@@ -11,17 +11,55 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane fx:id="painelPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1440.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerDesignacaoArbitro">
     <children>
-      <ImageView fitHeight="568.0" fitWidth="792.0" layoutX="-5.0" layoutY="243.0" pickOnBounds="true">
+      <ImageView fitHeight="582.0" fitWidth="810.0" layoutX="-5.0" layoutY="229.0" pickOnBounds="true">
          <image>
             <Image url="@../../images/Arbitragem/imagem2Arbitragem.png" />
          </image>
       </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="717.0" layoutX="-11.0" layoutY="95.0" strokeType="INSIDE" width="1453.0">
+         <stroke>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.5368421077728271" green="0.5129824280738831" blue="0.5129824280738831" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </stroke>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7008000016212463" green="0.7173466682434082" blue="0.7300000190734863" opacity="0.800000011920929" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9740740656852722" green="0.9874691367149353" blue="1.0" opacity="0.4000000059604645" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
         <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="#ffffff6d" strokeType="INSIDE" width="1440.0" />
         <StackPane layoutX="91.0" layoutY="59.0" prefHeight="150.0" prefWidth="125.0" styleClass="logo_copa26_arredondado" stylesheets="@../../css/style.css">
             <children>
@@ -71,7 +109,7 @@
                 <MenuItem text="Cancelar" />
             </items>
         </MenuButton>
-        <TableView fx:id="tabela" layoutX="767.0" layoutY="239.0" prefHeight="434.0" prefWidth="634.0" stylesheets="@../../css/style2.css">
+        <TableView fx:id="tabela" layoutX="789.0" layoutY="230.0" prefHeight="434.0" prefWidth="634.0" stylesheets="@../../css/style2.css">
             <columns>
                 <TableColumn prefWidth="75.0" text="Arbitro" />
                 <TableColumn prefWidth="75.0" text="Partida" />
@@ -90,7 +128,7 @@
         <Label layoutX="807.0" layoutY="701.0" prefHeight="75.0" prefWidth="279.0" text="Label" />
       <StackPane layoutX="928.0" layoutY="195.0" prefHeight="27.0" prefWidth="36.0" styleClass="lupa" stylesheets="@../../css/style3.css">
          <children>
-              <ImageView fitHeight="18.0" fitWidth="33.0" onMouseClicked="#handlePesquisar" pickOnBounds="true">
+              <ImageView fitHeight="16.0" fitWidth="27.0" onMouseClicked="#handlePesquisar" pickOnBounds="true">
                <image>
                   <Image url="@../../images/Arbitragem/img.jpg" />
                </image>

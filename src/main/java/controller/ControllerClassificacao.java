@@ -39,7 +39,6 @@ public class ControllerClassificacao {
     }
 
     @FXML
-
     private void irParaEstadios(MouseEvent e) {
         Usuario u = Sessao.getInstancia().getUsuarioLogado();
         if(u.getFuncao()!= Funcao.ARBITRO){

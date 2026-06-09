@@ -60,11 +60,14 @@ public class CadastroPartidaService {
         }
     }
     //Pega a lista com todos os arbitros cadastrados e recebe a data para verificar disponibilidade
-    public void arbitroDisponivel(List<Arbitro> arbitros, LocalDate dataPartida, ComboBox<Arbitro> disponiveis){
+    public void arbitroDisponivel(List<Arbitro> arbitros, LocalDate dataPartida, ComboBox<Arbitro> disponiveis,String paisSelecao1,String paisSelecao2){
         disponiveis.getItems().clear();
         for (Arbitro a : arbitros){
             //Se ao chamar o metodo estaDisponivel do arbitro e estiver true, então tem disponibilidade
-            if(a.estaDisponivel(dataPartida)){
+            boolean estaDisponivel = a.estaDisponivel(dataPartida);
+            boolean neutro = !a.getPais().equalsIgnoreCase(paisSelecao1) &&
+                    !a.getPais().equalsIgnoreCase(paisSelecao2);
+            if (estaDisponivel && neutro) {
                 disponiveis.getItems().add(a);
             }
         }

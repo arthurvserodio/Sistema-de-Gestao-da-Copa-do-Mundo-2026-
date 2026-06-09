@@ -135,4 +135,7 @@ public class Partida {
     public void setEscalacaoVisitante(Escalacao escalacaoVisitante) {
         this.escalacaoVisitante = escalacaoVisitante;
     }
+
+
+
 }
