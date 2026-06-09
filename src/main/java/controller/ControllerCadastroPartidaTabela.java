@@ -300,6 +300,8 @@ public class ControllerCadastroPartidaTabela {
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("/designAndScreens/telasPartidas/estatisticas.fxml"));
                     Parent root = loader.load();
                     Stage stage = new Stage();
+                    ControllerCadastroEstatisticas controller= loader.getController();
+                    controller.setPartida(partida);
                     stage.initStyle(StageStyle.TRANSPARENT);
                     stage.initModality(Modality.APPLICATION_MODAL);
                     stage.setScene(new Scene(root));

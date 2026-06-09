@@ -17,7 +17,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1000.0" styleClass="cadastro_card" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1000.0" styleClass="cadastro_card" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerCadastroEstatisticas">
    <children>
       <Circle fill="#c9972e" layoutX="106.0" layoutY="72.0" opacity="0.44" radius="56.0" stroke="TRANSPARENT" strokeType="INSIDE" />
       <ImageView fitHeight="72.0" fitWidth="67.0" layoutX="71.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
@@ -53,7 +53,7 @@
                <content>
                   <AnchorPane prefHeight="519.0" prefWidth="913.0">
                      <children>
-                        <Spinner layoutX="220.0" layoutY="67.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
+                        <Spinner fx:id="golsCasa" layoutX="220.0" layoutY="67.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
                         <Line endX="753.666748046875" endY="3.814697265625E-6" layoutX="127.0" layoutY="60.0" startX="-100.0" stroke="#c9c9c9" />
                         <Line endX="753.666748046875" endY="3.814697265625E-6" layoutX="127.0" layoutY="100.0" startX="-100.0" stroke="#c9c9c9" />
                         <Line endX="753.666748046875" endY="3.814697265625E-6" layoutX="127.0" layoutY="140.0" startX="-100.0" stroke="#c9c9c9" />
@@ -66,52 +66,44 @@
                         <Line endX="753.666748046875" endY="3.814697265625E-6" layoutX="127.0" layoutY="420.0" startX="-100.0" stroke="#c9c9c9" />
                         <Line endX="753.666748046875" endY="3.814697265625E-6" layoutX="127.0" layoutY="460.0" startX="-100.0" stroke="#c9c9c9" />
                         <Line endX="753.666748046875" endY="3.814697265625E-6" layoutX="127.0" layoutY="500.0" startX="-100.0" stroke="#c9c9c9" />
-                        <Spinner layoutX="220.0" layoutY="107.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
-                        <Spinner layoutX="220.0" layoutY="147.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
-                        <Spinner layoutX="220.0" layoutY="187.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
-                        <Spinner layoutX="220.0" layoutY="227.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
-                        <Spinner layoutX="220.0" layoutY="267.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
-                        <Spinner layoutX="220.0" layoutY="307.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
-                        <Spinner layoutX="220.0" layoutY="347.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
-                        <Spinner layoutX="220.0" layoutY="387.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
-                        <Spinner layoutX="220.0" layoutY="427.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
-                        <Spinner layoutX="220.0" layoutY="467.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
-                        <Spinner layoutX="580.0" layoutY="67.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
+                        <Spinner fx:id="chutesCasa" layoutX="220.0" layoutY="107.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
+                        <Spinner fx:id="chutesAGolCasa" layoutX="220.0" layoutY="147.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
+                        <Spinner fx:id="posseDeBolaCasa" layoutX="220.0" layoutY="187.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
+                        <Spinner fx:id="passesCasa" layoutX="220.0" layoutY="227.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
+                        <Spinner fx:id="precisaoPCasa" layoutX="220.0" layoutY="267.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
+                        <Spinner fx:id="faltasCasa" layoutX="220.0" layoutY="307.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
+                        <Spinner fx:id="amareloCasa" layoutX="220.0" layoutY="347.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
+                        <Spinner fx:id="vermelhoCasa" layoutX="220.0" layoutY="387.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
+                        <Spinner fx:id="impedimentoCasa" layoutX="220.0" layoutY="427.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
+                        <Spinner fx:id="escanteioCasa" layoutX="220.0" layoutY="467.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
+                        <Spinner fx:id="golsVisitante" layoutX="580.0" layoutY="67.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
                         <Text layoutX="26.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleções">
                            <font>
                               <Font name="Roboto Condensed Black" size="20.0" />
                            </font>
                         </Text>
-                        <ImageView fitHeight="67.0" fitWidth="33.0" layoutX="220.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/Logos/brasil.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="265.0" layoutY="20.0" text="Brasil">
+                        <ImageView fx:id="imageCasa" fitHeight="45.0" fitWidth="33.0" layoutX="220.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="casa" layoutX="275.0" layoutY="20.0">
                            <font>
                               <Font name="Roboto Condensed Black" size="20.0" />
                            </font>
                         </Label>
-                        <ImageView fitHeight="67.0" fitWidth="33.0" layoutX="580.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/Logos/brasil.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="625.0" layoutY="20.0" text="Brasil">
+                        <ImageView fx:id="imageVisitante" fitHeight="45.0" fitWidth="33.0" layoutX="580.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="visitante" layoutX="635.0" layoutY="20.0">
                            <font>
                               <Font name="Roboto Condensed Black" size="20.0" />
                            </font>
                         </Label>
-                        <Spinner layoutX="580.0" layoutY="107.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
-                        <Spinner layoutX="580.0" layoutY="147.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
-                        <Spinner layoutX="580.0" layoutY="227.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
-                        <Spinner layoutX="580.0" layoutY="187.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
-                        <Spinner layoutX="580.0" layoutY="267.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
-                        <Spinner layoutX="580.0" layoutY="307.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
-                        <Spinner layoutX="580.0" layoutY="347.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
-                        <Spinner layoutX="580.0" layoutY="387.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
-                        <Spinner layoutX="580.0" layoutY="427.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
-                        <Spinner layoutX="580.0" layoutY="467.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
+                        <Spinner fx:id="chutesVisitante" layoutX="580.0" layoutY="107.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
+                        <Spinner fx:id="chutesAGolVisitante" layoutX="580.0" layoutY="147.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
+                        <Spinner fx:id="passesVisitante" layoutX="580.0" layoutY="227.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
+                        <Spinner fx:id="posseDeBolaVisitante" layoutX="580.0" layoutY="187.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
+                        <Spinner fx:id="precisaoPVisitante" layoutX="580.0" layoutY="267.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
+                        <Spinner fx:id="faltasVisitante" layoutX="580.0" layoutY="307.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
+                        <Spinner fx:id="amareloVisitante" layoutX="580.0" layoutY="347.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
+                        <Spinner fx:id="vermelhoVisitante" layoutX="580.0" layoutY="387.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
+                        <Spinner fx:id="impedimentoVisitante" layoutX="580.0" layoutY="427.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
+                        <Spinner fx:id="escanteioVisitante" layoutX="580.0" layoutY="467.0" prefHeight="5.0" prefWidth="198.0" stylesheets="@../../css/style.css" />
                         <ImageView fitHeight="31.0" fitWidth="26.0" layoutX="30.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../images/ball.png" />
@@ -344,11 +336,7 @@
                      <children>
                         <AnchorPane layoutX="10.0" layoutY="22.0" prefHeight="480.0" prefWidth="452.0" styleClass="card-group_stage" stylesheets="@../../css/style.css">
                            <children>
-                              <ImageView fitHeight="67.0" fitWidth="41.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../images/Logos/brasil.png" />
-                                 </image>
-                              </ImageView>
+                              <ImageView fx:id="selecaoCasa" fitHeight="67.0" fitWidth="41.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
                               <Label layoutX="67.0" layoutY="30.0" text="Jogadores">
                                  <font>
                                     <Font name="Roboto Condensed Black" size="24.0" />
@@ -356,22 +344,22 @@
                               </Label>
                               <AnchorPane layoutX="12.0" layoutY="95.0" prefHeight="40.0" prefWidth="427.0" styleClass="NavBarCadastro" stylesheets="@../../css/style.css">
                                  <children>
-                                    <Text fill="#969696" layoutX="27.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N°">
+                                    <Text fill="#969696" layoutX="19.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N°">
                                        <font>
                                           <Font name="Roboto Condensed Bold" size="12.0" />
                                        </font>
                                     </Text>
-                                    <Text fill="#969696" layoutX="90.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jogador">
+                                    <Text fill="#969696" layoutX="74.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jogador">
                                        <font>
                                           <Font name="Roboto Condensed Bold" size="12.0" />
                                        </font>
                                     </Text>
-                                    <Text fill="#969696" layoutX="210.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Posição">
+                                    <Text fill="#969696" layoutX="244.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Posição">
                                        <font>
                                           <Font name="Roboto Condensed Bold" size="12.0" />
                                        </font>
                                     </Text>
-                                    <Text fill="#969696" layoutX="320.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nota(0-10)">
+                                    <Text fill="#969696" layoutX="322.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nota(0-10)">
                                        <font>
                                           <Font name="Roboto Condensed Bold" size="12.0" />
                                        </font>
@@ -382,7 +370,7 @@
                                 <content>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="411.0" styleClass="list_equipes" stylesheets="@../../css/style.css">
                                        <children>
-                                          <VBox prefHeight="50.0" prefWidth="411.0" />
+                                          <VBox fx:id="notasCasa" prefHeight="50.0" prefWidth="411.0" />
                                        </children>
                                     </AnchorPane>
                                 </content>
@@ -401,11 +389,7 @@
                         </AnchorPane>
                         <AnchorPane layoutX="471.0" layoutY="22.0" prefHeight="480.0" prefWidth="438.0" styleClass="card-group_stage" stylesheets="@../../css/style.css">
                            <children>
-                              <ImageView fitHeight="67.0" fitWidth="41.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../images/Logos/brasil.png" />
-                                 </image>
-                              </ImageView>
+                              <ImageView fx:id="selecaoVisitante" fitHeight="67.0" fitWidth="41.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
                               <Label layoutX="67.0" layoutY="30.0" text="Jogadores">
                                  <font>
                                     <Font name="Roboto Condensed Black" size="24.0" />
@@ -413,22 +397,22 @@
                               </Label>
                               <AnchorPane layoutX="5.0" layoutY="95.0" prefHeight="40.0" prefWidth="427.0" styleClass="NavBarCadastro" stylesheets="@../../css/style.css">
                                  <children>
-                                    <Text fill="#969696" layoutX="27.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N°">
+                                    <Text fill="#969696" layoutX="19.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N°">
                                        <font>
                                           <Font name="Roboto Condensed Bold" size="12.0" />
                                        </font>
                                     </Text>
-                                    <Text fill="#969696" layoutX="90.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jogador">
+                                    <Text fill="#969696" layoutX="74.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jogador">
                                        <font>
                                           <Font name="Roboto Condensed Bold" size="12.0" />
                                        </font>
                                     </Text>
-                                    <Text fill="#969696" layoutX="210.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Posição">
+                                    <Text fill="#969696" layoutX="244.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Posição">
                                        <font>
                                           <Font name="Roboto Condensed Bold" size="12.0" />
                                        </font>
                                     </Text>
-                                    <Text fill="#969696" layoutX="320.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nota(0-10)">
+                                    <Text fill="#969696" layoutX="322.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nota(0-10)">
                                        <font>
                                           <Font name="Roboto Condensed Bold" size="12.0" />
                                        </font>
@@ -439,7 +423,7 @@
                                  <content>
                                     <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="411.0" styleClass="list_equipes" stylesheets="@../../css/style.css">
                                        <children>
-                                          <VBox prefHeight="50.0" prefWidth="411.0" />
+                                          <VBox fx:id="notasVisitante" prefHeight="50.0" prefWidth="411.0" />
                                        </children>
                                     </AnchorPane>
                                  </content>
