@@ -7,9 +7,14 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import services.UsuarioService;
 import services.files.UsuarioFile;
 import users.Sessao;
@@ -186,38 +191,22 @@ public class ControllerUsuarios {
     }
 
     @FXML
-    private void adicionarUsuario(ActionEvent e){
-        String nome_s = nome.getText().trim();
-        String funcao_s = funcao.getText().trim();
-        String status_s = status.getText().trim();
-        String pais_s = pais.getText().trim();
-        String senha_s = senha.getText().trim();
-        String senha2_s = senha2.getText().trim();
+    private void irParaCadastrarUsuario(ActionEvent e){
         try{
-            UsuarioService.adicionarUsuario(nome_s, funcao_s, status_s, pais_s, senha_s, senha2_s);
-            mostrarSucesso("Usuário cadastrado!");
-            tabelaUsuarios.setItems(UsuarioFile.getInstancia().listarTodos());
-        }
-        catch(CamposVaziosException a ){
-            mostrarErro("Preencha todos os campos");
-            return;
-        }
-        catch(UsuarioExisteException a){
-            mostrarErro("O usuario inserido já existe");
-            return;
-        }
-        catch(SenhasDiferemException a){
-            mostrarErro("As senhas diferem");
-        }
-        catch(FuncaoInvalidaException a){
-            mostrarErro("A função é inexistente");
 
-        }
-        catch(StatusInvalidoException a){
-            mostrarErro("O status é inválido");
-        }
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/designAndScreens/telasAdministrador/CadastroUsuarios.fxml"));
+            Parent root = loader.load();
 
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        }catch(IOException ex){
+            System.err.println("Falha ao abrir o telaCadastroUsuario: " + ex.getMessage());
+        }
     }
+
+
 
     @FXML
     private void removerUsuario() {
@@ -294,21 +283,12 @@ public class ControllerUsuarios {
         SceneController.mudaDeTela( "/designAndScreens/telaInicial/paginaInicial.fxml");
     }
 
-    @FXML
-    private Label labelMensagem;
+
 
     @FXML
     private Label labelMensagemEdit;
 
-    private void mostrarErro(String mensagem) {
-        labelMensagem.setStyle("-fx-font-size: 13px; -fx-text-fill: #cc0000;");
-        labelMensagem.setText(mensagem);
-    }
 
-    private void mostrarSucesso(String mensagem) {
-        labelMensagem.setStyle("-fx-font-size: 13px; -fx-text-fill: #1a7a1a;");
-        labelMensagem.setText(mensagem);
-    }
 
     private void mostrarErroEdit(String mensagem) {
         labelMensagemEdit.setStyle("-fx-font-size: 13px; -fx-text-fill: #cc0000;");
