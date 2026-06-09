@@ -5,12 +5,24 @@ import nationsAndPlayers.nations.Selecoes;
 public class Jogadores {
     private String nome;
     private int idade;
+    private String posicao;
+    private int numeracao;
     private Selecoes selecao;
     private boolean lesionado;
     private boolean suspenso;
 
     public Jogadores(String nome, int idade, Selecoes selecao, boolean lesionado, boolean suspenso) {
         this.nome = nome;
+        this.idade = idade;
+        this.selecao = selecao;
+        this.lesionado = lesionado;
+        this.suspenso = suspenso;
+    }
+    //Criei esse construtor para adicionar a psoição e pq não sei se o construtor de cima é usado em algum lugar
+    public Jogadores(String nome, int idade, Selecoes selecao, boolean lesionado, boolean suspenso,String posicao,int numeracao) {
+        this.nome = nome;
+        this.posicao=posicao;
+        this.numeracao=numeracao;
         this.idade = idade;
         this.selecao = selecao;
         this.lesionado = lesionado;
@@ -55,5 +67,12 @@ public class Jogadores {
 
     public void setSuspenso(boolean suspenso) {
         this.suspenso = suspenso;
+    }
+
+    public String getPosicao() {
+        return posicao;
+    }
+    public int getNumeracao() {
+        return numeracao;
     }
 }

@@ -146,10 +146,14 @@
     -fx-padding: 0 0 0 30;
     -fx-font-size: 12px;
     -fx-pref-height: 45;
-    -fx-font-family: "Inter 18pt";
 }
 .choice-box .arrow {
     -fx-background-color: #C89B2C;
+}
+.choice-box .prompt {
+    -fx-font-family: "Inter 18pt";
+    -fx-text-fill: #c9c9c9;
+    -fx-font-size: 10px;
 }
 .text-fieldCadastroPartida{
     -fx-background-color: white;
@@ -206,4 +210,213 @@
 .date-picker .arrow-button {
     -fx-background-color: transparent;
     -fx-background-radius: 20;
+}
+.NavBarCadastro{
+    -fx-background-color: #ffffff;
+    -fx-border-color: #d9d9d9;
+    -fx-border-width: 1;
+    -fx-background-radius: 15 15 0 0;
+    -fx-border-radius: 15 15 0 0;
+}
+.btn-editar {
+    -fx-background-color: #D9A520;
+    -fx-background-radius: 8;
+    -fx-min-width: 39;
+    -fx-min-height: 39;
+    -fx-max-width: 39;
+    -fx-max-height: 39;
+    -fx-cursor: hand;
+}
+
+.btn-editar:hover {
+    -fx-background-color: #C79210;
+}
+
+.btn-excluir {
+    -fx-background-color: white;
+    -fx-border-color: #FC0005;
+    -fx-border-width: 2;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-min-width: 39;
+    -fx-min-height: 39;
+    -fx-max-width: 39;
+    -fx-max-height: 39;
+    -fx-cursor: hand;
+}
+
+.btn-excluir:hover {
+    -fx-background-color: #FFF5F5;
+}
+
+.btn-nova-partida {
+    -fx-background-color: #D69A00;
+    -fx-background-radius: 10;
+    -fx-text-fill: white;
+    -fx-font-family: "Oswald Medium";
+    -fx-font-size: 18px;
+    -fx-padding: 12 30 12 30;
+    -fx-cursor: hand;
+}
+
+.btn-nova-partida:hover {
+    -fx-background-color: #C28D00;
+}
+
+.btn-nova-partida:pressed {
+    -fx-background-color: #B07F00;
+}
+.cadastro_card{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: black;
+    -fx-border-width: 1;
+}
+.combo-boxEscalacao {
+    -fx-background-color: white;
+    -fx-border-color: #D9D9D9;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 2 8 2 8;
+
+    -fx-font-size: 16px;
+    -fx-font-family: "Inter 18pt";
+    -fx-text-fill: black;
+}
+
+.combo-boxEscalacao:hover {
+    -fx-border-color: #C5C5C5;
+}
+
+.combo-boxEscalacao .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.combo-boxEscalacao .arrow {
+    -fx-background-color: #666666;
+}
+
+.combo-boxEscalacao .list-cell {
+    -fx-font-family:"Inter 18pt";
+    -fx-font-size: 10px;
+    -fx-background-color: transparent;
+    -fx-text-fill: #555555;
+    -fx-prompt-text-fill: #999999;
+    -fx-padding: 5 8 5 8;
+}
+
+
+.tag-gol {
+    -fx-background-color: #DCEBFF;
+    -fx-text-fill: #3A7BDA;
+    -fx-font-size: 10px;
+    -fx-background-radius: 20;
+}
+.tag-zagueiro {
+    -fx-background-color: #FFF3D6;
+    -fx-text-fill: #D18B00;
+    -fx-font-size: 10px;
+    -fx-background-radius: 20;
+}
+.tag-lateral {
+    -fx-background-color: #DDF3E1;
+    -fx-text-fill: #2E8B57;
+    -fx-font-size: 10px;
+    -fx-background-radius: 20;
+}
+.tag-volante {
+    -fx-background-color: #EAE0FF;
+    -fx-text-fill: #7A4DCC;
+    -fx-font-size: 10px;
+    -fx-background-radius: 20;
+}
+.tag-ataque {
+    -fx-background-color: #FFE2E2;
+    -fx-text-fill: #E04B4B;
+    -fx-font-size: 10px;
+    -fx-background-radius: 20;
+}
+
+.tab-pane {
+    -fx-background-color: transparent;
+}
+
+.tab-pane .tab-header-area {
+    -fx-padding: 0;
+}
+
+.tab-pane .tab-header-background {
+    -fx-background-color: transparent;
+}
+
+/* Aba padrão */
+.tab {
+    -fx-background-color: white;
+    -fx-background-radius: 15 15 0 0;
+    -fx-border-color: #D9D9D9;
+    -fx-border-width: 1;
+    -fx-border-radius: 15 15 0 0;
+    -fx-padding: 12 30 12 30;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* Aba selecionada */
+.tab:selected {
+    -fx-background-color: #D4A62A;
+    -fx-border-color: #D4A62A;
+}
+
+/* Texto */
+.tab-label {
+    fx-font-family:"Inter 18pt";
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+    -fx-text-fill: black;
+}
+
+/* Texto da aba selecionada */
+.tab:selected .tab-label {
+    -fx-text-fill: black;
+}
+
+/* Conteúdo */
+.tab-content-area {
+    -fx-background-color: white;
+    -fx-border-color: #E5E5E5;
+    -fx-border-width: 1;
+    -fx-background-radius: 0 0 15 15;
+    -fx-border-radius: 0 0 15 15;
+}
+.spinner {
+    -fx-background-color: white;
+    -fx-background-radius: 7;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 7;
+    -fx-border-width: 1;
+}
+
+.spinner .text-field {
+    -fx-background-color: transparent;
+    -fx-alignment: center;
+    -fx-font-size: 11px;
+    -fx-border-width: 0;
+}
+
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0 8 0 8;
+}
+
+.spinner .increment-arrow,
+.spinner .decrement-arrow {
+    -fx-background-color: #8C8C8C;
+}
+
+.spinner:focused,
+.spinner .text-field:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
 }

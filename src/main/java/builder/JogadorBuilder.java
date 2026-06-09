@@ -7,6 +7,8 @@ public class JogadorBuilder {
 
     private String nome;
     private int idade;
+    private String posicao;
+    private int numero;
     private Selecoes selecao;
     private boolean lesionado;
     private boolean suspenso;
@@ -32,9 +34,17 @@ public class JogadorBuilder {
         this.suspenso = suspenso;
         return this;
     }
+    public JogadorBuilder posicao(String posicao){
+        this.posicao=posicao;
+        return this;
+    }
+    public JogadorBuilder numero(int numero){
+        this.numero=numero;
+        return this;
+    }
     
     public Jogadores build(){
-        return new Jogadores(nome,idade,selecao,lesionado,suspenso);
+        return new Jogadores(nome,idade,selecao,lesionado,suspenso,posicao,numero);
     }
 
 }

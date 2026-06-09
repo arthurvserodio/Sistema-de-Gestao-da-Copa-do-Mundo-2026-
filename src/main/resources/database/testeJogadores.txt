@@ -1,0 +1,42 @@
+Alisson;33;Brasil;false;false;GOL;1
+Ederson;32;Brasil;false;false;GOL;23
+Bento;27;Brasil;false;true;GOL;12
+Danilo;35;Brasil;false;false;LD;2
+Vanderson;25;Brasil;false;false;LD;13
+Alex Sandro;35;Brasil;false;false;LE;6
+Guilherme Arana;29;Brasil;false;false;LE;16
+Marquinhos;32;Brasil;false;false;ZAG;4
+Gabriel Magalhaes;29;Brasil;false;false;ZAG;3
+Eder Militao;28;Brasil;false;false;ZAG;14
+Bruno Guimaraes;29;Brasil;false;false;MC;5
+Casemiro;34;Brasil;false;false;MC;8
+Andre;25;Brasil;false;false;MC;15
+Lucas Paqueta;29;Brasil;false;false;MC;17
+Raphinha;30;Brasil;false;false;PD;11
+Rodrygo;26;Brasil;false;false;PD;21
+Vinicius Junior;26;Brasil;false;false;PE;7
+Savinho;22;Brasil;false;false;PE;19
+Neymar;34;Brasil;true;false;PE;10
+Richarlison;29;Brasil;false;false;ATA;9
+Pedro;29;Brasil;false;false;ATA;18
+Jo Hyeon-woo;35;Coreia do Sul;false;false;GOL;1
+Kim Seung-gyu;36;Coreia do Sul;false;false;GOL;21
+Song Bum-keun;29;Coreia do Sul;false;false;GOL;12
+Kim Moon-hwan;31;Coreia do Sul;false;false;LD;2
+Seol Young-woo;28;Coreia do Sul;false;false;LD;22
+Lee Ki-je;35;Coreia do Sul;false;false;LE;3
+Kim Jin-su;34;Coreia do Sul;false;false;LE;17
+Kim Min-jae;30;Coreia do Sul;false;false;ZAG;4
+Jung Seung-hyun;32;Coreia do Sul;false;false;ZAG;15
+Kwon Kyung-won;34;Coreia do Sul;false;false;ZAG;20
+Hwang In-beom;30;Coreia do Sul;false;false;MC;6
+Park Yong-woo;33;Coreia do Sul;false;false;MC;5
+Lee Jae-sung;34;Coreia do Sul;false;false;MC;10
+Hong Hyun-seok;27;Coreia do Sul;false;false;MC;8
+Lee Kang-in;25;Coreia do Sul;false;false;PD;18
+Yang Hyun-jun;24;Coreia do Sul;false;false;PD;26
+Son Heung-min;34;Coreia do Sul;false;false;PE;7
+Jeong Woo-yeong;27;Coreia do Sul;false;false;PE;11
+Hwang Hee-chan;30;Coreia do Sul;false;false;ATA;9
+Cho Gue-sung;28;Coreia do Sul;false;false;ATA;16
+Oh Hyeon-gyu;25;Coreia do Sul;false;false;ATA;19

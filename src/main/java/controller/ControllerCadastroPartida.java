@@ -1,25 +1,31 @@
 package controller;
 
 import Enums.Fase;
-import builder.ArbitroBuilder;
-import builder.EstadioBuilder;
-import builder.SelecaoBuilder;
+import Enums.StatusPartida;
+import builder.*;
 import exceptions.IllegalIntervaloEntrePartidaException;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 import matches.EstadoDaCopa;
 import matches.Partida;
+import matches.PartidaGrupo;
 import nationsAndPlayers.nations.Selecoes;
 import services.matches.CadastroPartidaService;
 import services.matches.CarregaArquivoService;
 import stadiumAndRefeering.Estadio;
 import users.Arbitro;
 
+import javax.swing.text.html.ImageView;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.spi.CalendarDataProvider;
 
 public class ControllerCadastroPartida {
     private List<Selecoes> ListSelecoes = new ArrayList<>();
@@ -59,7 +65,7 @@ public class ControllerCadastroPartida {
     public void initialize() {
         //ATENÇÃO, TENHO QUE RETIRAR ISSO MAIS TARDE
         faseAtual = new EstadoDaCopa(
-                Fase.OITAVAS,
+                Fase.FASE_DE_GRUPOS,
                 LocalDate.of(2026,6,11),
                 LocalDate.of(2026,6,27)
         );
@@ -72,6 +78,13 @@ public class ControllerCadastroPartida {
         ListSelecoes = CarregaArquivoService.carregaArquivo("/database/SelecoesNaCopa.txt", parte->new SelecaoBuilder().nome(parte[0]).grupo(parte[1]).build());
         ListArbitros = CarregaArquivoService.carregaArquivo("/database/arbitrosNaCopa.txt", parte->new ArbitroBuilder().nome(parte[0]).build());
         ListEstadio=CarregaArquivoService.carregaArquivo("/database/Estadios.txt", parte->new EstadioBuilder().nome(parte[0]).build());
+        if(faseAtual.getFaseAtual()==Fase.FASE_DE_GRUPOS){
+            ListPartida = CarregaArquivoService.carregaArquivo("/database/partida_grupo.txt",parte->new PartidaGrupoBuilder().id(Integer.parseInt(parte[0])).data(LocalDate.parse(parte[2])).horario(parte[3]).estadio(CadastroPartidaService.buscaPeloNome(ListEstadio,Estadio::getNome,parte[4])).arbitro(CadastroPartidaService.buscaPeloNome(ListArbitros,Arbitro::getNome,parte[5])).grupo(parte[6]).Casa(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[7])).Visitante(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[8])).fase(Fase.valueOf(parte[9])).status(StatusPartida.valueOf(parte[10])).build());
+        }
+        for (Partida p : ListPartida) {
+            p.getEstadio().getDatasOcupadas().add(p.getData());
+            p.getArbitro().getApitando().add(p);
+        }
         //Colocando No ChoiceBox
         choiceSelecao1.getItems().addAll(ListSelecoes);
         choiceArbitro.getItems().addAll(ListArbitros);
@@ -88,10 +101,16 @@ public class ControllerCadastroPartida {
             if(choiceSelecao2.getValue()==null && faseAtual.getFaseAtual()==Fase.FASE_DE_GRUPOS){
                 //Só vai deixar o grupo da seleção escolhida na combobox de Grupo
                 Selecoes escolhida= choiceSelecao1.getValue();
+                if(escolhida==null){
+                    return;
+                }
                 choiceGrupo.getItems().clear();
                 choiceGrupo.getItems().add(escolhida.getGrupo());
                 //Atualiza a outro combobox para ser as seleções presentes no mesmo grupo
-                partidaService.atualizarComboBox(choiceSelecao1, choiceSelecao2, ListSelecoes);
+                partidaService.atualizarComboBox(choiceSelecao1, choiceSelecao2, ListSelecoes,faseAtual.getFaseAtual());
+            }
+            else if(choiceSelecao2.getValue()==null && faseAtual.getFaseAtual()!=Fase.FASE_DE_GRUPOS){
+
             }
         });
         //Impede que o usuário escolha uma data fora do escopo da fase atual
@@ -167,6 +186,60 @@ public class ControllerCadastroPartida {
                 alert.showAndWait();
                 return;
             }
+            if(faseAtual.getFaseAtual() == Fase.FASE_DE_GRUPOS) {
+                PartidaGrupo partida = new PartidaGrupoBuilder()
+                        .id(partidaService.gerarProximoId(ListPartida))
+                        .data(Data.getValue())
+                        .horario(horario.getText())
+                        .estadio(choiceEstadio.getValue())
+                        .arbitro(choiceArbitro.getValue())
+                        .Casa(choiceSelecao1.getValue())
+                        .Visitante(choiceSelecao2.getValue())
+                        .fase(Fase.FASE_DE_GRUPOS)
+                        .status(StatusPartida.AGENDADA)
+                        .grupo(choiceGrupo.getValue())
+                        .build();
+                CadastroPartidaService.salvarPartida(partida, "src/main/resources/database/partida_grupo.txt");
+                CadastroPartidaService.salvarPartida(partida, "target/classes/database/partida_grupo.txt");
+                choiceArbitro.getValue().getApitando().add(partida);
+                choiceEstadio.getValue().getDatasOcupadas().add(partida.getData());
+                System.out.println("Partida salva!");
+                fecharJanela();
+            }
         });
+    }
+    //Metodo de fechar a janela usado ao clicar no X ou salvamento com sucesso
+    private void fecharJanela() {
+        Stage stage = (Stage) salvarPartida.getScene().getWindow();
+        stage.close();
+    }
+    //Fecha o popUp ao clicar no X
+    @FXML
+    private void fecharPopUp(MouseEvent e){
+        fecharJanela();
+    }
+
+    @FXML
+    //Lógica do botão de cancelar
+    private void limparCampos(ActionEvent e) {
+        //Limpa todos os campos
+        choiceSelecao1.setValue(null);
+        choiceSelecao2.setValue(null);
+        choiceArbitro.setValue(null);
+        choiceEstadio.setValue(null);
+        choiceFase.setValue(null);
+        choiceGrupo.setValue(null);
+
+        Data.setValue(null);
+
+        horario.clear();
+
+        choiceSelecao2.getItems().clear();
+
+        choiceArbitro.setDisable(true);
+        choiceEstadio.setDisable(true);
+
+        choiceArbitro.setPromptText("Escolha uma data primeiro");
+        choiceEstadio.setPromptText("Escolha uma data primeiro");
     }
 }

@@ -1,6 +1,7 @@
 package matches;
 
 public class EstatisticaTime {
+    private int gols;
     private int chutes;
     private int chutesAGol;
     private float posseDeBola;

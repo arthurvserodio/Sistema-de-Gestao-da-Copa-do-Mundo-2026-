@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1440.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerCadastroPartidaTabela">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="3000.0" prefWidth="1424.0" styleClass="white" stylesheets="@../../css/style.css">
+         <children>
+            <Button fx:id="botaoLogin" layoutX="1297.0" layoutY="27.0" mnemonicParsing="false" styleClass="golden_button" stylesheets="@../../css/style.css" text="Login">
+               <font>
+                  <Font name="Oswald Medium" size="12.0" />
+               </font>
+            </Button>
+            <Line endX="100.0" endY="-10.666656494140625" layoutX="130.0" layoutY="130.0" startX="100.0" startY="76.0" stroke="#b37a1d" strokeWidth="4.0" />
+            <Text layoutX="250.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestão de Partidas">
+               <font>
+                  <Font name="Roboto Condensed Black" size="56.0" />
+               </font>
+            </Text>
+            <Text fill="#c9c9c9" layoutX="255.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gerencie, cadastre e edite as partidas da Copa do Mundo">
+               <font>
+                  <Font name="Inter 18pt Regular" size="19.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="70.0" layoutY="250.0" prefHeight="600.0" prefWidth="1300.0" stylesheets="@../../css/style.css">
+               <styleClass>
+                  <String fx:value="white" />
+                  <String fx:value="card-group_stage" />
+               </styleClass>
+               <children>
+                  <ImageView fitHeight="64.0" fitWidth="74.0" layoutX="67.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/clock2.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="155.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agendadas">
+                     <font>
+                        <Font name="Roboto Condensed Black" size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#c9c9c9" layoutX="155.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Partidas criadas e agendadas">
+                     <font>
+                        <Font name="Inter 18pt Regular" size="19.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane layoutX="68.0" layoutY="147.0" prefHeight="50.0" prefWidth="1186.0" stylesheets="@../../css/style.css">
+                     <styleClass>
+                        <String fx:value="NavBarEquipes" />
+                        <String fx:value="NavBarCadastro" />
+                     </styleClass>
+                     <children>
+                        <Label layoutX="40.0" layoutY="15.0" text="Partida">
+                           <font>
+                              <Font name="Inter 18pt Medium" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="370.0" layoutY="15.0" text="Data">
+                           <font>
+                              <Font name="Inter 18pt Medium" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="540.0" layoutY="15.0" text="Horário">
+                           <font>
+                              <Font name="Inter 18pt Medium" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="700.0" layoutY="15.0" text="Estádio">
+                           <font>
+                              <Font name="Inter 18pt Medium" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="900.0" layoutY="15.0" text="Fase">
+                           <font>
+                              <Font name="Inter 18pt Medium" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1070.0" layoutY="15.0" text="Ações">
+                           <font>
+                              <Font name="Inter 18pt Medium" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <ScrollPane layoutX="68.0" layoutY="195.0" prefHeight="380.0" prefWidth="1188.0" styleClass="scrol_panel" stylesheets="@../../css/style.css">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="1172.0" styleClass="list_equipes" stylesheets="@../../css/style.css">
+                           <children>
+                              <VBox fx:id="listPartida" prefHeight="200.0" prefWidth="1173.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <MenuButton fx:id="menuUsuario" layoutX="1307.0" layoutY="37.0" maxWidth="150" mnemonicParsing="false" prefWidth="150" styleClass="white_button" stylesheets="@../../css/style.css" visible="false">
+               <font>
+                  <Font name="Oswald Medium" size="12.0" />
+               </font>
+               <items>
+                  <MenuItem onAction="#onLogout" text="Logout" />
+                  <MenuItem text="Cancelar" />
+               </items>
+            </MenuButton>
+            <Button layoutX="1196.0" layoutY="178.0" mnemonicParsing="false" onAction="#irParaCadastro" styleClass="btn-nova-partida" stylesheets="@../../css/style.css" text="     Nova Partida">
+               <font>
+                  <Font name="Oswald Medium" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="23.0" fitWidth="22.0" layoutX="1213.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/plus.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="70.0" layoutY="900.0" prefHeight="600.0" prefWidth="1300.0" stylesheets="@../../css/style.css">
+               <styleClass>
+                  <String fx:value="white" />
+                  <String fx:value="card-group_stage" />
+               </styleClass>
+               <children>
+                  <ImageView fitHeight="64.0" fitWidth="74.0" layoutX="67.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/play2.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="155.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Em Andamento">
+                     <font>
+                        <Font name="Roboto Condensed Black" size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#c9c9c9" layoutX="155.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Partidas que já começaram">
+                     <font>
+                        <Font name="Inter 18pt Regular" size="19.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane layoutX="68.0" layoutY="147.0" prefHeight="50.0" prefWidth="1186.0" stylesheets="@../../css/style.css">
+                     <styleClass>
+                        <String fx:value="NavBarEquipes" />
+                        <String fx:value="NavBarCadastro" />
+                     </styleClass>
+                     <children>
+                        <Label layoutX="40.0" layoutY="15.0" text="Partida">
+                           <font>
+                              <Font name="Inter 18pt Medium" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="370.0" layoutY="15.0" text="Data">
+                           <font>
+                              <Font name="Inter 18pt Medium" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="540.0" layoutY="15.0" text="Horário">
+                           <font>
+                              <Font name="Inter 18pt Medium" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="700.0" layoutY="15.0" text="Estádio">
+                           <font>
+                              <Font name="Inter 18pt Medium" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="900.0" layoutY="15.0" text="Fase">
+                           <font>
+                              <Font name="Inter 18pt Medium" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1075.0" layoutY="15.0" text="Ações">
+                           <font>
+                              <Font name="Inter 18pt Medium" size="15.0" />
+                           </font>
+                        </Label>
+                        <Circle fill="#fe0000" layoutX="107.0" layoutY="25.0" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                        <Text fill="#fe0000" layoutX="115.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AO VIVO">
+                           <font>
+                              <Font name="Roboto Condensed Bold" size="10.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <ScrollPane layoutX="68.0" layoutY="195.0" prefHeight="380.0" prefWidth="1188.0" styleClass="scrol_panel" stylesheets="@../../css/style.css">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="1172.0" styleClass="list_equipes" stylesheets="@../../css/style.css">
+                           <children>
+                              <VBox fx:id="aoVivo" prefHeight="200.0" prefWidth="1173.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+  </content>
+</ScrollPane>

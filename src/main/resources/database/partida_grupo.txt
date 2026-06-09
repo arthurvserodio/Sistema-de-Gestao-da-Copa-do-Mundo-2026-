@@ -1,0 +1,2 @@
+1;GRUPO;2026-06-11;11:00;Maracanã;Daronco;G;Brasil;Coreia do Sul;FASE_DE_GRUPOS;EM_ANDAMENTO;
+2;GRUPO;2026-06-12;11:00;Maracanã;Daronco;E;Alemanha;Bélgica;FASE_DE_GRUPOS;AGENDADA;

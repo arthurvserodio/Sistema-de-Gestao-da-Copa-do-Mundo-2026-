@@ -5,12 +5,10 @@ import nationsAndPlayers.players.Jogadores;
 public class JogadorPartida {
     private Jogadores jogador;
     private double nota;
-    private boolean capitao;
 
-    public JogadorPartida(Jogadores jogador, double nota, boolean capitao) {
+    public JogadorPartida(Jogadores jogador, double nota) {
         this.jogador = jogador;
         this.nota = nota;
-        this.capitao = capitao;
     }
 
     public Jogadores getJogador() {
@@ -25,12 +23,5 @@ public class JogadorPartida {
     }
     public void setNota(double nota) {
         this.nota = nota;
-    }
-
-    public boolean isCapitao() {
-        return capitao;
-    }
-    public void setCapitao(boolean capitao) {
-        this.capitao = capitao;
     }
 }

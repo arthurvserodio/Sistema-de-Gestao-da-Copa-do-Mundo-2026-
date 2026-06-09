@@ -18,8 +18,8 @@ public class PartidaEliminatoria extends Partida{
     private int golsPenaltiCasa;
     private int golsPenaltiVisitante;
 
-    public PartidaEliminatoria(LocalDate data,String horario, int publico, Estadio estadio, Arbitro arbitro, Jogadores MVP, Selecoes selecaoCasa, Selecoes selecaoVisitante, Tecnico tecnicoCasa, Tecnico tecnicoVisitante, Fase fase, StatusPartida status, int golsCasa, int golsVisitante, EstatisticaPartida estatistica, ArrayList<EventosOcorridos> eventos, Escalacao escalacaoCasa, Escalacao escalacaoVisitante, boolean prorrogacao, boolean penaltis, int golsPenaltiCasa, int golsPenaltiVisitante) {
-        super(data,horario, publico, estadio, arbitro, MVP, selecaoCasa, selecaoVisitante, tecnicoCasa, tecnicoVisitante, fase, status, golsCasa, golsVisitante, estatistica, eventos, escalacaoCasa, escalacaoVisitante);
+    public PartidaEliminatoria(int id,LocalDate data,String horario, int publico, Estadio estadio, Arbitro arbitro, Jogadores MVP, Selecoes selecaoCasa, Selecoes selecaoVisitante, Tecnico tecnicoCasa, Tecnico tecnicoVisitante, Fase fase, StatusPartida status, EstatisticaPartida estatistica, ArrayList<EventosOcorridos> eventos, Escalacao escalacaoCasa, Escalacao escalacaoVisitante, boolean prorrogacao, boolean penaltis, int golsPenaltiCasa, int golsPenaltiVisitante) {
+        super(id,data,horario, publico, estadio, arbitro, MVP, selecaoCasa, selecaoVisitante, tecnicoCasa, tecnicoVisitante, fase, status, estatistica, eventos, escalacaoCasa, escalacaoVisitante);
         this.prorrogacao = prorrogacao;
         this.penaltis = penaltis;
         this.golsPenaltiCasa = golsPenaltiCasa;

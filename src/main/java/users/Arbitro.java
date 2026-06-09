@@ -19,6 +19,10 @@ public class Arbitro extends Usuario {
         this.experiencia = experiencia;
     }
 
+    public List<Partida> getApitando() {
+        return apitando;
+    }
+
     public int getExperiencia() {
         return experiencia;
     }

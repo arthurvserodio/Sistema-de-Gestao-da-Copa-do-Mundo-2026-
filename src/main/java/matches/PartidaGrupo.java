@@ -16,8 +16,8 @@ public class PartidaGrupo extends Partida{
     private String grupo;
     private int rodada;
 
-    public PartidaGrupo(LocalDate data, String horario, int publico, Estadio estadio, Arbitro arbitro, Jogadores MVP, Selecoes selecaoCasa, Selecoes selecaoVisitante, Tecnico tecnicoCasa, Tecnico tecnicoVisitante, Fase fase, StatusPartida status, int golsCasa, int golsVisitante, EstatisticaPartida estatistica, ArrayList<EventosOcorridos> eventos, Escalacao escalacaoCasa, Escalacao escalacaoVisitante, String grupo, int rodada) {
-        super(data,horario, publico, estadio, arbitro, MVP, selecaoCasa, selecaoVisitante, tecnicoCasa, tecnicoVisitante, fase, status, golsCasa, golsVisitante, estatistica, eventos, escalacaoCasa, escalacaoVisitante);
+    public PartidaGrupo(int id,LocalDate data, String horario, int publico, Estadio estadio, Arbitro arbitro, Jogadores MVP, Selecoes selecaoCasa, Selecoes selecaoVisitante, Tecnico tecnicoCasa, Tecnico tecnicoVisitante, Fase fase, StatusPartida status, EstatisticaPartida estatistica, ArrayList<EventosOcorridos> eventos, Escalacao escalacaoCasa, Escalacao escalacaoVisitante, String grupo, int rodada) {
+        super(id,data,horario, publico, estadio, arbitro, MVP, selecaoCasa, selecaoVisitante, tecnicoCasa, tecnicoVisitante, fase, status, estatistica, eventos, escalacaoCasa, escalacaoVisitante);
         this.grupo = grupo;
         this.rodada = rodada;
     }
