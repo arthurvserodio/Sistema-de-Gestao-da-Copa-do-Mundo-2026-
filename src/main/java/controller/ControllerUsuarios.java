@@ -140,6 +140,11 @@ public class ControllerUsuarios {
     }
 
     @FXML
+    private void irParaRelatorio(MouseEvent e){
+        SceneController.mudaDeTela("/designAndScreens/telasAdministrador/relatorio.fxml");
+    }
+
+    @FXML
     private void irParaLogin(ActionEvent e) {
         SceneController.mudaDeTela( "/designAndScreens/login/login.fxml");
     }

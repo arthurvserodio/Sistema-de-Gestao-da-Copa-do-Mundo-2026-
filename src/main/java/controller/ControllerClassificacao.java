@@ -78,6 +78,8 @@ public class ControllerClassificacao {
     @FXML private Text botaoUsuario;
     @FXML private Text botaoArbitro1;
     @FXML private Text botaoArbitro2;
+    @FXML private Text botaoRelatorio;
+    @FXML private Text botaoHistoria;
 
     public void initialize() {
         Usuario u = Sessao.getInstancia().getUsuarioLogado();
@@ -89,6 +91,8 @@ public class ControllerClassificacao {
             botaoLogin.setVisible(false);
             if(u.getFuncao() == Funcao.ADMINISTRADOR){
                 botaoUsuario.setVisible(true);
+                botaoRelatorio.setVisible(true);
+                botaoHistoria.setVisible(false);
             }
         } else {
             botaoLogin.setVisible(true);
@@ -100,6 +104,11 @@ public class ControllerClassificacao {
     private void onLogout(ActionEvent e){
         Sessao.getInstancia().logout();
         SceneController.mudaDeTela( "/designAndScreens/telaInicial/paginaInicial.fxml");
+    }
+
+    @FXML
+    private void irParaRelatorio(MouseEvent e){
+        SceneController.mudaDeTela("/designAndScreens/telasAdministrador/relatorio.fxml");
     }
 
 }

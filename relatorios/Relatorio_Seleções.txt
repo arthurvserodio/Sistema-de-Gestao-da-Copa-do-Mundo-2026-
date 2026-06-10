@@ -1,0 +1,54 @@
+========================================
+          COPA 26 - SELECOES            
+========================================
+Gerado em: 2026-06-10
+
+Nome                      Grupo      Ranking    Participacoes   Titulos   
+------------------------------------------------------------------------
+Argentina                 C          1          18              3         
+Brasil                    G          5          22              5         
+Alemanha                  E          11         20              4         
+França                    D          2          16              2         
+Espanha                   B          16         16              1         
+Portugal                  H          7          8               0         
+Inglaterra                F          4          16              1         
+Itália                    A          9          18              4         
+Holanda                   G          6          11              0         
+Bélgica                   E          3          14              0         
+Croácia                   D          10         6               0         
+Uruguai                   C          15         14              2         
+Estados Unidos            B          13         11              0         
+México                    A          14         18              0         
+Canadá                    F          31         3               0         
+Japão                     H          17         7               0         
+Coreia do Sul             G          23         11              0         
+Marrocos                  E          12         6               0         
+Senegal                   D          19         3               0         
+Suíça                     B          20         12              0         
+Dinamarca                 F          21         6               0         
+Polônia                   C          22         9               0         
+Sérvia                    A          24         13              0         
+Áustria                   H          25         8               0         
+Turquia                   G          26         2               0         
+Suécia                    E          27         12              0         
+Noruega                   D          28         3               0         
+Egito                     B          29         3               0         
+Nigéria                   F          30         6               0         
+Camarões                  H          32         8               0         
+Costa Rica                C          41         6               0         
+Austrália                 A          38         6               0         
+Irã                       G          39         6               0         
+Arábia Saudita            E          56         6               0         
+Tunísia                   D          41         6               0         
+Equador                   B          36         4               0         
+Chile                     F          40         9               0         
+Colômbia                  H          17         6               0         
+Peru                      A          35         5               0         
+Paraguai                  C          53         8               0         
+eita                      R          45         3               7         
+eita2                     Y          45         21              5         
+eita3                     C          34         3               4         
+eita4                     F          34         2               7         
+bla                       d          dd         dd              dd        
+------------------------------------------------------------------------
+Total: 45

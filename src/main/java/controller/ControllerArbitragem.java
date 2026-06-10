@@ -36,6 +36,7 @@ public class ControllerArbitragem {
     @FXML private TextField txtBusca;
     @FXML private Label label;
     @FXML private Text botaoUsuario;
+    @FXML private Text botaoRelatorio;
 
 
     private final ArbitroFile arbitroFile = ArbitroFile.getInstance();
@@ -62,6 +63,7 @@ public class ControllerArbitragem {
             botaoLogin.setVisible(false);
             if(u.getFuncao()== Funcao.ADMINISTRADOR){
                 botaoUsuario.setVisible(true);
+                botaoRelatorio.setVisible(true);
             }
         } else {
             botaoLogin.setVisible(true);
@@ -69,6 +71,11 @@ public class ControllerArbitragem {
         }
 
 
+    }
+
+    @FXML
+    private void irParaRelatorio(MouseEvent e){
+        SceneController.mudaDeTela("/designAndScreens/telasAdministrador/relatorio.fxml");
     }
 
 

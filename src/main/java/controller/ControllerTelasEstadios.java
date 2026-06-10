@@ -34,6 +34,7 @@ public class ControllerTelasEstadios {
     @FXML private TextField txtCapacidade;
     @FXML private TextField txtBusca;
     @FXML private Text botaoUsuario;
+    @FXML private Text botaoRelatorio;
 
     private final EstadioFile estadioFile = EstadioFile.getInstance();
 
@@ -66,7 +67,7 @@ public class ControllerTelasEstadios {
             botaoLogin.setVisible(false);
             if(u.getFuncao()==Funcao.ADMINISTRADOR){
                 botaoUsuario.setVisible(true);
-
+                botaoRelatorio.setVisible(true);
             }
         } else {
             botaoLogin.setVisible(true);
@@ -223,7 +224,10 @@ public class ControllerTelasEstadios {
     }
 
 
-
+    @FXML
+    private void irParaRelatorio(MouseEvent e){
+        SceneController.mudaDeTela("/designAndScreens/telasAdministrador/relatorio.fxml");
+    }
 
 
     @FXML

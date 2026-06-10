@@ -32,7 +32,12 @@
                   </ImageView>
                </children>
             </StackPane>
-            <Text fill="WHITE" layoutX="272.0" layoutY="64.0" onMouseClicked="#irParaHistoria" strokeType="OUTSIDE" strokeWidth="0.0" text="História" textAlignment="CENTER">
+            <Text fx:id="botaoHistoria" fill="WHITE" layoutX="272.0" layoutY="64.0" onMouseClicked="#irParaHistoria" strokeType="OUTSIDE" strokeWidth="0.0" text="História" textAlignment="CENTER">
+               <font>
+                  <Font name="Oswald Medium" size="30.0" />
+               </font>
+            </Text>
+            <Text fx:id="botaoRelatorio" fill="WHITE" layoutX="272.0" layoutY="64.0" onMouseClicked="#irParaRelatorio" strokeType="OUTSIDE" strokeWidth="0.0" text="Relatórios" textAlignment="CENTER" visible="false">
                <font>
                   <Font name="Oswald Medium" size="30.0" />
                </font>

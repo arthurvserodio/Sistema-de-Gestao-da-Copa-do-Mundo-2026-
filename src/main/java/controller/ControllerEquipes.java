@@ -41,6 +41,9 @@ public class ControllerEquipes {
 
     @FXML private Text botaoUsuario;
 
+    @FXML private Text botaoHistoria;
+    @FXML private Text botaoRelatorio;
+
 
 
 
@@ -62,6 +65,8 @@ public class ControllerEquipes {
             if(u.getFuncao() == Funcao.ADMINISTRADOR){
                 botaoUsuario.setVisible(true);
                 botaoCadastrarSelecao.setVisible(true);
+                botaoHistoria.setVisible(false);
+                botaoRelatorio.setVisible(true);
             }
         } else {
             botaoLogin.setVisible(true);
@@ -124,6 +129,12 @@ public class ControllerEquipes {
             }
         }
     }
+
+    @FXML
+    private void irParaRelatorio(MouseEvent e){
+        SceneController.mudaDeTela("/designAndScreens/telasAdministrador/relatorio.fxml");
+    }
+
     @FXML
     private void irParaCadastroDeSelecoes(MouseEvent e){
 
