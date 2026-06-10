@@ -159,7 +159,7 @@ public class ControllerCadastroPartidaTabela {
                 -fx-font-family: 'Inter 18pt Medium';""");
         //Imagem seleção 2
         /*refatoracao para upload de imagens*/
-        is = new File("target/classes/images/Logos/" + partida.getSelecaoCasa().getNome().toLowerCase().replace(" ", "_") + ".png");
+        is = new File("target/classes/images/Logos/" + partida.getSelecaoVisitante().getNome().toLowerCase().replace(" ", "_") + ".png");
         System.out.println(is.getAbsolutePath());
 
         ImageView logoSelecao2;

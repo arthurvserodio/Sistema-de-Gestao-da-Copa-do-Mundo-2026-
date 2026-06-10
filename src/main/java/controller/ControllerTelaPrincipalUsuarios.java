@@ -4,6 +4,7 @@ import Enums.Funcao;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
@@ -59,7 +60,7 @@ public class ControllerTelaPrincipalUsuarios {
             SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroAdm.fxml");
         }
         else{
-            SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroNormal.fxml");
+            SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaDesignacao.fxml");
         }
     }
 
@@ -72,9 +73,29 @@ public class ControllerTelaPrincipalUsuarios {
     @FXML private Button botaoLogin;
     @FXML private MenuButton menuUsuario;
     @FXML private Text botaoUsuario;
+    @FXML private Text botaoArbitro1;
+    @FXML private Text botaoArbitro2;
 
     public void initialize() {
         Usuario u = Sessao.getInstancia().getUsuarioLogado();
+
+        if(u== null){
+            botaoArbitro2.setVisible(false);
+            botaoArbitro1.setVisible(false);
+
+        }else {
+            if (u.getFuncao() == Funcao.ARBITRO) {
+                botaoArbitro1.setVisible(false);
+                botaoArbitro2.setVisible(true);
+            } else if (u.getFuncao() == Funcao.ADMINISTRADOR || u.getFuncao() == Funcao.ORGANIZADOR) {
+                botaoArbitro2.setVisible(false);
+                botaoArbitro1.setVisible(true);
+            } else {
+                botaoArbitro2.setVisible(false);
+                botaoArbitro1.setVisible(false);
+            }
+        }
+
         if (u != null) {
             menuUsuario.setText(u.getNome() );
             menuUsuario.setVisible(true);

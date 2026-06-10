@@ -104,6 +104,11 @@ public class ControllerArbitragem {
 
             }
 
+            if(arbitroFile.arbitroJaExiste(nome)){
+                mostrarErro("Arbitro já existe");
+                return;
+            }
+
             int experiencia;
             try {
 

@@ -15,6 +15,7 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.shape.Line;
 import nationsAndPlayers.nations.Campeoes;
+import org.w3c.dom.Text;
 import services.matches.CarregaArquivoService;
 import users.Sessao;
 import users.Usuario;

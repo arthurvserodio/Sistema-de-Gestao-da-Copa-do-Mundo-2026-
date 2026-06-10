@@ -109,7 +109,10 @@ public class PartidaBuilder {
         return this;
     }
 
+
     public Partida build(){
         return new Partida(id, data, horario, publico, estadio, arbitro, MVP, selecaoCasa, selecaoVisitante,tecnicoCasa,tecnicoVisitante,fase,status,estatistica,eventos, escalacaoCasa, escalacaoVisitante);
     }
+
+
 }

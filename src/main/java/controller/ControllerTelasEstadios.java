@@ -34,8 +34,10 @@ public class ControllerTelasEstadios {
     @FXML private TextField txtCapacidade;
     @FXML private TextField txtBusca;
     @FXML private Text botaoUsuario;
-
+    @FXML private Text botaoArbitro1;
+    @FXML private Text botaoArbitro2;
     private final EstadioFile estadioFile = EstadioFile.getInstance();
+
 
     @FXML
     public void initialize() {
@@ -50,19 +52,44 @@ public class ControllerTelasEstadios {
         painelPrincipal.setOnMouseClicked(event -> {
             tabelaEstadios.getSelectionModel().clearSelection();
         });
+
+
+
+
+
 /// Parte da Helena
         Usuario u = Sessao.getInstancia().getUsuarioLogado();
+        if(u== null){
+            botaoArbitro2.setVisible(false);
+            botaoArbitro1.setVisible(false);
+
+        }else {
+            if (u.getFuncao() == Funcao.ARBITRO) {
+                botaoArbitro1.setVisible(false);
+                botaoArbitro2.setVisible(true);
+            } else if (u.getFuncao() == Funcao.ADMINISTRADOR || u.getFuncao() == Funcao.ORGANIZADOR) {
+                botaoArbitro1.setVisible(true);
+                botaoArbitro2.setVisible(false);
+            } else {
+                botaoArbitro2.setVisible(false);
+                botaoArbitro1.setVisible(false);
+            }
+        }
+
         if (u != null) {
             menuUsuario.setText(u.getNome());
             menuUsuario.setVisible(true);
             botaoLogin.setVisible(false);
             if(u.getFuncao()==Funcao.ADMINISTRADOR){
                 botaoUsuario.setVisible(true);
+
             }
         } else {
             botaoLogin.setVisible(true);
             menuUsuario.setVisible(false);
         }
+
+
     }
 
     // Mostrar tabela
@@ -98,6 +125,11 @@ public class ControllerTelasEstadios {
                     throw new IllegalArgumentException("Nome deve conter apenas letras.");
                 }
 
+            }
+
+            if(estadioFile.estadioJaExiste(nome)){
+                mostrarErro("Estadio já cadastrado");
+                return;
             }
 
             int capacidade;
@@ -253,7 +285,7 @@ public class ControllerTelasEstadios {
             SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroAdm.fxml");
         }
         else{
-            SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroNormal.fxml");
+            SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaDesignacao.fxml");
         }
     }
 
