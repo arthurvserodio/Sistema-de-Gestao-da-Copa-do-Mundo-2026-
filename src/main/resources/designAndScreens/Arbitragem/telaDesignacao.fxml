@@ -90,7 +90,7 @@
                 <Font name="Oswald Medium" size="30.0" />
             </font>
         </Text>
-        <Text fx:id="botaoUsuario" fill="WHITE" layoutX="970.0" layoutY="64.0" onMouseClicked="#irParaUsuarios" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuários" textAlignment="CENTER" visible="false">
+        <Text fx:id="botaoUsuario" fill="WHITE" layoutX="1107.0" layoutY="64.0" onMouseClicked="#irParaUsuarios" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuários" textAlignment="CENTER" visible="false">
             <font>
                 <Font name="Oswald Medium" size="30.0" />
             </font>
@@ -119,7 +119,7 @@
             </columnResizePolicy>
         </TableView>
         <TextField layoutX="966.0" layoutY="192.0" prefHeight="36.0" prefWidth="193.0" style="-fx-background-color: #80808080;" styleClass="textfield_equipes" stylesheets="@../../css/style.css" />
-        <Text fill="WHITE" layoutX="995.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER" underline="true">
+        <Text fill="WHITE" layoutX="1107.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER" underline="true">
             <font>
                 <Font name="Oswald Medium" size="30.0" />
             </font>
