@@ -7,9 +7,14 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import services.UsuarioService;
 import services.files.UsuarioFile;
 import users.Sessao;
@@ -27,18 +32,6 @@ public class ControllerUsuarios {
     @FXML private TableColumn<Usuario, String> colFuncao;
     @FXML private TableColumn<Usuario, String> colStatus;
     @FXML private TableColumn<Usuario, String> colPais;
-    @FXML private TextField nome;
-    @FXML private TextField funcao;
-    @FXML private TextField status;
-    @FXML private TextField pais;
-    @FXML private PasswordField senha;
-    @FXML private PasswordField senha2;
-    @FXML private TextField nomeEdit;
-    @FXML private TextField funcaoEdit;
-    @FXML private TextField statusEdit;
-    @FXML private TextField paisEdit;
-    @FXML private PasswordField senhaEdit;
-    @FXML private PasswordField senha2Edit;
     @FXML private Button botaoLogin;
     @FXML private MenuButton menuUsuario;
     @FXML private CheckMenuItem checkNome;
@@ -46,7 +39,7 @@ public class ControllerUsuarios {
     @FXML private CheckMenuItem checkPais;
     @FXML private CheckMenuItem checkStatus;
     @FXML private TextField campoPesquisa;
-    @FXML private MenuButton menuEditar;
+
 
 
 
@@ -80,36 +73,7 @@ public class ControllerUsuarios {
         checkPais.selectedProperty().addListener((obs, antigo, novo) -> filtrar());
         checkStatus.selectedProperty().addListener((obs, antigo, novo) -> filtrar());
 
-        //detecta quando o menuEditar for aberto pra ja iniciar os fields com o valor do selecionado
-        menuEditar.showingProperty().addListener((obs, antigo, novo) -> {
-            if (novo) {
-                try{
-                    Usuario selecionado = tabelaUsuarios.getSelectionModel().getSelectedItem();
 
-                    if(selecionado==null){
-                        throw new NenhumUsuarioSelecionadoException("Nenhum usuário foi selecionado");
-                    }
-
-                    //inicializa os fields com os dados do usuario selecionado
-
-                    nomeEdit.setText(selecionado.getNome());
-                    funcaoEdit.setText(selecionado.getFuncao().toString());
-                    paisEdit.setText(selecionado.getPais());
-                    statusEdit.setText(selecionado.getStatus());
-                    senhaEdit.setText(selecionado.getSenha());
-                    senha2Edit.setText(selecionado.getSenha());
-
-                }catch (NenhumUsuarioSelecionadoException e) {
-                    Alert alert = new Alert(Alert.AlertType.WARNING);
-                    alert.setTitle("Atenção");
-                    alert.setHeaderText(null);
-                    alert.setContentText(e.getMessage());
-                    alert.showAndWait();
-                    menuEditar.hide(); //nao abre o menu se nao tiver selecionado
-                }
-
-            }
-        });
 
     }
 
@@ -186,38 +150,54 @@ public class ControllerUsuarios {
     }
 
     @FXML
-    private void adicionarUsuario(ActionEvent e){
-        String nome_s = nome.getText().trim();
-        String funcao_s = funcao.getText().trim();
-        String status_s = status.getText().trim();
-        String pais_s = pais.getText().trim();
-        String senha_s = senha.getText().trim();
-        String senha2_s = senha2.getText().trim();
+    private void irParaCadastrarUsuario(ActionEvent e){
         try{
-            UsuarioService.adicionarUsuario(nome_s, funcao_s, status_s, pais_s, senha_s, senha2_s);
-            mostrarSucesso("Usuário cadastrado!");
-            tabelaUsuarios.setItems(UsuarioFile.getInstancia().listarTodos());
-        }
-        catch(CamposVaziosException a ){
-            mostrarErro("Preencha todos os campos");
-            return;
-        }
-        catch(UsuarioExisteException a){
-            mostrarErro("O usuario inserido já existe");
-            return;
-        }
-        catch(SenhasDiferemException a){
-            mostrarErro("As senhas diferem");
-        }
-        catch(FuncaoInvalidaException a){
-            mostrarErro("A função é inexistente");
 
-        }
-        catch(StatusInvalidoException a){
-            mostrarErro("O status é inválido");
-        }
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/designAndScreens/telasAdministrador/CadastroUsuarios.fxml"));
+            Parent root = loader.load();
 
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        }catch(IOException ex){
+            System.err.println("Falha ao abrir o telaCadastroUsuario: " + ex.getMessage());
+        }
     }
+
+    @FXML
+    private void irParaEditarUsuario(ActionEvent e){
+        try{
+
+            Usuario selecionado = tabelaUsuarios.getSelectionModel().getSelectedItem();
+
+            if(selecionado==null){
+                throw new NenhumUsuarioSelecionadoException("Nenhum usuário foi selecionado");
+            }
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/designAndScreens/telasAdministrador/EditarUsuario.fxml"));
+            Parent root = loader.load(); //carrega o fxml
+
+            ControllerEditarUsuario controller = loader.getController();
+            controller.setUsuario(selecionado);
+
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL); //trava a janela anterior enquanto essa nao fechar
+            stage.setScene(new Scene(root)); //coloca no novo stage o fxml carregado
+            stage.showAndWait(); //mostra a cena e trava o codigo ate sair daqui
+        }catch(IOException ex){
+            System.err.println("Falha ao abrir o telaEditarUsuario: " + ex.getMessage());
+        }catch (NenhumUsuarioSelecionadoException a) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Atenção");
+            alert.setHeaderText(null);
+            alert.setContentText(a.getMessage());
+            alert.showAndWait();
+
+        }
+    }
+
+
 
     @FXML
     private void removerUsuario() {
@@ -248,43 +228,7 @@ public class ControllerUsuarios {
         }
     }
 
-    @FXML
-    private void editarUsuario(){
 
-        String nomeEdit_s = nomeEdit.getText().trim();
-        String funcaoEdit_s = funcaoEdit.getText().trim();
-        String statusEdit_s = statusEdit.getText().trim();
-        String paisEdit_s = paisEdit.getText().trim();
-        String senhaEdit_s = senhaEdit.getText().trim();
-        String senha2Edit_s = senha2Edit.getText().trim();
-
-        try{
-            //so vai clicar aqui se tiver selecionado usuario
-            Usuario selecionado = tabelaUsuarios.getSelectionModel().getSelectedItem();
-            UsuarioService.editarUsuario(selecionado,nomeEdit_s, funcaoEdit_s, statusEdit_s, paisEdit_s, senhaEdit_s, senha2Edit_s);
-            mostrarSucessoEdit("Usuário editado!");
-            campoPesquisa.clear();
-            tabelaUsuarios.refresh(); //constroi a tebela de novo a partir dos objetos
-        } catch(CamposVaziosException a ){
-            mostrarErroEdit("Preencha todos os campos");
-        }
-        catch(UsuarioExisteException a){
-            mostrarErroEdit("O usuario inserido já existe");
-        }
-        catch(SenhasDiferemException a){
-            mostrarErroEdit("As senhas diferem");
-        }
-        catch(FuncaoInvalidaException a){
-            mostrarErroEdit("A função é inexistente");
-
-        }
-        catch(StatusInvalidoException a){
-            mostrarErroEdit("O status é inválido");
-        }
-
-
-
-    }
 
 
 
@@ -294,30 +238,7 @@ public class ControllerUsuarios {
         SceneController.mudaDeTela( "/designAndScreens/telaInicial/paginaInicial.fxml");
     }
 
-    @FXML
-    private Label labelMensagem;
 
-    @FXML
-    private Label labelMensagemEdit;
 
-    private void mostrarErro(String mensagem) {
-        labelMensagem.setStyle("-fx-font-size: 13px; -fx-text-fill: #cc0000;");
-        labelMensagem.setText(mensagem);
-    }
-
-    private void mostrarSucesso(String mensagem) {
-        labelMensagem.setStyle("-fx-font-size: 13px; -fx-text-fill: #1a7a1a;");
-        labelMensagem.setText(mensagem);
-    }
-
-    private void mostrarErroEdit(String mensagem) {
-        labelMensagemEdit.setStyle("-fx-font-size: 13px; -fx-text-fill: #cc0000;");
-        labelMensagemEdit.setText(mensagem);
-    }
-
-    private void mostrarSucessoEdit(String mensagem) {
-        labelMensagemEdit.setStyle("-fx-font-size: 13px; -fx-text-fill: #1a7a1a;");
-        labelMensagemEdit.setText(mensagem);
-    }
 
 }

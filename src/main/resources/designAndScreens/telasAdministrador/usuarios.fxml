@@ -45,7 +45,7 @@
                 <Font name="Oswald Medium" size="30.0" />
             </font>
         </Text>
-        <Text fill="WHITE" layoutX="970.0" layoutY="64.0"  strokeType="OUTSIDE" strokeWidth="0.0" text="Usuários" underline="true" textAlignment="CENTER">
+        <Text fill="WHITE" layoutX="1107.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuários" underline="true" textAlignment="CENTER">
             <font>
                 <Font name="Oswald Medium" size="30.0" />
             </font>
@@ -65,7 +65,7 @@
                 <MenuItem text="Cancelar" />
             </items>
         </MenuButton>
-        <Text fill="WHITE" layoutX="1107.0" layoutY="63.0" onMouseClicked="#irParaArbitros" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER">
+        <Text fill="WHITE" layoutX="970.0" layoutY="63.0" onMouseClicked="#irParaArbitros" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER">
             <font>
                 <Font name="Oswald Medium" size="30.0" />
             </font>
@@ -110,7 +110,9 @@
                 <MenuItem text="Cancelar" />
             </items>
         </MenuButton>
-        <MenuButton layoutX="550.0" layoutY="650.0" minHeight="18.0" minWidth="45.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="156.0" styleClass="button-adicionar" text="Add">
+
+        <Button layoutX="550.0" layoutY="650.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="156.0"
+                styleClass="button-adicionar" text="Add" onAction="#irParaCadastrarUsuario">
             <font>
                 <Font name="Oswald Medium" size="12.0" />
             </font>
@@ -118,40 +120,11 @@
                 <URL value="@../../css/style.css" />
                 <URL value="@../../css/style3.css" />
             </stylesheets>
-            <items>
-                <CustomMenuItem hideOnClick="false">
-                    <content>
-                        <VBox spacing="10.0" prefWidth="250" style="-fx-padding: 15; -fx-background-color: white;" >
-                            <Label text="Cadastro de Usuário" style="-fx-font-size: 14; -fx-font-weight: bold;"/>
+        </Button>
 
-                            <Label text="Nome" />
-                            <TextField fx:id="nome" promptText="Nome" />
 
-                            <Label text="Função (Administrador, Organizador, Arbitro)" wrapText="true" maxWidth="220" />
-                            <TextField fx:id="funcao" promptText="Função" />
-
-                            <Label text="Status (Ativo, Inativo)" />
-                            <TextField fx:id="status" promptText="Status"  />
-
-                            <Label text="País" />
-                            <TextField fx:id="pais" promptText="País" />
-
-                            <Label text="Senha" />
-                            <PasswordField fx:id="senha" promptText="Senha" />
-
-                            <Label text="Repetir Senha" />
-                            <PasswordField fx:id="senha2" promptText="Repetir senha" />
-
-                            <!-- Mensagem de erro/feedback -->
-                            <Label fx:id="labelMensagem" wrapText="true" style="-fx-font-size: 13px; -fx-text-fill: #cc0000;" text="" />
-
-                            <Button mnemonicParsing="false" onAction="#adicionarUsuario" text="Cadastrar" styleClass="button-add" maxWidth="Infinity"/>
-                        </VBox>
-                    </content>
-                </CustomMenuItem>
-            </items>
-        </MenuButton>
-        <MenuButton fx:id="menuEditar" layoutX="724.0" layoutY="650.0" minHeight="18.0" minWidth="45.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="156.0" styleClass="button-editar" text="Editar">
+        <Button fx:id="menuEditar" layoutX="724.0" layoutY="650.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="156.0"
+                styleClass="button-editar" text="Editar" onAction="#irParaEditarUsuario">
             <font>
                 <Font name="Oswald Medium" size="12.0" />
             </font>
@@ -159,39 +132,8 @@
                 <URL value="@../../css/style.css" />
                 <URL value="@../../css/style3.css" />
             </stylesheets>
-            <items>
-                <CustomMenuItem hideOnClick="false">
-                    <content>
-                        <VBox spacing="10.0" prefWidth="250" style="-fx-padding: 15; -fx-background-color: white;" >
-                            <Label text="Edição de Usuário" style="-fx-font-size: 14; -fx-font-weight: bold;"/>
+        </Button>
 
-                            <Label text="Nome" />
-                            <TextField fx:id="nomeEdit" promptText="Nome" />
-
-                            <Label text="Função (Administrador, Organizador, Arbitro)" wrapText="true" maxWidth="220" />
-                            <TextField fx:id="funcaoEdit" promptText="Função" />
-
-                            <Label text="Status (Ativo, Inativo)" />
-                            <TextField fx:id="statusEdit" promptText="Status"  />
-
-                            <Label text="País" />
-                            <TextField fx:id="paisEdit" promptText="País" />
-
-                            <Label text="Senha" />
-                            <PasswordField fx:id="senhaEdit" promptText="Senha" />
-
-                            <Label text="Repetir Senha" />
-                            <PasswordField fx:id="senha2Edit" promptText="Repetir senha" />
-
-                            <!-- Mensagem de erro/feedback -->
-                            <Label fx:id="labelMensagemEdit" wrapText="true" style="-fx-font-size: 13px; -fx-text-fill: #cc0000;" text="" />
-
-                            <Button mnemonicParsing="false" onAction="#editarUsuario" text="Editar" styleClass="button-editar" maxWidth="Infinity"/>
-                        </VBox>
-                    </content>
-                </CustomMenuItem>
-            </items>
-        </MenuButton>
     </children>
 
 </AnchorPane>

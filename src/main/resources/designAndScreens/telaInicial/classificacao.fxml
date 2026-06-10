@@ -55,7 +55,7 @@
                         <Font name="Oswald Medium" size="30.0" />
                      </font>
                   </Text>
-                  <Text fx:id="botaoArbitro2" fill="WHITE" layoutX="963.0" layoutY="64.0" onMouseClicked="#irParaArbitros" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER">
+                  <Text fx:id="botaoArbitro" fill="WHITE" layoutX="970.0" layoutY="64.0" onMouseClicked="#irParaArbitros" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER">
                      <font>
                         <Font name="Oswald Medium" size="30.0" />
                      </font>
@@ -74,11 +74,6 @@
                         <MenuItem text="Cancelar" />
                      </items>
                   </MenuButton>
-                  <Text fx:id="botaoArbitro1" fill="WHITE" layoutX="1115.0" layoutY="64.0" onMouseClicked="#irParaArbitros" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER">
-                     <font>
-                        <Font name="Oswald Medium" size="30.0" />
-                     </font>
-                  </Text>
                </children>
             </Group>
             <ImageView fitHeight="1262.0" fitWidth="985.0" layoutX="265.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
