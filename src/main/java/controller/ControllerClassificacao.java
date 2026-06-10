@@ -20,8 +20,14 @@ public class ControllerClassificacao {
     //Volta para a pagina inicial de menu clicando no logo da copa
     @FXML
     private void irPaginaInicial(MouseEvent e){
-        SceneController.mudaDeTela("/designAndScreens/telaInicial/paginaInicial.fxml");
-    }
+            Usuario u = Sessao.getInstancia().getUsuarioLogado();
+            if( u == null) {
+                SceneController.mudaDeTela("/designAndScreens/telaInicial/paginaInicial.fxml");
+            }else {
+                SceneController.mudaDeTela("/designAndScreens/telasAdministrador/telaPrincipalUsuarios.fxml");
+            }
+        }
+
     //Passa do Menu para a página que conta a historia da copa
     @FXML
     private void irParaHistoria(MouseEvent e){
@@ -41,11 +47,11 @@ public class ControllerClassificacao {
     @FXML
     private void irParaEstadios(MouseEvent e) {
         Usuario u = Sessao.getInstancia().getUsuarioLogado();
-        if(u.getFuncao()!= Funcao.ARBITRO){
-            SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioAdm.fxml");
+        if(u == null || u.getFuncao() == Funcao.ARBITRO){
+            SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioNormal.fxml");
         }
         else{
-            SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioNormal.fxml");
+            SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioAdm.fxml");
         }
     }
 

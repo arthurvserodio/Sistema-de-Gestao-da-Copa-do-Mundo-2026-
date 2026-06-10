@@ -240,7 +240,12 @@ public class ControllerTelasEstadios {
     @FXML
     //Muda para tela de inicio
     private void irParaInicio(MouseEvent e) {
-        SceneController.mudaDeTela( "/designAndScreens/telaInicial/paginaInicial.fxml");
+        Usuario u = Sessao.getInstancia().getUsuarioLogado();
+        if( u == null) {
+            SceneController.mudaDeTela("/designAndScreens/telaInicial/paginaInicial.fxml");
+        }else {
+            SceneController.mudaDeTela("/designAndScreens/telasAdministrador/telaPrincipalUsuarios.fxml");
+        }
     }
     @FXML
     //Passa do Menu para a tela de equipes presentes na copa de 2026

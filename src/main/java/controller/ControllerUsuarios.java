@@ -110,7 +110,7 @@ public class ControllerUsuarios {
     @FXML
     //Muda para tela de inicio
     private void irParaInicio(MouseEvent e) {
-        SceneController.mudaDeTela( "/designAndScreens/telaInicial/paginaInicial.fxml");
+        SceneController.mudaDeTela( "/designAndScreens/telasAdministrador/telaPrincipalUsuarios.fxml");
     }
     @FXML
     private void irParaHistoria(MouseEvent e){

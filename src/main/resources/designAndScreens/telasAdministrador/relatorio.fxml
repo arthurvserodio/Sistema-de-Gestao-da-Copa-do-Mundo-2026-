@@ -27,7 +27,7 @@
                 </ImageView>
                 <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="#ffffff6d" strokeType="INSIDE" width="1710.0" />
 
-                <StackPane layoutX="91.0" layoutY="59.0" prefHeight="150.0" prefWidth="125.0" styleClass="logo_copa26_arredondado" stylesheets="@../../css/style.css">
+                <StackPane layoutX="91.0" layoutY="59.0" onMouseClicked="#irPaginaInicial" prefHeight="150.0" prefWidth="125.0" styleClass="logo_copa26_arredondado" stylesheets="@../../css/style.css">
                     <children>
                         <ImageView fitHeight="122.0" fitWidth="115.0" onMouseClicked="#irPaginaInicial" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -65,10 +65,10 @@
                 <Button fx:id="botaoLogin" layoutX="1297.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
                     <font><Font name="Oswald Medium" size="12.0" /></font>
                 </Button>
-                <MenuButton fx:id="menuUsuario" layoutX="1297.0" layoutY="27.0" mnemonicParsing="false" maxWidth="150" prefWidth="150" visible="false" styleClass="white_button" stylesheets="@../../css/style.css">
+                <MenuButton fx:id="menuUsuario" layoutX="1297.0" layoutY="27.0" maxWidth="150" mnemonicParsing="false" prefWidth="150" styleClass="white_button" stylesheets="@../../css/style.css" visible="false">
                     <font><Font name="Oswald Medium" size="12.0" /></font>
                     <items>
-                        <MenuItem text="Logout" onAction="#onLogout" />
+                        <MenuItem onAction="#onLogout" text="Logout" />
                         <MenuItem text="Cancelar" />
                     </items>
                 </MenuButton>
@@ -76,13 +76,13 @@
         </Group>
 
 
-        <VBox layoutX="0.0" layoutY="130.0" prefWidth="1710.0" alignment="TOP_CENTER" spacing="50.0" stylesheets="@../../css/styleRelatorio.css">
+        <VBox alignment="TOP_CENTER" layoutX="0.0" layoutY="130.0" prefWidth="1710.0" spacing="50.0" stylesheets="@../../css/styleRelatorio.css">
             <padding>
-                <Insets top="60.0" bottom="60.0" left="80.0" right="80.0" />
+                <Insets bottom="60.0" left="80.0" right="80.0" top="60.0" />
             </padding>
 
-            <VBox alignment="CENTER" translateX="-50" spacing="8.0">
-                <Text fill="#1a1a1a" text="Gerar Relatórios" textAlignment="CENTER" styleClass="titulo-relatorios">
+            <VBox alignment="CENTER" spacing="8.0" translateX="-50">
+                <Text fill="#1a1a1a" styleClass="titulo-relatorios" text="Gerar Relatórios" textAlignment="CENTER">
                     <font><Font name="Oswald Medium" size="42.0" /></font>
                 </Text>
                 <Text fill="#6b4f10" text="Selecione uma categoria e exporte os dados" textAlignment="CENTER">
@@ -91,99 +91,99 @@
             </VBox>
 
 
-            <HBox spacing="18.0" alignment="CENTER" translateX="-80.0">
+            <HBox alignment="CENTER" spacing="18.0" translateX="-80.0">
 
 
-                <VBox styleClass="card-relatorio" alignment="CENTER" spacing="18.0" prefWidth="230.0" prefHeight="280.0" stylesheets="@../../css/styleRelatorio.css">
-                    <padding><Insets top="30.0" bottom="30.0" left="20.0" right="20.0" /></padding>
-                    <StackPane styleClass="icone-circulo" prefWidth="68.0" prefHeight="68.0">
-                        <Text text="🏆" styleClass="icone-emoji" />
+                <VBox alignment="CENTER" prefHeight="280.0" prefWidth="230.0" spacing="18.0" styleClass="card-relatorio" stylesheets="@../../css/styleRelatorio.css">
+                    <padding><Insets bottom="30.0" left="20.0" right="20.0" top="30.0" /></padding>
+                    <StackPane prefHeight="68.0" prefWidth="68.0" styleClass="icone-circulo">
+                        <Text styleClass="icone-emoji" text="🏆" />
                     </StackPane>
                     <VBox alignment="CENTER" spacing="6.0">
-                        <Text fill="#0d0d0d" text="Seleções" textAlignment="CENTER" styleClass="card-titulo">
+                        <Text fill="#0d0d0d" styleClass="card-titulo" text="Seleções" textAlignment="CENTER">
                             <font><Font name="Oswald Medium" size="22.0" /></font>
                         </Text>
-                        <Text fill="#888888" text="Todas as seleções&#10;participantes" textAlignment="CENTER" styleClass="card-subtitulo">
+                        <Text fill="#888888" styleClass="card-subtitulo" text="Todas as seleções&#10;participantes" textAlignment="CENTER">
                             <font><Font name="Inter 18pt" size="12.0" /></font>
                         </Text>
                     </VBox>
-                    <Button styleClass="botao-relatorio" text="Gerar Relatório" onAction="#gerarRelatorioSelecoes" mnemonicParsing="false">
+                    <Button mnemonicParsing="false" onAction="#gerarRelatorioSelecoes" styleClass="botao-relatorio" text="Gerar Relatório">
                         <font><Font name="Oswald Medium" size="13.0" /></font>
                     </Button>
                 </VBox>
 
 
-                <VBox styleClass="card-relatorio" alignment="CENTER" spacing="18.0" prefWidth="230.0" prefHeight="280.0" stylesheets="@../../css/styleRelatorio.css">
-                    <padding><Insets top="30.0" bottom="30.0" left="20.0" right="20.0" /></padding>
-                    <StackPane styleClass="icone-circulo" prefWidth="68.0" prefHeight="68.0">
-                        <Text text="⚽" styleClass="icone-emoji" />
+                <VBox alignment="CENTER" prefHeight="280.0" prefWidth="230.0" spacing="18.0" styleClass="card-relatorio" stylesheets="@../../css/styleRelatorio.css">
+                    <padding><Insets bottom="30.0" left="20.0" right="20.0" top="30.0" /></padding>
+                    <StackPane prefHeight="68.0" prefWidth="68.0" styleClass="icone-circulo">
+                        <Text styleClass="icone-emoji" text="⚽" />
                     </StackPane>
                     <VBox alignment="CENTER" spacing="6.0">
-                        <Text fill="#0d0d0d" text="Jogadores" textAlignment="CENTER" styleClass="card-titulo">
+                        <Text fill="#0d0d0d" styleClass="card-titulo" text="Jogadores" textAlignment="CENTER">
                             <font><Font name="Oswald Medium" size="22.0" /></font>
                         </Text>
-                        <Text fill="#888888" text="Lista completa&#10;de atletas" textAlignment="CENTER" styleClass="card-subtitulo">
+                        <Text fill="#888888" styleClass="card-subtitulo" text="Lista completa&#10;de atletas" textAlignment="CENTER">
                             <font><Font name="Inter 18pt" size="12.0" /></font>
                         </Text>
                     </VBox>
-                    <Button styleClass="botao-relatorio" text="Gerar Relatório" onAction="#gerarRelatorioJogadores" mnemonicParsing="false">
+                    <Button mnemonicParsing="false" onAction="#gerarRelatorioJogadores" styleClass="botao-relatorio" text="Gerar Relatório">
                         <font><Font name="Oswald Medium" size="13.0" /></font>
                     </Button>
                 </VBox>
 
 
-                <VBox styleClass="card-relatorio" alignment="CENTER" spacing="18.0" prefWidth="230.0" prefHeight="280.0" stylesheets="@../../css/styleRelatorio.css">
-                    <padding><Insets top="30.0" bottom="30.0" left="20.0" right="20.0" /></padding>
-                    <StackPane styleClass="icone-circulo" prefWidth="68.0" prefHeight="68.0">
-                        <Text text="🟨" styleClass="icone-emoji" />
+                <VBox alignment="CENTER" prefHeight="280.0" prefWidth="230.0" spacing="18.0" styleClass="card-relatorio" stylesheets="@../../css/styleRelatorio.css">
+                    <padding><Insets bottom="30.0" left="20.0" right="20.0" top="30.0" /></padding>
+                    <StackPane prefHeight="68.0" prefWidth="68.0" styleClass="icone-circulo">
+                        <Text styleClass="icone-emoji" text="🟨" />
                     </StackPane>
                     <VBox alignment="CENTER" spacing="6.0">
-                        <Text fill="#0d0d0d" text="Árbitros" textAlignment="CENTER" styleClass="card-titulo">
+                        <Text fill="#0d0d0d" styleClass="card-titulo" text="Árbitros" textAlignment="CENTER">
                             <font><Font name="Oswald Medium" size="22.0" /></font>
                         </Text>
-                        <Text fill="#888888" text="Árbitros escalados&#10;no torneio" textAlignment="CENTER" styleClass="card-subtitulo">
+                        <Text fill="#888888" styleClass="card-subtitulo" text="Árbitros escalados&#10;no torneio" textAlignment="CENTER">
                             <font><Font name="Inter 18pt" size="12.0" /></font>
                         </Text>
                     </VBox>
-                    <Button styleClass="botao-relatorio" text="Gerar Relatório" onAction="#gerarRelatorioArbitros" mnemonicParsing="false">
+                    <Button mnemonicParsing="false" onAction="#gerarRelatorioArbitros" styleClass="botao-relatorio" text="Gerar Relatório">
                         <font><Font name="Oswald Medium" size="13.0" /></font>
                     </Button>
                 </VBox>
 
 
-                <VBox styleClass="card-relatorio" alignment="CENTER" spacing="18.0" prefWidth="230.0" prefHeight="280.0" stylesheets="@../../css/styleRelatorio.css">
-                    <padding><Insets top="30.0" bottom="30.0" left="20.0" right="20.0" /></padding>
-                    <StackPane styleClass="icone-circulo" prefWidth="68.0" prefHeight="68.0">
-                        <Text text="🏟️" styleClass="icone-emoji" />
+                <VBox alignment="CENTER" prefHeight="280.0" prefWidth="230.0" spacing="18.0" styleClass="card-relatorio" stylesheets="@../../css/styleRelatorio.css">
+                    <padding><Insets bottom="30.0" left="20.0" right="20.0" top="30.0" /></padding>
+                    <StackPane prefHeight="68.0" prefWidth="68.0" styleClass="icone-circulo">
+                        <Text styleClass="icone-emoji" text="🏟️" />
                     </StackPane>
                     <VBox alignment="CENTER" spacing="6.0">
-                        <Text fill="#0d0d0d" text="Estádios" textAlignment="CENTER" styleClass="card-titulo">
+                        <Text fill="#0d0d0d" styleClass="card-titulo" text="Estádios" textAlignment="CENTER">
                             <font><Font name="Oswald Medium" size="22.0" /></font>
                         </Text>
-                        <Text fill="#888888" text="Estádios sedes&#10;da competição" textAlignment="CENTER" styleClass="card-subtitulo">
+                        <Text fill="#888888" styleClass="card-subtitulo" text="Estádios sedes&#10;da competição" textAlignment="CENTER">
                             <font><Font name="Inter 18pt" size="12.0" /></font>
                         </Text>
                     </VBox>
-                    <Button styleClass="botao-relatorio" text="Gerar Relatório" onAction="#gerarRelatorioEstadios" mnemonicParsing="false">
+                    <Button mnemonicParsing="false" onAction="#gerarRelatorioEstadios" styleClass="botao-relatorio" text="Gerar Relatório">
                         <font><Font name="Oswald Medium" size="13.0" /></font>
                     </Button>
                 </VBox>
 
 
-                <VBox styleClass="card-relatorio" alignment="CENTER" spacing="18.0" prefWidth="230.0" prefHeight="280.0" stylesheets="@../../css/styleRelatorio.css">
-                    <padding><Insets top="30.0" bottom="30.0" left="20.0" right="20.0" /></padding>
-                    <StackPane styleClass="icone-circulo" prefWidth="68.0" prefHeight="68.0">
-                        <Text text="👤" styleClass="icone-emoji" />
+                <VBox alignment="CENTER" prefHeight="280.0" prefWidth="230.0" spacing="18.0" styleClass="card-relatorio" stylesheets="@../../css/styleRelatorio.css">
+                    <padding><Insets bottom="30.0" left="20.0" right="20.0" top="30.0" /></padding>
+                    <StackPane prefHeight="68.0" prefWidth="68.0" styleClass="icone-circulo">
+                        <Text styleClass="icone-emoji" text="👤" />
                     </StackPane>
                     <VBox alignment="CENTER" spacing="6.0">
-                        <Text fill="#0d0d0d" text="Usuários" textAlignment="CENTER" styleClass="card-titulo">
+                        <Text fill="#0d0d0d" styleClass="card-titulo" text="Usuários" textAlignment="CENTER">
                             <font><Font name="Oswald Medium" size="22.0" /></font>
                         </Text>
-                        <Text fill="#888888" text="Usuários cadastrados&#10;no sistema" textAlignment="CENTER" styleClass="card-subtitulo">
+                        <Text fill="#888888" styleClass="card-subtitulo" text="Usuários cadastrados&#10;no sistema" textAlignment="CENTER">
                             <font><Font name="Inter 18pt" size="12.0" /></font>
                         </Text>
                     </VBox>
-                    <Button styleClass="botao-relatorio" text="Gerar Relatório" onAction="#gerarRelatorioUsuarios" mnemonicParsing="false">
+                    <Button mnemonicParsing="false" onAction="#gerarRelatorioUsuarios" styleClass="botao-relatorio" text="Gerar Relatório">
                         <font><Font name="Oswald Medium" size="13.0" /></font>
                     </Button>
                 </VBox>

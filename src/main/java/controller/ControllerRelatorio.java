@@ -14,8 +14,9 @@ import users.Usuario;
 public class ControllerRelatorio {
     @FXML
     private void irPaginaInicial(MouseEvent e){
-        SceneController.mudaDeTela("/designAndScreens/telaInicial/paginaInicial.fxml");
-    }
+        SceneController.mudaDeTela("/designAndScreens/telasAdministrador/telaPrincipalUsuarios.fxml");
+
+        }
 
     @FXML
     private void irParaRelatorio(MouseEvent e){
