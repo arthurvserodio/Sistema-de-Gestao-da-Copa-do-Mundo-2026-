@@ -41,8 +41,7 @@ public class ControllerEquipes {
 
     @FXML private Text botaoUsuario;
 
-    @FXML private Text botaoArbitro1;
-    @FXML private Text botaoArbitro2;
+
 
 
 
@@ -55,22 +54,7 @@ public class ControllerEquipes {
         pesquisa.textProperty().addListener((obs, antigo, novo) -> {pesquisarSelecao();});
         Usuario u = Sessao.getInstancia().getUsuarioLogado();
 
-        if(u== null){
-            botaoArbitro2.setVisible(false);
-            botaoArbitro1.setVisible(false);
 
-        }else {
-            if (u.getFuncao() == Funcao.ARBITRO) {
-                botaoArbitro1.setVisible(false);
-                botaoArbitro2.setVisible(true);
-            } else if (u.getFuncao() == Funcao.ADMINISTRADOR || u.getFuncao() == Funcao.ORGANIZADOR) {
-                botaoArbitro2.setVisible(false);
-                botaoArbitro1.setVisible(true);
-            } else {
-                botaoArbitro2.setVisible(false);
-                botaoArbitro1.setVisible(false);
-            }
-        }
         if (u != null) {
             menuUsuario.setText(u.getNome() );
             menuUsuario.setVisible(true);

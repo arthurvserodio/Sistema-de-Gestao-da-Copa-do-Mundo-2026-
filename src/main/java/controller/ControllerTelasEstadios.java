@@ -34,8 +34,7 @@ public class ControllerTelasEstadios {
     @FXML private TextField txtCapacidade;
     @FXML private TextField txtBusca;
     @FXML private Text botaoUsuario;
-    @FXML private Text botaoArbitro1;
-    @FXML private Text botaoArbitro2;
+
     private final EstadioFile estadioFile = EstadioFile.getInstance();
 
 
@@ -59,22 +58,7 @@ public class ControllerTelasEstadios {
 
 /// Parte da Helena
         Usuario u = Sessao.getInstancia().getUsuarioLogado();
-        if(u== null){
-            botaoArbitro2.setVisible(false);
-            botaoArbitro1.setVisible(false);
 
-        }else {
-            if (u.getFuncao() == Funcao.ARBITRO) {
-                botaoArbitro1.setVisible(false);
-                botaoArbitro2.setVisible(true);
-            } else if (u.getFuncao() == Funcao.ADMINISTRADOR || u.getFuncao() == Funcao.ORGANIZADOR) {
-                botaoArbitro1.setVisible(true);
-                botaoArbitro2.setVisible(false);
-            } else {
-                botaoArbitro2.setVisible(false);
-                botaoArbitro1.setVisible(false);
-            }
-        }
 
         if (u != null) {
             menuUsuario.setText(u.getNome());
