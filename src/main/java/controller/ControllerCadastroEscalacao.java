@@ -55,6 +55,7 @@ public class ControllerCadastroEscalacao {
     //Armazena qual popUp já foi chamado
     private boolean casaEscalada=false;
     ControllerCadastroPartidaTabela controllerTabela;
+    private EstadoDaCopa faseAtual; //Verificação de qual fase está a copa
     @FXML
     private Button btnCancela;
     @FXML
@@ -71,6 +72,9 @@ public class ControllerCadastroEscalacao {
     private AnchorPane campo;
     @FXML
     public void initialize(){
+        //Leitura da fae atual da copa
+        List<EstadoDaCopa> estadosDaCopa = CarregaArquivoService.carregaArquivo("/database/estado_copa.txt", parte -> new EstadoDaCopa(Fase.valueOf(parte[0]), LocalDate.parse(parte[1]), LocalDate.parse(parte[2])));
+        faseAtual = estadosDaCopa.get(0);
         formacao.getItems().addAll("4-2-3-1","4-2-4","5-2-3");
         ListSelecoes = CarregaArquivoService.carregaArquivo("/database/SelecoesNaCopa.txt", parte->new SelecaoBuilder().nome(parte[0]).grupo(parte[1]).build());
         ListaJogadores=CarregaArquivoService.carregaArquivo("/database/testeJogadores.txt", parte-> new JogadorBuilder().nome(parte[0]).selecao(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[2])).lesionado(Boolean.parseBoolean(parte[3])).suspenso(Boolean.parseBoolean(parte[4])).numero(Integer.parseInt(parte[6])).posicao(parte[5]).build());
@@ -144,7 +148,7 @@ public class ControllerCadastroEscalacao {
                 alert.showAndWait();
                 CadastroPartidaService.salvarEscalacao(partida,"src/main/resources/database/escalacao.txt");
                 CadastroPartidaService.salvarEscalacao(partida,"target/classes/database/escalacao.txt");
-                CadastroPartidaService.atualizaStatusDaPartida(partida.getId());
+                CadastroPartidaService.atualizaStatusDaPartida(partida.getId(),partida,faseAtual);
                 controllerTabela.atualizaTabela();
                 //Lógica para salvar no arquivo
                 //fecha a tela

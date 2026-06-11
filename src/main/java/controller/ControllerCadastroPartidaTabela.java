@@ -3,10 +3,7 @@ package controller;
 import Enums.Fase;
 import Enums.Funcao;
 import Enums.StatusPartida;
-import builder.ArbitroBuilder;
-import builder.EstadioBuilder;
-import builder.PartidaGrupoBuilder;
-import builder.SelecaoBuilder;
+import builder.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -25,6 +22,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import matches.EstadoDaCopa;
+import matches.EstatisticaTime;
 import matches.Partida;
 import matches.PartidaGrupo;
 import nationsAndPlayers.nations.Selecoes;
@@ -44,11 +42,12 @@ import java.util.List;
 import java.util.Optional;
 
 public class ControllerCadastroPartidaTabela {
-    private List<PartidaGrupo> todasAsPartidas=new ArrayList<>();
+    private List<? extends Partida> todasAsPartidas=new ArrayList<>();
     private EstadoDaCopa faseAtual;
     private List<Selecoes> ListSelecoes = new ArrayList<>();
     private List<Arbitro> ListArbitros = new ArrayList<>();
     private List<Estadio> ListEstadio = new ArrayList<>();
+    private List<String[]> PartidasFinalizadas=new ArrayList<>();
     @FXML
     private Button botaoLogin;
     @FXML private MenuButton menuUsuario;
@@ -59,21 +58,24 @@ public class ControllerCadastroPartidaTabela {
     //VBOX DE PARTIDAS AOVIVO
     @FXML
     private VBox aoVivo;
+    //VBOX DE PARTIDAS FIALIZADAS
+    @FXML
+    private VBox finalizada;
     @FXML private Text botaoUsuario;
 
     @FXML
     public void initialize() {
-        //ATENÇÃO, TENHO QUE RETIRAR ISSO MAIS TARDE
-        faseAtual = new EstadoDaCopa(
-                Fase.FASE_DE_GRUPOS,
-                LocalDate.of(2026,6,11),
-                LocalDate.of(2026,6,27)
-        );
+        //Leitura da fae atual da copa
+        List<EstadoDaCopa> estadosDaCopa = CarregaArquivoService.carregaArquivo("/database/estado_copa.txt", parte -> new EstadoDaCopa(Fase.valueOf(parte[0]), LocalDate.parse(parte[1]), LocalDate.parse(parte[2])));
+        faseAtual = estadosDaCopa.get(0);
         ListSelecoes = CarregaArquivoService.carregaArquivo("/database/SelecoesNaCopa.txt", parte->new SelecaoBuilder().nome(parte[0]).grupo(parte[1]).build());
         ListArbitros = CarregaArquivoService.carregaArquivo("/database/arbitrosNaCopa.txt", parte->new ArbitroBuilder().nome(parte[0]).build());
         ListEstadio=CarregaArquivoService.carregaArquivo("/database/Estadios.txt", parte->new EstadioBuilder().nome(parte[0]).local(parte[2]).build());
         if(faseAtual.getFaseAtual()==Fase.FASE_DE_GRUPOS){
             todasAsPartidas = CarregaArquivoService.carregaArquivo("/database/partida_grupo.txt", parte->new PartidaGrupoBuilder().id(Integer.parseInt(parte[0])).data(LocalDate.parse(parte[2])).horario(parte[3]).estadio(CadastroPartidaService.buscaPeloNome(ListEstadio, Estadio::getNome,parte[4])).arbitro(CadastroPartidaService.buscaPeloNome(ListArbitros, Arbitro::getNome,parte[5])).grupo(parte[6]).Casa(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[7])).Visitante(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[8])).fase(Fase.valueOf(parte[9])).status(StatusPartida.valueOf(parte[10])).build());
+        }
+        else{
+            todasAsPartidas = CarregaArquivoService.carregaArquivo("/database/partida_eliminatoria.txt", parte->new PartidaEliminatoriaBuilder().id(Integer.parseInt(parte[0])).data(LocalDate.parse(parte[2])).horario(parte[3]).estadio(CadastroPartidaService.buscaPeloNome(ListEstadio, Estadio::getNome,parte[4])).arbitro(CadastroPartidaService.buscaPeloNome(ListArbitros, Arbitro::getNome,parte[5])).Casa(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[6])).Visitante(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[7])).fase(Fase.valueOf(parte[8])).status(StatusPartida.valueOf(parte[9])).build());
         }
         //Mostra as partidas na tabela
         mostraPartida();
@@ -102,7 +104,6 @@ public class ControllerCadastroPartidaTabela {
     @FXML
     private void abrirPopUp(){
         try {
-
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/designAndScreens/telasPartidas/backup.fxml"));
             Parent root = loader.load();
             Stage popup = new Stage();
@@ -115,7 +116,7 @@ public class ControllerCadastroPartidaTabela {
             System.out.println(e.getMessage());
         }
     }
-    private HBox criarLinha(PartidaGrupo partida) {
+    private HBox criarLinha(Partida partida) {
         HBox linha = new HBox();
         linha.setAlignment(Pos.CENTER_LEFT);
         linha.setSpacing(10);
@@ -131,23 +132,34 @@ public class ControllerCadastroPartidaTabela {
         System.out.println(is.getAbsolutePath());
 
         ImageView logoSelecao;
+        ImageView logo1;
         if(is.exists()){
             System.out.println("Achei");
             Image imagem=new Image(is.toURI().toString());
             logoSelecao = new ImageView(imagem);
+            logo1 = new ImageView(imagem);
         }
         else {
             System.out.println("Nao achei");
             Image imagemPadrao = new Image(getClass().getResourceAsStream("/images/Logos/brasil.png"));
             logoSelecao = new ImageView(imagemPadrao);
+            logo1 = new ImageView(imagemPadrao);
         }
         logoSelecao.setPreserveRatio(true);
         logoSelecao.setFitWidth(50);
         logoSelecao.setFitHeight(50);
+        logo1.setPreserveRatio(true);
+        logo1.setFitWidth(50);
+        logo1.setFitHeight(50);
         //Pegando os dados da seleção
         // Nome
         Label nome = new Label(partida.getSelecaoCasa().getNome() + "  X");
+        Label casa= new Label(partida.getSelecaoCasa().getNome());
         nome.setStyle(""" 
+                -fx-font-size: 16; 
+                -fx-text-fill: black;
+                -fx-font-family: 'Inter 18pt Medium';""");
+        casa.setStyle(""" 
                 -fx-font-size: 16; 
                 -fx-text-fill: black;
                 -fx-font-family: 'Inter 18pt Medium';""");
@@ -157,26 +169,59 @@ public class ControllerCadastroPartidaTabela {
                 -fx-font-size: 16; 
                 -fx-text-fill: black;
                 -fx-font-family: 'Inter 18pt Medium';""");
+        Label nome3 = new Label(partida.getSelecaoVisitante().getNome());
+        nome3.setStyle(""" 
+                -fx-font-size: 16; 
+                -fx-text-fill: black;
+                -fx-font-family: 'Inter 18pt Medium';""");
+        //PLACAR SÓ PARA QUANDO ESTIVER FINALIZADO
+        HBox placar = new HBox(15);
+        Label x = new Label("x");
+        Label golsC = new Label();
+        Label golsV = new Label();
+        if(partida.getStatus().equals(StatusPartida.FINALIZADA)){
+            PartidasFinalizadas= CarregaArquivoService.carregaArquivo("/database/estatisticas_partida.txt", parte-> parte);
+            for(String[] e : PartidasFinalizadas){
+                int idPartida = Integer.parseInt(e[0]);
+                if(idPartida == partida.getId()){
+                    golsC.setText(e[1]);
+                    golsV.setText(e[2]);
+                    break;
+                }
+            }
+            placar.getChildren().addAll(golsC,x,golsV);
+            placar.setAlignment(Pos.CENTER);
+            placar.getStyleClass().add("placar");
+        }
         //Imagem seleção 2
         /*refatoracao para upload de imagens*/
-        is = new File("target/classes/images/Logos/" + partida.getSelecaoCasa().getNome().toLowerCase().replace(" ", "_") + ".png");
+        is = new File("target/classes/images/Logos/" + partida.getSelecaoVisitante().getNome().toLowerCase().replace(" ", "_") + ".png");
         System.out.println(is.getAbsolutePath());
 
         ImageView logoSelecao2;
+        ImageView logo2;
         if(is.exists()){
             System.out.println("Achei");
             Image imagem=new Image(is.toURI().toString());
             logoSelecao2 = new ImageView(imagem);
+            logo2 = new ImageView(imagem);
         }
         else {
             System.out.println("Nao achei");
             Image imagemPadrao = new Image(getClass().getResourceAsStream("/images/Logos/brasil.png"));
             logoSelecao2 = new ImageView(imagemPadrao);
+            logo2 = new ImageView(imagemPadrao);
         }
         logoSelecao2.setPreserveRatio(true);
         logoSelecao2.setFitWidth(50);
         logoSelecao2.setFitHeight(50);
+        logo2.setPreserveRatio(true);
+        logo2.setFitWidth(50);
+        logo2.setFitHeight(50);
         HBox colunaPartida = new HBox(10, logoSelecao, nome, logoSelecao2, nome2);
+        HBox colunaFinalizada = new HBox(10, logo1, casa, placar,logo2, nome3);
+        colunaFinalizada.setPrefWidth(450);
+        colunaFinalizada.setAlignment(Pos.CENTER_LEFT);
         colunaPartida.setPrefWidth(390);
         colunaPartida.setAlignment(Pos.CENTER_LEFT);
         //Data
@@ -232,7 +277,7 @@ public class ControllerCadastroPartidaTabela {
         Label grupo;
         if(partida.getFase()== Fase.FASE_DE_GRUPOS){
             qualFase=new Label("Fase de Grupos");
-            grupo=new Label("Grupo " + partida.getGrupo());
+            grupo=new Label("Grupo " +((PartidaGrupo) partida).getGrupo());
         }
         else if(partida.getFase()== Fase.PLAYOFFS){
             qualFase=new Label("Playoffs");
@@ -269,49 +314,53 @@ public class ControllerCadastroPartidaTabela {
         HBox colunaFase = new HBox(10, fase);
         colunaFase.setPrefWidth(200);
         colunaFase.setAlignment(Pos.CENTER_LEFT);
+
         //Ação Editar
-        ImageView caneta = new ImageView(new Image(getClass().getResourceAsStream("/images/play-button.png")));
-        caneta.setFitWidth(16);
-        caneta.setFitHeight(16);
         Button Editar = new Button();
-        Editar.setGraphic(caneta);
-        Editar.getStyleClass().add("btn-editar");
-        //Chama o popUp de Escalação e o seu controller
-        Editar.setOnAction(e->{
-            if(partida.getStatus()==StatusPartida.AGENDADA){
-                try {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/designAndScreens/telasPartidas/popUpEscalacao.fxml"));
-                    Parent root = loader.load();
-                    ControllerCadastroEscalacao controller = loader.getController();
-                    controller.setControllerTabela(this);
-                    controller.setPartidaCasa(partida);
-                    Stage stage = new Stage();
-                    stage.initStyle(StageStyle.TRANSPARENT);
-                    stage.initModality(Modality.APPLICATION_MODAL);
-                    stage.setScene(new Scene(root));
-                    stage.show();
+        if(!partida.getStatus().equals(StatusPartida.FINALIZADA)){
+            ImageView caneta = new ImageView(new Image(getClass().getResourceAsStream("/images/play-button.png")));
+            caneta.setFitWidth(16);
+            caneta.setFitHeight(16);
+            Editar.setGraphic(caneta);
+            Editar.getStyleClass().add("btn-editar");
+            //Chama o popUp de Escalação e o seu controller
+            Editar.setOnAction(e->{
+                if(partida.getStatus()==StatusPartida.AGENDADA){
+                    try {
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/designAndScreens/telasPartidas/popUpEscalacao.fxml"));
+                        Parent root = loader.load();
+                        ControllerCadastroEscalacao controller = loader.getController();
+                        controller.setControllerTabela(this);
+                        controller.setPartidaCasa(partida);
+                        Stage stage = new Stage();
+                        stage.initStyle(StageStyle.TRANSPARENT);
+                        stage.initModality(Modality.APPLICATION_MODAL);
+                        stage.setScene(new Scene(root));
+                        stage.show();
+                    }
+                    catch (IOException i) {
+                        i.printStackTrace();
+                    }
                 }
-                catch (IOException i) {
-                    i.printStackTrace();
+                else if(partida.getStatus()==StatusPartida.EM_ANDAMENTO){
+                    try {
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/designAndScreens/telasPartidas/estatisticas.fxml"));
+                        Parent root = loader.load();
+                        Stage stage = new Stage();
+                        ControllerCadastroEstatisticas controller= loader.getController();
+                        controller.setControllerTabela(this);
+                        controller.setPartida(partida);
+                        stage.initStyle(StageStyle.TRANSPARENT);
+                        stage.initModality(Modality.APPLICATION_MODAL);
+                        stage.setScene(new Scene(root));
+                        stage.show();
+                    }
+                    catch (IOException i) {
+                        i.printStackTrace();
+                    }
                 }
-            }
-            else if(partida.getStatus()==StatusPartida.EM_ANDAMENTO){
-                try {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/designAndScreens/telasPartidas/estatisticas.fxml"));
-                    Parent root = loader.load();
-                    Stage stage = new Stage();
-                    ControllerCadastroEstatisticas controller= loader.getController();
-                    controller.setPartida(partida);
-                    stage.initStyle(StageStyle.TRANSPARENT);
-                    stage.initModality(Modality.APPLICATION_MODAL);
-                    stage.setScene(new Scene(root));
-                    stage.show();
-                }
-                catch (IOException i) {
-                    i.printStackTrace();
-                }
-            }
-        });
+            });
+        }
         Button Excluir = new Button();
         HBox colunaAcoes=new HBox(15);
         if(partida.getStatus()==StatusPartida.AGENDADA){
@@ -333,18 +382,28 @@ public class ControllerCadastroPartidaTabela {
                     excluiDaTabela(partida.getId());
                 }
             });
-        }else{colunaAcoes.getChildren().addAll(Editar);}
-
+        }else if((partida.getStatus()==StatusPartida.EM_ANDAMENTO)){colunaAcoes.getChildren().addAll(Editar);}
         colunaAcoes.setPrefWidth(120);
         colunaAcoes.setAlignment(Pos.CENTER_LEFT);
         //Colocando todas as labeis na linha
-        linha.getChildren().addAll(colunaPartida,colunaData,colunaHorario,colunaEstadio,colunaFase,colunaAcoes);
+        if(!partida.getStatus().equals(StatusPartida.FINALIZADA)){
+            linha.getChildren().addAll(colunaPartida,colunaData,colunaHorario,colunaEstadio,colunaFase,colunaAcoes);
+        }
+        else{
+            linha.getChildren().addAll(colunaFinalizada,colunaData,colunaHorario,colunaEstadio,colunaFase);
+        }
         return linha;
     }
     @FXML
     public void excluiDaTabela(int id){
-        CadastroPartidaService.removePartidaDoTXT(id,"target/classes/database/partida_grupo.txt");
-        CadastroPartidaService.removePartidaDoTXT(id,"src/main/resources/database/partida_grupo.txt");
+        if(faseAtual.equals(Fase.FASE_DE_GRUPOS)){
+            CadastroPartidaService.removePartidaDoTXT(id,"target/classes/database/partida_grupo.txt");
+            CadastroPartidaService.removePartidaDoTXT(id,"src/main/resources/database/partida_grupo.txt");
+        }
+        else{
+            CadastroPartidaService.removePartidaDoTXT(id,"target/classes/database/partida_eliminatoria.txt");
+            CadastroPartidaService.removePartidaDoTXT(id,"src/main/resources/database/partida_eliminatoria.txt");
+        }
         atualizaTabela();
     }
     //Atualiza a tabela após salvar uma nova partida
@@ -352,19 +411,26 @@ public class ControllerCadastroPartidaTabela {
         if(faseAtual.getFaseAtual()==Fase.FASE_DE_GRUPOS){
             todasAsPartidas = CarregaArquivoService.carregaArquivo("/database/partida_grupo.txt", parte->new PartidaGrupoBuilder().id(Integer.parseInt(parte[0])).data(LocalDate.parse(parte[2])).horario(parte[3]).estadio(CadastroPartidaService.buscaPeloNome(ListEstadio, Estadio::getNome,parte[4])).arbitro(CadastroPartidaService.buscaPeloNome(ListArbitros, Arbitro::getNome,parte[5])).grupo(parte[6]).Casa(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[7])).Visitante(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[8])).fase(Fase.valueOf(parte[9])).status(StatusPartida.valueOf(parte[10])).build());
         }
+        else{
+            todasAsPartidas = CarregaArquivoService.carregaArquivo("/database/partida_eliminatoria.txt", parte->new PartidaEliminatoriaBuilder().id(Integer.parseInt(parte[0])).data(LocalDate.parse(parte[2])).horario(parte[3]).estadio(CadastroPartidaService.buscaPeloNome(ListEstadio, Estadio::getNome,parte[4])).arbitro(CadastroPartidaService.buscaPeloNome(ListArbitros, Arbitro::getNome,parte[5])).Casa(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[6])).Visitante(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[7])).fase(Fase.valueOf(parte[8])).status(StatusPartida.valueOf(parte[9])).build());
+        }
         mostraPartida();
     }
     private void mostraPartida() {
         //limpa a tela para nao sobrepor visuais que serão atualizados
         listPartida.getChildren().clear();
         aoVivo.getChildren().clear();
-        for (PartidaGrupo p : todasAsPartidas) { //alteracao para usar a lista final do SelecoesFile
+        finalizada.getChildren().clear();
+        for (Partida p : todasAsPartidas) { //alteracao para usar a lista final do SelecoesFile
             HBox linha = criarLinha(p);
             if(p.getStatus()==StatusPartida.AGENDADA){
                 listPartida.getChildren().add(linha);
             }
             else if(p.getStatus()==StatusPartida.EM_ANDAMENTO){
                 aoVivo.getChildren().add(linha);
+            }
+            else{
+                finalizada.getChildren().add(linha);
             }
         }
     }

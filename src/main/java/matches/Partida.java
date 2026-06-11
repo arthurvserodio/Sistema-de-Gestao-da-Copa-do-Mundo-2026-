@@ -136,6 +136,11 @@ public class Partida {
         this.escalacaoVisitante = escalacaoVisitante;
     }
 
+    public void setData(LocalDate data) {
+        this.data = data;
+    }
 
-
+    public void setEstatistica(EstatisticaPartida estatistica) {
+        this.estatistica = estatistica;
+    }
 }

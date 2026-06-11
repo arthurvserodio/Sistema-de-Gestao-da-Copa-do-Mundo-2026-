@@ -1,0 +1,5 @@
+1;GRUPO;GOL;21;Brasil;Raphinha
+1;GRUPO;GOL;34;Brasil;Vinicius Junior
+1;GRUPO;GOL;40;Brasil;Richarlison
+1;GRUPO;GOL;45;Brasil;Casemiro
+1;GRUPO;GOL;67;Brasil;Raphinha

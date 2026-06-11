@@ -12,6 +12,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import matches.EstadoDaCopa;
 import matches.Partida;
+import matches.PartidaEliminatoria;
 import matches.PartidaGrupo;
 import nationsAndPlayers.nations.Selecoes;
 import services.matches.CadastroPartidaService;
@@ -63,12 +64,9 @@ public class ControllerCadastroPartida {
 
     @FXML
     public void initialize() {
-        //ATENÇÃO, TENHO QUE RETIRAR ISSO MAIS TARDE
-        faseAtual = new EstadoDaCopa(
-                Fase.FASE_DE_GRUPOS,
-                LocalDate.of(2026,6,11),
-                LocalDate.of(2026,6,27)
-        );
+        //Leitura da fae atual da copa
+        List<EstadoDaCopa> estadosDaCopa = CarregaArquivoService.carregaArquivo("/database/estado_copa.txt", parte -> new EstadoDaCopa(Fase.valueOf(parte[0]), LocalDate.parse(parte[1]), LocalDate.parse(parte[2])));
+        faseAtual = estadosDaCopa.get(0);
         //Desabilita os campos choiceArbitro e choiceEstadio até que o usuario coloque uma data
         choiceArbitro.setDisable(true);
         choiceEstadio.setDisable(true);
@@ -80,6 +78,9 @@ public class ControllerCadastroPartida {
         ListEstadio=CarregaArquivoService.carregaArquivo("/database/Estadios.txt", parte->new EstadioBuilder().nome(parte[0]).build());
         if(faseAtual.getFaseAtual()==Fase.FASE_DE_GRUPOS){
             ListPartida = CarregaArquivoService.carregaArquivo("/database/partida_grupo.txt",parte->new PartidaGrupoBuilder().id(Integer.parseInt(parte[0])).data(LocalDate.parse(parte[2])).horario(parte[3]).estadio(CadastroPartidaService.buscaPeloNome(ListEstadio,Estadio::getNome,parte[4])).arbitro(CadastroPartidaService.buscaPeloNome(ListArbitros,Arbitro::getNome,parte[5])).grupo(parte[6]).Casa(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[7])).Visitante(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[8])).fase(Fase.valueOf(parte[9])).status(StatusPartida.valueOf(parte[10])).build());
+        }
+        else{
+            ListPartida = CarregaArquivoService.carregaArquivo("/database/partida_eliminatoria.txt",parte->new PartidaEliminatoriaBuilder().id(Integer.parseInt(parte[0])).data(LocalDate.parse(parte[2])).horario(parte[3]).estadio(CadastroPartidaService.buscaPeloNome(ListEstadio,Estadio::getNome,parte[4])).arbitro(CadastroPartidaService.buscaPeloNome(ListArbitros,Arbitro::getNome,parte[5])).Casa(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[6])).Visitante(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[7])).fase(Fase.valueOf(parte[8])).status(StatusPartida.valueOf(parte[9])).build());
         }
         for (Partida p : ListPartida) {
             p.getEstadio().getDatasOcupadas().add(p.getData());
@@ -110,7 +111,7 @@ public class ControllerCadastroPartida {
                 partidaService.atualizarComboBox(choiceSelecao1, choiceSelecao2, ListSelecoes,faseAtual.getFaseAtual());
             }
             else if(choiceSelecao2.getValue()==null && faseAtual.getFaseAtual()!=Fase.FASE_DE_GRUPOS){
-
+                partidaService.atualizarComboBox(choiceSelecao1, choiceSelecao2, ListSelecoes,faseAtual.getFaseAtual());
             }
         });
         //Impede que o usuário escolha uma data fora do escopo da fase atual
@@ -121,9 +122,7 @@ public class ControllerCadastroPartida {
                 if (empty) {
                     return;
                 }
-                setDisable(
-                        item.isBefore(faseAtual.getInicio()) || item.isAfter(faseAtual.getFim()));
-            }});
+                setDisable(item.isBefore(faseAtual.getInicio()) || item.isAfter(faseAtual.getFim()));}});
         //Toda vez que for escrito alguma coisa no text ele chama a função de verificar os estadios disponiveis
         Data.valueProperty().addListener((obs, antigo, novo) -> {
             if(novo==null) {
@@ -143,7 +142,6 @@ public class ControllerCadastroPartida {
             choiceEstadio.setPromptText("Selecione um estádio");
             partidaService.estadiosDisponivel(ListEstadio, novo,choiceEstadio);
             partidaService.arbitroDisponivel(ListArbitros,novo,choiceArbitro,choiceSelecao1.getValue().getNome(),choiceSelecao2.getValue().getNome());});
-        //Verifica o horário da partida
         salvarPartida.setOnAction(s->{
             //Verificar se tem algum campo vazio
             if(choiceSelecao1.getValue()==null || choiceSelecao2.getValue()==null || choiceArbitro.getValue()==null || choiceEstadio.getValue()==null || choiceFase.getValue()==null || (choiceGrupo.getValue()==null && faseAtual.getFaseAtual()==Fase.FASE_DE_GRUPOS) || Data.getValue()==null || horario.getText().isBlank()){
@@ -155,7 +153,6 @@ public class ControllerCadastroPartida {
                 return;
             }
 
-
             //Verifica se a Partida já não foi criada
             if(partidaService.partidaJaExiste(choiceSelecao1.getValue(),choiceSelecao2.getValue(),ListPartida)){
                 Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -165,6 +162,7 @@ public class ControllerCadastroPartida {
                 alert.showAndWait();
                 return;
             }
+            //Verifica o horário da partida
             try{
                 LocalTime horarioValido= LocalTime.parse(horario.getText());
             }
@@ -190,7 +188,7 @@ public class ControllerCadastroPartida {
             }
             if(faseAtual.getFaseAtual() == Fase.FASE_DE_GRUPOS) {
                 PartidaGrupo partida = new PartidaGrupoBuilder()
-                        .id(partidaService.gerarProximoId(ListPartida))
+                        .id(partidaService.gerarProximoIdGlobal())
                         .data(Data.getValue())
                         .horario(horario.getText())
                         .estadio(choiceEstadio.getValue())
@@ -203,6 +201,25 @@ public class ControllerCadastroPartida {
                         .build();
                 CadastroPartidaService.salvarPartida(partida, "src/main/resources/database/partida_grupo.txt");
                 CadastroPartidaService.salvarPartida(partida, "target/classes/database/partida_grupo.txt");
+                choiceArbitro.getValue().getApitando().add(partida);
+                choiceEstadio.getValue().getDatasOcupadas().add(partida.getData());
+                System.out.println("Partida salva!");
+                fecharJanela();
+            }
+            else{
+                PartidaEliminatoria partida = new PartidaEliminatoriaBuilder()
+                        .id(partidaService.gerarProximoIdGlobal())
+                        .data(Data.getValue())
+                        .horario(horario.getText())
+                        .estadio(choiceEstadio.getValue())
+                        .arbitro(choiceArbitro.getValue())
+                        .Casa(choiceSelecao1.getValue())
+                        .Visitante(choiceSelecao2.getValue())
+                        .fase(faseAtual.getFaseAtual())
+                        .status(StatusPartida.AGENDADA)
+                        .build();
+                CadastroPartidaService.salvarPartida(partida, "src/main/resources/database/partida_eliminatoria.txt");
+                CadastroPartidaService.salvarPartida(partida, "target/classes/database/partida_eliminatoria.txt");
                 choiceArbitro.getValue().getApitando().add(partida);
                 choiceEstadio.getValue().getDatasOcupadas().add(partida.getData());
                 System.out.println("Partida salva!");

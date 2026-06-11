@@ -75,4 +75,7 @@ public class Jogadores {
     public int getNumeracao() {
         return numeracao;
     }
+    public String toString(){
+        return nome;
+    }
 }

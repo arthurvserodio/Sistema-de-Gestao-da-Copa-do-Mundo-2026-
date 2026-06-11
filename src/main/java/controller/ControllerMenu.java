@@ -23,7 +23,7 @@ public class ControllerMenu {
     @FXML
     //Passa do Menu para a tela de equipes presentes na copa de 2026
     private void irParaEquipes(MouseEvent e) {
-        SceneController.mudaDeTela( "/designAndScreens/telasPartidas/cadastroDePartida.fxml");
+        SceneController.mudaDeTela( "/designAndScreens/telaInicial/equipesNaCopa.fxml");
     }
     @FXML
     //Passa do Menu para a tela de grupos da copa 2026

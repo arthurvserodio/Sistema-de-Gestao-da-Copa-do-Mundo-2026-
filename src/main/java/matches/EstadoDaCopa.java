@@ -5,7 +5,7 @@ import Enums.Fase;
 import java.time.LocalDate;
 
 public class EstadoDaCopa {
-    private Fase faseAtual=Fase.NAOCOMECO;
+    private Fase faseAtual=Fase.NAO_COMECOU;
     private LocalDate inicio;
     private LocalDate fim;
 
@@ -38,7 +38,7 @@ public class EstadoDaCopa {
         }
         //Se chegou ao fim, volta para o começo
         else{
-            this.faseAtual=Fase.NAOCOMECO;
+            this.faseAtual=Fase.NAO_COMECOU;
         }
     }
     public String toString(){

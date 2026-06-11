@@ -200,6 +200,76 @@
                   </ScrollPane>
                </children>
             </AnchorPane>
+            <AnchorPane layoutX="70.0" layoutY="1550.0" prefHeight="600.0" prefWidth="1300.0" stylesheets="@../../css/style.css">
+               <styleClass>
+                  <String fx:value="white" />
+                  <String fx:value="card-group_stage" />
+               </styleClass>
+               <children>
+                  <ImageView fitHeight="64.0" fitWidth="74.0" layoutX="67.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/trophy2.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="155.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Finalizadas">
+                     <font>
+                        <Font name="Roboto Condensed Black" size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#c9c9c9" layoutX="155.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Partidas que já terminaram">
+                     <font>
+                        <Font name="Inter 18pt Regular" size="19.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane layoutX="68.0" layoutY="147.0" prefHeight="50.0" prefWidth="1186.0" stylesheets="@../../css/style.css">
+                     <styleClass>
+                        <String fx:value="NavBarEquipes" />
+                        <String fx:value="NavBarCadastro" />
+                     </styleClass>
+                     <children>
+                        <Label layoutX="40.0" layoutY="15.0" text="Partida">
+                           <font>
+                              <Font name="Inter 18pt Medium" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="440.0" layoutY="15.0" text="Data">
+                           <font>
+                              <Font name="Inter 18pt Medium" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="622.0" layoutY="15.0" text="Horário">
+                           <font>
+                              <Font name="Inter 18pt Medium" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="774.0" layoutY="15.0" text="Estádio">
+                           <font>
+                              <Font name="Inter 18pt Medium" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="992.0" layoutY="15.0" text="Fase">
+                           <font>
+                              <Font name="Inter 18pt Medium" size="15.0" />
+                           </font>
+                        </Label>
+                        <Text fill="#3958a8" layoutX="105.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FIM DE JOGO">
+                           <font>
+                              <Font name="Roboto Condensed Bold" size="10.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <ScrollPane layoutX="68.0" layoutY="195.0" prefHeight="380.0" prefWidth="1188.0" styleClass="scrol_panel" stylesheets="@../../css/style.css">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="1172.0" styleClass="list_equipes" stylesheets="@../../css/style.css">
+                           <children>
+                              <VBox fx:id="finalizada" prefHeight="200.0" prefWidth="1173.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
          </children></AnchorPane>
   </content>
 </ScrollPane>

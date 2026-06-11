@@ -35,7 +35,7 @@
             <Font name="Inter 18pt Regular" size="13.0" />
          </font>
       </Text>
-      <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="934.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="934.0" layoutY="35.0" onMouseClicked="#fecharPopUp" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/cross.png" />
          </image>
@@ -240,7 +240,7 @@
                                     <Font name="Roboto Condensed Bold" size="17.0" />
                                  </font>
                               </Text>
-                              <TextField layoutX="23.0" layoutY="95.0" prefHeight="25.0" prefWidth="290.0" promptText="Ex.: 24" styleClass="text-fieldCadastroPartida" stylesheets="@../../css/style.css" />
+                              <TextField fx:id="tempo" layoutX="23.0" layoutY="95.0" prefHeight="25.0" prefWidth="290.0" promptText="Ex.: 24" styleClass="text-fieldCadastroPartida" stylesheets="@../../css/style.css" />
                               <ImageView fitHeight="16.0" fitWidth="15.0" layoutX="33.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../images/clock.png" />
@@ -251,19 +251,19 @@
                                     <Font name="Roboto Condensed Bold" size="12.0" />
                                  </font>
                               </Text>
-                              <ComboBox layoutX="23.0" layoutY="174.0" prefWidth="290.0" promptText="Selecione um evento" styleClass="choice-box" stylesheets="@../../css/style.css" />
+                              <ComboBox fx:id="eventos" layoutX="23.0" layoutY="174.0" prefWidth="290.0" promptText="Selecione um evento" styleClass="choice-box" stylesheets="@../../css/style.css" />
                               <Text layoutX="23.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de Evento">
                                  <font>
                                     <Font name="Roboto Condensed Bold" size="12.0" />
                                  </font>
                               </Text>
-                              <ComboBox layoutX="23.0" layoutY="253.0" prefWidth="290.0" promptText="Selecione a seleção" styleClass="choice-box" stylesheets="@../../css/style.css" />
+                              <ComboBox fx:id="selecoes" layoutX="23.0" layoutY="253.0" prefWidth="290.0" promptText="Selecione a seleção" styleClass="choice-box" stylesheets="@../../css/style.css" />
                               <ImageView fitHeight="19.0" fitWidth="21.0" layoutX="34.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../images/soccer.png" />
                                  </image>
                               </ImageView>
-                              <ComboBox layoutX="23.0" layoutY="332.0" prefWidth="290.0" promptText="Selecione a seleção" styleClass="choice-box" stylesheets="@../../css/style.css" />
+                              <ComboBox fx:id="jogadores" layoutX="23.0" layoutY="332.0" prefWidth="290.0" promptText="Selecione a seleção" styleClass="choice-box" stylesheets="@../../css/style.css" />
                               <Text layoutX="23.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleção">
                                  <font>
                                     <Font name="Roboto Condensed Bold" size="12.0" />
@@ -279,32 +279,32 @@
                                     <Image url="@../../images/people.png" />
                                  </image>
                               </ImageView>
-                              <Button layoutX="67.0" layoutY="399.0" mnemonicParsing="false" prefWidth="290.0" styleClass="botao-salvar" stylesheets="@../../css/style.css" text="Adicionar Evento" />
+                              <Button fx:id="adicionarEvento" layoutX="67.0" layoutY="399.0" mnemonicParsing="false" prefWidth="290.0" styleClass="botao-salvar" stylesheets="@../../css/style.css" text="Adicionar Evento" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="378.0" layoutY="31.0" prefHeight="40.0" prefWidth="511.0" styleClass="NavBarCadastro" stylesheets="@../../css/style.css">
                            <children>
-                              <Text fill="#969696" layoutX="29.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tempo">
+                              <Text fill="#969696" layoutX="15.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tempo">
                                  <font>
                                     <Font name="Roboto Condensed Bold" size="12.0" />
                                  </font>
                               </Text>
-                              <Text fill="#969696" layoutX="120.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Evento">
+                              <Text fill="#969696" layoutX="90.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Evento">
                                  <font>
                                     <Font name="Roboto Condensed Bold" size="12.0" />
                                  </font>
                               </Text>
-                              <Text fill="#969696" layoutX="230.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleção">
+                              <Text fill="#969696" layoutX="250.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleção">
                                  <font>
                                     <Font name="Roboto Condensed Bold" size="12.0" />
                                  </font>
                               </Text>
-                              <Text fill="#969696" layoutX="340.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jogador">
+                              <Text fill="#969696" layoutX="330.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jogador">
                                  <font>
                                     <Font name="Roboto Condensed Bold" size="12.0" />
                                  </font>
                               </Text>
-                              <Text fill="#969696" layoutX="430.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ações">
+                              <Text fill="#969696" layoutX="443.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ações">
                                  <font>
                                     <Font name="Roboto Condensed Bold" size="12.0" />
                                  </font>
@@ -315,7 +315,7 @@
                           <content>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="495.0" styleClass="list_equipes" stylesheets="@../../css/style.css">
                                  <children>
-                                    <VBox prefHeight="100.0" prefWidth="495.0" />
+                                    <VBox fx:id="tabelaEventos" prefHeight="100.0" prefWidth="495.0" />
                                  </children>
                               </AnchorPane>
                           </content>
@@ -452,5 +452,6 @@
             </Tab>
         </tabs>
       </TabPane>
+      <Button fx:id="salvarEstatistica" layoutX="765.0" layoutY="728.0" mnemonicParsing="false" prefWidth="154.0" styleClass="botao-salvar" stylesheets="@../../css/style.css" text="Salvar Estatística" />
    </children>
 </AnchorPane>

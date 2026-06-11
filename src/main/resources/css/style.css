@@ -420,3 +420,31 @@
     -fx-focus-color: transparent;
     -fx-faint-focus-color: transparent;
 }
+.btn-excluir2 {
+    -fx-background-color: white;
+    -fx-border-color: #FC0005;
+    -fx-border-width: 2;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-min-width: 29;
+    -fx-min-height: 29;
+    -fx-max-width: 29;
+    -fx-max-height: 29;
+    -fx-cursor: hand;
+}
+
+.btn-excluir2:hover {
+    -fx-background-color: #FFF5F5;
+}
+.placar{
+    -fx-background-color: #F5F6FA;
+    -fx-background-radius: 10;
+    -fx-padding: 4 12 4 12;
+    -fx-pref-height: 15;
+}
+
+.placar .label{
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2E5CB8;
+}

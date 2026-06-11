@@ -1,6 +1,9 @@
 package services.matches;
 
 import Enums.Fase;
+import Enums.StatusPartida;
+import builder.PartidaEliminatoriaBuilder;
+import builder.PartidaGrupoBuilder;
 import exceptions.IllegalIntervaloEntrePartidaException;
 import javafx.geometry.Point2D;
 import javafx.geometry.Pos;
@@ -10,9 +13,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Circle;
-import matches.JogadorPartida;
-import matches.Partida;
-import matches.PartidaGrupo;
+import matches.*;
 import nationsAndPlayers.nations.Selecoes;
 import nationsAndPlayers.players.Jogadores;
 import stadiumAndRefeering.Estadio;
@@ -47,6 +48,11 @@ public class CadastroPartidaService {
             List<Selecoes> mesmoGrupo=ListSelecoes.stream().filter(s -> s.getGrupo().equals(grupo) && !s.toString().equals(selecionada.toString())).toList();
             destino.getItems().clear(); //Limpa o que tava na comboBox anteriormente
             destino.getItems().addAll(mesmoGrupo); //Adiciona a nova lista
+        }
+        else{
+            List<Selecoes> qualquerUma=ListSelecoes.stream().filter(s -> !s.toString().equals(selecionada.toString())).toList();
+            destino.getItems().clear(); //Limpa o que tava na comboBox anteriormente
+            destino.getItems().addAll(qualquerUma); //Adiciona a nova lista
         }
     }
     //Pega a lista com todos os estadios cadastrados e recebe a data para verificar disponibilidade
@@ -103,17 +109,24 @@ public class CadastroPartidaService {
                 bw.newLine();
                 bw.close();
             }
+            else if(partida instanceof PartidaEliminatoria){
+                //id;tipo;data;horario;estadio;arbitro;casa;visitante;fase;status;
+                bw.write(partida.getId() + ";" + "ELIMINATORIA;" + partida.getData() + ";" + partida.getHorario() + ";" + partida.getEstadio() + ";" + partida.getArbitro()  + ";" + partida.getSelecaoCasa()+ ";" + partida.getSelecaoVisitante() + ";" + partida.getFase() +";"+  "AGENDADA;");
+                bw.newLine();
+                bw.close();
+            }
         }
         catch(IOException e){
             System.out.println(e.getMessage());
         }
     }
-    public int gerarProximoId(List<Partida> partidas){
-        if(partidas.isEmpty()){
-            return 1;
-        }
-        int maior=partidas.stream().mapToInt(Partida::getId).max().orElse(0); //Pega o maior Id presente na lista
-        return maior+1;
+    public int gerarProximoIdGlobal() {
+
+        List<PartidaGrupo> grupos = CarregaArquivoService.carregaArquivo("/database/partida_grupo.txt", parte -> new PartidaGrupoBuilder().id(Integer.parseInt(parte[0])).build());
+        List<PartidaEliminatoria> eliminatorias = CarregaArquivoService.carregaArquivo("/database/partida_eliminatoria.txt", parte -> new PartidaEliminatoriaBuilder().id(Integer.parseInt(parte[0])).build());
+        int maiorGrupo = grupos.stream().mapToInt(Partida::getId).max().orElse(0);
+        int maiorEliminatoria = eliminatorias.stream().mapToInt(Partida::getId).max().orElse(0);
+        return Math.max(maiorGrupo, maiorEliminatoria) + 1;
     }
     public static <T> T buscaPeloNome(List<T> lista, Function<T, String> extratorNome,String nome){
         //Percorre a lista até encontrar o objeto
@@ -203,25 +216,160 @@ public class CadastroPartidaService {
         }
     }
     //Após as eslações das duas partidas, o status da partida deve mudar de AGENDADA -> EM_ANDAMENTO
-    public static void atualizaStatusDaPartida(int id_partida){
+    public static void atualizaStatusDaPartida(int id_partida, Partida partida, EstadoDaCopa fase){
         try{
-            List<String> todasAsLinhas=Files.readAllLines(Paths.get("src/main/resources/database/partida_grupo.txt"));
+            List<String> todasAsLinhas;
+            if(fase.equals(Fase.FASE_DE_GRUPOS)){
+                todasAsLinhas=Files.readAllLines(Paths.get("src/main/resources/database/partida_grupo.txt"));
+            }
+            else{
+                todasAsLinhas=Files.readAllLines(Paths.get("src/main/resources/database/partida_eliminatoria.txt"));
+            }
             List<String> novaLinha=new ArrayList<>();
             for(String l:todasAsLinhas){
                 String[] parte=l.split(";");
                 int id= Integer.parseInt(parte[0]);
-                if(id==id_partida){
-                    parte[10]="EM_ANDAMENTO;";
+                if(id==id_partida && partida.getStatus().equals(StatusPartida.AGENDADA)){
+                    if(fase.equals(Fase.FASE_DE_GRUPOS)){
+                        parte[10]="EM_ANDAMENTO;";
+                    }
+                    else{
+                        parte[9]="EM_ANDAMENTO;";
+                    }
+                    novaLinha.add(String.join(";",parte));
+                }
+                else if(id==id_partida && partida.getStatus().equals(StatusPartida.EM_ANDAMENTO)){
+                    if(fase.equals(Fase.FASE_DE_GRUPOS)){
+                        parte[10]="FINALIZADA;";
+                    }
+                    else{
+                        parte[9]="FINALIZADA;";
+                    }
                     novaLinha.add(String.join(";",parte));
                 }
                 else{
                     novaLinha.add(l);
                 }
             }
-            Files.write(Paths.get("src/main/resources/database/partida_grupo.txt"),novaLinha);
-            Files.write(Paths.get("target/classes/database/partida_grupo.txt"),novaLinha);
+            if(fase.equals(Fase.FASE_DE_GRUPOS)){
+                Files.write(Paths.get("src/main/resources/database/partida_grupo.txt"),novaLinha);
+                Files.write(Paths.get("target/classes/database/partida_grupo.txt"),novaLinha);
+            }
+            else{
+                Files.write(Paths.get("src/main/resources/database/partida_eliminatoria.txt"),novaLinha);
+                Files.write(Paths.get("target/classes/database/partida_eliminatoria.txt"),novaLinha);
+            }
         } catch(IOException e){
             e.printStackTrace();
         }
+    }
+    //Salavando eventos ocorridos na partida no arquivo
+    public static void salvarEvento(EventosOcorridos evento, int id, Selecoes selecao,String path){
+        try{
+            BufferedWriter bw = new BufferedWriter(new FileWriter(path, true));
+            //id;tipo;tipoDeEvento;minuto;seleção;jogador
+            bw.write(id + ";" + "GRUPO;" + evento.getTipo() + ";" + evento.getMinuto() + ";" + selecao + ";" + evento.getJogador());
+            bw.newLine();
+            bw.close();
+        }
+        catch(IOException e){
+            System.out.println(e.getMessage());
+        }
+    }
+    //Apaga o Evento e reescreve o arquivo
+    public static void reescreverArquivo(List <String[]> TodosOsEventos, String path){
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter(path))) {
+            for(String[] e : TodosOsEventos){
+                bw.write(String.join(";", e));
+                bw.newLine();
+            }
+
+        } catch(IOException ex){
+            ex.printStackTrace();
+        }
+    }
+    public static void salvarEstatisticaPartida(Partida partida, String path){
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter(path, true))){
+
+            EstatisticaTime casa = partida.getEstatistica().getEstatisticaCasa();
+            EstatisticaTime visitante = partida.getEstatistica().getEstatisticaVisitante();
+
+            bw.write(
+                    partida.getId() + ";" +
+                            casa.getGols() + ";" +
+                            visitante.getGols() + ";" +
+                            casa.getChutes() + ";" +
+                            visitante.getChutes() + ";" +
+                            casa.getChutesAGol() + ";" +
+                            visitante.getChutesAGol() + ";" +
+                            casa.getPosseDeBola() + ";" +
+                            visitante.getPosseDeBola() + ";" +
+                            casa.getPasses() + ";" +
+                            visitante.getPasses() + ";" +
+                            casa.getPrecisaoDosPasses() + ";" +
+                            visitante.getPrecisaoDosPasses() + ";" +
+                            casa.getFaltas() + ";" +
+                            visitante.getFaltas() + ";" +
+                            casa.getCartoesAmarelos() + ";" +
+                            visitante.getCartoesAmarelos() + ";" +
+                            casa.getCartoesVermelhos() + ";" +
+                            visitante.getCartoesVermelhos() + ";" +
+                            casa.getImpedimentos() + ";" +
+                            visitante.getImpedimentos() + ";" +
+                            casa.getEscanteios() + ";" +
+                            visitante.getEscanteios()
+            );
+
+            bw.newLine();
+
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+    //Salvando as notas dos jogadores
+    public static void salvarNotasJogadores(int idPartida, List<JogadorPartida> notasJogadores, String path){
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter(path, true))){
+            StringBuilder sb = new StringBuilder();
+            sb.append(idPartida).append(";");
+            for(int i = 0; i < notasJogadores.size(); i++){
+                JogadorPartida jp = notasJogadores.get(i);
+                sb.append(jp.getJogador().getNome()).append(":").append(jp.getNota());
+                if(i < notasJogadores.size() - 1){
+                    sb.append(",");
+                }
+            }
+            bw.write(sb.toString());
+            bw.newLine();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+    //Salvando a Fase em que a Copa DO mundo esta, no arquivo Estado da Copa
+    public static void salvarEstadoDaCopa(EstadoDaCopa estado, String path){
+        //Só vai ter uma linha de arquivo, visto que cada novo estado sobreescreve o anterior
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter(path))){
+            //FASE;DATA INICIO;DATA FIM;
+            bw.write(estado.getFaseAtual() + ";" + estado.getInicio() + ";" + estado.getFim());
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    //Conta as partidas finalizadas para ver se pode passar para a próxima fase da copa do mundo
+    public static int contarPartidasFinalizadas(Fase fase) {
+        int contador = 0;
+        List<? extends Partida> partidas;
+        if(fase==Fase.FASE_DE_GRUPOS){
+            partidas = CarregaArquivoService.carregaArquivo("/database/partida_grupo.txt", parte-> new PartidaGrupoBuilder().fase(Fase.valueOf(parte[9])).status(StatusPartida.valueOf(parte[10])).build());
+        }
+        else{
+            partidas = CarregaArquivoService.carregaArquivo("/database/partida_eliminatoria.txt", parte-> new PartidaEliminatoriaBuilder().fase(Fase.valueOf(parte[9])).status(StatusPartida.valueOf(parte[10])).build());
+        }
+        for (Partida p : partidas) {
+            //Verifica se finalizou a partida e aumenta o contador
+            if (p.getFase() == fase && p.getStatus() == StatusPartida.FINALIZADA) {
+                contador++;
+            }
+        }
+        return contador;
     }
 }

@@ -1,7 +1,7 @@
 package Enums;
 
 public enum Fase {
-    NAOCOMECO,
+    NAO_COMECOU,
     FASE_DE_GRUPOS,
     PLAYOFFS,
     OITAVAS,

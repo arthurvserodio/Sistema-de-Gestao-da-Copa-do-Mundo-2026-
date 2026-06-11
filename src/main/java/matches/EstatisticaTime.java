@@ -4,16 +4,17 @@ public class EstatisticaTime {
     private int gols;
     private int chutes;
     private int chutesAGol;
-    private float posseDeBola;
+    private int posseDeBola;
     private int passes;
-    private float precisaoDosPasses;
+    private int precisaoDosPasses;
     private int faltas;
     private int cartoesAmarelos;
     private int cartoesVermelhos;
     private int impedimentos;
     private int escanteios;
 
-    public EstatisticaTime(int chutes, int chutesAGol, float posseDeBola, int passes, float precisaoDosPasses, int faltas, int cartoesAmarelos, int cartoesVermelhos, int impedimentos, int escanteios) {
+    public EstatisticaTime(int gols, int chutes, int chutesAGol, int posseDeBola, int passes, int precisaoDosPasses, int faltas, int cartoesAmarelos, int cartoesVermelhos, int impedimentos, int escanteios) {
+        this.gols=gols;
         this.chutes = chutes;
         this.chutesAGol = chutesAGol;
         this.posseDeBola = posseDeBola;
@@ -25,6 +26,15 @@ public class EstatisticaTime {
         this.impedimentos = impedimentos;
         this.escanteios = escanteios;
     }
+
+    public int getGols() {
+        return gols;
+    }
+
+    public void setGols(int gols) {
+        this.gols = gols;
+    }
+
     public int getChutes() {
         return chutes;
     }
@@ -39,10 +49,10 @@ public class EstatisticaTime {
         this.chutesAGol = chutesAGol;
     }
 
-    public float getPosseDeBola() {
+    public int getPosseDeBola() {
         return posseDeBola;
     }
-    public void setPosseDeBola(float posseDeBola) {
+    public void setPosseDeBola(int posseDeBola) {
         this.posseDeBola = posseDeBola;
     }
 
@@ -53,10 +63,10 @@ public class EstatisticaTime {
         this.passes = passes;
     }
 
-    public float getPrecisaoDosPasses() {
+    public int getPrecisaoDosPasses() {
         return precisaoDosPasses;
     }
-    public void setPrecisaoDosPasses(float precisaoDosPasses) {
+    public void setPrecisaoDosPasses(int precisaoDosPasses) {
         this.precisaoDosPasses = precisaoDosPasses;
     }
 
