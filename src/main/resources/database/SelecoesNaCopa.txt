@@ -1,9 +1,6 @@
-Argentina;C;1;18;3
-Brasil;G;5;22;5
 Alemanha;E;11;20;4
 França;D;2;16;2
 Espanha;B;16;16;1
-Portugal;H;7;8;0
 Inglaterra;F;4;16;1
 Itália;A;9;18;4
 Holanda;G;6;11;0

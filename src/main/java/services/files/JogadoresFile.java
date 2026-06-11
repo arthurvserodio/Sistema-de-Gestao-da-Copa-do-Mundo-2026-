@@ -69,6 +69,7 @@ public class JogadoresFile {
             for(Jogadores jogadores : listaJogadores){
                 bw.write(jogadores.getNome() +";" + jogadores.getIdade() + ";" + jogadores.getSelecao().getNome() + ";" + jogadores.isLesionado() + ";" + jogadores.isSuspenso());
                 bw.newLine();
+
             }
         }catch(IOException e){
             System.err.println("Erro ao salvar: " + e.getMessage());

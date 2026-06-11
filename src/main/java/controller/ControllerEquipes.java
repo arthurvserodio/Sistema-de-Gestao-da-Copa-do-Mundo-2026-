@@ -21,6 +21,8 @@ import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import nationsAndPlayers.nations.Selecoes;
+import nationsAndPlayers.players.Jogadores;
+import services.files.JogadoresFile;
 import services.files.SelecoesFile;
 import users.Sessao;
 import users.Usuario;
@@ -32,22 +34,19 @@ public class ControllerEquipes {
     @FXML private Button botaoLogin;
     @FXML private MenuButton menuUsuario;
     @FXML private Button botaoCadastrarSelecao;
-
-    @FXML
-    private VBox listaSelecoes;
-
-    @FXML
-    private TextField pesquisa;
-
+    @FXML private Button botaoRemoverSelecao;
+    @FXML private VBox listaSelecoes;
+    @FXML private TextField pesquisa;
     @FXML private Text botaoUsuario;
 
+    private final SelecoesFile selecoesFile = SelecoesFile.getInstance();
+    private final JogadoresFile jogadoresFile = JogadoresFile.getInstancia();
     @FXML private Text botaoHistoria;
     @FXML private Text botaoRelatorio;
 
 
 
-
-
+    private HBox linhaSelecionada;
     @FXML
     public void initialize() {
         SelecoesFile.getInstance().getListaSelecoes();
@@ -65,6 +64,7 @@ public class ControllerEquipes {
             if(u.getFuncao() == Funcao.ADMINISTRADOR){
                 botaoUsuario.setVisible(true);
                 botaoCadastrarSelecao.setVisible(true);
+                botaoRemoverSelecao.setVisible(true);
                 botaoHistoria.setVisible(false);
                 botaoRelatorio.setVisible(true);
             }
@@ -158,7 +158,6 @@ public class ControllerEquipes {
         }
     }
 
-
     @FXML
     private void onLogout(ActionEvent e){
         Sessao.getInstancia().logout();
@@ -207,6 +206,7 @@ public class ControllerEquipes {
         logoSelecao.setPreserveRatio(true);
         logoSelecao.setFitWidth(55);
         logoSelecao.setFitHeight(55);
+
         //Pegando os dados da seleção
         // Nome
         Label nome = new Label(selecao.getNome());
@@ -245,6 +245,13 @@ public class ControllerEquipes {
         titulos.setPrefWidth(50);
         //Colocando todas as labeis na linha
         linha.getChildren().addAll(logoSelecao, nome, grupo, ranking, participacao, titulos);
+
+        /*logica de remocao de selecao*/
+        linha.setOnMouseClicked(eventoDeClique ->{
+           linhaSelecionada = linha;
+        });
+
+
         return linha;
     }
 
@@ -255,6 +262,7 @@ public class ControllerEquipes {
             listaSelecoes.getChildren().add(linha);
         }
     }
+
     private void pesquisarSelecao(){
         String pais = pesquisa.getText().trim().toLowerCase();
         //Vou pegar a Vbox e destrinchar ela, ou seja, pegar cada Hbox criado
@@ -273,5 +281,37 @@ public class ControllerEquipes {
                 linha.setVisible(true);
             }
         }
+    }
+
+    @FXML
+    private void removerSelecao(){
+
+        /*captura o nome da selecao selecinada por meio de metodos do do Hbox e Label*/
+        String nomeDaSelecaoSelecionada = ((Label) linhaSelecionada.getChildren().get(1)).getText();
+
+        Selecoes selecaoParaSerRemovida = null;
+        for(Selecoes s : SelecoesFile.getInstance().getListaSelecoes()){
+            if(s.getNome().equals(nomeDaSelecaoSelecionada)){
+                selecaoParaSerRemovida = s;
+                break;
+            }
+        }
+        selecoesFile.getListaSelecoes().remove(selecaoParaSerRemovida);
+        selecoesFile.salvarNoTxt();
+
+        /*Apagando todos os jogadores relacionados a selecao*/
+        removerJogadoresDaSelecao(selecaoParaSerRemovida);
+
+        /*chama o metodo do controller de mudar a tela para chamar o iniciatilize que chama o mostraSelecao para atualizar a lista*/
+        SceneController.mudaDeTela("/designAndScreens/telaInicial/equipesNaCopa.fxml");
+    }
+
+    private void removerJogadoresDaSelecao(Selecoes selecaoParaSerRemovida){
+        for(Jogadores j : JogadoresFile.getInstancia().getListaJogadores()){
+            if(j.getSelecao().equals(selecaoParaSerRemovida)){
+                jogadoresFile.getListaJogadores().remove(j);
+            }
+        }
+        jogadoresFile.salvarNoTxt();
     }
 }

@@ -1,6 +1,7 @@
 package controller;
 
 import Enums.Funcao;
+import javafx.animation.FadeTransition;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -9,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -18,6 +20,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import nationsAndPlayers.nations.Selecoes;
 import nationsAndPlayers.players.Jogadores;
 import services.files.JogadoresFile;
@@ -31,6 +34,8 @@ import java.io.InputStream;
 public class ControllerJogadores {
 
     private Selecoes selecao;
+    private final JogadoresFile jogadoresFile = JogadoresFile.getInstancia();
+    private Jogadores jogadorSelecionado;
 
     @FXML private Button botaoAdicionarJogador;
     @FXML private Button botaoRemoverJogador;
@@ -39,7 +44,7 @@ public class ControllerJogadores {
     @FXML private TableColumn<Jogadores,String> jogadorColuna;
     @FXML private TableColumn<Jogadores,Integer> idadeColuna;
     @FXML private TableColumn<Jogadores,String> posicaoColuna;
-    @FXML private VBox listaJogadores; // trabalhar nisso depois
+    @FXML private Label labelMensagem;
 
     public void initialize() {
         SelecoesFile.getInstance().getListaSelecoes();
@@ -52,6 +57,12 @@ public class ControllerJogadores {
                 botaoRemoverJogador.setVisible(true);
             }
         }
+
+        tabelaJogadores.setOnMouseClicked(eventoDeClique -> {
+           if(eventoDeClique.getClickCount() == 1){
+               jogadorSelecionado = tabelaJogadores.getSelectionModel().getSelectedItem();
+           }
+        });
 /*
         jogadorColuna.setCellValueFactory(new PropertyValueFactory<>("nome"));
         idadeColuna.setCellValueFactory(new PropertyValueFactory<>("idade"));
@@ -78,8 +89,10 @@ public class ControllerJogadores {
 
         ObservableList<Jogadores> listaJogadoresFiltrada = FXCollections.observableArrayList();
         for(Jogadores jogadores: JogadoresFile.getInstancia().getListaJogadores()){
-            if(jogadores.getSelecao().getNome().equals(selecao.getNome())){
+            if(jogadores.getSelecao() != null){
+                if(jogadores.getSelecao().getNome().equals(selecao.getNome())){
                 listaJogadoresFiltrada.add(jogadores);
+                }
             }
         }
         tabelaJogadores.setItems(listaJogadoresFiltrada);
@@ -123,6 +136,55 @@ public class ControllerJogadores {
         }catch(IOException ex){
             System.err.println("Falha ao abrir o telaCadastrarJogadores: " + ex.getMessage());
         }
+    }
+
+    @FXML
+    private void removerJogadores(){
+
+        if(jogadorSelecionado == null){
+            mostrarErro("Por favor, selecione um jogador \n " +
+                    "na tabela para remover.");
+            return;
+        }
+
+        jogadoresFile.getListaJogadores().remove(jogadorSelecionado);
+        jogadoresFile.salvarNoTxt();
+
+        mostrarErro("Jogador removido com sucesso!");
+        tabelaJogadores.getSelectionModel().clearSelection();
+        atualizarTabela();
+
+    }
+
+    private void mostrarErro(String str) {
+        labelMensagem.setText(str);
+        labelMensagem.setStyle("-fx-text-fill: #d32f2f; -fx-font-size: 14px; -fx-font-weight: bold;");
+        labelMensagem.setOpacity(1.0);
+
+        tornarMensagemTemporaria();
+    }
+
+    private void mostrarSucesso(String str) {
+        labelMensagem.setText(str);
+        labelMensagem.setStyle("-fx-text-fill: #388e3c; -fx-font-size: 14px; -fx-font-weight: bold;");
+        labelMensagem.setOpacity(1.0);
+
+        tornarMensagemTemporaria();
+    }
+
+    private void tornarMensagemTemporaria() {
+
+        FadeTransition fade = new FadeTransition(Duration.seconds(1.0), labelMensagem);
+        fade.setFromValue(1.0); // Totalmente visível
+        fade.setToValue(0.0);   // Totalmente invisível
+
+
+        fade.setDelay(Duration.seconds(2.0));
+
+
+        fade.setOnFinished(event -> labelMensagem.setText(""));
+
+        fade.play(); // Inicia o temporizador/efeito
     }
 
 }

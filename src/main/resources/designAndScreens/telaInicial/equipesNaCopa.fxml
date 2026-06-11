@@ -62,7 +62,7 @@
                   <Font name="Oswald Medium" size="30.0" />
                </font>
             </Text>
-            <Text fx:id="botaoArbitro" fill="WHITE" layoutX="970.0" layoutY="63.0" onMouseClicked="#irParaArbitros" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER" >
+            <Text fx:id="botaoArbitro" fill="WHITE" layoutX="970.0" layoutY="63.0" onMouseClicked="#irParaArbitros" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER">
                <font>
                   <Font name="Oswald Medium" size="30.0" />
                </font>
@@ -149,7 +149,8 @@
                   </AnchorPane>
                </content>
             </ScrollPane>
-            <Button fx:id="botaoCadastrarSelecao" layoutX="505.0" layoutY="21.0" mnemonicParsing="false" text="Cadastrar Seleção" visible="false" onMouseClicked="#irParaCadastroDeSelecoes"/>
+            <Button fx:id="botaoCadastrarSelecao" layoutX="505.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#irParaCadastroDeSelecoes" text="Cadastrar Seleção" visible="false" />
+            <Button fx:id="botaoRemoverSelecao" layoutX="666.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#removerSelecao" text="Remover Seleção" visible="false" />
          </children>
       </AnchorPane>
    </children>

@@ -34,9 +34,9 @@
       </Label>
       <TableView fx:id="tabelaJogadores" layoutX="858.0" layoutY="251.0" prefHeight="200.0" prefWidth="398.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Jogador" fx:id="jogadorColuna"/>
-          <TableColumn prefWidth="75.0" text="Posição" fx:id="posicaoColuna"/>
-            <TableColumn prefWidth="75.0" text="Idade" fx:id="idadeColuna"/>
+          <TableColumn fx:id="jogadorColuna" prefWidth="75.0" text="Jogador" />
+          <TableColumn fx:id="posicaoColuna" prefWidth="75.0" text="Posição" />
+            <TableColumn fx:id="idadeColuna" prefWidth="75.0" text="Idade" />
         </columns>
       </TableView>
       <ImageView fitHeight="37.0" fitWidth="38.0" layoutX="31.0" layoutY="23.0" onMouseClicked="#irParaEquipes" pickOnBounds="true" preserveRatio="true">
@@ -44,7 +44,8 @@
             <Image url="@../../images/setinha_de_voltar.png" />
          </image>
       </ImageView>
-      <Button layoutX="879.0" layoutY="470.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="146.0" visible="false" text="Adicionar Jogador" fx:id="botaoAdicionarJogador" onAction="#irParaCadastrarJogadores"/>
-      <Button layoutX="1080.0" layoutY="470.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="146.0" visible="false" text="Remover Jogador" fx:id="botaoRemoverJogador"/>
+      <Button fx:id="botaoAdicionarJogador" layoutX="879.0" layoutY="470.0" mnemonicParsing="false" onAction="#irParaCadastrarJogadores" prefHeight="30.0" prefWidth="146.0" text="Adicionar Jogador" visible="false" />
+      <Button fx:id="botaoRemoverJogador" layoutX="1080.0" layoutY="470.0" mnemonicParsing="false" onAction="#removerJogadores" prefHeight="30.0" prefWidth="146.0" text="Remover Jogador" visible="false" />
+      <Label fx:id="labelMensagem" layoutX="1043.0" layoutY="190.0" text="Label" />
    </children>
 </AnchorPane>
