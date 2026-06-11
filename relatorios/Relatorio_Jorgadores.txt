@@ -1,0 +1,67 @@
+========================================
+          COPA 26 - JOGADORES           
+========================================
+Gerado em: 2026-06-10
+
+Nome                      Idade  Posicao         Num   Selecao              Lesionado  Suspenso  
+-------------------------------------------------------------------------------------
+Joao                      24     -               0     Alemanha             Nao        Nao       
+Carlos                    28     -               0     Brasil               Nao        Nao       
+Miguel                    22     -               0     Argentina            Nao        Nao       
+Pedro                     30     -               0     Paraguai             Sim        Nao       
+Lucas                     26     -               0     França               Nao        Sim       
+Mateus                    21     -               0     Espanha              Nao        Nao       
+Rafael                    29     -               0     Portugal             Sim        Nao       
+Diego                     27     -               0     Uruguai              Nao        Nao       
+André                     25     -               0     Inglaterra           Nao        Sim       
+Felipe                    31     -               0     Itália               Nao        Nao       
+Bruno                     23     -               0     Holanda              Nao        Nao       
+Thiago                    28     -               0     Bélgica              Sim        Nao       
+Eduardo                   24     -               0     Croácia              Nao        Nao       
+Gustavo                   32     -               0     Alemanha             Nao        Sim       
+Henrique                  20     -               0     Brasil               Nao        Nao       
+Vinicius                  22     -               0     Brasil               Nao        Nao       
+Rodrigo                   27     -               0     Argentina            Sim        Nao       
+Sergio                    30     -               0     Espanha              Nao        Nao       
+Marcos                    26     -               0     México               Nao        Sim       
+Javier                    29     -               0     Colômbia             Nao        Nao       
+Luis                      31     -               0     Chile                Sim        Nao       
+Fernando                  24     -               0     Peru                 Nao        Nao       
+Oscar                     28     -               0     Equador              Nao        Nao       
+Ricardo                   33     -               0     Uruguai              Nao        Sim       
+Daniel                    25     -               0     Estados Unidos       Nao        Nao       
+Kevin                     22     -               0     Canadá               Nao        Nao       
+Joshua                    27     -               0     Inglaterra           Sim        Nao       
+Harry                     29     -               0     Inglaterra           Nao        Nao       
+Thomas                    30     -               0     Alemanha             Nao        Nao       
+Kai                       24     -               0     Alemanha             Nao        Sim       
+Lionel                    36     -               0     Argentina            Nao        Nao       
+Julian                    23     -               0     Argentina            Nao        Nao       
+Neymar                    32     -               0     Brasil               Sim        Nao       
+Casemiro                  31     -               0     Brasil               Nao        Nao       
+Alisson                   30     -               0     Brasil               Nao        Nao       
+Kylian                    25     -               0     França               Nao        Nao       
+Antoine                   33     -               0     França               Nao        Sim       
+Luka                      38     -               0     Croácia              Nao        Nao       
+Erling                    24     -               0     Noruega              Sim        Nao       
+Cristiano                 39     -               0     Portugal             Nao        Nao       
+Bernardo                  29     -               0     Portugal             Nao        Nao       
+Sadio                     32     -               0     Senegal              Sim        Nao       
+Achraf                    26     -               0     Marrocos             Nao        Nao       
+Hakim                     31     -               0     Marrocos             Nao        Sim       
+Son                       32     -               0     Coreia do Sul        Nao        Nao       
+Takefusa                  23     -               0     Japão                Nao        Nao       
+Mehdi                     28     -               0     Irã                  Nao        Nao       
+Ali                       27     -               0     Arábia Saudita       Nao        Nao       
+Diego Maradona            45     -               0     Argentina            Nao        Nao       
+maldine                   56     -               0     Argentina            Nao        Nao       
+eduardo                   65     -               0     Argentina            Nao        Nao       
+ademir                    54     -               0     Argentina            Nao        Nao       
+gusta                     23     -               0     Argentina            Nao        Nao       
+lamine                    32     -               0     Argentina            Nao        Nao       
+lamine                    23     -               0     Espanha              Nao        Nao       
+jefferson                 34     -               0     eita3                Nao        Nao       
+tiago                     34     -               0     eita4                Nao        Nao       
+-------------------------------------------------------------------------------------
+Total     : 57
+Lesionados: 9  |  Suspensos: 8

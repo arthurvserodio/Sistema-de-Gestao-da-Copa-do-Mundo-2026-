@@ -36,6 +36,7 @@ public class ControllerArbitragem {
     @FXML private TextField txtBusca;
     @FXML private Label label;
     @FXML private Text botaoUsuario;
+    @FXML private Text botaoRelatorio;
 
 
     private final ArbitroFile arbitroFile = ArbitroFile.getInstance();
@@ -62,6 +63,7 @@ public class ControllerArbitragem {
             botaoLogin.setVisible(false);
             if(u.getFuncao()== Funcao.ADMINISTRADOR){
                 botaoUsuario.setVisible(true);
+                botaoRelatorio.setVisible(true);
             }
         } else {
             botaoLogin.setVisible(true);
@@ -69,6 +71,11 @@ public class ControllerArbitragem {
         }
 
 
+    }
+
+    @FXML
+    private void irParaRelatorio(MouseEvent e){
+        SceneController.mudaDeTela("/designAndScreens/telasAdministrador/relatorio.fxml");
     }
 
 
@@ -102,6 +109,11 @@ public class ControllerArbitragem {
                     throw new IllegalArgumentException("Nome deve conter apenas letras.");
                 }
 
+            }
+
+            if(arbitroFile.arbitroJaExiste(nome)){
+                mostrarErro("Arbitro já existe");
+                return;
             }
 
             int experiencia;
@@ -218,11 +230,11 @@ public class ControllerArbitragem {
 
     private void irParaEstadios(MouseEvent e) {
         Usuario u = Sessao.getInstancia().getUsuarioLogado();
-        if(u.getFuncao() != Funcao.ARBITRO){
-            SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioAdm.fxml");
+        if(u == null || u.getFuncao() == Funcao.ARBITRO){
+            SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioNormal.fxml");
         }
         else{
-            SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioNormal.fxml");
+            SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioAdm.fxml");
         }
     }
 
@@ -237,7 +249,12 @@ public class ControllerArbitragem {
     @FXML
     //Muda para tela de inicio
     private void irParaInicio(MouseEvent e) {
-        SceneController.mudaDeTela( "/designAndScreens/telaInicial/paginaInicial.fxml");
+        Usuario u = Sessao.getInstancia().getUsuarioLogado();
+        if( u == null) {
+            SceneController.mudaDeTela("/designAndScreens/telaInicial/paginaInicial.fxml");
+        }else {
+            SceneController.mudaDeTela("/designAndScreens/telasAdministrador/telaPrincipalUsuarios.fxml");
+        }
     }
     @FXML
     //Passa do Menu para a tela de equipes presentes na copa de 2026

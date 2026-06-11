@@ -14,7 +14,12 @@ public class ControllerHistoria {
     //Volta para a pagina inicial de menu clicando no logo da copa
     @FXML
     private void irPaginaInicial(MouseEvent e){
-        SceneController.mudaDeTela("/designAndScreens/telaInicial/paginaInicial.fxml");
+            Usuario u = Sessao.getInstancia().getUsuarioLogado();
+            if( u == null) {
+                SceneController.mudaDeTela("/designAndScreens/telaInicial/paginaInicial.fxml");
+            }else {
+                SceneController.mudaDeTela("/designAndScreens/telasAdministrador/telaPrincipalUsuarios.fxml");
+            }
     }
     //Passa da História para a própria página
     @FXML
@@ -35,11 +40,11 @@ public class ControllerHistoria {
 
     private void irParaEstadios(MouseEvent e) {
         Usuario u = Sessao.getInstancia().getUsuarioLogado();
-        if(u.getFuncao() != Funcao.ARBITRO){
-            SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioAdm.fxml");
+        if(u == null || u.getFuncao() == Funcao.ARBITRO){
+            SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioNormal.fxml");
         }
         else{
-            SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioNormal.fxml");
+            SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioAdm.fxml");
         }
     }
     @FXML
@@ -48,7 +53,7 @@ public class ControllerHistoria {
     }
     @FXML
     //Passa da História para a tela de campeoes da copa
-    private void irParaCampeoes(ActionEvent e) {SceneController.mudaDeTela( "/designAndScreens/telaInicial/campeoes.fxml");
+    private void irParaCampeoes(ActionEvent e) {SceneController.mudaDeTela( "/designAndScre/Arbitragem/telaDesignacao.fxml");
     }
 
     @FXML
@@ -58,11 +63,14 @@ public class ControllerHistoria {
     @FXML
     private void irParaArbitros(MouseEvent e){
         Usuario u = Sessao.getInstancia().getUsuarioLogado();
-        if(u.getFuncao() != Funcao.ARBITRO){
-            SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroAdm.fxml");
-        }
-        else{
-            SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroNormal.fxml");
+        if( u == null) {
+            SceneController.mudaDeTela("/designAndScreens/Arbitragem/telaArbitroNormal.fxml");
+        }else {
+            if (u.getFuncao() != Funcao.ARBITRO) {
+                SceneController.mudaDeTela("/designAndScreens/Arbitragem/telaArbitroAdm.fxml");
+            } else {
+                SceneController.mudaDeTela("/designAndScreens/Arbitragem/telaDesignacao.fxml");
+            }
         }
     }
 
@@ -75,10 +83,12 @@ public class ControllerHistoria {
     @FXML private Button botaoLogin;
     @FXML private MenuButton menuUsuario;
     @FXML private Text botaoUsuario;
-    @FXML private Text botaoArbitro;
+
 
     public void initialize() {
         Usuario u = Sessao.getInstancia().getUsuarioLogado();
+
+
         if (u != null) {
             menuUsuario.setText(u.getNome() );
             menuUsuario.setVisible(true);

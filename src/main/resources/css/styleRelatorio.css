@@ -1,0 +1,67 @@
+
+.card-relatorio {
+    -fx-background-color: rgba(255, 255, 255, 0.96);
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-color: rgba(255, 255, 255, 0.3);
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.25), 18, 0, 0, 6);
+    -fx-cursor: default;
+}
+
+.card-relatorio:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.38), 26, 0, 0, 10);
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+
+.icone-circulo {
+    -fx-background-color: #fdf3d8;
+    -fx-background-radius: 50;
+    -fx-border-radius: 50;
+    -fx-border-color: #e8c96a;
+    -fx-border-width: 2;
+    -fx-alignment: center;
+}
+
+.icone-emoji {
+    -fx-font-size: 38px;
+}
+
+
+.card-titulo {
+    -fx-text-fill: #0d0d0d;
+    -fx-font-weight: bold;
+}
+
+.card-subtitulo {
+    -fx-text-fill: #888888;
+}
+
+
+.botao-relatorio {
+    -fx-background-color: linear-gradient(to right, #6b4f10, #4a3508);
+    -fx-background-radius: 30;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-padding: 10 28 10 28;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.35), 8, 0, 0, 3);
+}
+
+.botao-relatorio:hover {
+    -fx-background-color: linear-gradient(to right, #4a3508, #2e2005);
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 12, 0, 0, 4);
+}
+
+.botao-relatorio:pressed {
+    -fx-scale-x: 0.96;
+    -fx-scale-y: 0.96;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 5, 0, 0, 2);
+}
+
+.titulo-relatorios {
+    -fx-text-fill: #1a1a1a;
+    -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.15), 2, 0, 0, 1);
+}

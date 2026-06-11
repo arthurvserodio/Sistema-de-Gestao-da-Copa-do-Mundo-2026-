@@ -107,6 +107,7 @@ public class ControllerCadastroPartida {
                 }
                 choiceGrupo.getItems().clear();
                 choiceGrupo.getItems().add(escolhida.getGrupo());
+                Data.setValue(null);
                 //Atualiza a outro combobox para ser as seleções presentes no mesmo grupo
                 partidaService.atualizarComboBox(choiceSelecao1, choiceSelecao2, ListSelecoes,faseAtual.getFaseAtual());
             }

@@ -27,6 +27,7 @@ public class Arbitro extends Usuario {
         return experiencia;
     }
 
+
     public void setExperiencia(int experiencia) {
         this.experiencia = experiencia;
     }

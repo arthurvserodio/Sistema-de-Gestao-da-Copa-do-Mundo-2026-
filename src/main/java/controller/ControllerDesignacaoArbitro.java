@@ -2,6 +2,7 @@ package controller;
 
 import Enums.Funcao;
 import javafx.animation.FadeTransition;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -11,28 +12,31 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 import matches.Partida;
+import services.DesignacaoService;
 import stadiumAndRefeering.DesignacaoArbitragem;
 import stadiumAndRefeering.Estadio;
 import users.Arbitro;
 import users.Sessao;
 import users.Usuario;
 
-import javax.swing.text.TabableView;
-import javax.swing.text.html.ImageView;
+import java.util.List;
+import java.util.stream.Collectors;
+
 
 public class ControllerDesignacaoArbitro {
 
-    @FXML TableView<DesignacaoArbitragem> TabelaDesignacao;
+    @FXML private TableView<DesignacaoArbitragem> tabelaDesignacao;
     @FXML private Label labelMensagem;
     @FXML private TableColumn<DesignacaoArbitragem, Partida> colPartida;
     @FXML private TableColumn<DesignacaoArbitragem, Arbitro> colArbitros;
-    @FXML private TextField txtBusca;
+    @FXML private TextField buscar;
     @FXML private MenuButton menuUsuario;
     @FXML private Text botaoUsuario;
     @FXML private Button botaoLogin;
 
 
 
+    final DesignacaoService designacaoService =  new DesignacaoService();
 
     public void initialize(){
         Usuario u = Sessao.getInstancia().getUsuarioLogado();
@@ -51,6 +55,7 @@ public class ControllerDesignacaoArbitro {
 
         colArbitros.setCellValueFactory(new PropertyValueFactory<>("nomeArbitro"));
         colPartida.setCellValueFactory(new PropertyValueFactory<>("nomePartida"));
+        tabelaDesignacao.setItems(designacaoService.listaDesignacoes());
 
     }
 
@@ -80,7 +85,7 @@ public class ControllerDesignacaoArbitro {
     @FXML
     //Muda para tela de inicio
     private void irParaInicio(MouseEvent e) {
-        SceneController.mudaDeTela( "/designAndScreens/telaInicial/paginaInicial.fxml");
+        SceneController.mudaDeTela( "/designAndScreens/telasAdministrador/telaPrincipalUsuarios.fxml");
     }
     @FXML
     //Passa do Menu para a tela de equipes presentes na copa de 2026
@@ -106,16 +111,36 @@ public class ControllerDesignacaoArbitro {
     private void irParaUsuarios(MouseEvent e){
         SceneController.mudaDeTela( "/designAndScreens/telasAdministrador/usuarios.fxml");
     }
+
     @FXML
-    private void irParaArbitros(MouseEvent e){
+    private void irParaEstadios(MouseEvent e) {
         Usuario u = Sessao.getInstancia().getUsuarioLogado();
         if(u.getFuncao() != Funcao.ARBITRO){
-            SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroAdm.fxml");
+            SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioAdm.fxml");
         }
         else{
-            SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroNormal.fxml");
+            SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioNormal.fxml");
         }
     }
+
+
+    @FXML
+    private void handlePesquisar(MouseEvent event) {
+        String termo = buscar.getText().toLowerCase().trim();
+
+        // se o campo estiver vazio reseta a tabela
+        if (termo.isEmpty()) {
+            tabelaDesignacao.setItems(designacaoService.listaDesignacoes());
+            return;
+        }
+        List<DesignacaoArbitragem> resultadoFiltrado = designacaoService.listaDesignacoes().stream()
+                .filter(d -> d.getNomeArbitro().toLowerCase().contains(termo) ||
+                        d.getNomePartida().toLowerCase().contains(termo))
+                .collect(Collectors.toList());
+
+        tabelaDesignacao.setItems(FXCollections.observableArrayList(resultadoFiltrado));
+    }
+
 
 
 }

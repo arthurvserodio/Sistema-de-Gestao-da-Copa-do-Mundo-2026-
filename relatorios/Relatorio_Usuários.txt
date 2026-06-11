@@ -1,0 +1,15 @@
+========================================
+           COPA 26 - USUARIOS           
+========================================
+Gerado em: 2026-06-10
+
+Nome                      Funcao          Pais            Status    
+------------------------------------------------------------------
+admin                     ADMINISTRADOR   brasileiro      ativo     
+teste                     ORGANIZADOR     americano       ativo     
+gusta                     ADMINISTRADOR   brasileiro      ativo     
+arb                       ARBITRO         russo           ativo     
+helena                    ADMINISTRADOR   brasil          ativo     
+------------------------------------------------------------------
+Total : 5
+Ativos: 5  |  Inativos: 0

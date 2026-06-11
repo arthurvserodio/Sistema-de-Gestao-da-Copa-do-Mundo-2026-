@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<StackPane stylesheets="@../../css/styleCadastrarSelecao.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerCadastroUsuarios">
+
+
+    <BorderPane style="-fx-background-color: #0d0d0d;">
+
+
+        <center>
+            <HBox spacing="40" style="-fx-padding: 40;">
+
+
+                <VBox prefWidth="600" spacing="20" style="-fx-background-color: #121212; -fx-padding: 25; -fx-background-radius: 10;">
+
+                    <Label style="-fx-text-fill: white; -fx-font-size: 24px;" text="Cadastrar Usuário" />
+
+                    <Label style="-fx-text-fill: #aaaaaa;" text="Preencha as informações do usuário" />
+
+
+                    <HBox spacing="15">
+                        <VBox spacing="5">
+                            <Label styleClass="label" text="Nome" />
+                            <TextField fx:id="nome" promptText="id" />
+                        </VBox>
+                        <VBox spacing="5">
+                            <Label styleClass="label" text="Função" />
+                            <TextField fx:id="funcao" promptText="Administrador, Organizador, Árbitro" />
+                        </VBox>
+                    </HBox>
+
+
+                    <HBox spacing="15">
+                        <VBox spacing="5">
+                            <Label styleClass="label" text="País" />
+                            <TextField fx:id="pais" promptText="Ex: Brasil" />
+                        </VBox>
+                        <VBox spacing="5">
+                            <Label styleClass="label" text="Status" />
+                            <TextField fx:id="status" promptText="Ativo, Inativo" />
+                        </VBox>
+                    </HBox>
+
+                    <Separator />
+
+
+                    <HBox spacing="15">
+                        <VBox spacing="5">
+                            <Label styleClass="label" text="Senha" />
+                            <PasswordField fx:id="senha" promptText="Senha" />
+                        </VBox>
+                        <VBox spacing="5">
+                            <Label styleClass="label" text="Repetir Senha" />
+                            <PasswordField fx:id="senha2" promptText="Repetir senha" />
+                        </VBox>
+                    </HBox>
+
+
+                    <Label fx:id="labelMensagem" wrapText="true"
+                           style="-fx-font-size: 13px; -fx-text-fill: #cc0000;" text="" />
+
+
+                    <HBox spacing="15">
+                        <Button styleClass="btn-secondary" text="Cancelar" />
+                        <Button styleClass="btn-primary" text="Salvar Usuário" onAction="#adicionarUsuario" />
+                    </HBox>
+
+                </VBox>
+
+
+
+
+            </HBox>
+        </center>
+
+    </BorderPane>
+
+</StackPane>

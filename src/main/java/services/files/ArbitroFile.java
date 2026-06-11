@@ -64,6 +64,14 @@ public class ArbitroFile {
         }
     }
 
+    public boolean arbitroJaExiste(String nome){
+        for(Arbitro a : listaArbitros){
+            if(a.getNome().equalsIgnoreCase(nome)){
+                return true;
+            }
+        }
+        return false;
+    }
 
 
 

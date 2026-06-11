@@ -58,7 +58,7 @@
                 </ImageView>
             </children>
         </StackPane>
-        <Text fill="WHITE" layoutX="272.0" layoutY="64.0" onMouseClicked="#irParaHistoria" strokeType="OUTSIDE" strokeWidth="0.0" text="História" textAlignment="CENTER">
+        <Text fx:id="botaoRelatorio" fill="WHITE" layoutX="272.0" layoutY="64.0" onMouseClicked="#irParaRelatorio" strokeType="OUTSIDE" strokeWidth="0.0" text="Relatórios" textAlignment="CENTER" visible="false">
             <font>
                 <Font name="Oswald Medium" size="30.0" />
             </font>
@@ -78,7 +78,7 @@
                 <Font name="Oswald Medium" size="30.0" />
             </font>
         </Text>
-        <Text fx:id="botaoUsuario" fill="WHITE" layoutX="970.0" layoutY="64.0" onMouseClicked="#irParaUsuarios" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuários" textAlignment="CENTER" visible="false">
+        <Text fx:id="botaoUsuario" fill="WHITE" layoutX="1107.0" layoutY="64.0" onMouseClicked="#irParaUsuarios" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuários" textAlignment="CENTER" visible="false">
             <font>
                 <Font name="Oswald Medium" size="30.0" />
             </font>
@@ -165,7 +165,7 @@
             <Image url="@../../images/ChatGPT%20Image%209%20de%20mai.%20de%202026,%2018_28_43.png" />
          </image>
       </ImageView>
-      <Text fill="WHITE" layoutX="1107.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER" underline="true">
+      <Text fill="WHITE" layoutX="970.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER" underline="true">
          <font>
             <Font name="Oswald Medium" size="30.0" />
          </font>

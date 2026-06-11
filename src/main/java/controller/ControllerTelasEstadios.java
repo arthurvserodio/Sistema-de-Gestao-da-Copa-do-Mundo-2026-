@@ -34,8 +34,10 @@ public class ControllerTelasEstadios {
     @FXML private TextField txtCapacidade;
     @FXML private TextField txtBusca;
     @FXML private Text botaoUsuario;
+    @FXML private Text botaoRelatorio;
 
     private final EstadioFile estadioFile = EstadioFile.getInstance();
+
 
     @FXML
     public void initialize() {
@@ -50,19 +52,29 @@ public class ControllerTelasEstadios {
         painelPrincipal.setOnMouseClicked(event -> {
             tabelaEstadios.getSelectionModel().clearSelection();
         });
+
+
+
+
+
 /// Parte da Helena
         Usuario u = Sessao.getInstancia().getUsuarioLogado();
+
+
         if (u != null) {
             menuUsuario.setText(u.getNome());
             menuUsuario.setVisible(true);
             botaoLogin.setVisible(false);
             if(u.getFuncao()==Funcao.ADMINISTRADOR){
                 botaoUsuario.setVisible(true);
+                botaoRelatorio.setVisible(true);
             }
         } else {
             botaoLogin.setVisible(true);
             menuUsuario.setVisible(false);
         }
+
+
     }
 
     // Mostrar tabela
@@ -98,6 +110,11 @@ public class ControllerTelasEstadios {
                     throw new IllegalArgumentException("Nome deve conter apenas letras.");
                 }
 
+            }
+
+            if(estadioFile.estadioJaExiste(nome)){
+                mostrarErro("Estadio já cadastrado");
+                return;
             }
 
             int capacidade;
@@ -207,7 +224,10 @@ public class ControllerTelasEstadios {
     }
 
 
-
+    @FXML
+    private void irParaRelatorio(MouseEvent e){
+        SceneController.mudaDeTela("/designAndScreens/telasAdministrador/relatorio.fxml");
+    }
 
 
     @FXML
@@ -220,7 +240,12 @@ public class ControllerTelasEstadios {
     @FXML
     //Muda para tela de inicio
     private void irParaInicio(MouseEvent e) {
-        SceneController.mudaDeTela( "/designAndScreens/telaInicial/paginaInicial.fxml");
+        Usuario u = Sessao.getInstancia().getUsuarioLogado();
+        if( u == null) {
+            SceneController.mudaDeTela("/designAndScreens/telaInicial/paginaInicial.fxml");
+        }else {
+            SceneController.mudaDeTela("/designAndScreens/telasAdministrador/telaPrincipalUsuarios.fxml");
+        }
     }
     @FXML
     //Passa do Menu para a tela de equipes presentes na copa de 2026
@@ -249,11 +274,14 @@ public class ControllerTelasEstadios {
     @FXML
     private void irParaArbitros(MouseEvent e){
         Usuario u = Sessao.getInstancia().getUsuarioLogado();
-        if(u.getFuncao() != Funcao.ARBITRO){
-            SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroAdm.fxml");
-        }
-        else{
-            SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroNormal.fxml");
+        if( u == null) {
+            SceneController.mudaDeTela("/designAndScreens/Arbitragem/telaArbitroNormal.fxml");
+        }else {
+            if (u.getFuncao() != Funcao.ARBITRO) {
+                SceneController.mudaDeTela("/designAndScreens/Arbitragem/telaArbitroAdm.fxml");
+            } else {
+                SceneController.mudaDeTela("/designAndScreens/Arbitragem/telaDesignacao.fxml");
+            }
         }
     }
 

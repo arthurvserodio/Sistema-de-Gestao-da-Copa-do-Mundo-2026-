@@ -4,23 +4,23 @@ import Enums.Funcao;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
+import services.*;
 import users.Sessao;
 import users.Usuario;
 
-public class ControllerTelaPrincipalUsuarios {
-
+public class ControllerRelatorio {
     @FXML
     private void irPaginaInicial(MouseEvent e){
         SceneController.mudaDeTela("/designAndScreens/telasAdministrador/telaPrincipalUsuarios.fxml");
-    }
+
+        }
 
     @FXML
     private void irParaRelatorio(MouseEvent e){
-        SceneController.mudaDeTela("/designAndScreens/telasAdministrador/relatorio.fxml");
+        SceneController.mudaDeTela("/designAndScreens/telaInicial/relatorio.fxml");
     }
     @FXML
     //Passa do Menu para a tela de equipes presentes na copa de 2026
@@ -70,16 +70,10 @@ public class ControllerTelaPrincipalUsuarios {
         SceneController.mudaDeTela( "/designAndScreens/telaInicial/paginaInicial.fxml");
     }
 
-    @FXML
-    private void irParaHistoria(MouseEvent e){
-        SceneController.mudaDeTela("/designAndScreens/telaInicial/historia.fxml");
-    }
-
     @FXML private Button botaoLogin;
     @FXML private MenuButton menuUsuario;
     @FXML private Text botaoUsuario;
     @FXML private Text botaoRelatorio;
-    @FXML private Text botaoHistoria;
 
 
     public void initialize() {
@@ -94,7 +88,6 @@ public class ControllerTelaPrincipalUsuarios {
             if(u.getFuncao()== Funcao.ADMINISTRADOR){
                 botaoUsuario.setVisible(true);
                 botaoRelatorio.setVisible(true);
-                botaoHistoria.setVisible(false);
             }
         } else {
             botaoLogin.setVisible(true);
@@ -102,6 +95,23 @@ public class ControllerTelaPrincipalUsuarios {
         }
     }
 
+    public void gerarRelatorioSelecoes(ActionEvent e){
+        RelatorioSelecoes.gerar("Relatorio_Seleções.txt");
+    }
+
+    public void gerarRelatorioJogadores(ActionEvent e){
+        RelatorioJogadores.gerar("Relatorio_Jorgadores.txt");
+    }
+
+    public void gerarRelatorioArbitros(ActionEvent e){
+        RelatorioArbitros.gerar("Relatorio_Arbitros.txt");
+    }
+
+    public void gerarRelatorioEstadios(ActionEvent e){
+        RelatorioEstadios.gerar("Relatorio_Estádios.txt");
+    }
+
+    public void gerarRelatorioUsuarios(ActionEvent e){
+        RelatorioUsuarios.gerar("Relatorio_Usuários.txt");
+    }
 }
-
-

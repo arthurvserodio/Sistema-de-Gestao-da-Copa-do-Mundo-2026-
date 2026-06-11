@@ -90,7 +90,7 @@
                 <Font name="Oswald Medium" size="30.0" />
             </font>
         </Text>
-        <Text fx:id="botaoUsuario" fill="WHITE" layoutX="970.0" layoutY="64.0" onMouseClicked="#irParaUsuarios" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuários" textAlignment="CENTER" visible="false">
+        <Text fx:id="botaoUsuario" fill="WHITE" layoutX="1107.0" layoutY="64.0" onMouseClicked="#irParaUsuarios" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuários" textAlignment="CENTER" visible="false">
             <font>
                 <Font name="Oswald Medium" size="30.0" />
             </font>
@@ -109,26 +109,25 @@
                 <MenuItem text="Cancelar" />
             </items>
         </MenuButton>
-        <TableView fx:id="tabela" layoutX="789.0" layoutY="230.0" prefHeight="434.0" prefWidth="634.0" stylesheets="@../../css/style2.css">
+        <TableView fx:id="tabelaDesignacao" layoutX="789.0" layoutY="230.0" prefHeight="434.0" prefWidth="634.0" stylesheets="@../../css/style2.css">
             <columns>
-                <TableColumn prefWidth="75.0" text="Arbitro" />
-                <TableColumn prefWidth="75.0" text="Partida" />
+                <TableColumn fx:id="colArbitros" prefWidth="75.0" text="Arbitro" />
+                <TableColumn fx:id="colPartida" prefWidth="75.0" text="Partida" />
             </columns>
             <columnResizePolicy>
                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
             </columnResizePolicy>
         </TableView>
-        <TextField layoutX="966.0" layoutY="192.0" prefHeight="36.0" prefWidth="193.0" style="-fx-background-color: #80808080;" styleClass="textfield_equipes" stylesheets="@../../css/style.css" />
-        <Text fill="WHITE" layoutX="995.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER" underline="true">
+        <TextField fx:id="buscar" layoutX="966.0" layoutY="192.0" prefHeight="36.0" prefWidth="193.0" style="-fx-background-color: #80808080;" styleClass="textfield_equipes" stylesheets="@../../css/style.css" />
+        <Text fill="WHITE" layoutX="947.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER" underline="true">
             <font>
                 <Font name="Oswald Medium" size="30.0" />
             </font>
         </Text>
         <Label text="Label" />
-        <Label layoutX="807.0" layoutY="701.0" prefHeight="75.0" prefWidth="279.0" text="Label" />
       <StackPane layoutX="928.0" layoutY="195.0" prefHeight="27.0" prefWidth="36.0" styleClass="lupa" stylesheets="@../../css/style3.css">
          <children>
-              <ImageView fitHeight="16.0" fitWidth="27.0" onMouseClicked="#handlePesquisar" pickOnBounds="true">
+              <ImageView fx:id="handlePesquisar" fitHeight="16.0" fitWidth="27.0" onMouseClicked="#handlePesquisar" pickOnBounds="true">
                <image>
                   <Image url="@../../images/Arbitragem/img.jpg" />
                </image>

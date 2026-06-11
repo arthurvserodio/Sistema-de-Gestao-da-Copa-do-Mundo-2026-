@@ -57,6 +57,8 @@ import java.util.List;
 
         }
 
+
+
 /// Salva no disco :
         public void salvarNoTxt() {
             File arquivo = new File("src/main/resources/database/Estadios.txt");
@@ -70,6 +72,17 @@ import java.util.List;
             } catch (IOException e) {
                 System.err.println("Erro ao salvar: " + e.getMessage());
             }
+        }
+
+
+        // Verifica duplicidade
+        public boolean estadioJaExiste(String nome){
+           for(Estadio e : listaEstadios){
+               if(e.getNome().equalsIgnoreCase(nome)){
+                   return true;
+               }
+           }
+           return false;
         }
     }
 

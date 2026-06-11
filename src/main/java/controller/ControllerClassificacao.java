@@ -20,8 +20,14 @@ public class ControllerClassificacao {
     //Volta para a pagina inicial de menu clicando no logo da copa
     @FXML
     private void irPaginaInicial(MouseEvent e){
-        SceneController.mudaDeTela("/designAndScreens/telaInicial/paginaInicial.fxml");
-    }
+            Usuario u = Sessao.getInstancia().getUsuarioLogado();
+            if( u == null) {
+                SceneController.mudaDeTela("/designAndScreens/telaInicial/paginaInicial.fxml");
+            }else {
+                SceneController.mudaDeTela("/designAndScreens/telasAdministrador/telaPrincipalUsuarios.fxml");
+            }
+        }
+
     //Passa do Menu para a página que conta a historia da copa
     @FXML
     private void irParaHistoria(MouseEvent e){
@@ -41,11 +47,11 @@ public class ControllerClassificacao {
     @FXML
     private void irParaEstadios(MouseEvent e) {
         Usuario u = Sessao.getInstancia().getUsuarioLogado();
-        if(u.getFuncao()!= Funcao.ARBITRO){
-            SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioAdm.fxml");
+        if(u == null || u.getFuncao() == Funcao.ARBITRO){
+            SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioNormal.fxml");
         }
         else{
-            SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioNormal.fxml");
+            SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioAdm.fxml");
         }
     }
 
@@ -62,27 +68,37 @@ public class ControllerClassificacao {
     @FXML
     private void irParaArbitros(MouseEvent e){
         Usuario u = Sessao.getInstancia().getUsuarioLogado();
-        if(u.getFuncao()!= Funcao.ARBITRO){
-            SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroAdm.fxml");
-        }
-        else{
-            SceneController.mudaDeTela( "/designAndScreens/Arbitragem/telaArbitroNormal.fxml");
+        if( u == null) {
+            SceneController.mudaDeTela("/designAndScreens/Arbitragem/telaArbitroNormal.fxml");
+        }else {
+            if (u.getFuncao() != Funcao.ARBITRO) {
+                SceneController.mudaDeTela("/designAndScreens/Arbitragem/telaArbitroAdm.fxml");
+            } else {
+                SceneController.mudaDeTela("/designAndScreens/Arbitragem/telaDesignacao.fxml");
+            }
         }
     }
 
     @FXML private Button botaoLogin;
     @FXML private MenuButton menuUsuario;
     @FXML private Text botaoUsuario;
-    @FXML private Text botaoArbitro;
+    @FXML private Text botaoArbitro1;
+    @FXML private Text botaoArbitro2;
+    @FXML private Text botaoRelatorio;
+    @FXML private Text botaoHistoria;
 
     public void initialize() {
         Usuario u = Sessao.getInstancia().getUsuarioLogado();
+
+
         if (u != null) {
             menuUsuario.setText(u.getNome() );
             menuUsuario.setVisible(true);
             botaoLogin.setVisible(false);
             if(u.getFuncao() == Funcao.ADMINISTRADOR){
                 botaoUsuario.setVisible(true);
+                botaoRelatorio.setVisible(true);
+                botaoHistoria.setVisible(false);
             }
         } else {
             botaoLogin.setVisible(true);
@@ -94,6 +110,11 @@ public class ControllerClassificacao {
     private void onLogout(ActionEvent e){
         Sessao.getInstancia().logout();
         SceneController.mudaDeTela( "/designAndScreens/telaInicial/paginaInicial.fxml");
+    }
+
+    @FXML
+    private void irParaRelatorio(MouseEvent e){
+        SceneController.mudaDeTela("/designAndScreens/telasAdministrador/relatorio.fxml");
     }
 
 }
