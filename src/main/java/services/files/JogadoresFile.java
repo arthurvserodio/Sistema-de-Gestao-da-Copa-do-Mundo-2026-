@@ -67,7 +67,7 @@ public class JogadoresFile {
 
         try(BufferedWriter bw = new BufferedWriter(new FileWriter(arquivo))){
             for(Jogadores jogadores : listaJogadores){
-                bw.write(jogadores.getNome() +";" + jogadores.getIdade() + ";" + jogadores.getSelecao().getNome() + ";" + jogadores.isLesionado() + ";" + jogadores.isSuspenso());
+                bw.write(jogadores.getNome() +";" + jogadores.getIdade() + ";" + jogadores.getSelecao().getNome() + ";" + jogadores.isLesionado() + ";" + jogadores.isSuspenso() + ";" + jogadores.getPosicao() + ";" + jogadores.getNumeracao());
                 bw.newLine();
 
             }

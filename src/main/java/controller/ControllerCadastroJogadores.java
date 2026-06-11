@@ -1,5 +1,6 @@
 package controller;
 
+import Enums.PosicaoJogador;
 import javafx.animation.FadeTransition;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -21,6 +22,9 @@ public class ControllerCadastroJogadores {
     @FXML private ComboBox<Selecoes> selecaoJogadorCadastrado;
     @FXML private CheckBox lesionadoJogadorCadastrado;
     @FXML private CheckBox suspensoJogadorCadastrado;
+    @FXML private ComboBox<PosicaoJogador> posicaoJogadorCadastrado;
+    @FXML private TextField numeroCamisaJogadorCadastrado;
+
     @FXML private Label mensagemCamposIncompletos;
 
     private final JogadoresFile jogadoresFile = JogadoresFile.getInstancia();
@@ -30,31 +34,38 @@ public class ControllerCadastroJogadores {
         /*Inicializando a lista de selecoes no ComboBox*/
         ObservableList<Selecoes> listaSelecoes = FXCollections.observableArrayList(SelecoesFile.getInstance().getListaSelecoes());
         selecaoJogadorCadastrado.setItems(listaSelecoes);
+
+        /*inicializando a lista de posicoes no ComboBox*/
+        posicaoJogadorCadastrado.getItems().addAll(PosicaoJogador.values());
     }
 
     @FXML
     private void adicionarJogador(){
 
         try{
+
             String nomeJogadorCadastradaString = nomeJogadorCadastrado.getText();
             String idadeJogadorCadastradoString = idadeJogadorCadastrado.getText();
             Selecoes selecaoJogadorCadastradaSelecoes = selecaoJogadorCadastrado.getValue();
             boolean lesionadoJogadorCadastradoBoolean = lesionadoJogadorCadastrado.isSelected();
             boolean suspensoJogadorCadastradoBoolean = suspensoJogadorCadastrado.isSelected();
+            String numeroCamisaJogadorCadastradoString = numeroCamisaJogadorCadastrado.getText();
+            String posicaoJogadorCadastradoString = posicaoJogadorCadastrado.getValue().toString();
 
-            if(nomeJogadorCadastradaString.isEmpty() || selecaoJogadorCadastradaSelecoes == null || idadeJogadorCadastradoString.isEmpty()){
+            if(nomeJogadorCadastradaString.isEmpty() || selecaoJogadorCadastradaSelecoes == null || idadeJogadorCadastradoString.isEmpty() || posicaoJogadorCadastradoString == null){
                 throw new IllegalArgumentException("Todos os campos devem ser preenchidos");
             }
 
             /*checando se a idade digitada eh um numero*/
-            int idadeJogadorCadastradoInt;
+            int idadeJogadorCadastradoInt, numeroJogadorCadastradoInt;
             try{
                 idadeJogadorCadastradoInt = Integer.parseInt(idadeJogadorCadastradoString);
+                numeroJogadorCadastradoInt = Integer.parseInt(numeroCamisaJogadorCadastradoString);
             }catch (NumberFormatException i){
                 throw new IllegalArgumentException("Idade deve ser um numero");
             }
 
-            Jogadores novoJogador = new Jogadores(nomeJogadorCadastradaString, idadeJogadorCadastradoInt, selecaoJogadorCadastradaSelecoes, lesionadoJogadorCadastradoBoolean, suspensoJogadorCadastradoBoolean);
+            Jogadores novoJogador = new Jogadores(nomeJogadorCadastradaString, idadeJogadorCadastradoInt, selecaoJogadorCadastradaSelecoes, lesionadoJogadorCadastradoBoolean, suspensoJogadorCadastradoBoolean, posicaoJogadorCadastradoString, numeroJogadorCadastradoInt);
             jogadoresFile.getListaJogadores().add(novoJogador);
             jogadoresFile.salvarNoTxt();
 

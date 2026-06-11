@@ -1,1 +1,2 @@
-Joao;24;Alemanha;false;false
+Joao;24;Alemanha;false;false;null;0
+gustavo;23;Espanha;true;false;ATA;10

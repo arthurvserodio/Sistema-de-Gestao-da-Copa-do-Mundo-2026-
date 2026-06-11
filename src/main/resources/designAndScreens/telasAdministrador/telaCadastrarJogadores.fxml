@@ -9,9 +9,8 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Circle?>
 
-<HBox spacing="20" style="-fx-background-color: #0f0f0f;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="controller.ControllerCadastroJogadores">
+<HBox spacing="20" style="-fx-background-color: #0f0f0f;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerCadastroJogadores">
 
     <!-- LADO ESQUERDO -->
     <VBox prefWidth="600" spacing="20" style="-fx-background-color: #1a1a1a; -fx-background-radius: 10;">
@@ -22,7 +21,7 @@
         <Label style="-fx-text-fill: white; -fx-font-size: 26px;" text="Cadastrar Jogador" />
         <Label style="-fx-text-fill: #aaaaaa;" text="Preencha as informações do jogador" />
 
-        <!-- LINHA 1 -->
+        <!-- LINHA 1: Nome, Idade, Seleção -->
         <HBox spacing="10">
             <VBox spacing="5">
                 <Label style="-fx-text-fill: white;" text="Nome" />
@@ -40,6 +39,21 @@
             </VBox>
         </HBox>
 
+        <!-- LINHA 2: Número da Camisa e Posição -->
+        <HBox spacing="10">
+            <VBox spacing="5">
+                <Label style="-fx-text-fill: white;" text="Número da Camisa" />
+                <TextField fx:id="numeroCamisaJogadorCadastrado" prefWidth="150" promptText="Ex: 10" />
+            </VBox>
+
+            <VBox spacing="5">
+                <Label style="-fx-text-fill: white;" text="Posição" />
+                <ComboBox fx:id="posicaoJogadorCadastrado" prefWidth="200" promptText="Selecione a posição">
+
+                </ComboBox>
+            </VBox>
+        </HBox>
+
         <!-- CHECKBOX -->
         <HBox spacing="40">
             <CheckBox fx:id="lesionadoJogadorCadastrado" style="-fx-text-fill: white;" text="Lesionado" />
@@ -52,34 +66,9 @@
         <!-- BOTÕES -->
         <HBox spacing="10">
             <Button style="-fx-background-color: #2a2a2a; -fx-text-fill: white; -fx-background-radius: 8;" text="Cancelar" />
-
             <Button onAction="#adicionarJogador" style="-fx-background-color: #ffd700; -fx-text-fill: black; -fx-background-radius: 8;" text="Salvar Jogador" />
-         <Label prefHeight="18.0" prefWidth="354.0" text="Label" fx:id="mensagemCamposIncompletos"/>
+            <Label fx:id="mensagemCamposIncompletos" prefHeight="18.0" prefWidth="354.0" />
         </HBox>
-
-    </VBox>
-
-    <!-- LADO DIREITO (PREVIEW) -->
-    <VBox alignment="TOP_CENTER" prefWidth="300" spacing="15" style="-fx-background-color: #1a1a1a; -fx-background-radius: 10;">
-        <padding>
-            <Insets bottom="30" left="20" right="20" top="30" />
-        </padding>
-
-        <Label style="-fx-text-fill: #ffd700; -fx-font-size: 16px;" text="Pré-visualização" />
-
-        <!-- IMAGEM -->
-        <Circle fill="#2a2a2a" radius="60" />
-
-        <Label style="-fx-text-fill: white; -fx-font-size: 18px;" text="Nome do Jogador" />
-
-        <Label style="-fx-text-fill: #ffd700;" text="SIG" />
-
-        <Separator />
-
-        <Label style="-fx-text-fill: #cccccc;" text="Seleção" />
-        <Label style="-fx-text-fill: #cccccc;" text="Idade" />
-
-        <Label style="-fx-text-fill: #00ff88;" text="Status: Disponível" />
 
     </VBox>
 
