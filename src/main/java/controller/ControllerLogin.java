@@ -1,6 +1,7 @@
 package controller;
 
 import exceptions.LoginInvalidoException;
+import exceptions.UsuarioInativoException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -59,9 +60,7 @@ public class ControllerLogin {
     @FXML
     private Button botaoCadastro;
 
-    // -------------------------------------------------------
-    // Chamado ao clicar em "Entrar"
-    // -------------------------------------------------------
+
     @FXML
     private void handleEntrar() {
         String usuario = campoUsuario.getText().trim();
@@ -78,6 +77,9 @@ public class ControllerLogin {
             SceneController.mudaDeTela("/designAndScreens/telasAdministrador/telaPrincipalUsuarios.fxml");
         } catch (LoginInvalidoException e) {
             mostrarErro("Login ou senha inválidas");
+        }
+        catch(UsuarioInativoException a){
+            mostrarErro(a.getMessage());
         }
 
 
