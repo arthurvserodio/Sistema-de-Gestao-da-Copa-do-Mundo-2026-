@@ -35,6 +35,7 @@ public class ControllerTelasEstadios {
     @FXML private TextField txtBusca;
     @FXML private Text botaoUsuario;
     @FXML private Text botaoRelatorio;
+    @FXML private Text botaoHistoria;
 
     private final EstadioFile estadioFile = EstadioFile.getInstance();
 
@@ -68,6 +69,7 @@ public class ControllerTelasEstadios {
             if(u.getFuncao()==Funcao.ADMINISTRADOR){
                 botaoUsuario.setVisible(true);
                 botaoRelatorio.setVisible(true);
+                botaoHistoria.setVisible(false);
             }
         } else {
             botaoLogin.setVisible(true);

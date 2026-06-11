@@ -37,6 +37,7 @@ public class ControllerArbitragem {
     @FXML private Label label;
     @FXML private Text botaoUsuario;
     @FXML private Text botaoRelatorio;
+    @FXML private Text botaoHistoria;
 
 
     private final ArbitroFile arbitroFile = ArbitroFile.getInstance();
@@ -64,6 +65,7 @@ public class ControllerArbitragem {
             if(u.getFuncao()== Funcao.ADMINISTRADOR){
                 botaoUsuario.setVisible(true);
                 botaoRelatorio.setVisible(true);
+                botaoHistoria.setVisible(false);
             }
         } else {
             botaoLogin.setVisible(true);
