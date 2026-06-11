@@ -86,6 +86,10 @@ public class ControllerMaquinaDeEstados {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setContentText("Fase atualizada com sucesso!");
             alert.showAndWait();
+            CarregaArquivoService.limparArquivos("src/main/resources/database/arbitrosNaCopa.txt");
+            CarregaArquivoService.limparArquivos("src/main/resources/database/escalacao.txt");
+            CarregaArquivoService.limparArquivos("src/main/resources/database/jogadores.txt");
+            CarregaArquivoService.limparArquivos("src/main/resources/database/estadios.txt");
         }
         private void salvarEstado(){
             CadastroPartidaService.salvarEstadoDaCopa(estadoAtual, "src/main/resources/database/estado_copa.txt");
@@ -104,6 +108,7 @@ public class ControllerMaquinaDeEstados {
                 podeAvancar.setStyle("-fx-text-fill: #D32F2F;");
             }
         }
+
         //Faz a iteração para ter o que colocar na label de próximo estado
         private Fase proximaFase(Fase atual){
             Fase[] fases = Fase.values();

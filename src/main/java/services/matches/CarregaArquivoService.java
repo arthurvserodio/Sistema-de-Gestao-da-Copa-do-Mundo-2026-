@@ -3,8 +3,7 @@ package services.matches;
 import nationsAndPlayers.nations.Campeoes;
 import nationsAndPlayers.nations.Selecoes;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
@@ -27,5 +26,15 @@ public class CarregaArquivoService {
             e.printStackTrace();
         }
         return lista;
+    }
+
+    // codigo para limpar arquivos
+
+    public static  void limparArquivos(String caminho){
+        try(FileWriter limpa = new FileWriter(caminho,false)){}
+        catch (IOException e) {
+            System.err.println("Erro ao limpar o arquivo: " + caminho);
+            e.printStackTrace();
+        }
     }
 }
