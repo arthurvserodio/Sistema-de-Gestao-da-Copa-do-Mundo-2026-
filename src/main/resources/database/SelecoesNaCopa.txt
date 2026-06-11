@@ -1,7 +1,6 @@
 Alemanha;E;11;20;4
 França;D;2;16;2
 Espanha;B;16;16;1
-Inglaterra;F;4;16;1
 Itália;A;9;18;4
 Holanda;G;6;11;0
 Bélgica;E;3;14;0

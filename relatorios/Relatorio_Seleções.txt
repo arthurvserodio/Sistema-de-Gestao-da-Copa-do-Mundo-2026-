@@ -1,17 +1,13 @@
 ========================================
           COPA 26 - SELECOES            
 ========================================
-Gerado em: 2026-06-10
+Gerado em: 2026-06-11
 
 Nome                      Grupo      Ranking    Participacoes   Titulos   
 ------------------------------------------------------------------------
-Argentina                 C          1          18              3         
-Brasil                    G          5          22              5         
 Alemanha                  E          11         20              4         
 França                    D          2          16              2         
 Espanha                   B          16         16              1         
-Portugal                  H          7          8               0         
-Inglaterra                F          4          16              1         
 Itália                    A          9          18              4         
 Holanda                   G          6          11              0         
 Bélgica                   E          3          14              0         
@@ -51,4 +47,4 @@ eita3                     C          34         3               4
 eita4                     F          34         2               7         
 bla                       d          dd         dd              dd        
 ------------------------------------------------------------------------
-Total: 45
+Total: 41
