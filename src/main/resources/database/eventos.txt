@@ -1,0 +1,17 @@
+1;GRUPO;GOL;9;México;Julián Quiñones
+1;GRUPO;ASSISTENCIA;9;México;Erik Lira
+1;GRUPO;CARTAO_AMARELO;17;África do Sul;Teboho Mokoena
+1;GRUPO;CARTAO_AMARELO;23;México;Brian Gutiérrez
+1;GRUPO;CARTAO_VERMELHO;49;África do Sul;Sphephelo Sithole
+1;GRUPO;SUBSTITUICAO;56;África do Sul;Themba Zwane
+1;GRUPO;SUBSTITUICAO;61;África do Sul;Thalente Mbatha
+1;GRUPO;SUBSTITUICAO;66;México;Gilberto Mora
+1;GRUPO;SUBSTITUICAO;66;México;Luis Chávez
+1;GRUPO;GOL;67;México;Raúl Jiménez
+1;GRUPO;ASSISTENCIA;67;México;Roberto Alvarado
+1;GRUPO;SUBSTITUICAO;76;México;Armando González
+1;GRUPO;SUBSTITUICAO;76;México;Edson Álvarez
+1;GRUPO;SUBSTITUICAO;76;África do Sul;Evidence Makgopa
+1;GRUPO;SUBSTITUICAO;76;África do Sul;Oswin Appollis
+1;GRUPO;CARTAO_VERMELHO;84;África do Sul;Themba Zwane
+1;GRUPO;CARTAO_VERMELHO;90;México;César Montes

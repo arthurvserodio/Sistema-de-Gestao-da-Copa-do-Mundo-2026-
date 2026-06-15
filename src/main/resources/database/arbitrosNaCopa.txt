@@ -50,4 +50,3 @@ Khalid Al Turais;Arábia Saudita;3
 Gustavo Tejera;Uruguai;4
 Ilgiz Tantashev;Uzbequistão;3
 Jesus Valenzuela;Venezuela;5
- 

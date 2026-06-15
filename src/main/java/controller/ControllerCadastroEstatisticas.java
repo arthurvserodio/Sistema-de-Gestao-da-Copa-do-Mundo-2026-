@@ -244,17 +244,17 @@ public class ControllerCadastroEstatisticas {
                     .escanteios(escanteioCasa.getValue())
                     .build();
             EstatisticaTime estatVisitante = new EstatisticaTimeBuilder()
-                    .gols(golsCasa.getValue())
-                    .chutes(chutesCasa.getValue())
-                    .chutesAGol(chutesAGolCasa.getValue())
-                    .posseDeBola(posseDeBolaCasa.getValue())
-                    .passes(passesCasa.getValue())
-                    .precisaoDosPasses(precisaoPCasa.getValue())
-                    .faltas(faltasCasa.getValue())
-                    .cartoesAmarelos(amareloCasa.getValue())
-                    .cartoesVermelhos(vermelhoCasa.getValue())
-                    .impedimentos(impedimentoCasa.getValue())
-                    .escanteios(escanteioCasa.getValue())
+                    .gols(golsVisitante.getValue())
+                    .chutes(chutesVisitante.getValue())
+                    .chutesAGol(chutesAGolVisitante.getValue())
+                    .posseDeBola(posseDeBolaVisitante.getValue())
+                    .passes(passesVisitante.getValue())
+                    .precisaoDosPasses(precisaoPVisitante.getValue())
+                    .faltas(faltasVisitante.getValue())
+                    .cartoesAmarelos(amareloVisitante.getValue())
+                    .cartoesVermelhos(vermelhoVisitante.getValue())
+                    .impedimentos(impedimentoVisitante.getValue())
+                    .escanteios(escanteioVisitante.getValue())
                     .build();
             EstatisticaPartida estatisticaPartida = new EstatisticaPartida(estatCasa, estatVisitante);
             partida.setEstatistica(estatisticaPartida);
