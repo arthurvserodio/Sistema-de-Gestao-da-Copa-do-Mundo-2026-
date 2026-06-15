@@ -52,7 +52,7 @@ public class ControllerJogadores {
         //Toda vez que for escrito alguma coisa no textField ele chama a função de pesquisa
         Usuario u = Sessao.getInstancia().getUsuarioLogado();
         if (u != null) {
-            if(u.getFuncao() == Funcao.ADMINISTRADOR){
+            if(u.getFuncao() == Funcao.ADMINISTRADOR || u.getFuncao() == Funcao.ORGANIZADOR){
                 botaoAdicionarJogador.setVisible(true);
                 botaoRemoverJogador.setVisible(true);
             }

@@ -61,7 +61,7 @@ public class ControllerEquipes {
             menuUsuario.setText(u.getNome() );
             menuUsuario.setVisible(true);
             botaoLogin.setVisible(false);
-            if(u.getFuncao() == Funcao.ADMINISTRADOR){
+            if(u.getFuncao() == Funcao.ADMINISTRADOR || u.getFuncao() == Funcao.ORGANIZADOR){
                 botaoUsuario.setVisible(true);
                 botaoCadastrarSelecao.setVisible(true);
                 botaoRemoverSelecao.setVisible(true);
