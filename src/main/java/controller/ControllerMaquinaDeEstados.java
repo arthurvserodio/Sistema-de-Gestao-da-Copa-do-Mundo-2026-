@@ -92,10 +92,18 @@ public class ControllerMaquinaDeEstados {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setContentText("Fase atualizada com sucesso!");
             alert.showAndWait();
-            CarregaArquivoService.limparArquivos("src/main/resources/database/arbitrosNaCopa.txt");
-            CarregaArquivoService.limparArquivos("src/main/resources/database/escalacao.txt");
-            CarregaArquivoService.limparArquivos("src/main/resources/database/jogadores.txt");
-            CarregaArquivoService.limparArquivos("src/main/resources/database/estadios.txt");
+            if(estadoAtual.getFaseAtual()==Fase.FINALIZADO) {
+                CarregaArquivoService.limparArquivos("src/main/resources/database/arbitrosNaCopa.txt");
+                CarregaArquivoService.limparArquivos("src/main/resources/database/escalacao.txt");
+                CarregaArquivoService.limparArquivos("src/main/resources/database/Jogadores.txt");
+                CarregaArquivoService.limparArquivos("src/main/resources/database/Estadios.txt");
+                CarregaArquivoService.limparArquivos("src/main/resources/database/estatisticas_partida.txt");
+                CarregaArquivoService.limparArquivos("src/main/resources/database/eventos.txt");
+                CarregaArquivoService.limparArquivos("src/main/resources/database/notas_jogadores.txt");
+                CarregaArquivoService.limparArquivos("src/main/resources/database/partida_grupo.txt");
+                CarregaArquivoService.limparArquivos("src/main/resources/database/partida_eliminatoria.txt");
+                CarregaArquivoService.limparArquivos("src/main/resources/database/SelecoesNaCopa.txt");
+            }
         }
         private void salvarEstado(){
             CadastroPartidaService.salvarEstadoDaCopa(estadoAtual, "src/main/resources/database/estado_copa.txt");

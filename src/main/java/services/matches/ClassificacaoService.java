@@ -51,7 +51,11 @@ public class ClassificacaoService {
         //Ordena de acordo com os critérios
         //1° pontos, 2° saldo de gols e 3° gols pro
         //Primeiro ele ordena por pontos, se tiver a mesma pontuação compara o saldo e se tiver o mesmo saldo, compara gols pro
-        classificacao.sort(Comparator.comparingInt(ClassificacaoGrupo::getPontos).thenComparingInt(ClassificacaoGrupo::getSaldoGols).thenComparingInt(ClassificacaoGrupo::getGolsPro).reversed());
+        classificacao.sort((a, b) -> {
+            if (b.getPontos() != a.getPontos()) return b.getPontos() - a.getPontos();
+            if (b.getSaldoGols() != a.getSaldoGols()) return b.getSaldoGols() - a.getSaldoGols();
+            return b.getGolsPro() - a.getGolsPro();
+        });
         return classificacao;
     }
     public static EstatisticaTime buscarEstatisticaPorId(int idPartida, List<EstatisticaTime> estatisticas){

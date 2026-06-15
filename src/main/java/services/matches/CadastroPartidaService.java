@@ -61,7 +61,12 @@ public class CadastroPartidaService {
         //Ajuda para descobrir os melhores 3° colocados
         List<ClassificacaoGrupo> terceiros = new ArrayList<>();
         for(char grupo = 'A'; grupo <= 'L'; grupo++) {
+            System.out.println(grupo);
             List<ClassificacaoGrupo> tabela = ClassificacaoService.gerarTabelaGrupo(String.valueOf(grupo), partidas, casa, visitante);
+            System.out.println(tabela.get(0).getSelecao());
+            System.out.println(tabela.get(1).getSelecao());
+            System.out.println(tabela.get(2).getSelecao());
+            System.out.println(tabela.get(3).getSelecao());
             classificados.add(tabela.get(0).getSelecao());
             classificados.add(tabela.get(1).getSelecao());
             terceiros.add(tabela.get(2));

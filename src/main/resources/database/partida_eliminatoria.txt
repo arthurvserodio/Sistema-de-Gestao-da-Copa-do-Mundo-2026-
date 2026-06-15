@@ -1,0 +1,4 @@
+73;ELIMINATORIA;2026-06-28;12:00;SoFi Stadium;Wilton Sampaio;Alemanha;Escócia;PLAYOFFS;AGENDADA;
+74;ELIMINATORIA;2026-06-28;01:00;Arrowhead Stadium;Raphael Claus;França;Paraguai;PLAYOFFS;AGENDADA;
+75;ELIMINATORIA;2026-06-28;20:30;AT&T Stadium;Ramon Abatti;Coreia do Sul;Bósnia e Herzegovina;PLAYOFFS;AGENDADA;
+76;ELIMINATORIA;2026-06-29;10:00;SoFi Stadium;Wilton Sampaio;Holanda;Marrocos;PLAYOFFS;AGENDADA;
