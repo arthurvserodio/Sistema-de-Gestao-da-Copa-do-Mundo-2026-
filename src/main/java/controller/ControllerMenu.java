@@ -1,5 +1,6 @@
 package controller;
 
+import Enums.Funcao;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -31,6 +32,24 @@ public class ControllerMenu {
         SceneController.mudaDeTela( "/designAndScreens/telaInicial/classificacao.fxml");
     }
     @FXML
+    //Passa do Menu para a tela de grupos da copa 2026
+    private void irParaPartidas(MouseEvent e) {
+        SceneController.mudaDeTela( "/designAndScreens/telasPartidas/mostraPartida.fxml");
+    }
+    @FXML
+    private void irParaArbitros(MouseEvent e){
+        Usuario u = Sessao.getInstancia().getUsuarioLogado();
+        if( u == null) {
+            SceneController.mudaDeTela("/designAndScreens/Arbitragem/telaArbitroNormal.fxml");
+        }else {
+            if (u.getFuncao() != Funcao.ARBITRO) {
+                SceneController.mudaDeTela("/designAndScreens/Arbitragem/telaArbitroAdm.fxml");
+            } else {
+                SceneController.mudaDeTela("/designAndScreens/Arbitragem/telaDesignacao.fxml");
+            }
+        }
+    }
+    @FXML
     //Gustavo ta fazendo, depois adiciona o trocaTela + fxml
     private void irParaEstadios(MouseEvent e) { SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioNormal.fxml");
     }
@@ -50,6 +69,7 @@ public class ControllerMenu {
     @FXML private MenuButton menuUsuario;
 
     public void initialize() {
+        System.out.println(getClass().getResource("/images/fundo_partida.png"));
         Usuario u = Sessao.getInstancia().getUsuarioLogado();
         if (u != null) {
             menuUsuario.setText(u.getNome() );

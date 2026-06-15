@@ -77,7 +77,7 @@ public class ControllerCadastroEscalacao {
         faseAtual = estadosDaCopa.get(0);
         formacao.getItems().addAll("4-2-3-1","4-2-4","5-2-3");
         ListSelecoes = CarregaArquivoService.carregaArquivo("/database/SelecoesNaCopa.txt", parte->new SelecaoBuilder().nome(parte[0]).grupo(parte[1]).build());
-        ListaJogadores=CarregaArquivoService.carregaArquivo("/database/testeJogadores.txt", parte-> new JogadorBuilder().nome(parte[0]).selecao(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[2])).lesionado(Boolean.parseBoolean(parte[3])).suspenso(Boolean.parseBoolean(parte[4])).numero(Integer.parseInt(parte[6])).posicao(parte[5]).build());
+        ListaJogadores=CarregaArquivoService.carregaArquivo("/database/Jogadores.txt", parte-> new JogadorBuilder().nome(parte[0]).selecao(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[2])).lesionado(Boolean.parseBoolean(parte[3])).suspenso(Boolean.parseBoolean(parte[4])).numero(Integer.parseInt(parte[6])).posicao(parte[5]).build());
         btnCancela.setOnAction(e -> {
             Stage stage = (Stage) btnCancela.getScene().getWindow();
             stage.close();
@@ -93,10 +93,10 @@ public class ControllerCadastroEscalacao {
             }
             //Cria o objeto NEW ESCALACAO para não dá NULLPOINTER
             if(!casaEscalada){
-                partida.setEscalacaoCasa(new Escalacao(partida.getSelecaoCasa(),formacao.getValue().toString(),new ArrayList<>(),new ArrayList<>()));
+                partida.setEscalacaoCasa(new Escalacao(partida.getId(),partida.getSelecaoCasa(),formacao.getValue().toString(),new ArrayList<>(),new ArrayList<>()));
             }
             else{
-                partida.setEscalacaoVisitante(new Escalacao(partida.getSelecaoVisitante(),formacao.getValue().toString(),new ArrayList<>(),new ArrayList<>()));
+                partida.setEscalacaoVisitante(new Escalacao(partida.getId(),partida.getSelecaoVisitante(),formacao.getValue().toString(),new ArrayList<>(),new ArrayList<>()));
             }
             for(Jogadores j : titulares){
                 if(!casaEscalada){

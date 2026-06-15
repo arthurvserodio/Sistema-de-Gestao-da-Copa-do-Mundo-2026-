@@ -10,10 +10,7 @@ import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import matches.EstadoDaCopa;
-import matches.Partida;
-import matches.PartidaEliminatoria;
-import matches.PartidaGrupo;
+import matches.*;
 import nationsAndPlayers.nations.Selecoes;
 import services.matches.CadastroPartidaService;
 import services.matches.CarregaArquivoService;
@@ -33,6 +30,8 @@ public class ControllerCadastroPartida {
     private List<Arbitro> ListArbitros = new ArrayList<>();
     private List<Estadio> ListEstadio = new ArrayList<>();
     private List<Partida> ListPartida = new ArrayList<>();
+    private List<EstatisticaTime> EstatisticasCASA;
+    private List<EstatisticaTime> EstatisticasVISITANTE;
     private CadastroPartidaService partidaService = new CadastroPartidaService();
     private EstadoDaCopa faseAtual; //Verificação de qual fase está a copa
     @FXML
@@ -73,6 +72,10 @@ public class ControllerCadastroPartida {
         choiceArbitro.setPromptText("Escolha uma data primeiro");
         choiceEstadio.setPromptText("Escolha uma data primeiro");
         //Lendo dos arquivos para obter as Seleções, Árbitros e Estádios
+        List<PartidaGrupo> partidas_grupos = CarregaArquivoService.carregaArquivo("/database/partida_grupo.txt", parte->new PartidaGrupoBuilder().id(Integer.parseInt(parte[0])).data(LocalDate.parse(parte[2])).horario(parte[3]).Casa(CadastroPartidaService.buscaPeloNome(ListSelecoes, Selecoes::getNome,parte[7])).Visitante(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[8])).fase(Fase.valueOf(parte[9])).status(StatusPartida.valueOf(parte[10])).build());
+        List<PartidaEliminatoria> partidas_eliminatoria = CarregaArquivoService.carregaArquivo("/database/partida_eliminatoria.txt", parte->new PartidaEliminatoriaBuilder().id(Integer.parseInt(parte[0])).data(LocalDate.parse(parte[2])).horario(parte[3]).Casa(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[6])).Visitante(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[7])).fase(Fase.valueOf(parte[8])).status(StatusPartida.valueOf(parte[9])).build());
+        EstatisticasCASA = CarregaArquivoService.carregaArquivo("/database/estatisticas_partida.txt",parte->new EstatisticaTimeBuilder().id(Integer.parseInt(parte[0])).gols(Integer.parseInt(parte[1])).chutes(Integer.parseInt(parte[3])).chutesAGol(Integer.parseInt(parte[5])).posseDeBola(Integer.parseInt(parte[7])).passes(Integer.parseInt(parte[9])).precisaoDosPasses(Integer.parseInt(parte[11])).faltas(Integer.parseInt(parte[13])).cartoesAmarelos(Integer.parseInt(parte[15])).cartoesVermelhos(Integer.parseInt(parte[17])).impedimentos(Integer.parseInt(parte[19])).escanteios(Integer.parseInt(parte[21])).build());
+        EstatisticasVISITANTE = CarregaArquivoService.carregaArquivo("/database/estatisticas_partida.txt",parte->new EstatisticaTimeBuilder().id(Integer.parseInt(parte[0])).gols(Integer.parseInt(parte[2])).chutes(Integer.parseInt(parte[4])).chutesAGol(Integer.parseInt(parte[6])).posseDeBola(Integer.parseInt(parte[8])).passes(Integer.parseInt(parte[10])).precisaoDosPasses(Integer.parseInt(parte[12])).faltas(Integer.parseInt(parte[14])).cartoesAmarelos(Integer.parseInt(parte[16])).cartoesVermelhos(Integer.parseInt(parte[18])).impedimentos(Integer.parseInt(parte[20])).escanteios(Integer.parseInt(parte[22])).build());
         ListSelecoes = CarregaArquivoService.carregaArquivo("/database/SelecoesNaCopa.txt", parte->new SelecaoBuilder().nome(parte[0]).grupo(parte[1]).build());
         ListArbitros = CarregaArquivoService.carregaArquivo("/database/arbitrosNaCopa.txt", parte->new ArbitroBuilder().nome(parte[0]).pais(parte[1]).build());
         ListEstadio=CarregaArquivoService.carregaArquivo("/database/Estadios.txt", parte->new EstadioBuilder().nome(parte[0]).build());
@@ -87,7 +90,12 @@ public class ControllerCadastroPartida {
             p.getArbitro().getApitando().add(p);
         }
         //Colocando No ChoiceBox
-        choiceSelecao1.getItems().addAll(ListSelecoes);
+        if(faseAtual.getFaseAtual().equals(Fase.FASE_DE_GRUPOS)){
+            choiceSelecao1.getItems().addAll(ListSelecoes);
+        }
+        else if(faseAtual.getFaseAtual().equals(Fase.PLAYOFFS)){
+
+        }
         choiceArbitro.getItems().addAll(ListArbitros);
         choiceFase.getItems().add(faseAtual.toString());
         if(faseAtual.getFaseAtual()==Fase.FASE_DE_GRUPOS){
@@ -112,7 +120,14 @@ public class ControllerCadastroPartida {
                 partidaService.atualizarComboBox(choiceSelecao1, choiceSelecao2, ListSelecoes,faseAtual.getFaseAtual());
             }
             else if(choiceSelecao2.getValue()==null && faseAtual.getFaseAtual()!=Fase.FASE_DE_GRUPOS){
-                partidaService.atualizarComboBox(choiceSelecao1, choiceSelecao2, ListSelecoes,faseAtual.getFaseAtual());
+                if(faseAtual.getFaseAtual().equals(Fase.PLAYOFFS)){
+                    List<Selecoes> classificados=CadastroPartidaService.obterClassificados(partidas_grupos,EstatisticasCASA,EstatisticasVISITANTE);
+                    partidaService.atualizarComboBoxEliminatoria(choiceSelecao1, choiceSelecao2,faseAtual.getFaseAtual(),classificados);
+                }
+                else{
+                    int indice = faseAtual.getFaseAtual().ordinal()-1;
+                    List<Selecoes> classificados=CadastroPartidaService.obterVencedores(Fase.values()[indice],partidas_eliminatoria,EstatisticasCASA,EstatisticasVISITANTE);
+                }
             }
         });
         //Impede que o usuário escolha uma data fora do escopo da fase atual

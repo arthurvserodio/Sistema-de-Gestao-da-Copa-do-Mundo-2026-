@@ -1,2 +1,16 @@
-Maracanã;78838;Rio de Janeiro
-Mineirão;61846;Belo Horizonte
+SoFi Stadium;100000;Los Angeles
+MetLife Stadium;82500;East Rutherford
+AT&T Stadium;80000;Arlington
+Arrowhead Stadium;76000;Kansas City
+Mercedes-Benz Stadium;75000;Atlanta
+Lumen Field;72000;Seattle
+NRG Stadium;72000;Houston
+Levi's Stadium;70000;São Francisco
+Lincoln Financial Field;69000;Filadélfia
+Hard Rock Stadium;65000;Miami
+Gillette Stadium;65000;Foxborough
+Estádio Azteca;83000;Cidade do México
+Estádio BBVA;53000;Monterrey
+Estádio Akron;48000;Guadalajara
+BC Place;54500;Vancouver
+BMO Field;45000;Toronto

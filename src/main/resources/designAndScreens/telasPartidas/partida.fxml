@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="810.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerMaquinaDeEstados" stylesheets="@../../css/style.css">
+
+    <top>
+        <HBox alignment="CENTER_LEFT">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Button fx:id="btnVoltar"
+                    text="←"
+                    prefWidth="50"
+                    prefHeight="50"
+                    styleClass="btn-voltar"/>
+        </HBox>
+    </top>
+
+    <!-- Conteúdo -->
+    <center>
+        <VBox alignment="CENTER" spacing="40">
+
+            <Label text="ESCOLHA UMA OPÇÃO"
+                   styleClass="titulo-menu"/>
+
+            <HBox alignment="CENTER" spacing="40">
+
+                <!-- Gestão de Partidas -->
+                <StackPane styleClass="card-menu"
+                           prefWidth="320"
+                           prefHeight="250">
+
+                    <VBox alignment="CENTER" spacing="20">
+
+                        <Label text="⚽"
+                               style="-fx-font-size: 55;"/>
+
+                        <Label text="GESTÃO DE&#10;PARTIDAS"
+                               styleClass="texto-card"/>
+
+                        <Button fx:id="btnPartidas"
+                                text="Acessar"
+                                styleClass="btn-dourado"/>
+                    </VBox>
+
+                </StackPane>
+
+                <!-- Máquina de Estados -->
+                <StackPane styleClass="card-menu"
+                           prefWidth="320"
+                           prefHeight="250">
+
+                    <VBox alignment="CENTER" spacing="20">
+
+                        <Label text="⟳"
+                               style="-fx-font-size: 55;"/>
+
+                        <Label text="MÁQUINA DE&#10;ESTADOS"
+                               styleClass="texto-card"/>
+
+                        <Button fx:id="btnEstados"
+                                text="Acessar"
+                                styleClass="btn-dourado"/>
+                    </VBox>
+
+                </StackPane>
+
+            </HBox>
+
+        </VBox>
+    </center>
+
+</BorderPane>

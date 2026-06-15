@@ -3,6 +3,7 @@ package controller;
 import Enums.Fase;
 import Enums.StatusPartida;
 import Enums.TipoEvento;
+import builder.EstatisticaTimeBuilder;
 import builder.JogadorBuilder;
 import builder.SelecaoBuilder;
 import javafx.fxml.FXML;
@@ -170,7 +171,7 @@ public class ControllerCadastroEstatisticas {
         //Lendo os jogadores do Arquivo
         ListSelecoes = CarregaArquivoService.carregaArquivo("/database/SelecoesNaCopa.txt", parte->new SelecaoBuilder().nome(parte[0]).build());
         //Carrega todos os jogadores presentes na base de dados
-        todosOsJogadores = CarregaArquivoService.carregaArquivo("/database/testeJogadores.txt", parte->new JogadorBuilder().nome(parte[0]).selecao(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[2])).posicao(parte[5]).numero(Integer.parseInt(parte[6])).build());
+        todosOsJogadores = CarregaArquivoService.carregaArquivo("/database/Jogadores.txt", parte->new JogadorBuilder().nome(parte[0]).selecao(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[2])).posicao(parte[5]).numero(Integer.parseInt(parte[6])).build());
         jogadoresNaPartidaCasa = new ArrayList<>();
         jogadoresNaPartidaVisitante = new ArrayList<>();
         //Carrega elementos na comboBox de eventos
@@ -229,32 +230,32 @@ public class ControllerCadastroEstatisticas {
         });
         //Salvando as estatisticas
         salvarEstatistica.setOnAction(s->{
-            EstatisticaTime estatCasa = new EstatisticaTime(
-                    golsCasa.getValue(),
-                    chutesCasa.getValue(),
-                    chutesAGolCasa.getValue(),
-                    posseDeBolaCasa.getValue(),
-                    passesCasa.getValue(),
-                    precisaoPCasa.getValue(),
-                    faltasCasa.getValue(),
-                    amareloCasa.getValue(),
-                    vermelhoCasa.getValue(),
-                    impedimentoCasa.getValue(),
-                    escanteioCasa.getValue()
-            );
-            EstatisticaTime estatVisitante = new EstatisticaTime(
-                    golsVisitante.getValue(),
-                    chutesVisitante.getValue(),
-                    chutesAGolVisitante.getValue(),
-                    posseDeBolaVisitante.getValue(),
-                    passesVisitante.getValue(),
-                    precisaoPVisitante.getValue(),
-                    faltasVisitante.getValue(),
-                    amareloVisitante.getValue(),
-                    vermelhoVisitante.getValue(),
-                    impedimentoVisitante.getValue(),
-                    escanteioVisitante.getValue()
-            );
+            EstatisticaTime estatCasa = new EstatisticaTimeBuilder()
+                    .gols(golsCasa.getValue())
+                    .chutes(chutesCasa.getValue())
+                    .chutesAGol(chutesAGolCasa.getValue())
+                    .posseDeBola(posseDeBolaCasa.getValue())
+                    .passes(passesCasa.getValue())
+                    .precisaoDosPasses(precisaoPCasa.getValue())
+                    .faltas(faltasCasa.getValue())
+                    .cartoesAmarelos(amareloCasa.getValue())
+                    .cartoesVermelhos(vermelhoCasa.getValue())
+                    .impedimentos(impedimentoCasa.getValue())
+                    .escanteios(escanteioCasa.getValue())
+                    .build();
+            EstatisticaTime estatVisitante = new EstatisticaTimeBuilder()
+                    .gols(golsCasa.getValue())
+                    .chutes(chutesCasa.getValue())
+                    .chutesAGol(chutesAGolCasa.getValue())
+                    .posseDeBola(posseDeBolaCasa.getValue())
+                    .passes(passesCasa.getValue())
+                    .precisaoDosPasses(precisaoPCasa.getValue())
+                    .faltas(faltasCasa.getValue())
+                    .cartoesAmarelos(amareloCasa.getValue())
+                    .cartoesVermelhos(vermelhoCasa.getValue())
+                    .impedimentos(impedimentoCasa.getValue())
+                    .escanteios(escanteioCasa.getValue())
+                    .build();
             EstatisticaPartida estatisticaPartida = new EstatisticaPartida(estatCasa, estatVisitante);
             partida.setEstatistica(estatisticaPartida);
             CadastroPartidaService.salvarEstatisticaPartida(partida, "src/main/resources/database/estatisticas_partida.txt");

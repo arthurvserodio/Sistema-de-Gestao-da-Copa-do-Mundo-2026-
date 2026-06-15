@@ -13,6 +13,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
@@ -64,6 +65,10 @@ public class ControllerCadastroPartidaTabela {
     @FXML private Text botaoUsuario;
 
     @FXML
+    private void voltaParaEscolha(MouseEvent e) {
+        SceneController.mudaDeTela( "/designAndScreens/telasPartidas/EscolhaPartida.fxml");
+    }
+    @FXML
     public void initialize() {
         //Leitura da fae atual da copa
         List<EstadoDaCopa> estadosDaCopa = CarregaArquivoService.carregaArquivo("/database/estado_copa.txt", parte -> new EstadoDaCopa(Fase.valueOf(parte[0]), LocalDate.parse(parte[1]), LocalDate.parse(parte[2])));
@@ -77,6 +82,11 @@ public class ControllerCadastroPartidaTabela {
         else{
             todasAsPartidas = CarregaArquivoService.carregaArquivo("/database/partida_eliminatoria.txt", parte->new PartidaEliminatoriaBuilder().id(Integer.parseInt(parte[0])).data(LocalDate.parse(parte[2])).horario(parte[3]).estadio(CadastroPartidaService.buscaPeloNome(ListEstadio, Estadio::getNome,parte[4])).arbitro(CadastroPartidaService.buscaPeloNome(ListArbitros, Arbitro::getNome,parte[5])).Casa(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[6])).Visitante(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[7])).fase(Fase.valueOf(parte[8])).status(StatusPartida.valueOf(parte[9])).build());
         }
+        for (Partida p : todasAsPartidas) {
+            System.out.println("Partida " + p.getId() +
+                    " | Casa: " + p.getSelecaoCasa() +
+                    " | Visitante: " + p.getSelecaoVisitante());
+        }
         //Mostra as partidas na tabela
         mostraPartida();
         Usuario u = Sessao.getInstancia().getUsuarioLogado();
@@ -84,10 +94,6 @@ public class ControllerCadastroPartidaTabela {
             menuUsuario.setText(u.getNome() );
             menuUsuario.setVisible(true);
             botaoLogin.setVisible(false);
-            if(u.getFuncao() == Funcao.ADMINISTRADOR){
-                botaoUsuario.setVisible(true);
-                botaoCadastrarSelecao.setVisible(true);
-            }
         } else {
             botaoLogin.setVisible(true);
             menuUsuario.setVisible(false);
@@ -396,7 +402,7 @@ public class ControllerCadastroPartidaTabela {
     }
     @FXML
     public void excluiDaTabela(int id){
-        if(faseAtual.equals(Fase.FASE_DE_GRUPOS)){
+        if(faseAtual.getFaseAtual().equals(Fase.FASE_DE_GRUPOS)){
             CadastroPartidaService.removePartidaDoTXT(id,"target/classes/database/partida_grupo.txt");
             CadastroPartidaService.removePartidaDoTXT(id,"src/main/resources/database/partida_grupo.txt");
         }

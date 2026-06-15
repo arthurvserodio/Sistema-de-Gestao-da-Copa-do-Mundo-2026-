@@ -7,6 +7,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import matches.EstadoDaCopa;
 import nationsAndPlayers.nations.Selecoes;
 import services.matches.CadastroPartidaService;
@@ -35,6 +36,11 @@ public class ControllerMaquinaDeEstados {
 
         @FXML
         private Button btnAvancar;
+
+        @FXML
+        private void voltaParaEscolha(MouseEvent e) {
+            SceneController.mudaDeTela( "/designAndScreens/telasPartidas/EscolhaPartida.fxml");
+        }
 
         @FXML
         public void initialize() {

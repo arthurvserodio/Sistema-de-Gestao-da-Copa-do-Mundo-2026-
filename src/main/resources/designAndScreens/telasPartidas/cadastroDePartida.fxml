@@ -270,6 +270,11 @@
                   </ScrollPane>
                </children>
             </AnchorPane>
+            <ImageView fitHeight="44.0" fitWidth="38.0" layoutX="83.0" layoutY="47.0" onMouseClicked="#voltaParaEscolha" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/undo.png" />
+               </image>
+            </ImageView>
          </children></AnchorPane>
   </content>
 </ScrollPane>

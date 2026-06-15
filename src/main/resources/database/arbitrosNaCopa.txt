@@ -1,1 +1,53 @@
-Daronco;Brasil;4
+Raphael Claus;Brasil;5
+Wilton Sampaio;Brasil;5
+Ramon Abatti;Brasil;4
+Felix Zwayer;Alemanha;5
+Mustapha Ghorbal;Argélia;4
+Yael Falcon Perez;Argentina;5
+Facundo Tello;Argentina;4
+Dario Herrera;Argentina;3
+Alireza Faghani;Austrália;5
+Drew Fischer;Canadá;4
+Abdulrahman Al Jassim;Catar;4
+Cristian Garay;Chile;4
+Ma Ning;China;4
+Andres Rojas;Colômbia;4
+Juan Calderon;Costa Rica;3
+Amin Mohamed;Egito;3
+Ivan Barton;El Salvador;4
+Omar Al Ali;Emirados Árabes Unidos;3
+Slavko Vincic;Eslovênia;5
+Alejandro Hernandez;Espanha;4
+Ismail Elfath;Estados Unidos;4
+Tori Penso;Estados Unidos;4
+Francois Letexier;França;5
+Clement Turpin;França;5
+Pierre Atcho;Gabão;3
+Danny Makkelie;Holanda;5
+Hector Said Martinez;Honduras;3
+Michael Oliver;Inglaterra;5
+Anthony Taylor;Inglaterra;5
+Maurizio Mariani;Itália;4
+Oshane Nation;Jamaica;3
+Yusuke Araki;Japão;4
+Adham Makhadmeh;Jordânia;3
+Jalal Jayed;Marrocos;4
+Dahane Beida;Mauritânia;3
+Katia Garcia;México;4
+Cesar Ramos;México;4
+Espen Eskas;Noruega;4
+Campbell-Kirk Kawana-Waugh;Nova Zelândia;3
+Juan Gabriel Benitez;Paraguai;4
+Kevin Ortega;Peru;4
+Szymon Marciniak;Polônia;5
+João Pinheiro;Portugal;4
+Istvan Kovacs;Romênia;5
+Omar Abdulkadir Artan;Somália;3
+Glenn Nyberg;Suécia;4
+Sandro Schaerer;Suíça;4
+Abongile Tom;África do Sul;3
+Khalid Al Turais;Arábia Saudita;3
+Gustavo Tejera;Uruguai;4
+Ilgiz Tantashev;Uzbequistão;3
+Jesus Valenzuela;Venezuela;5
+ 

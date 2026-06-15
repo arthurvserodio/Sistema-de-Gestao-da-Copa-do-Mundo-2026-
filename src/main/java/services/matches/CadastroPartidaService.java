@@ -30,10 +30,7 @@ import java.time.LocalDateTime;
 import java.time.chrono.ChronoLocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 import java.util.function.Function;
 
 public class CadastroPartidaService {
@@ -49,11 +46,52 @@ public class CadastroPartidaService {
             destino.getItems().clear(); //Limpa o que tava na comboBox anteriormente
             destino.getItems().addAll(mesmoGrupo); //Adiciona a nova lista
         }
-        else{
-            List<Selecoes> qualquerUma=ListSelecoes.stream().filter(s -> !s.toString().equals(selecionada.toString())).toList();
-            destino.getItems().clear(); //Limpa o que tava na comboBox anteriormente
-            destino.getItems().addAll(qualquerUma); //Adiciona a nova lista
+    }
+    public void atualizarComboBoxEliminatoria(ComboBox<Selecoes> origem, ComboBox<Selecoes> destino, Fase atual,List<Selecoes> classificados){
+        Selecoes selecionada= origem.getValue(); //Pega a seleção da comboBox
+        if(selecionada==null) return;
+        List<Selecoes> adversarios = classificados.stream().filter(s -> !s.equals(selecionada)).toList();
+        destino.getItems().clear(); //Limpa o que tava na comboBox anteriormente
+        destino.getItems().addAll(adversarios); //Adiciona a nova lista
+
+    }
+    //Isso obtem a classificação da fase de grupos
+    public static List<Selecoes> obterClassificados(List<PartidaGrupo> partidas, List<EstatisticaTime> casa, List<EstatisticaTime> visitante) {
+        List<Selecoes> classificados = new ArrayList<>();
+        //Ajuda para descobrir os melhores 3° colocados
+        List<ClassificacaoGrupo> terceiros = new ArrayList<>();
+        for(char grupo = 'A'; grupo <= 'L'; grupo++) {
+            List<ClassificacaoGrupo> tabela = ClassificacaoService.gerarTabelaGrupo(String.valueOf(grupo), partidas, casa, visitante);
+            classificados.add(tabela.get(0).getSelecao());
+            classificados.add(tabela.get(1).getSelecao());
+            terceiros.add(tabela.get(2));
         }
+        //Ordena os 3° colocados por pontos,saldo e gols pro
+        terceiros.sort(Comparator.comparingInt(ClassificacaoGrupo::getPontos).thenComparingInt(ClassificacaoGrupo::getSaldoGols).thenComparingInt(ClassificacaoGrupo::getGolsPro).reversed());
+        for(int i =0 ;i<8;i++){
+            classificados.add(terceiros.get(i).getSelecao());
+        }
+        return classificados;
+    }
+    //Obtem classificados para fases depois dos playoffs
+    public static List<Selecoes> obterVencedores(Fase faseAnterior, List<PartidaEliminatoria> partidas, List<EstatisticaTime> casa, List<EstatisticaTime> visitante){
+        List<Selecoes> vencedores = new ArrayList<>();
+        for(PartidaEliminatoria p : partidas){
+            if(p.getFase() != faseAnterior) continue;
+            if(p.getStatus() != StatusPartida.FINALIZADA) continue;
+            EstatisticaTime estCasa = ClassificacaoService.buscarEstatisticaPorId(p.getId(), casa);
+            EstatisticaTime estVisitante = ClassificacaoService.buscarEstatisticaPorId(p.getId(), visitante);
+            if(estCasa == null || estVisitante == null) continue;
+            int golsCasa = estCasa.getGols();
+            int golsVisitante = estVisitante.getGols();
+            if(golsCasa > golsVisitante){
+                vencedores.add(p.getSelecaoCasa());
+            }
+            else if(golsVisitante > golsCasa){
+                vencedores.add(p.getSelecaoVisitante());
+            }
+        }
+        return vencedores;
     }
     //Pega a lista com todos os estadios cadastrados e recebe a data para verificar disponibilidade
     public void estadiosDisponivel(List<Estadio> estadios, LocalDate dataPartida, ComboBox<Estadio> disponiveis){
@@ -177,9 +215,54 @@ public class CadastroPartidaService {
         vbox.getChildren().addAll(camisa,nome);
         return vbox;
     }
+    public static VBox criarJogadorVisualPartida(JogadorPartida jp){
+        Circle circulo=new Circle(12);
+        circulo.setStyle("""
+        -fx-fill: white;
+        -fx-stroke: black;
+        -fx-stroke-width: 2;""");
+        //Numeração
+        Label num=new Label(String.valueOf(jp.getJogador().getNumeracao()));
+        num.setStyle("""
+        -fx-font-size: 9;
+        -fx-font-weight: bold;""");
+        //Montando a camisa
+        StackPane camisa=new StackPane(circulo,num);
+        //Nome do jogador
+        Label nome=new Label(jp.getJogador().getNome());
+        nome.setStyle("""
+            -fx-background-color: rgba(0,0,0,0.65);
+            -fx-text-fill: white;
+            -fx-background-radius: 8;
+            -fx-padding: 4 10 4 10;
+            -fx-font-size: 8px;
+            -fx-font-family: "Roboto Condensed Black";""");
+        //Nota do jogador
+        Label nota = new Label(String.format("%.1f", jp.getNota()));
+        nota.setStyle("""
+        -fx-background-color: #F5EBD3;
+        -fx-background-radius: 12;
+        -fx-padding: 2 8 2 8;
+        -fx-font-size: 8;
+        -fx-font-weight: bold;
+    """);
+        //Cria o elemento
+        VBox vbox = new VBox(2);
+        vbox.setAlignment(Pos.CENTER);
+        vbox.getChildren().addAll(camisa,nome,nota);
+        return vbox;
+    }
     //Coloca a VBox criada para o jogador e a coloca no campo
     public static VBox adicionandoNoCampo(Jogadores j, AnchorPane campo,double x,double y){
         VBox visual=criarJogadorVisual(j);
+        visual.setLayoutX(x);
+        visual.setLayoutY(y);
+        campo.getChildren().add(visual);
+        return visual;
+    }
+    //Coloca a VBox criada para o jogador e a coloca no campo
+    public static VBox adicionandoNoCampoPartida(JogadorPartida jp, AnchorPane campo,double x,double y){
+        VBox visual=criarJogadorVisualPartida(jp);
         visual.setLayoutX(x);
         visual.setLayoutY(y);
         campo.getChildren().add(visual);
@@ -219,7 +302,7 @@ public class CadastroPartidaService {
     public static void atualizaStatusDaPartida(int id_partida, Partida partida, EstadoDaCopa fase){
         try{
             List<String> todasAsLinhas;
-            if(fase.equals(Fase.FASE_DE_GRUPOS)){
+            if(fase.getFaseAtual().equals(Fase.FASE_DE_GRUPOS)){
                 todasAsLinhas=Files.readAllLines(Paths.get("src/main/resources/database/partida_grupo.txt"));
             }
             else{
@@ -230,20 +313,20 @@ public class CadastroPartidaService {
                 String[] parte=l.split(";");
                 int id= Integer.parseInt(parte[0]);
                 if(id==id_partida && partida.getStatus().equals(StatusPartida.AGENDADA)){
-                    if(fase.equals(Fase.FASE_DE_GRUPOS)){
-                        parte[10]="EM_ANDAMENTO;";
+                    if(fase.getFaseAtual().equals(Fase.FASE_DE_GRUPOS)){
+                        parte[10]="EM_ANDAMENTO";
                     }
                     else{
-                        parte[9]="EM_ANDAMENTO;";
+                        parte[9]="EM_ANDAMENTO";
                     }
                     novaLinha.add(String.join(";",parte));
                 }
                 else if(id==id_partida && partida.getStatus().equals(StatusPartida.EM_ANDAMENTO)){
-                    if(fase.equals(Fase.FASE_DE_GRUPOS)){
-                        parte[10]="FINALIZADA;";
+                    if(fase.getFaseAtual().equals(Fase.FASE_DE_GRUPOS)){
+                        parte[10]="FINALIZADA";
                     }
                     else{
-                        parte[9]="FINALIZADA;";
+                        parte[9]="FINALIZADA";
                     }
                     novaLinha.add(String.join(";",parte));
                 }
@@ -251,7 +334,7 @@ public class CadastroPartidaService {
                     novaLinha.add(l);
                 }
             }
-            if(fase.equals(Fase.FASE_DE_GRUPOS)){
+            if(fase.getFaseAtual().equals(Fase.FASE_DE_GRUPOS)){
                 Files.write(Paths.get("src/main/resources/database/partida_grupo.txt"),novaLinha);
                 Files.write(Paths.get("target/classes/database/partida_grupo.txt"),novaLinha);
             }

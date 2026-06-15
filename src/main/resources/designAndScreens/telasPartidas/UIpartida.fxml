@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="790.0" prefWidth="1400.0" styleClass="cadastro_card" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerUiPartida">
+   <children>
+      <AnchorPane fx:id="painelTopo" layoutX="13.0" layoutY="20.0" prefHeight="200.0" prefWidth="1372.0" styleClass="painel-topo" stylesheets="@../../css/style.css">
+         <children>
+            <HBox alignment="CENTER" layoutX="585.0" layoutY="21.0" prefHeight="27.0" prefWidth="210.0" spacing="10.0">
+               <children>
+                  <Line endX="-46.04048156738281" endY="-0.17665131390094757" startX="-100.0" stroke="#967924" />
+                  <Text fill="#967924" strokeType="OUTSIDE" strokeWidth="0.0" text="Copa do Mundo">
+                     <font>
+                        <Font name="Oswald Regular" size="16.0" />
+                     </font>
+                  </Text>
+                  <Line endX="-46.04048156738281" endY="-0.17665131390094757" startX="-100.0" stroke="#967924" />
+               </children>
+            </HBox>
+            <Label fx:id="golsC" alignment="CENTER_RIGHT" layoutX="650.0" layoutY="67.0" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="44.0" />
+               </font>
+            </Label>
+            <Label layoutX="686.0" layoutY="63.0" text=":" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="44.0" />
+               </font>
+            </Label>
+            <Label fx:id="golsV" layoutX="710.0" layoutY="67.0" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="44.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_RIGHT" layoutX="12.0" layoutY="48.0" prefHeight="100.0" prefWidth="608.0" spacing="25.0">
+               <children>
+                  <Label fx:id="Casa" alignment="CENTER_RIGHT" prefWidth="400.0" textFill="#aa7e2a">
+                     <font>
+                        <Font name="Roboto Condensed Black" size="35.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="logoC" fitHeight="81.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="760.0" layoutY="48.0" prefHeight="100.0" prefWidth="600.0" spacing="25.0">
+               <children>
+                  <ImageView fx:id="logoV" fitHeight="81.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="Visitante" prefWidth="800.0" textFill="#aa7e2a">
+                     <font>
+                        <Font name="Roboto Condensed Black" size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Label layoutX="663.0" layoutY="130.0" text="FIM DE JOGO" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="21.0" fitWidth="16.0" layoutX="526.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/calendar4.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="data" layoutX="550.0" layoutY="164.0" textFill="#4e3317">
+               <font>
+                  <Font name="Inter 18pt Medium" size="10.0" />
+               </font>
+            </Label>
+            <Line endX="-90.0" layoutX="726.0" layoutY="172.0" rotate="90.0" startX="-100.0" stroke="#aa7e2a" strokeWidth="0.5" />
+            <ImageView fitHeight="21.0" fitWidth="16.0" layoutX="659.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/estadio3.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="estadio" layoutX="685.0" layoutY="164.0" textFill="#4e3317">
+               <font>
+                  <Font name="Inter 18pt Medium" size="10.0" />
+               </font>
+            </Label>
+            <Line endX="-90.0" layoutX="870.0" layoutY="172.0" rotate="90.0" startX="-100.0" stroke="#aa7e2a" strokeWidth="0.5" />
+            <ImageView fitHeight="21.0" fitWidth="16.0" layoutX="800.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/trophy3.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="fase" layoutX="825.0" layoutY="164.0" textFill="#4e3317">
+               <font>
+                  <Font name="Inter 18pt Medium" size="10.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="volta" fitHeight="33.0" fitWidth="21.0" layoutX="17.0" layoutY="25.0" onMouseClicked="#fecharPopup" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/undo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="13.0" layoutY="235.0" prefHeight="525.0" prefWidth="363.0" styleClass="painel-topo" stylesheets="@../../css/style.css">
+         <children>
+            <ImageView fitHeight="451.0" fitWidth="343.0" layoutX="13.0" layoutY="37.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../images/ChatGPT%20Image%2013%20de%20jun.%20de%202026,%2017_23_12.png" />
+               </image>
+            </ImageView>
+            <Text fill="#aa7e2a" layoutX="120.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ESCALAÇÃO - CASA">
+               <font>
+                  <Font name="Roboto Condensed Black" size="16.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="135.0" layoutY="492.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/football-field.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="formC" fill="#aa7e2a" layoutX="167.0" layoutY="509.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Roboto Condensed Black" size="16.0" />
+               </font>
+            </Text>
+            <AnchorPane fx:id="escalacaoC" layoutX="25.0" layoutY="50.0" prefHeight="419.0" prefWidth="322.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="410.0" layoutY="235.0" prefHeight="525.0" prefWidth="263.0" styleClass="painel-topo" stylesheets="@../../css/style.css">
+         <children>
+            <Text fill="#aa7e2a" layoutX="57.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EVENTOS DA PARTIDA">
+               <font>
+                  <Font name="Roboto Condensed Black" size="16.0" />
+               </font>
+            </Text>
+            <Line endX="100.0" layoutX="132.0" layoutY="38.0" startX="-100.0" stroke="#aa7e2a" strokeWidth="0.5" />
+            <ScrollPane layoutX="14.0" layoutY="49.0" prefHeight="451.0" prefWidth="238.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="224.0">
+                     <children>
+                        <VBox fx:id="boxEventos" prefHeight="100.0" prefWidth="224.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1020.0" layoutY="235.0" prefHeight="525.0" prefWidth="363.0" styleClass="painel-topo" stylesheets="@../../css/style.css">
+         <children>
+            <ImageView fitHeight="451.0" fitWidth="343.0" layoutX="13.0" layoutY="37.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../images/ChatGPT%20Image%2013%20de%20jun.%20de%202026,%2017_23_12.png" />
+               </image>
+            </ImageView>
+            <Text fill="#aa7e2a" layoutX="102.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ESCALAÇÃO - VISITANTE">
+               <font>
+                  <Font name="Roboto Condensed Black" size="16.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="135.0" layoutY="492.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/football-field.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="formV" fill="#aa7e2a" layoutX="167.0" layoutY="509.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Roboto Condensed Black" size="16.0" />
+               </font>
+            </Text>
+            <AnchorPane fx:id="escalacaoV" layoutX="25.0" layoutY="50.0" prefHeight="419.0" prefWidth="322.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="690.0" layoutY="235.0" prefHeight="525.0" prefWidth="315.0" styleClass="painel-topo" stylesheets="@../../css/style.css">
+         <children>
+            <Text fill="#aa7e2a" layoutX="70.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ESTATÍSTICAS DA PARTIDA">
+               <font>
+                  <Font name="Roboto Condensed Black" size="16.0" />
+               </font>
+            </Text>
+            <Line endX="152.0" layoutX="132.0" layoutY="38.0" startX="-100.0" stroke="#aa7e2a" strokeWidth="0.5" />
+            <ProgressBar fx:id="pbGols" layoutX="15.0" layoutY="67.0" prefHeight="10.0" prefWidth="287.0" progress="0.0" />
+            <Label layoutX="151.0" layoutY="46.0" text="Gols" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="pbFinalizacoes" layoutX="15.0" layoutY="110.0" prefHeight="10.0" prefWidth="287.0" progress="0.0" />
+            <Label layoutX="145.0" layoutY="85.0" text="Chutes" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="pbFinalizacoesAlvo" layoutX="15.0" layoutY="153.0" prefHeight="10.0" prefWidth="287.0" progress="0.0" />
+            <Label layoutX="135.0" layoutY="128.0" text="Chutes A Gol" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="pbPosse" layoutX="15.0" layoutY="196.0" prefHeight="10.0" prefWidth="287.0" progress="0.0" />
+            <Label layoutX="131.0" layoutY="171.0" text="Posse de Bola" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="pbPasses" layoutX="15.0" layoutY="239.0" prefHeight="10.0" prefWidth="287.0" progress="0.0" />
+            <Label layoutX="142.0" layoutY="214.0" text="Passes" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="pbPrecisao" layoutX="15.0" layoutY="281.0" prefHeight="10.0" prefWidth="287.0" progress="0.0" />
+            <Label layoutX="118.0" layoutY="257.0" text="Precisão dos Passes" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="pbFaltas" layoutX="15.0" layoutY="325.0" prefHeight="10.0" prefWidth="287.0" progress="0.0" />
+            <Label layoutX="145.0" layoutY="300.0" text="Faltas" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="pbAmarelos" layoutX="15.0" layoutY="368.0" prefHeight="10.0" prefWidth="287.0" progress="0.0" />
+            <Label layoutX="124.0" layoutY="343.0" text="Cartões Amarelos" textAlignment="CENTER" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="pbImpedimentos" layoutX="15.0" layoutY="454.0" prefHeight="10.0" prefWidth="287.0" progress="0.0" />
+            <Label alignment="CENTER" layoutX="122.0" layoutY="386.0" text="Cartões Vermelhos" textAlignment="CENTER" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="pbVermelhos" layoutX="15.0" layoutY="411.0" prefHeight="10.0" prefWidth="287.0" progress="0.0" />
+            <Label alignment="CENTER" layoutX="130.0" layoutY="429.0" text="Impedimentos" textAlignment="CENTER" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="pbEscanteios" layoutX="15.0" layoutY="497.0" prefHeight="10.0" prefWidth="287.0" progress="0.0" />
+            <Label alignment="CENTER" layoutX="135.0" layoutY="472.0" text="Escanteios" textAlignment="CENTER" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblGolsCasa" layoutX="20.0" layoutY="50.0" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblFinalizacoesCasa" layoutX="20.0" layoutY="93.0" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblFinalizacoesAlvoCasa" layoutX="20.0" layoutY="136.0" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPosseCasa" layoutX="20.0" layoutY="179.0" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPassesCasa" layoutX="20.0" layoutY="222.0" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPrecisaoCasa" layoutX="20.0" layoutY="265.0" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblFaltasCasa" layoutX="20.0" layoutY="308.0" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAmarelosCasa" layoutX="20.0" layoutY="351.0" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblVermelhosCasa" layoutX="20.0" layoutY="394.0" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblImpedimentosCasa" layoutX="20.0" layoutY="437.0" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblEscanteiosCasa" layoutX="20.0" layoutY="480.0" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblGolsVisitante" layoutX="290.0" layoutY="50.0" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblFinalizacoesVisitante" layoutX="290.0" layoutY="93.0" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblFinalizacoesAlvoVisitante" layoutX="290.0" layoutY="136.0" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPosseVisitante" layoutX="290.0" layoutY="179.0" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPassesVisitante" layoutX="290.0" layoutY="223.0" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPrecisaoVisitante" layoutX="290.0" layoutY="265.0" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblFaltasVisitante" layoutX="290.0" layoutY="308.0" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAmarelosVisitante" layoutX="290.0" layoutY="351.0" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblVermelhosVisitante" layoutX="290.0" layoutY="394.0" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblImpedimentosVisitante" layoutX="290.0" layoutY="437.0" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblEscanteiosVisitante" layoutX="290.0" layoutY="480.0" textFill="#4e3317">
+               <font>
+                  <Font name="Oswald Medium" size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

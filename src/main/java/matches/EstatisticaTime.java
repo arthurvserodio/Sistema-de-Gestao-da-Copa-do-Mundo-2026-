@@ -1,6 +1,7 @@
 package matches;
 
 public class EstatisticaTime {
+    private int id;
     private int gols;
     private int chutes;
     private int chutesAGol;
@@ -13,7 +14,8 @@ public class EstatisticaTime {
     private int impedimentos;
     private int escanteios;
 
-    public EstatisticaTime(int gols, int chutes, int chutesAGol, int posseDeBola, int passes, int precisaoDosPasses, int faltas, int cartoesAmarelos, int cartoesVermelhos, int impedimentos, int escanteios) {
+    public EstatisticaTime(int id,int gols, int chutes, int chutesAGol, int posseDeBola, int passes, int precisaoDosPasses, int faltas, int cartoesAmarelos, int cartoesVermelhos, int impedimentos, int escanteios) {
+        this.id=id;
         this.gols=gols;
         this.chutes = chutes;
         this.chutesAGol = chutesAGol;
@@ -25,6 +27,14 @@ public class EstatisticaTime {
         this.cartoesVermelhos = cartoesVermelhos;
         this.impedimentos = impedimentos;
         this.escanteios = escanteios;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getGols() {

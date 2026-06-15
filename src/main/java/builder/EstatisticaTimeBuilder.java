@@ -3,6 +3,7 @@ package builder;
 import matches.EstatisticaTime;
 
 public class EstatisticaTimeBuilder {
+    private int id;
     private int gols;
     private int chutes;
     private int chutesAGol;
@@ -14,6 +15,11 @@ public class EstatisticaTimeBuilder {
     private int cartoesVermelhos;
     private int impedimentos;
     private int escanteios;
+
+    public EstatisticaTimeBuilder id(int id) {
+        this.id= id;
+        return this;
+    }
 
     public EstatisticaTimeBuilder gols(int gols) {
         this.gols = gols;
@@ -71,6 +77,6 @@ public class EstatisticaTimeBuilder {
     }
 
     public EstatisticaTime build() {
-        return new EstatisticaTime(gols, chutes, chutesAGol, posseDeBola, passes, precisaoDosPasses, faltas, cartoesAmarelos, cartoesVermelhos, impedimentos, escanteios);
+        return new EstatisticaTime(id,gols, chutes, chutesAGol, posseDeBola, passes, precisaoDosPasses, faltas, cartoesAmarelos, cartoesVermelhos, impedimentos, escanteios);
     }
 }
