@@ -291,7 +291,7 @@ public class ControllerTelasEstadios {
     private void irParaPartidas(MouseEvent e) {
 
         Usuario u = Sessao.getInstancia().getUsuarioLogado();
-        if( u == null) {
+        if( u == null || u.getFuncao() == Funcao.ARBITRO) {
             SceneController.mudaDeTela("/designAndScreens/telasPartidas/mostraPartida.fxml");
         }else {
 

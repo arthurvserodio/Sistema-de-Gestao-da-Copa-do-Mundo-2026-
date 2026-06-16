@@ -80,7 +80,7 @@
             </ImageView>
          </children>
       </StackPane>
-      <Text fx:id="botaoHistoria" fill="WHITE" layoutX="282.0" layoutY="48.0" onMouseClicked="#irParaRelatorio" strokeType="OUTSIDE" strokeWidth="0.0" text="Relatórios" textAlignment="CENTER">
+      <Text fx:id="botaoHistoria" fill="WHITE" layoutX="282.0" layoutY="63.0" onMouseClicked="#irParaRelatorio" strokeType="OUTSIDE" strokeWidth="0.0" text="Relatórios" textAlignment="CENTER">
          <font>
             <Font name="Oswald Medium" size="30.0" />
          </font>

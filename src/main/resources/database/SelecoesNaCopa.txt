@@ -30,7 +30,6 @@ Espanha;H;2;17;1
 Uruguai;H;17;15;2
 Arábia Saudita;H;61;8;0
 Cabo Verde;H;69;1;0
-França;I;1;17;2
 Senegal;I;14;4;0
 Noruega;I;31;4;0
 Iraque;I;57;2;0
