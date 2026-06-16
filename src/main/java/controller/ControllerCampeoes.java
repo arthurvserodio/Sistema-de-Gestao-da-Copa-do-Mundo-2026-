@@ -56,6 +56,11 @@ public class ControllerCampeoes {
             menuUsuario.setVisible(false);
         }
     }
+    @FXML
+    //Passa do Menu para a tela de grupos da copa 2026
+    private void irParaPartidas(MouseEvent e) {
+        SceneController.mudaDeTela( "/designAndScreens/telasPartidas/mostraPartida.fxml");
+    }
     //Volta para a pagina inicial de menu clicando no logo da copa
     @FXML
     private void irPaginaInicial(MouseEvent e){

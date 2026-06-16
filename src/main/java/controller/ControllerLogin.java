@@ -13,6 +13,7 @@ import services.ValidaLogin;
 import users.Sessao;
 
 import Enums.Funcao;
+import users.Usuario;
 
 public class ControllerLogin {
     //Volta para a pagina inicial de menu clicando no logo da copa
@@ -38,13 +39,30 @@ public class ControllerLogin {
     @FXML
     //Gustavo ta fazendo, depois adiciona o trocaTela + fxml
     private void irParaEstadios(MouseEvent e) {
-        SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioAdm.fxml");
+        SceneController.mudaDeTela( "/designAndScreens/telaEstadios/telaEstadioNormal.fxml");
     }
     @FXML
     //Helena ta fazendo, depois adiciona o trocaTela + fxml
     private void irParaLogin(ActionEvent e) {SceneController.mudaDeTela( "/designAndScreens/login/login.fxml");
     }
-
+    @FXML
+    private void irParaArbitros(MouseEvent e){
+        Usuario u = Sessao.getInstancia().getUsuarioLogado();
+        if( u == null) {
+            SceneController.mudaDeTela("/designAndScreens/Arbitragem/telaArbitroNormal.fxml");
+        }else {
+            if (u.getFuncao() != Funcao.ARBITRO) {
+                SceneController.mudaDeTela("/designAndScreens/Arbitragem/telaArbitroAdm.fxml");
+            } else {
+                SceneController.mudaDeTela("/designAndScreens/Arbitragem/telaDesignacao.fxml");
+            }
+        }
+    }
+    @FXML
+    //Passa do Menu para a tela de grupos da copa 2026
+    private void irParaPartidas(MouseEvent e) {
+        SceneController.mudaDeTela( "/designAndScreens/telasPartidas/mostraPartida.fxml");
+    }
     @FXML
     private TextField campoUsuario;
 

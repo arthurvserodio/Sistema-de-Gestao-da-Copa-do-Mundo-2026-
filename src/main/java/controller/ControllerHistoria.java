@@ -103,6 +103,11 @@ public class ControllerHistoria {
         }
     }
 
+    @FXML
+    //Passa do Menu para a tela de grupos da copa 2026
+    private void irParaPartidas(MouseEvent e) {
+        SceneController.mudaDeTela( "/designAndScreens/telasPartidas/mostraPartida.fxml");
+    }
 
 }
 

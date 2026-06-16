@@ -30,7 +30,6 @@
                 <Image url="@../../images/Arbitragem/imagemA.jpg" />
             </image>
         </ImageView>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="#ffffff6d" strokeType="INSIDE" width="1440.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="708.0" layoutY="98.0" stroke="BLACK" strokeType="INSIDE" width="1443.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
@@ -49,59 +48,6 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-        <StackPane layoutX="91.0" layoutY="59.0" prefHeight="150.0" prefWidth="125.0" styleClass="logo_copa26_arredondado" stylesheets="@../../css/style.css">
-            <children>
-                <ImageView fitHeight="122.0" fitWidth="115.0" onMouseClicked="#irParaInicio" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../../images/copa.jpg" />
-                    </image>
-                </ImageView>
-            </children>
-        </StackPane>
-        <Text fx:id="botaoHistoria" fill="WHITE" layoutX="272.0" layoutY="64.0" onMouseClicked="#irParaHistoria" strokeType="OUTSIDE" strokeWidth="0.0" text="História" textAlignment="CENTER">
-            <font>
-                <Font name="Oswald Medium" size="30.0" />
-            </font>
-        </Text>
-        <Text fx:id="botaoRelatorio" fill="WHITE" layoutX="272.0" layoutY="64.0" onMouseClicked="#irParaRelatorio" strokeType="OUTSIDE" strokeWidth="0.0" text="Relatórios" textAlignment="CENTER" visible="false">
-            <font>
-                <Font name="Oswald Medium" size="30.0" />
-            </font>
-        </Text>
-        <Text fill="WHITE" layoutX="437.0" layoutY="64.0" onMouseClicked="#irParaEquipes" strokeType="OUTSIDE" strokeWidth="0.0" text="Equipes" textAlignment="CENTER">
-            <font>
-                <Font name="Oswald Medium" size="30.0" />
-            </font>
-        </Text>
-        <Text fill="WHITE" layoutX="605.0" layoutY="65.0" onMouseClicked="#irParaClassificacao" strokeType="OUTSIDE" strokeWidth="0.0" text="Classificação" textAlignment="CENTER">
-            <font>
-                <Font name="Oswald Medium" size="30.0" />
-            </font>
-        </Text>
-        <Text fill="WHITE" layoutX="799.0" layoutY="65.0" onMouseClicked="#irParaEstadios" strokeType="OUTSIDE" strokeWidth="0.0" text="Estádios" textAlignment="CENTER" wrappingWidth="109.47002410888672">
-            <font>
-                <Font name="Oswald Medium" size="30.0" />
-            </font>
-        </Text>
-        <Text fx:id="botaoUsuario" fill="WHITE" layoutX="1107.0" layoutY="64.0" onMouseClicked="#irParaUsuarios" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuários" textAlignment="CENTER" visible="false">
-            <font>
-                <Font name="Oswald Medium" size="30.0" />
-            </font>
-        </Text>
-        <Button fx:id="botaoLogin" layoutX="1297.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
-            <font>
-                <Font name="Oswald Medium" size="12.0" />
-            </font>
-        </Button>
-        <MenuButton fx:id="menuUsuario" layoutX="1297.0" layoutY="27.0" maxWidth="150" mnemonicParsing="false" prefWidth="150" styleClass="white_button" stylesheets="@../../css/style.css" visible="false">
-            <font>
-                <Font name="Oswald Medium" size="12.0" />
-            </font>
-            <items>
-                <MenuItem onAction="#onLogout" text="Logout" />
-                <MenuItem text="Cancelar" />
-            </items>
-        </MenuButton>
         <Button layoutX="1186.0" layoutY="194.0" minHeight="18.0" minWidth="45.0" mnemonicParsing="false" onAction="#handleRemover" prefHeight="40.0" prefWidth="156.0" styleClass="button-remove" text="Remove">
             <font>
                 <Font name="Oswald Medium" size="12.0" />
@@ -170,12 +116,56 @@
             <Image url="@../../images/ChatGPT%20Image%209%20de%20mai.%20de%202026,%2018_28_43.png" />
          </image>
       </ImageView>
-      <Text fill="WHITE" layoutX="970.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER" underline="true">
+      <Label text="Label" />
+      <Label fx:id="label" layoutX="386.0" layoutY="532.0" prefHeight="75.0" prefWidth="279.0" text="Label" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="#ffffff6d" strokeType="INSIDE" width="1440.0" />
+      <StackPane layoutX="101.0" layoutY="69.0" prefHeight="150.0" prefWidth="125.0" styleClass="logo_copa26_arredondado" stylesheets="@../../css/style.css">
+         <children>
+            <ImageView fitHeight="122.0" fitWidth="115.0" onMouseClicked="#irParaInicio" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/copa.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+      <Text fill="WHITE" layoutX="282.0" layoutY="63.0" onMouseClicked="#irParaHistoria" strokeType="OUTSIDE" strokeWidth="0.0" text="História" textAlignment="CENTER">
          <font>
             <Font name="Oswald Medium" size="30.0" />
          </font>
       </Text>
-      <Label text="Label" />
-      <Label fx:id="label" layoutX="386.0" layoutY="532.0" prefHeight="75.0" prefWidth="279.0" text="Label" />
+      <Text fill="WHITE" layoutX="447.0" layoutY="63.0" onMouseClicked="#irParaEquipes" strokeType="OUTSIDE" strokeWidth="0.0" text="Equipes" textAlignment="CENTER">
+         <font>
+            <Font name="Oswald Medium" size="30.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="615.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estádios" textAlignment="CENTER">
+         <font>
+            <Font name="Oswald Medium" size="30.0" />
+         </font>
+      </Text>
+      <Text fx:id="botaoArbitro" fill="WHITE" layoutX="765.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="Oswald Medium" size="30.0" />
+         </font>
+      </Text>
+      <Button fx:id="botaoLogin" layoutX="1290.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
+         <font>
+            <Font name="Oswald Medium" size="12.0" />
+         </font>
+      </Button>
+      <MenuButton fx:id="menuUsuario" layoutX="1290.0" layoutY="27.0" maxWidth="150" mnemonicParsing="false" prefWidth="150" styleClass="white_button" stylesheets="@../../css/style.css" visible="false">
+         <font>
+            <Font name="Oswald Medium" size="12.0" />
+         </font>
+         <items>
+            <MenuItem onAction="#onLogout" text="Logout" />
+            <MenuItem text="Cancelar" />
+         </items>
+      </MenuButton>
+      <Text fx:id="botaoArbitro1" fill="WHITE" layoutX="937.0" layoutY="63.0" onMouseClicked="#irParaPartidas" strokeType="OUTSIDE" strokeWidth="0.0" text="Partidas" textAlignment="CENTER">
+         <font>
+            <Font name="Oswald Medium" size="30.0" />
+         </font>
+      </Text>
     </children>
 </AnchorPane>

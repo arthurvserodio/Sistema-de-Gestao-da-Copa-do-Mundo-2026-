@@ -282,7 +282,19 @@ public class ControllerArbitragem {
         SceneController.mudaDeTela( "/designAndScreens/telasAdministrador/usuarios.fxml");
     }
 
+    @FXML
+    //Passa do Menu para a tela de grupos da copa 2026
+    private void irParaPartidas(MouseEvent e) {
 
+        Usuario u = Sessao.getInstancia().getUsuarioLogado();
+        if( u == null) {
+            SceneController.mudaDeTela("/designAndScreens/telasPartidas/mostraPartida.fxml");
+        }else {
+
+            SceneController.mudaDeTela("/designAndScreens/telasPartidas/EscolhaPartida.fxml");
+            }
+
+        }
 
 
 
