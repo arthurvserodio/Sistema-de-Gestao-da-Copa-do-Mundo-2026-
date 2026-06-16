@@ -288,7 +288,6 @@ public class ControllerEquipes {
 
         /*captura o nome da selecao selecinada por meio de metodos do do Hbox e Label*/
         String nomeDaSelecaoSelecionada = ((Label) linhaSelecionada.getChildren().get(1)).getText();
-
         Selecoes selecaoParaSerRemovida = null;
         for(Selecoes s : SelecoesFile.getInstance().getListaSelecoes()){
             if(s.getNome().equals(nomeDaSelecaoSelecionada)){
@@ -298,20 +297,15 @@ public class ControllerEquipes {
         }
         selecoesFile.getListaSelecoes().remove(selecaoParaSerRemovida);
         selecoesFile.salvarNoTxt();
-
         /*Apagando todos os jogadores relacionados a selecao*/
-        removerJogadoresDaSelecao(selecaoParaSerRemovida);
+        TesteRemoverJogadoresDaSelecao(selecaoParaSerRemovida);
 
         /*chama o metodo do controller de mudar a tela para chamar o iniciatilize que chama o mostraSelecao para atualizar a lista*/
         SceneController.mudaDeTela("/designAndScreens/telaInicial/equipesNaCopa.fxml");
     }
 
-    private void removerJogadoresDaSelecao(Selecoes selecaoParaSerRemovida){
-        for(Jogadores j : JogadoresFile.getInstancia().getListaJogadores()){
-            if(j.getSelecao().equals(selecaoParaSerRemovida)){
-                jogadoresFile.getListaJogadores().remove(j);
-            }
-        }
-        jogadoresFile.salvarNoTxt();
+    private void TesteRemoverJogadoresDaSelecao(Selecoes selecaoParaSerRemovida){
+        JogadoresFile.removeJogador("src/main/resources/database/Jogadores.txt",selecaoParaSerRemovida);
+        JogadoresFile.removeJogador("target/classes/database/Jogadores.txt",selecaoParaSerRemovida);
     }
 }

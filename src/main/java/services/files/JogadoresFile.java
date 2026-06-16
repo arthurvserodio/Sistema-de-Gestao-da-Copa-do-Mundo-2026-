@@ -5,6 +5,8 @@ import nationsAndPlayers.nations.Selecoes;
 import nationsAndPlayers.players.Jogadores;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -75,5 +77,16 @@ public class JogadoresFile {
             System.err.println("Erro ao salvar: " + e.getMessage());
         }
     }
-
+    public static void removeJogador(String path, Selecoes s){
+        try {
+            List<String> linhas = Files.readAllLines(Paths.get(path));
+            linhas.removeIf(linha -> {
+                String[] dados = linha.split(";");
+                return dados[2].equalsIgnoreCase(s.getNome());
+            });
+            Files.write(Paths.get(path),linhas);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
