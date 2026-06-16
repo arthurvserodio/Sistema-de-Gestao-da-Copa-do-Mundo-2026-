@@ -15,11 +15,13 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.shape.Line;
 import nationsAndPlayers.nations.Campeoes;
+import nationsAndPlayers.nations.Selecoes;
 import org.w3c.dom.Text;
 import services.matches.CarregaArquivoService;
 import users.Sessao;
 import users.Usuario;
 
+import java.io.File;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -115,17 +117,17 @@ public class ControllerCampeoes {
         ano.getStyleClass().add("text-ano"); //Pega a conf do css
         topo.getChildren().addAll(linha1,ano,linha2); //Coloca tudo na Hbox
         //LOGO DA SELEÇÃO
-        //Depois a gente vê
-        String caminhoImagem = "/images/" + campeao.getSelecao().toLowerCase().replace(" ", "_") + ".png";
-        InputStream is = getClass().getResourceAsStream(caminhoImagem);
-        ImageView logoSelecao;
-        if(is != null){
-            Image imagem=new Image(is);
-            logoSelecao = new ImageView(imagem);
+        ImageView logoSelecao = new ImageView();
+        File is = new File("target/classes/images/Logos/" + campeao.getSelecao().toLowerCase().replace(" ", "_") + ".png");
+        if(is.exists()){
+            System.out.println("Achei");
+            Image imagem=new Image(is.toURI().toString());
+            logoSelecao.setImage(imagem);
         }
         else {
+            System.out.println("Nao achei");
             Image imagemPadrao = new Image(getClass().getResourceAsStream("/images/Logos/brasil.png"));
-            logoSelecao = new ImageView(imagemPadrao);
+            logoSelecao.setImage(imagemPadrao);
         }
         logoSelecao.setPreserveRatio(true);
         logoSelecao.setFitWidth(83);

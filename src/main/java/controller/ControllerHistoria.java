@@ -53,7 +53,7 @@ public class ControllerHistoria {
     }
     @FXML
     //Passa da História para a tela de campeoes da copa
-    private void irParaCampeoes(ActionEvent e) {SceneController.mudaDeTela( "/designAndScre/Arbitragem/telaDesignacao.fxml");
+    private void irParaCampeoes(ActionEvent e) {SceneController.mudaDeTela( "/designAndScreens/telaInicial/campeoes.fxml");
     }
 
     @FXML

@@ -166,11 +166,12 @@ public class ControllerUiPartida {
         eventos = CarregaArquivoService.carregaArquivo("/database/eventos.txt", parte -> new EventosOcorridos(Integer.parseInt(parte[0]),Integer.parseInt(parte[3]),TipoEvento.valueOf(parte[2]),CadastroPartidaService.buscaPeloNome(ListaJogadores,Jogadores::getNome,parte[5]),parte[4]));
         EstatisticaPartida estatistica = EstatisticaService.buscarPorPartida(EstatisticasCASA,EstatisticasVISITANTE,partida.getId());
         Map<String, Double> notas = EstatisticaService.carregarNotasPartida(partida.getId());
+        System.out.println(notas);
         todasAsEscalacao = CarregaArquivoService.carregaArquivo("/database/escalacao.txt", parte->{
             //Lista de jogadores
             ArrayList<JogadorPartida> titulares = new ArrayList<>();
             ArrayList<JogadorPartida> reservas = new ArrayList<>();
-            //Como a escalação começa a partir do parte[] temos:
+            //Como a escalação começa a partir do parte[3] temos:
             for(int i=3;i<parte.length;i++){
                 //Nome| T OU R
                 String[] infoJogador = parte[i].split("\\|");
@@ -178,7 +179,11 @@ public class ControllerUiPartida {
                 String tipo = infoJogador[1];
                 Jogadores j = CadastroPartidaService.buscaPeloNome(ListaJogadores,Jogadores::getNome,nome);
                 if(j==null) continue;
-                JogadorPartida jp = new JogadorPartida(j, notas.get(j.getNome()));
+                double nota=0;
+                if(notas.get(j.getNome())!=null){
+                    nota= notas.get(j.getNome());
+                }
+                JogadorPartida jp = new JogadorPartida(j, nota);
                 if(tipo.equalsIgnoreCase("T")){
                     titulares.add(jp);
                 }
@@ -380,8 +385,10 @@ public class ControllerUiPartida {
         boxEventos.getChildren().clear();
         boxEventos.setSpacing(10);
         for(EventosOcorridos e : eventos){
-            HBox linha = criarLinhaEvento(e);
-            boxEventos.getChildren().add(linha);
+            if(e.getIdPartida() == partida.getId()){
+                HBox linha = criarLinhaEvento(e);
+                boxEventos.getChildren().add(linha);
+            }
         }
     }
     private ImageView getIconeEvento(String tipo){
@@ -390,10 +397,10 @@ public class ControllerUiPartida {
             case "GOL":
                 caminho = "/images/goal.png";
                 break;
-            case "AMARELO":
+            case "CARTAO_AMARELO":
                 caminho = "/images/yellow-card.png";
                 break;
-            case "VERMELHO":
+            case "CARTAO_VERMELHO":
                 caminho = "/images/cards.png";
                 break;
             case "SUBSTITUICAO":

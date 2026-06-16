@@ -1,6 +1,10 @@
 package controller;
 
 import Enums.Fase;
+import Enums.StatusPartida;
+import builder.EstadioBuilder;
+import builder.EstatisticaTimeBuilder;
+import builder.PartidaGrupoBuilder;
 import builder.SelecaoBuilder;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -8,10 +12,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import matches.EstadoDaCopa;
+import matches.*;
 import nationsAndPlayers.nations.Selecoes;
+import nationsAndPlayers.players.Jogadores;
 import services.matches.CadastroPartidaService;
 import services.matches.CarregaArquivoService;
+import services.matches.ClassificacaoService;
+import services.matches.EstatisticaService;
+import stadiumAndRefeering.Estadio;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -37,6 +45,12 @@ public class ControllerMaquinaDeEstados {
         @FXML
         private Button btnAvancar;
 
+        private List<Selecoes> ListSelecoes;
+        private List<EstatisticaTime> EstatisticasCASA;
+        private List<EstatisticaTime> EstatisticasVISITANTE;
+        private List<Estadio> ListEstadio;
+        List<Partida> partidas;
+
         @FXML
         private void voltaParaEscolha(MouseEvent e) {
             SceneController.mudaDeTela( "/designAndScreens/telasPartidas/EscolhaPartida.fxml");
@@ -44,6 +58,11 @@ public class ControllerMaquinaDeEstados {
 
         @FXML
         public void initialize() {
+            ListEstadio=CarregaArquivoService.carregaArquivo("/database/Estadios.txt", parte->new EstadioBuilder().nome(parte[0]).local(parte[2]).build());
+            ListSelecoes = CarregaArquivoService.carregaArquivo("/database/SelecoesNaCopa.txt", parte->new SelecaoBuilder().nome(parte[0]).build());
+            EstatisticasCASA = CarregaArquivoService.carregaArquivo("/database/estatisticas_partida.txt",parte->new EstatisticaTimeBuilder().id(Integer.parseInt(parte[0])).gols(Integer.parseInt(parte[1])).chutes(Integer.parseInt(parte[3])).chutesAGol(Integer.parseInt(parte[5])).posseDeBola(Integer.parseInt(parte[7])).passes(Integer.parseInt(parte[9])).precisaoDosPasses(Integer.parseInt(parte[11])).faltas(Integer.parseInt(parte[13])).cartoesAmarelos(Integer.parseInt(parte[15])).cartoesVermelhos(Integer.parseInt(parte[17])).impedimentos(Integer.parseInt(parte[19])).escanteios(Integer.parseInt(parte[21])).build());
+            EstatisticasVISITANTE = CarregaArquivoService.carregaArquivo("/database/estatisticas_partida.txt",parte->new EstatisticaTimeBuilder().id(Integer.parseInt(parte[0])).gols(Integer.parseInt(parte[2])).chutes(Integer.parseInt(parte[4])).chutesAGol(Integer.parseInt(parte[6])).posseDeBola(Integer.parseInt(parte[8])).passes(Integer.parseInt(parte[10])).precisaoDosPasses(Integer.parseInt(parte[12])).faltas(Integer.parseInt(parte[14])).cartoesAmarelos(Integer.parseInt(parte[16])).cartoesVermelhos(Integer.parseInt(parte[18])).impedimentos(Integer.parseInt(parte[20])).escanteios(Integer.parseInt(parte[22])).build());
+            partidas = CarregaArquivoService.carregaArquivo("/database/partida_eliminatoria.txt", parte->new PartidaGrupoBuilder().id(Integer.parseInt(parte[0])).data(LocalDate.parse(parte[2])).horario(parte[3]).estadio(CadastroPartidaService.buscaPeloNome(ListEstadio,Estadio::getNome,parte[4])).Casa(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[6])).Visitante(CadastroPartidaService.buscaPeloNome(ListSelecoes,Selecoes::getNome,parte[7])).fase(Fase.valueOf(parte[8])).status(StatusPartida.valueOf(parte[9])).build());
             carregarEstado();
             mostrarDados();
             btnAvancar.setOnAction(e -> avancarFase());
@@ -93,6 +112,26 @@ public class ControllerMaquinaDeEstados {
             alert.setContentText("Fase atualizada com sucesso!");
             alert.showAndWait();
             if(estadoAtual.getFaseAtual()==Fase.FINALIZADO) {
+                Partida Final=null;
+                for(Partida p : partidas){
+                    if(p.getFase().equals(Fase.FINAL)){
+                        Final=p;
+                        break;
+                    }
+                }
+                if(Final!=null){
+                    EstatisticaPartida daFinal= EstatisticaService.buscarPorPartida(EstatisticasCASA,EstatisticasVISITANTE, Final.getId());
+                    int golsCasa=daFinal.getEstatisticaCasa().getGols();
+                    int golsVisitante=daFinal.getEstatisticaVisitante().getGols();
+                    if(golsCasa>golsVisitante){
+                        ClassificacaoService.salvarCampeaoHistorico(Final.getSelecaoCasa().getNome(),Final.getEstadio(),estadoAtual.getInicio().getYear(),"src/main/resources/database/Campeoes.txt");
+                        ClassificacaoService.salvarCampeaoHistorico(Final.getSelecaoCasa().getNome(),Final.getEstadio(),estadoAtual.getInicio().getYear(),"target/classes/database/Campeoes.txt");
+                    }
+                    else if(golsCasa<golsVisitante){
+                        ClassificacaoService.salvarCampeaoHistorico(Final.getSelecaoVisitante().getNome(),Final.getEstadio(),estadoAtual.getInicio().getYear(),"src/main/resources/database/Campeoes.txt");
+                        ClassificacaoService.salvarCampeaoHistorico(Final.getSelecaoVisitante().getNome(),Final.getEstadio(),estadoAtual.getInicio().getYear(),"target/classes/database/Campeoes.txt");
+                    }
+                }
                 CarregaArquivoService.limparArquivos("src/main/resources/database/arbitrosNaCopa.txt");
                 CarregaArquivoService.limparArquivos("src/main/resources/database/escalacao.txt");
                 CarregaArquivoService.limparArquivos("src/main/resources/database/Jogadores.txt");

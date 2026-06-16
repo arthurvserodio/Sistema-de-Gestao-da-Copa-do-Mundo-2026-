@@ -6,7 +6,11 @@ import matches.EstatisticaPartida;
 import matches.EstatisticaTime;
 import matches.PartidaGrupo;
 import nationsAndPlayers.nations.Selecoes;
+import stadiumAndRefeering.Estadio;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 
 public class ClassificacaoService {
@@ -65,5 +69,14 @@ public class ClassificacaoService {
             }
         }
         return null;
+    }
+    public static void salvarCampeaoHistorico(String campeao, Estadio estadio, int ano,String path) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(path, true))) {
+            bw.write(campeao + ";" + ano +";" + estadio.getNome() + "," + estadio.getLocal());
+            bw.newLine();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

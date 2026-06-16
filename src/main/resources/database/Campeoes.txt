@@ -1,6 +1,2 @@
 França;2018;Moscou,Rússia
 Argentina;2022;Lusail,Catar
-França;2018;Moscou,Rússia
-Argentina;2022;Lusail,Catar
-França;2018;Moscou,Rússia
-Argentina;2022;Lusail,Catar

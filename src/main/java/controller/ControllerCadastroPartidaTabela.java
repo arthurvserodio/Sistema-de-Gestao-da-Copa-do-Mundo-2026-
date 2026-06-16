@@ -435,7 +435,7 @@ public class ControllerCadastroPartidaTabela {
             else if(p.getStatus()==StatusPartida.EM_ANDAMENTO){
                 aoVivo.getChildren().add(linha);
             }
-            else{
+            else if(p.getStatus()==StatusPartida.FINALIZADA && faseAtual.getFaseAtual().equals(p.getFase())){
                 finalizada.getChildren().add(linha);
             }
         }

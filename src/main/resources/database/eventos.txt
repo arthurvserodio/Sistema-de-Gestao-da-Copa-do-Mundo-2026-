@@ -15,3 +15,21 @@
 1;GRUPO;SUBSTITUICAO;76;África do Sul;Oswin Appollis
 1;GRUPO;CARTAO_VERMELHO;84;África do Sul;Themba Zwane
 1;GRUPO;CARTAO_VERMELHO;90;México;César Montes
+103;GRUPO;GOL;21;França;Kylian Mbappé
+103;GRUPO;ASSISTENCIA;21;França;Michael Olise
+103;GRUPO;GOL;25;Espanha;Lamine Yamal
+103;GRUPO;ASSISTENCIA;25;Espanha;Pedri
+103;GRUPO;CARTAO_AMARELO;30;Espanha;Marcos Llorente
+103;GRUPO;CARTAO_AMARELO;33;França;William Saliba
+103;GRUPO;PENALTI;45;Espanha;Marc Cucurella
+103;GRUPO;GOL;45;França;Kylian Mbappé
+103;GRUPO;CARTAO_AMARELO;50;França;Michael Olise
+103;GRUPO;CARTAO_AMARELO;60;França;Aurélien Tchouaméni
+103;GRUPO;GOL;62;Espanha;Lamine Yamal
+103;GRUPO;ASSISTENCIA;62;Espanha;Nico Williams
+103;GRUPO;SUBSTITUICAO;65;Espanha;Gavi
+103;GRUPO;CARTAO_AMARELO;75;Espanha;Gavi
+103;GRUPO;SUBSTITUICAO;75;França;Ousmane Dembélé
+103;GRUPO;SUBSTITUICAO;75;França;Rayan Cherki
+103;GRUPO;GOL;89;Espanha;Lamine Yamal
+103;GRUPO;ASSISTENCIA;89;Espanha;Gavi

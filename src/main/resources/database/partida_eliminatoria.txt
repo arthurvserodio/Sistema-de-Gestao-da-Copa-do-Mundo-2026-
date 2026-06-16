@@ -1,4 +1,31 @@
-73;ELIMINATORIA;2026-06-28;12:00;SoFi Stadium;Wilton Sampaio;Alemanha;Escócia;PLAYOFFS;AGENDADA;
-74;ELIMINATORIA;2026-06-28;01:00;Arrowhead Stadium;Raphael Claus;França;Paraguai;PLAYOFFS;AGENDADA;
-75;ELIMINATORIA;2026-06-28;20:30;AT&T Stadium;Ramon Abatti;Coreia do Sul;Bósnia e Herzegovina;PLAYOFFS;AGENDADA;
-76;ELIMINATORIA;2026-06-29;10:00;SoFi Stadium;Wilton Sampaio;Holanda;Marrocos;PLAYOFFS;AGENDADA;
+73;ELIMINATORIA;2026-06-28;12:00;SoFi Stadium;Wilton Sampaio;Alemanha;Escócia;PLAYOFFS;FINALIZADA
+74;ELIMINATORIA;2026-06-28;01:00;Arrowhead Stadium;Raphael Claus;França;Paraguai;PLAYOFFS;FINALIZADA
+75;ELIMINATORIA;2026-06-28;20:30;AT&T Stadium;Ramon Abatti;Coreia do Sul;Bósnia e Herzegovina;PLAYOFFS;FINALIZADA
+76;ELIMINATORIA;2026-06-29;10:00;SoFi Stadium;Wilton Sampaio;Holanda;Marrocos;PLAYOFFS;FINALIZADA
+77;ELIMINATORIA;2026-06-29;12:00;Levi's Stadium;Drew Fischer;Uzbequistão;Gana;PLAYOFFS;FINALIZADA
+78;ELIMINATORIA;2026-06-29;18:00;Hard Rock Stadium;Abdulrahman Al Jassim;Uruguai;Argélia;PLAYOFFS;FINALIZADA
+79;ELIMINATORIA;2026-06-29;20:30;Gillette Stadium;Felix Zwayer;Estados Unidos;Suíça;PLAYOFFS;FINALIZADA
+80;ELIMINATORIA;2026-06-30;10:00;MetLife Stadium;Wilton Sampaio;Bélgica;México;PLAYOFFS;FINALIZADA
+81;ELIMINATORIA;2026-06-30;15:00;Lincoln Financial Field;Ma Ning;Brasil;Suécia;PLAYOFFS;FINALIZADA
+82;ELIMINATORIA;2026-06-30;18:00;NRG Stadium;Yael Falcon Perez;Equador;Noruega;PLAYOFFS;FINALIZADA
+83;ELIMINATORIA;2026-07-01;10:00;Arrowhead Stadium;Felix Zwayer;Tchéquia;Cabo Verde;PLAYOFFS;FINALIZADA
+84;ELIMINATORIA;2026-07-01;20:30;Lumen Field;Yael Falcon Perez;Inglaterra;Costa do Marfim;PLAYOFFS;FINALIZADA
+85;ELIMINATORIA;2026-07-02;12:00;NRG Stadium;Mustapha Ghorbal;Espanha;Argentina;PLAYOFFS;FINALIZADA
+86;ELIMINATORIA;2026-07-02;20:30;MetLife Stadium;Dario Herrera;Turquia;Irã;PLAYOFFS;FINALIZADA
+87;ELIMINATORIA;2026-07-03;10:00;Mercedes-Benz Stadium;Ramon Abatti;Canadá;Japão;PLAYOFFS;FINALIZADA
+88;ELIMINATORIA;2026-07-03;18:00;MetLife Stadium;Wilton Sampaio;Portugal;Croácia;PLAYOFFS;FINALIZADA
+89;ELIMINATORIA;2026-07-04;12:00;Levi's Stadium;Mustapha Ghorbal;Alemanha;França;OITAVAS;FINALIZADA
+90;ELIMINATORIA;2026-07-04;15:00;Arrowhead Stadium;Ramon Abatti;Coreia do Sul;Marrocos;OITAVAS;FINALIZADA
+91;ELIMINATORIA;2026-07-04;20:30;AT&T Stadium;Wilton Sampaio;Uruguai;Gana;OITAVAS;FINALIZADA
+92;ELIMINATORIA;2026-07-05;12:00;NRG Stadium;Felix Zwayer;Bélgica;Estados Unidos;OITAVAS;FINALIZADA
+93;ELIMINATORIA;2026-07-05;15:00;Mercedes-Benz Stadium;Dario Herrera;Brasil;Noruega;OITAVAS;FINALIZADA
+94;ELIMINATORIA;2026-07-05;20:30;Hard Rock Stadium;Ramon Abatti;Inglaterra;Tchéquia;OITAVAS;FINALIZADA
+95;ELIMINATORIA;2026-07-06;16:00;Levi's Stadium;Mustapha Ghorbal;Espanha;Turquia;OITAVAS;FINALIZADA
+96;ELIMINATORIA;2026-07-07;21:00;Lumen Field;Wilton Sampaio;Japão;Portugal;OITAVAS;FINALIZADA
+97;ELIMINATORIA;2026-07-09;12:00;MetLife Stadium;Dario Herrera;Brasil;Inglaterra;QUARTAS;FINALIZADA
+98;ELIMINATORIA;2026-07-09;18:00;Levi's Stadium;Wilton Sampaio;França;Marrocos;QUARTAS;FINALIZADA
+99;ELIMINATORIA;2026-07-10;10:00;Mercedes-Benz Stadium;Ramon Abatti;Uruguai;Bélgica;QUARTAS;FINALIZADA
+100;ELIMINATORIA;2026-07-10;20:00;Hard Rock Stadium;Alireza Faghani;Espanha;Japão;QUARTAS;FINALIZADA
+101;ELIMINATORIA;2026-07-14;14:00;MetLife Stadium;Mustapha Ghorbal;França;Bélgica;SEMIFINAL;FINALIZADA
+102;ELIMINATORIA;2026-07-15;15:00;Mercedes-Benz Stadium;Felix Zwayer;Espanha;Inglaterra;SEMIFINAL;FINALIZADA
+103;ELIMINATORIA;2026-07-19;12:00;MetLife Stadium;Felix Zwayer;França;Espanha;FINAL;FINALIZADA

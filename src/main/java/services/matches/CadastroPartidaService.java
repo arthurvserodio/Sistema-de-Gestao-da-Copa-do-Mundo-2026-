@@ -450,7 +450,7 @@ public class CadastroPartidaService {
             partidas = CarregaArquivoService.carregaArquivo("/database/partida_grupo.txt", parte-> new PartidaGrupoBuilder().fase(Fase.valueOf(parte[9])).status(StatusPartida.valueOf(parte[10])).build());
         }
         else{
-            partidas = CarregaArquivoService.carregaArquivo("/database/partida_eliminatoria.txt", parte-> new PartidaEliminatoriaBuilder().fase(Fase.valueOf(parte[9])).status(StatusPartida.valueOf(parte[10])).build());
+            partidas = CarregaArquivoService.carregaArquivo("/database/partida_eliminatoria.txt", parte-> new PartidaEliminatoriaBuilder().fase(Fase.valueOf(parte[8])).status(StatusPartida.valueOf(parte[9])).build());
         }
         for (Partida p : partidas) {
             //Verifica se finalizou a partida e aumenta o contador
