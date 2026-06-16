@@ -101,6 +101,19 @@ public class ControllerEquipes {
     }
 
     @FXML
+    //Passa do Menu para a tela de grupos da copa 2026
+    private void irParaPartidas(MouseEvent e) {
+
+        Usuario u = Sessao.getInstancia().getUsuarioLogado();
+        if( u == null) {
+            SceneController.mudaDeTela("/designAndScreens/telasPartidas/mostraPartida.fxml");
+        }else {
+
+            SceneController.mudaDeTela("/designAndScreens/telasPartidas/EscolhaPartida.fxml");
+        }
+
+    }
+    @FXML
 
     private void irParaEstadios(MouseEvent e) {
         Usuario u = Sessao.getInstancia().getUsuarioLogado();

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -13,8 +14,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.MenuButton?>
 <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerHistoria">
   <content>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="4200.0" prefWidth="1424.0" styleClass="white" stylesheets="@../../css/style.css">
@@ -24,65 +23,6 @@
                   <Image url="@../../images/ChatGPT%20Image%2011%20de%20mai.%20de%202026,%2017_12_53.png" />
                </image>
             </ImageView>
-            <Group>
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="#ffffff6d" strokeType="INSIDE" width="1424.0" />
-                  <StackPane layoutX="91.0" layoutY="59.0" onMouseClicked="#irPaginaInicial" prefHeight="150.0" prefWidth="125.0" styleClass="logo_copa26_arredondado" stylesheets="@../../css/style.css">
-                     <children>
-                        <ImageView fitHeight="122.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/copa.jpg" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </StackPane>
-                  <Text fill="WHITE" layoutX="272.0" layoutY="64.0" onMouseClicked="#irParaHistoria" strokeType="OUTSIDE" strokeWidth="0.0" text="História" textAlignment="CENTER">
-                     <font>
-                        <Font name="Oswald Medium" size="30.0" />
-                     </font>
-                  </Text>
-                  <Text fill="WHITE" layoutX="437.0" layoutY="64.0" onMouseClicked="#irParaEquipes" strokeType="OUTSIDE" strokeWidth="0.0" text="Equipes" textAlignment="CENTER">
-                     <font>
-                        <Font name="Oswald Medium" size="30.0" />
-                     </font>
-                  </Text>
-                  <Text fill="WHITE" layoutX="602.0" layoutY="64.0" onMouseClicked="#irParaClassificacao" strokeType="OUTSIDE" strokeWidth="0.0" text="Classificação" textAlignment="CENTER">
-                     <font>
-                        <Font name="Oswald Medium" size="30.0" />
-                     </font>
-                  </Text>
-                  <Text fill="WHITE" layoutX="807.0" layoutY="64.0" onMouseClicked="#irParaEstadios" strokeType="OUTSIDE" strokeWidth="0.0" text="Estádios" textAlignment="CENTER">
-                     <font>
-                        <Font name="Oswald Medium" size="30.0" />
-                     </font>
-                  </Text>
-                  <Text fx:id="botaoUsuario" fill="WHITE" layoutX="1107.0" layoutY="64.0" onMouseClicked="#irParaUsuarios" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuários" textAlignment="CENTER" visible="false">
-                     <font>
-                        <Font name="Oswald Medium" size="30.0" />
-                     </font>
-                  </Text>
-                  <Text fx:id="botaoArbitro" fill="WHITE" layoutX="970.0" layoutY="63.0" onMouseClicked="#irParaArbitros" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER" >
-                     <font>
-                        <Font name="Oswald Medium" size="30.0" />
-                     </font>
-                  </Text>
-                  <Button fx:id="botaoLogin" layoutX="1297.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
-                     <font>
-                        <Font name="Oswald Medium" size="12.0" />
-                     </font>
-                  </Button>
-                  <MenuButton fx:id="menuUsuario" layoutX="1297.0" layoutY="27.0" mnemonicParsing="false" maxWidth="150" prefWidth="150" visible="false" styleClass="white_button" stylesheets="@../../css/style.css">
-                     <font>
-                        <Font name="Oswald Medium" size="12.0" />
-                     </font>
-                     <items>
-                        <MenuItem text="Logout" onAction="#onLogout" />
-                        <MenuItem text="Cancelar" />
-                     </items>
-                  </MenuButton>
-                  <Line endX="51.0" endY="-7.62939453125E-6" layoutX="308.0" layoutY="75.0" startX="-32.111114501953125" startY="-7.62939453125E-6" stroke="WHITE" />
-               </children>
-            </Group>
             <Text layoutX="91.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A MAIOR COMPETIÇÃO">
                <font>
                   <Font name="Roboto Condensed Black" size="70.0" />
@@ -490,6 +430,55 @@
                </children>
             </AnchorPane>
             <Button layoutX="666.0" layoutY="3850.0" mnemonicParsing="false" onAction="#irParaCampeoes" styleClass="golden_button" stylesheets="@../../css/style.css" text="CAMPEÕES" textFill="#c79842" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="#ffffff6d" strokeType="INSIDE" width="1440.0" />
+            <StackPane layoutX="101.0" layoutY="69.0" onMouseClicked="#irPaginaInicial" prefHeight="150.0" prefWidth="125.0" styleClass="logo_copa26_arredondado" stylesheets="@../../css/style.css">
+               <children>
+                  <ImageView fitHeight="112.0" fitWidth="105.0" onMouseClicked="#irPaginaInicial" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/copa.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <Text fill="WHITE" layoutX="282.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="História" textAlignment="CENTER" underline="true">
+               <font>
+                  <Font name="Oswald Medium" size="30.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="447.0" layoutY="63.0" onMouseClicked="#irParaEquipes" strokeType="OUTSIDE" strokeWidth="0.0" text="Equipes" textAlignment="CENTER">
+               <font>
+                  <Font name="Oswald Medium" size="30.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="615.0" layoutY="63.0" onMouseClicked="#irParaEstadios" strokeType="OUTSIDE" strokeWidth="0.0" text="Estádios" textAlignment="CENTER">
+               <font>
+                  <Font name="Oswald Medium" size="30.0" />
+               </font>
+            </Text>
+            <Text fx:id="botaoArbitro" fill="WHITE" layoutX="765.0" layoutY="63.0" onMouseClicked="#irParaArbitros" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER">
+               <font>
+                  <Font name="Oswald Medium" size="30.0" />
+               </font>
+            </Text>
+            <Button fx:id="botaoLogin" layoutX="1290.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
+               <font>
+                  <Font name="Oswald Medium" size="12.0" />
+               </font>
+            </Button>
+            <MenuButton fx:id="menuUsuario" layoutX="1290.0" layoutY="27.0" maxWidth="150" mnemonicParsing="false" prefWidth="150" styleClass="white_button" stylesheets="@../../css/style.css" visible="false">
+               <font>
+                  <Font name="Oswald Medium" size="12.0" />
+               </font>
+               <items>
+                  <MenuItem onAction="#onLogout" text="Logout" />
+                  <MenuItem text="Cancelar" />
+               </items>
+            </MenuButton>
+            <Text fx:id="botaoArbitro1" fill="WHITE" layoutX="937.0" layoutY="63.0" onMouseClicked="#irParaPartidas" strokeType="OUTSIDE" strokeWidth="0.0" text="Partidas" textAlignment="CENTER">
+               <font>
+                  <Font name="Oswald Medium" size="30.0" />
+               </font>
+            </Text>
          </children></AnchorPane>
   </content>
 </ScrollPane>

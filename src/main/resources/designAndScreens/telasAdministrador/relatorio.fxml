@@ -37,7 +37,7 @@
                     </children>
                 </StackPane>
 
-                <VBox layoutX="272.0" layoutY="40.0" spacing="2.0">
+                <VBox layoutX="272.0" layoutY="28.0" spacing="2.0">
                     <children>
                         <Text fx:id="botaoRelatorio" fill="WHITE" onMouseClicked="#irParaRelatorio" strokeType="OUTSIDE" strokeWidth="0.0" text="Relatórios" textAlignment="CENTER">
                             <font><Font name="Oswald Medium" size="30.0" /></font>
@@ -49,7 +49,7 @@
                 <Text fill="WHITE" layoutX="437.0" layoutY="64.0" onMouseClicked="#irParaEquipes" strokeType="OUTSIDE" strokeWidth="0.0" text="Equipes" textAlignment="CENTER">
                     <font><Font name="Oswald Medium" size="30.0" /></font>
                 </Text>
-                <Text fill="WHITE" layoutX="602.0" layoutY="64.0" onMouseClicked="#irParaClassificacao" strokeType="OUTSIDE" strokeWidth="0.0" text="Classificação" textAlignment="CENTER">
+                <Text fill="WHITE" layoutX="602.0" layoutY="64.0" onMouseClicked="#irParaPartidas" strokeType="OUTSIDE" strokeWidth="0.0" text="Partida" textAlignment="CENTER">
                     <font><Font name="Oswald Medium" size="30.0" /></font>
                 </Text>
                 <Text fill="WHITE" layoutX="807.0" layoutY="64.0" onMouseClicked="#irParaEstadios" strokeType="OUTSIDE" strokeWidth="0.0" text="Estádios" textAlignment="CENTER">

@@ -19,6 +19,12 @@ public class ControllerRelatorio {
         }
 
     @FXML
+    //Passa do Menu para a tela de grupos da copa 2026
+    private void irParaPartidas(MouseEvent e) {
+        SceneController.mudaDeTela( "/designAndScreens/telasPartidas/EscolhaPartida.fxml");
+    }
+
+    @FXML
     private void irParaRelatorio(MouseEvent e){
         SceneController.mudaDeTela("/designAndScreens/telaInicial/relatorio.fxml");
     }
