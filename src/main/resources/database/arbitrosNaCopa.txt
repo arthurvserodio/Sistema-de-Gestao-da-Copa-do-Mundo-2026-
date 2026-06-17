@@ -2,7 +2,6 @@ Raphael Claus;Brasil;5
 Wilton Sampaio;Brasil;5
 Ramon Abatti;Brasil;4
 Felix Zwayer;Alemanha;5
-Mustapha Ghorbal;Argélia;4
 Yael Falcon Perez;Argentina;5
 Facundo Tello;Argentina;4
 Dario Herrera;Argentina;3

@@ -74,12 +74,12 @@
             <Font name="Oswald Medium" size="30.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="615.0" layoutY="63.0" onMouseClicked="#irParaEstadios" strokeType="OUTSIDE" strokeWidth="0.0" text="Estádios" textAlignment="CENTER">
+      <Text fill="WHITE" layoutX="765.0" layoutY="63.0" onMouseClicked="#irParaEstadios" strokeType="OUTSIDE" strokeWidth="0.0" text="Estádios" textAlignment="CENTER">
          <font>
             <Font name="Oswald Medium" size="30.0" />
          </font>
       </Text>
-      <Text fx:id="botaoArbitro" fill="WHITE" layoutX="765.0" layoutY="63.0" onMouseClicked="#irParaArbitros" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER">
+      <Text fx:id="botaoArbitro" fill="WHITE" layoutX="937.0" layoutY="63.0" onMouseClicked="#irParaArbitros" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER">
          <font>
             <Font name="Oswald Medium" size="30.0" />
          </font>
@@ -89,7 +89,7 @@
             <Font name="Oswald Medium" size="12.0" />
          </font>
       </Button>
-      <Text fx:id="botaoArbitro1" fill="WHITE" layoutX="937.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Partidas" textAlignment="CENTER" underline="true">
+      <Text fx:id="botaoArbitro1" fill="WHITE" layoutX="615.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Partidas" textAlignment="CENTER" underline="true">
          <font>
             <Font name="Oswald Medium" size="30.0" />
          </font>
