@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
 
-<StackPane stylesheets="@../../css/styleCadastrarSelecao.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerCadastroSelecoes">
+<StackPane stylesheets="@../../css/styleCadastrarSelecao.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerCadastroSelecoes">
 
     <!-- Fundo principal -->
     <BorderPane style="-fx-background-color: #0d0d0d;">
@@ -61,19 +67,18 @@
                     <HBox spacing="15">
                         <VBox spacing="5">
                             <Label styleClass="label" text="Técnico" />
-                            <TextField />
+                            <TextField fx:id="tecnicoSelecaoCadastrada" />
                         </VBox>
                     </HBox>
 
                     <VBox spacing="5">
                         <Label styleClass="label" text="Escudo" />
-                        <Button styleClass="btn-outline" text="Upload imagem" onAction="#adicionarImagemDaSelecaoCadastrada"/>
+                        <Button onAction="#adicionarImagemDaSelecaoCadastrada" styleClass="btn-outline" text="Upload imagem" />
                     </VBox>
 
                     <!-- Botões -->
                     <HBox spacing="15">
-                        <Button styleClass="btn-secondary" text="Cancelar" />
-                        <Button styleClass="btn-primary" text="Salvar Seleção" onAction="#adicionarSelecao"/>
+                        <Button onAction="#adicionarSelecao" styleClass="btn-primary" text="Salvar Seleção" />
                         <Label fx:id="mensagemCamposIncompletos" layoutX="1072.0" layoutY="190.0" prefHeight="88.0" prefWidth="275.0" />
                     </HBox>
 
@@ -84,17 +89,11 @@
 
                     <Label style="-fx-text-fill: gold; -fx-font-size: 16px;" text="Pré-visualização" />
 
-                    <Circle radius="50" style="-fx-fill: #1e1e1e;" fx:id="visualizacaoImagemDaSelecaoCadastrada"/>
-
-                    <Label style="-fx-text-fill: white;" text="Nome da Seleção" />
+                    <Circle fx:id="visualizacaoImagemDaSelecaoCadastrada" radius="50" style="-fx-fill: #1e1e1e;" />
 
                     <Label style="-fx-text-fill: gold;" text="SIG" />
 
                     <Separator />
-
-
-                    <Label styleClass="preview-text" text="Grupo" />
-                    <Label styleClass="preview-text" text="Técnico" />
 
                 </VBox>
 

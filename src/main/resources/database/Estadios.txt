@@ -1,4 +1,3 @@
-SoFi Stadium;100000;Los Angeles
 MetLife Stadium;82500;East Rutherford
 AT&T Stadium;80000;Arlington
 Arrowhead Stadium;76000;Kansas City

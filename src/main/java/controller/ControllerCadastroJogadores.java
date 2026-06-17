@@ -74,6 +74,8 @@ public class ControllerCadastroJogadores {
             */
             nomeJogadorCadastrado.clear();
             idadeJogadorCadastrado.clear();
+            numeroCamisaJogadorCadastrado.clear();
+            posicaoJogadorCadastrado.setValue(null);
             selecaoJogadorCadastrado.setValue(null);
             lesionadoJogadorCadastrado.setSelected(false);
             suspensoJogadorCadastrado.setSelected(false);

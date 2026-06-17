@@ -80,12 +80,12 @@
                 <Font name="Oswald Medium" size="30.0" />
             </font>
         </Text>
-        <Text fill="WHITE" layoutX="602.0" layoutY="64.0" onMouseClicked="#irParaClassificacao" strokeType="OUTSIDE" strokeWidth="0.0" text="Classificação" textAlignment="CENTER">
+        <Text fill="WHITE" layoutX="602.0" layoutY="64.0" onMouseClicked="#irParaPartidas" strokeType="OUTSIDE" strokeWidth="0.0" text="Partida" textAlignment="CENTER">
             <font>
                 <Font name="Oswald Medium" size="30.0" />
             </font>
         </Text>
-        <Text fill="WHITE" layoutX="807.0" layoutY="64.0" onMouseClicked="#irParaEstadios" strokeType="OUTSIDE" strokeWidth="0.0" text="Estádios" textAlignment="CENTER">
+        <Text fill="WHITE" layoutX="769.0" layoutY="63.0" onMouseClicked="#irParaEstadios" strokeType="OUTSIDE" strokeWidth="0.0" text="Estádios" textAlignment="CENTER">
             <font>
                 <Font name="Oswald Medium" size="30.0" />
             </font>

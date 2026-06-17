@@ -65,7 +65,6 @@
 
         <!-- BOTÕES -->
         <HBox spacing="10">
-            <Button style="-fx-background-color: #2a2a2a; -fx-text-fill: white; -fx-background-radius: 8;" text="Cancelar" />
             <Button onAction="#adicionarJogador" style="-fx-background-color: #ffd700; -fx-text-fill: black; -fx-background-radius: 8;" text="Salvar Jogador" />
             <Label fx:id="mensagemCamposIncompletos" prefHeight="18.0" prefWidth="354.0" />
         </HBox>

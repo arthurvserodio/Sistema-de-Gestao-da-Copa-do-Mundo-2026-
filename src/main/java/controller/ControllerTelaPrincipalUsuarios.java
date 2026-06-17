@@ -28,10 +28,19 @@ public class ControllerTelaPrincipalUsuarios {
         SceneController.mudaDeTela( "/designAndScreens/telaInicial/equipesNaCopa.fxml");
     }
     @FXML
-    //Passa do Menu do usuario para a tela de escolha partida(maq. de estado + cadastro de partida)
-    private void irParaPartida(MouseEvent e) {
-        SceneController.mudaDeTela( "/designAndScreens/telasPartidas/EscolhaPartida.fxml");
+    //Passa do Menu para a tela de grupos da copa 2026
+    private void irParaPartidas(MouseEvent e) {
+
+        Usuario u = Sessao.getInstancia().getUsuarioLogado();
+        if( u == null || u.getFuncao() == Funcao.ARBITRO) {
+            SceneController.mudaDeTela("/designAndScreens/telasPartidas/mostraPartida.fxml");
+        }else {
+
+            SceneController.mudaDeTela("/designAndScreens/telasPartidas/EscolhaPartida.fxml");
+        }
+
     }
+
     @FXML
 
     private void irParaEstadios(MouseEvent e) {

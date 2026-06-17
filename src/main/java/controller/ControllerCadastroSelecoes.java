@@ -26,6 +26,7 @@ public class ControllerCadastroSelecoes {
     @FXML private TextField grupoSelecaoCadastrada;
     @FXML private TextField participacaoSelecaoCadastrada;
     @FXML private TextField titulosSelecaoCadastrada;
+    @FXML private TextField tecnicoSelecaoCadastrada;
     @FXML private Circle visualizacaoImagemDaSelecaoCadastrada;
     @FXML private Label mensagemCamposIncompletos;
 
@@ -40,8 +41,9 @@ public class ControllerCadastroSelecoes {
             String grupoSelecaoCadastradaString = grupoSelecaoCadastrada.getText();
             String participacaoSelecaoCadastradaString = participacaoSelecaoCadastrada.getText();
             String titulosSelecaoCadastradaString = titulosSelecaoCadastrada.getText();
+            String tecnicoSelecaoCadastradaString = tecnicoSelecaoCadastrada.getText();
 
-            if(nomeSelecaoCadastradaString.isEmpty() || rankingSelecaoCadastradaString.isEmpty() || grupoSelecaoCadastradaString.isEmpty() || participacaoSelecaoCadastradaString.isEmpty() || titulosSelecaoCadastradaString.isEmpty()){
+            if(nomeSelecaoCadastradaString.isEmpty() || rankingSelecaoCadastradaString.isEmpty() || grupoSelecaoCadastradaString.isEmpty() || participacaoSelecaoCadastradaString.isEmpty() || titulosSelecaoCadastradaString.isEmpty() || tecnicoSelecaoCadastradaString.isEmpty()){
                 throw new IllegalArgumentException("Todos os campos devem ser preenchidos");
             }
             Selecoes novaSelecao = new Selecoes(nomeSelecaoCadastradaString, grupoSelecaoCadastradaString, rankingSelecaoCadastradaString, participacaoSelecaoCadastradaString, titulosSelecaoCadastradaString);
@@ -56,6 +58,7 @@ public class ControllerCadastroSelecoes {
             grupoSelecaoCadastrada.clear();
             participacaoSelecaoCadastrada.clear();
             titulosSelecaoCadastrada.clear();
+            tecnicoSelecaoCadastrada.clear();
         }catch(IllegalArgumentException e){
             mostrarErro(e.getMessage());
         }
