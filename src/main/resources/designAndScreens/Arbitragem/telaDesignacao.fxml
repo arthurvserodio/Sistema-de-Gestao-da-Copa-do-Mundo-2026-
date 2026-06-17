@@ -80,12 +80,12 @@
                 <Font name="Oswald Medium" size="30.0" />
             </font>
         </Text>
-        <Text fill="WHITE" layoutX="602.0" layoutY="64.0" onMouseClicked="#irParaPartidas" strokeType="OUTSIDE" strokeWidth="0.0" text="Partida" textAlignment="CENTER">
+        <Text fill="WHITE" layoutX="937.0" layoutY="63.0" onMouseClicked="#irParaPartidas" strokeType="OUTSIDE" strokeWidth="0.0" text="Partidas" textAlignment="CENTER">
             <font>
                 <Font name="Oswald Medium" size="30.0" />
             </font>
         </Text>
-        <Text fill="WHITE" layoutX="769.0" layoutY="63.0" onMouseClicked="#irParaEstadios" strokeType="OUTSIDE" strokeWidth="0.0" text="Estádios" textAlignment="CENTER">
+        <Text fill="WHITE" layoutX="615.0" layoutY="63.0" onMouseClicked="#irParaEstadios" strokeType="OUTSIDE" strokeWidth="0.0" text="Estádios" textAlignment="CENTER">
             <font>
                 <Font name="Oswald Medium" size="30.0" />
             </font>
@@ -119,7 +119,7 @@
             </columnResizePolicy>
         </TableView>
         <TextField fx:id="buscar" layoutX="966.0" layoutY="192.0" prefHeight="36.0" prefWidth="193.0" style="-fx-background-color: #80808080;" styleClass="textfield_equipes" stylesheets="@../../css/style.css" />
-        <Text fill="WHITE" layoutX="947.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER" underline="true">
+        <Text fill="WHITE" layoutX="765.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Árbitros" textAlignment="CENTER" underline="true">
             <font>
                 <Font name="Oswald Medium" size="30.0" />
             </font>
