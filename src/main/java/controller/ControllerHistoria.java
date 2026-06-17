@@ -6,12 +6,18 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuButton;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import users.Sessao;
 import users.Usuario;
 
 public class ControllerHistoria {
+    @FXML
+    private AnchorPane root;
+    @FXML
+    private ScrollPane scrollPane;
     //Volta para a pagina inicial de menu clicando no logo da copa
     @FXML
     private void irPaginaInicial(MouseEvent e){
@@ -87,6 +93,9 @@ public class ControllerHistoria {
 
 
     public void initialize() {
+        Platform.runLater(() -> {root.requestFocus();
+            scrollPane.setVvalue(0);
+        });
         Usuario u = Sessao.getInstancia().getUsuarioLogado();
 
 

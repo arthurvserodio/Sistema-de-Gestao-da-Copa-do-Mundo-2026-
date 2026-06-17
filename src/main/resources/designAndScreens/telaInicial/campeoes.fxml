@@ -16,7 +16,7 @@
 
 <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerCampeoes">
   <content>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="4000.0" prefWidth="1424.0" styleClass="white" stylesheets="@../../css/style.css">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="1424.0" styleClass="white" stylesheets="@../../css/style.css">
          <children>
             <ImageView fitHeight="837.0" fitWidth="1369.0" layoutX="56.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -592,7 +592,7 @@
                   </ImageView>
                </children>
             </StackPane>
-            <Text fill="WHITE" layoutX="282.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="História" textAlignment="CENTER" underline="true">
+            <Text fill="WHITE" layoutX="282.0" layoutY="63.0" onMouseClicked="#irParaHistoria" strokeType="OUTSIDE" strokeWidth="0.0" text="História" textAlignment="CENTER" underline="true">
                <font>
                   <Font name="Oswald Medium" size="30.0" />
                </font>
