@@ -46,7 +46,7 @@
                         <Font name="Oswald Medium" size="30.0" />
                     </font>
                 </Text>
-                <Text fill="WHITE" layoutX="602.0" layoutY="64.0" onMouseClicked="#irParaPartida" strokeType="OUTSIDE" strokeWidth="0.0" text="Partida" textAlignment="CENTER">
+                <Text fill="WHITE" layoutX="602.0" layoutY="64.0" onMouseClicked="#irParaPartidas" strokeType="OUTSIDE" strokeWidth="0.0" text="Partida" textAlignment="CENTER">
                     <font>
                         <Font name="Oswald Medium" size="30.0" />
                     </font>
