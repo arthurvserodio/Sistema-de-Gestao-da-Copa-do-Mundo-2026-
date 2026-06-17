@@ -26,6 +26,7 @@ public class ControllerCadastroSelecoes {
     @FXML private TextField grupoSelecaoCadastrada;
     @FXML private TextField participacaoSelecaoCadastrada;
     @FXML private TextField titulosSelecaoCadastrada;
+    @FXML private TextField tecnicoSelecaoCadastrada;
     @FXML private Circle visualizacaoImagemDaSelecaoCadastrada;
     @FXML private Label mensagemCamposIncompletos;
 
@@ -56,6 +57,7 @@ public class ControllerCadastroSelecoes {
             grupoSelecaoCadastrada.clear();
             participacaoSelecaoCadastrada.clear();
             titulosSelecaoCadastrada.clear();
+            tecnicoSelecaoCadastrada.clear();
         }catch(IllegalArgumentException e){
             mostrarErro(e.getMessage());
         }

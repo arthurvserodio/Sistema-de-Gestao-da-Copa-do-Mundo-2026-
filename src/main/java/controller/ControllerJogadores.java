@@ -147,6 +147,7 @@ public class ControllerJogadores {
             return;
         }
 
+        System.out.println(jogadorSelecionado);
         jogadoresFile.getListaJogadores().remove(jogadorSelecionado);
         jogadoresFile.salvarNoTxt();
 
