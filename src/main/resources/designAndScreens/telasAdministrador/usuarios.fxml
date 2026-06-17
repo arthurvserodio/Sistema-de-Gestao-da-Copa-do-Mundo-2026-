@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerUsuarios">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerUsuarios">
     <children>
         <ImageView fitHeight="708.0" fitWidth="1445.0" layoutX="-5.0" layoutY="93.0" pickOnBounds="true">
             <image>
@@ -25,7 +35,7 @@
                 </ImageView>
             </children>
         </StackPane>
-        <Text fx:id="botaoRelatorio" fill="WHITE" layoutX="272.0" layoutY="64.0" onMouseClicked="#irParaRelatorio" strokeType="OUTSIDE" strokeWidth="0.0" text="Relatórios" textAlignment="CENTER" >
+        <Text fx:id="botaoRelatorio" fill="WHITE" layoutX="272.0" layoutY="64.0" onMouseClicked="#irParaRelatorio" strokeType="OUTSIDE" strokeWidth="0.0" text="Relatórios" textAlignment="CENTER">
             <font>
                 <Font name="Oswald Medium" size="30.0" />
             </font>
@@ -35,7 +45,7 @@
                 <Font name="Oswald Medium" size="30.0" />
             </font>
         </Text>
-        <Text fill="WHITE" layoutX="602.0" layoutY="64.0" onMouseClicked="#irParaClassificacao" strokeType="OUTSIDE" strokeWidth="0.0" text="Classificação" textAlignment="CENTER">
+        <Text fill="WHITE" layoutX="602.0" layoutY="64.0" onMouseClicked="#irParaPartida" strokeType="OUTSIDE" strokeWidth="0.0" text="Partida" textAlignment="CENTER">
             <font>
                 <Font name="Oswald Medium" size="30.0" />
             </font>
@@ -45,7 +55,7 @@
                 <Font name="Oswald Medium" size="30.0" />
             </font>
         </Text>
-        <Text fill="WHITE" layoutX="1107.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuários" underline="true" textAlignment="CENTER">
+        <Text fill="WHITE" layoutX="1107.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuários" textAlignment="CENTER" underline="true">
             <font>
                 <Font name="Oswald Medium" size="30.0" />
             </font>
@@ -56,12 +66,12 @@
             </font>
         </Button>
 
-        <MenuButton fx:id="menuUsuario" layoutX="1297.0" layoutY="27.0" mnemonicParsing="false" maxWidth="150" prefWidth="150" visible="false" styleClass="white_button" stylesheets="@../../css/style.css">
+        <MenuButton fx:id="menuUsuario" layoutX="1297.0" layoutY="27.0" maxWidth="150" mnemonicParsing="false" prefWidth="150" styleClass="white_button" stylesheets="@../../css/style.css" visible="false">
             <font>
                 <Font name="Oswald Medium" size="12.0" />
             </font>
             <items>
-                <MenuItem text="Logout" onAction="#onLogout" />
+                <MenuItem onAction="#onLogout" text="Logout" />
                 <MenuItem text="Cancelar" />
             </items>
         </MenuButton>
@@ -70,7 +80,7 @@
                 <Font name="Oswald Medium" size="30.0" />
             </font>
         </Text>
-        <HBox spacing="10.0" layoutX="347.0" layoutY="96.0" prefWidth="670.0" alignment="CENTER_LEFT" style="-fx-padding: 0 0 10 0;">
+        <HBox alignment="CENTER_LEFT" layoutX="347.0" layoutY="96.0" prefWidth="670.0" spacing="10.0" style="-fx-padding: 0 0 10 0;">
             <MenuButton fx:id="menuCriterios" text="Critérios">
                 <items>
                     <CheckMenuItem fx:id="checkNome" text="Nome" />
@@ -106,13 +116,12 @@
                 <URL value="@../../css/style3.css" />
             </stylesheets>
             <items>
-                <MenuItem text="Confirmar remover" onAction="#removerUsuario" />
+                <MenuItem onAction="#removerUsuario" text="Confirmar remover" />
                 <MenuItem text="Cancelar" />
             </items>
         </MenuButton>
 
-        <Button layoutX="550.0" layoutY="650.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="156.0"
-                styleClass="button-adicionar" text="Add" onAction="#irParaCadastrarUsuario">
+        <Button layoutX="550.0" layoutY="650.0" mnemonicParsing="false" onAction="#irParaCadastrarUsuario" prefHeight="40.0" prefWidth="156.0" styleClass="button-adicionar" text="Add">
             <font>
                 <Font name="Oswald Medium" size="12.0" />
             </font>
@@ -123,8 +132,7 @@
         </Button>
 
 
-        <Button fx:id="menuEditar" layoutX="724.0" layoutY="650.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="156.0"
-                styleClass="button-editar" text="Editar" onAction="#irParaEditarUsuario">
+        <Button fx:id="menuEditar" layoutX="724.0" layoutY="650.0" mnemonicParsing="false" onAction="#irParaEditarUsuario" prefHeight="40.0" prefWidth="156.0" styleClass="button-editar" text="Editar">
             <font>
                 <Font name="Oswald Medium" size="12.0" />
             </font>

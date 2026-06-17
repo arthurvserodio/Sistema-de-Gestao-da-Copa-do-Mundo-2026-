@@ -61,12 +61,19 @@ public class ControllerEquipes {
             menuUsuario.setText(u.getNome() );
             menuUsuario.setVisible(true);
             botaoLogin.setVisible(false);
-            if(u.getFuncao() == Funcao.ADMINISTRADOR || u.getFuncao() == Funcao.ORGANIZADOR){
+            if(u.getFuncao() == Funcao.ADMINISTRADOR ){
                 botaoUsuario.setVisible(true);
                 botaoCadastrarSelecao.setVisible(true);
                 botaoRemoverSelecao.setVisible(true);
                 botaoHistoria.setVisible(false);
                 botaoRelatorio.setVisible(true);
+            }
+            else if(u.getFuncao() == Funcao.ORGANIZADOR){
+                botaoUsuario.setVisible(false);
+                botaoRelatorio.setVisible(false);
+                botaoCadastrarSelecao.setVisible(true);
+                botaoRemoverSelecao.setVisible(true);
+                botaoHistoria.setVisible(false);
             }
         } else {
             botaoLogin.setVisible(true);

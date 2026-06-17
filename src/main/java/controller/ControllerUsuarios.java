@@ -113,6 +113,11 @@ public class ControllerUsuarios {
         SceneController.mudaDeTela( "/designAndScreens/telasAdministrador/telaPrincipalUsuarios.fxml");
     }
     @FXML
+    //Passa do Menu do usuario para a tela de escolha partida(maq. de estado + cadastro de partida)
+    private void irParaPartida(MouseEvent e) {
+        SceneController.mudaDeTela( "/designAndScreens/telasPartidas/EscolhaPartida.fxml");
+    }
+    @FXML
     private void irParaHistoria(MouseEvent e){
         SceneController.mudaDeTela("/designAndScreens/telaInicial/historia.fxml");
     }

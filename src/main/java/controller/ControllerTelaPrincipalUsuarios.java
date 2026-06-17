@@ -85,8 +85,6 @@ public class ControllerTelaPrincipalUsuarios {
     public void initialize() {
         Usuario u = Sessao.getInstancia().getUsuarioLogado();
 
-
-
         if (u != null) {
             menuUsuario.setText(u.getNome() );
             menuUsuario.setVisible(true);
@@ -94,6 +92,9 @@ public class ControllerTelaPrincipalUsuarios {
             if(u.getFuncao()== Funcao.ADMINISTRADOR){
                 botaoUsuario.setVisible(true);
                 botaoRelatorio.setVisible(true);
+                botaoHistoria.setVisible(false);
+            }
+            else if(u.getFuncao()== Funcao.ORGANIZADOR){
                 botaoHistoria.setVisible(false);
             }
         } else {

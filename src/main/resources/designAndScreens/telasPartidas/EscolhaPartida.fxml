@@ -80,7 +80,7 @@
             </ImageView>
          </children>
       </StackPane>
-      <Text fx:id="botaoHistoria" fill="WHITE" layoutX="282.0" layoutY="48.0" onMouseClicked="#irParaRelatorio" strokeType="OUTSIDE" strokeWidth="0.0" text="Relatórios" textAlignment="CENTER">
+      <Text fx:id="botaoHistoria" fill="WHITE" layoutX="282.0" layoutY="63.0" onMouseClicked="#irParaRelatorio" strokeType="OUTSIDE" strokeWidth="0.0" text="Relatórios" textAlignment="CENTER">
          <font>
             <Font name="Oswald Medium" size="30.0" />
          </font>
@@ -115,12 +115,12 @@
             <Font name="Oswald Medium" size="30.0" />
          </font>
       </Text>
-      <Button fx:id="botaoLogin" layoutX="1287.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
+      <Button fx:id="botaoLogin" layoutX="1290.0" layoutY="27.0" mnemonicParsing="false" onAction="#irParaLogin" styleClass="white_button" stylesheets="@../../css/style.css" text="Login">
          <font>
             <Font name="Oswald Medium" size="12.0" />
          </font>
       </Button>
-      <MenuButton fx:id="menuUsuario" layoutX="1287.0" layoutY="37.0" maxWidth="150" mnemonicParsing="false" prefWidth="150" styleClass="white_button" stylesheets="@../../css/style.css" visible="false">
+      <MenuButton fx:id="menuUsuario" layoutX="1287.0" layoutY="27.0" maxWidth="150" mnemonicParsing="false" prefWidth="150" styleClass="white_button" stylesheets="@../../css/style.css" visible="false">
          <font>
             <Font name="Oswald Medium" size="12.0" />
          </font>
