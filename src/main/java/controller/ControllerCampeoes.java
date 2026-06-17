@@ -1,5 +1,6 @@
 package controller;
 
+import Enums.Funcao;
 import builder.CampeoesBuilder;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -31,7 +32,6 @@ public class ControllerCampeoes {
     @FXML private Button botaoLogin;
     @FXML private MenuButton menuUsuario;
 
-
     //A lista erá usada para armazenar os campeoes lidos do arquivo
     private List<Campeoes> ListCampeoes = new ArrayList<>();
     @FXML
@@ -60,6 +60,19 @@ public class ControllerCampeoes {
     //Passa do Menu para a tela de grupos da copa 2026
     private void irParaPartidas(MouseEvent e) {
         SceneController.mudaDeTela( "/designAndScreens/telasPartidas/mostraPartida.fxml");
+    }
+    @FXML
+    private void irParaArbitros(MouseEvent e){
+        Usuario u = Sessao.getInstancia().getUsuarioLogado();
+        if( u == null) {
+            SceneController.mudaDeTela("/designAndScreens/Arbitragem/telaArbitroNormal.fxml");
+        }else {
+            if (u.getFuncao() != Funcao.ARBITRO) {
+                SceneController.mudaDeTela("/designAndScreens/Arbitragem/telaArbitroAdm.fxml");
+            } else {
+                SceneController.mudaDeTela("/designAndScreens/Arbitragem/telaDesignacao.fxml");
+            }
+        }
     }
     //Volta para a pagina inicial de menu clicando no logo da copa
     @FXML

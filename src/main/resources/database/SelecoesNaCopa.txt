@@ -1,0 +1,48 @@
+México;A;15;18;0
+Coreia do Sul;A;25;12;0
+África do Sul;A;60;4;0
+Tchéquia;A;41;8;0
+Canadá;B;30;3;0
+Suíça;B;19;13;0
+Catar;B;55;2;0
+Bósnia e Herzegovina;B;65;2;0
+Brasil;C;6;23;5
+Marrocos;C;8;7;0
+Escócia;C;43;9;0
+Haiti;C;83;2;0
+Estados Unidos;D;16;12;0
+Paraguai;D;40;9;0
+Austrália;D;27;7;0
+Turquia;D;22;3;0
+Alemanha;E;10;21;4
+Equador;E;23;5;0
+Costa do Marfim;E;34;4;0
+Curaçao;E;82;1;0
+Holanda;F;7;12;0
+Japão;F;18;8;0
+Tunísia;F;44;7;0
+Suécia;F;38;13;0
+Bélgica;G;9;15;0
+Egito;G;29;4;0
+Irã;G;21;7;0
+Nova Zelândia;G;85;3;0
+Espanha;H;2;17;1
+Uruguai;H;17;15;2
+Arábia Saudita;H;61;8;0
+Cabo Verde;H;69;1;0
+França;I;1;17;2
+Senegal;I;14;4;0
+Noruega;I;31;4;0
+Iraque;I;57;2;0
+Argentina;J;3;19;3
+Argélia;J;28;5;0
+Áustria;J;24;8;0
+Jordânia;J;63;1;0
+Portugal;K;5;9;0
+Colômbia;K;13;7;0
+Uzbequistão;K;50;1;0
+RD Congo;K;46;2;0
+Inglaterra;L;4;17;1
+Croácia;L;11;7;0
+Gana;L;74;5;0
+Panamá;L;33;2;0

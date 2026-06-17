@@ -1,6 +1,7 @@
 package controller;
 
 import Enums.Funcao;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -99,7 +100,6 @@ public class ControllerHistoria {
         } else {
             botaoLogin.setVisible(true);
             menuUsuario.setVisible(false);
-
         }
     }
 

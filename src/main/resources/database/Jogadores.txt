@@ -1,0 +1,1253 @@
+Kim Seung-gyu;34;Coreia do Sul;false;false;GOL;1
+Song Bum-keun;27;Coreia do Sul;false;false;GOL;12
+Jo Hyeon-woo;33;Coreia do Sul;false;false;GOL;21
+Kim Moon-hwan;30;Coreia do Sul;false;false;LD;2
+Kim Min-jae;28;Coreia do Sul;false;false;ZAG;3
+Kim Tae-hyeon;25;Coreia do Sul;false;false;ZAG;4
+Park Jin-seob;24;Coreia do Sul;false;false;ZAG;5
+Seol Young-woo;23;Coreia do Sul;false;false;ZAG;15
+Jens Castrop;24;Coreia do Sul;false;false;LD;22
+Lee Ki-hyuk;26;Coreia do Sul;false;false;LE;6
+Lee Tae-seok;27;Coreia do Sul;false;false;ZAG;13
+Leen Han-beom;24;Coreia do Sul;false;false;ZAG;16
+Cho Wi-je;23;Coreia do Sul;false;false;LE;23
+Kim Jin-gyu;26;Coreia do Sul;false;false;MC;8
+Bae Jun-ho;22;Coreia do Sul;false;false;MC;14
+Paik Seung-ho;29;Coreia do Sul;false;false;MC;7
+Yang Hyun-jun;22;Coreia do Sul;false;false;PE;17
+Eom Ji-sung;23;Coreia do Sul;false;false;MC;18
+Lee Kang-in;23;Coreia do Sul;false;false;PD;10
+Lee Dong-gyeong;29;Coreia do Sul;false;false;MC;9
+Lee Jae-sung;32;Coreia do Sul;false;false;MC;19
+Hwang In-beom;29;Coreia do Sul;false;false;MC;20
+Hwang Hee-chan;28;Coreia do Sul;false;false;ATA;11
+Son Heung-min;34;Coreia do Sul;false;false;ATA;7
+Oh Hyeong-yu;23;Coreia do Sul;false;false;ATA;24
+Cho Gue-sung;26;Coreia do Sul;false;false;ATA;25
+Carlos Acevedo;30;México;false;false;GOL;1
+Guillermo Ochoa;41;México;false;false;GOL;13
+Raúl Rangel;27;México;false;false;GOL;22
+César Montes;28;México;false;false;ZAG;3
+Edson Álvarez;27;México;false;false;MC;18
+Israel Reyes;25;México;false;false;LD;15
+Jesús Gallardo;30;México;false;false;LE;23
+Johan Vásquez;26;México;false;false;ZAG;5
+Jorge Sánchez;27;México;false;false;LD;2
+Mateo Chávez;22;México;false;false;ZAG;16
+Álvaro Fidalgo;28;México;false;false;MC;8
+Brian Gutiérrez;22;México;false;false;MC;20
+Luis Romo;29;México;false;false;MC;6
+Erik Lira;25;México;false;false;MC;14
+Gilberto Mora;23;México;false;false;MC;17
+Luis Chávez;28;México;false;false;MC;15
+Obed Vargas;21;México;false;false;MC;19
+Orbelín Pineda;29;México;false;false;MC;10
+Alexis Vega;28;México;false;false;ATA;11
+Armando González;24;México;false;false;ATA;25
+César Huerta;25;México;false;false;PE;21
+Guillermo Martínez;32;México;false;false;ATA;24
+Julián Quiñones;29;México;false;false;PE;26
+Raúl Jiménez;35;México;false;false;ATA;9
+Roberto Alvarado;26;México;false;false;PD;7
+Santiago Giménez;24;México;false;false;ATA;22
+Lukas Hornicek;25;Tchéquia;false;false;GOL;12
+Matej Kovar;25;Tchéquia;false;false;GOL;1
+Jindrich Stanek;31;Tchéquia;false;false;GOL;23
+Vladimir Coufal;32;Tchéquia;false;false;LD;2
+David Doudera;27;Tchéquia;false;false;LD;13
+Tomas Holes;31;Tchéquia;false;false;ZAG;5
+Robin Hranac;26;Tchéquia;false;false;ZAG;4
+Stepan Chaloupek;24;Tchéquia;false;false;ZAG;15
+David Jurasek;25;Tchéquia;false;false;LE;3
+Ladislav Krejcí;24;Tchéquia;false;false;ZAG;6
+Jaroslav Zeleny;23;Tchéquia;false;false;LE;16
+David Zima;25;Tchéquia;false;false;ZAG;14
+Lukas Cerv;27;Tchéquia;false;false;MC;8
+Vladimir Darida;34;Tchéquia;false;false;MC;10
+Lukas Provod;27;Tchéquia;false;false;MC;17
+Michal Sadilek;27;Tchéquia;false;false;MC;19
+Hugo Sochurek;22;Tchéquia;false;false;MC;20
+Alexandr Sojka;24;Tchéquia;false;false;MC;21
+Tomas Soucek;31;Tchéquia;false;false;MC;7
+Pavel Sulc;24;Tchéquia;false;false;PD;18
+Denis Visinsky;23;Tchéquia;false;false;MC;22
+Adam Hlozek;23;Tchéquia;false;false;ATA;11
+Tomas Chory;27;Tchéquia;false;false;ATA;24
+Mojmir Chytil;25;Tchéquia;false;false;ATA;25
+Patrik Schick;30;Tchéquia;false;false;ATA;9
+Jan Kuchta;28;Tchéquia;false;false;ATA;26
+Ronwen Williams;32;África do Sul;false;false;GOL;1
+Ricardo Goss;30;África do Sul;false;false;GOL;12
+Sipho Chaine;27;África do Sul;false;false;GOL;22
+Khuliso Mudau;27;África do Sul;false;false;LD;2
+Nkosinathi Sibisi;28;África do Sul;false;false;ZAG;5
+Ime Okon;25;África do Sul;false;false;ZAG;4
+Khulumani Ndamane;26;África do Sul;false;false;ZAG;13
+Aubrey Modiba;29;África do Sul;false;false;LE;3
+Samukelo Kabini;24;África do Sul;false;false;ZAG;16
+Thabang Matuludi;23;África do Sul;false;false;LD;14
+Olwethu Makhanya;25;África do Sul;false;false;LE;15
+Kamogelo Sebelebele;22;África do Sul;false;false;ZAG;17
+Bradley Cross;26;África do Sul;false;false;LE;6
+Mbekezeli Mbokazi;24;África do Sul;false;false;ZAG;18
+Teboho Mokoena;28;África do Sul;false;false;MC;8
+Thalente Mbatha;25;África do Sul;false;false;MC;19
+Sphephelo Sithole;24;África do Sul;false;false;MC;20
+Jayden Adams;24;África do Sul;false;false;MC;10
+Oswin Appollis;23;África do Sul;false;false;PD;21
+Iqraam Rayners;27;África do Sul;false;false;ATA;9
+Tshepang Moremi;23;África do Sul;false;false;ATA;23
+Relebohile Mofokeng;21;África do Sul;false;false;PE;11
+Evidence Makgopa;26;África do Sul;false;false;ATA;24
+Themba Zwane;33;África do Sul;false;false;ATA;7
+Lyle Foster;24;África do Sul;false;false;ATA;25
+Thapelo Maseko;30;África do Sul;false;false;PD;26
+Nikola Vasilj;29;Bósnia e Herzegovina;false;false;GOL;1
+Martin Zlomislic;27;Bósnia e Herzegovina;false;false;GOL;12
+Mladen Jurkas;25;Bósnia e Herzegovina;false;false;GOL;22
+Sead Kolasinac;31;Bósnia e Herzegovina;false;false;LE;5
+Amar Dedic;23;Bósnia e Herzegovina;false;false;LD;2
+Nihad Mujakic;25;Bósnia e Herzegovina;false;false;ZAG;4
+Nikola Katic;28;Bósnia e Herzegovina;false;false;ZAG;6
+Tarik Muharemovic;24;Bósnia e Herzegovina;false;false;ZAG;3
+Stjepan Radeljic;26;Bósnia e Herzegovina;false;false;ZAG;15
+Dennis Hadzikadunic;26;Bósnia e Herzegovina;false;false;ZAG;13
+Nidal Celik;24;Bósnia e Herzegovina;false;false;LD;16
+Amir Hadziahmetovic;25;Bósnia e Herzegovina;false;false;MC;8
+Ivan Sunjic;28;Bósnia e Herzegovina;false;false;MC;14
+Ivan Basic;26;Bósnia e Herzegovina;false;false;MC;17
+Dzenis Burnic;27;Bósnia e Herzegovina;false;false;MC;19
+Ermin Mahmic;24;Bósnia e Herzegovina;false;false;MC;20
+Benjamin Tahirovic;22;Bósnia e Herzegovina;false;false;MC;7
+Amar Memic;23;Bósnia e Herzegovina;false;false;MC;21
+Armin Gigovic;22;Bósnia e Herzegovina;false;false;MC;18
+Kerim Alajbegovic;23;Bósnia e Herzegovina;false;false;PD;10
+Esmir Bajraktrevic;21;Bósnia e Herzegovina;false;false;PE;11
+Ermedin Demirovic;27;Bósnia e Herzegovina;false;false;ATA;9
+Jovo Lukic;24;Bósnia e Herzegovina;false;false;ATA;23
+Samed Bazdar;25;Bósnia e Herzegovina;false;false;ATA;24
+Haris Tabakovic;28;Bósnia e Herzegovina;false;false;ATA;25
+Edin Dzeko;40;Bósnia e Herzegovina;false;false;ATA;26
+Maxime Crépeau;32;Canadá;false;false;GOL;1
+Owen Goodman;23;Canadá;false;false;GOL;12
+Dayne St. Clair;28;Canadá;false;false;GOL;18
+Zorhan Bassong;26;Canadá;false;false;ZAG;5
+Moïse Bombito;25;Canadá;false;false;ZAG;3
+Derek Cornelius;30;Canadá;false;false;ZAG;4
+Alphonso Davies;25;Canadá;false;false;LE;19
+Luc de Fougerolles;26;Canadá;false;false;ZAG;15
+Alistair Johnston;27;Canadá;false;false;LD;2
+Alfie Jones;27;Canadá;false;false;ZAG;16
+Jamie Knight-Lebel;24;Canadá;false;false;ZAG;13
+Richie Laryea;31;Canadá;false;false;LD;22
+Ralph Priso;25;Canadá;false;false;ZAG;14
+Niko Sigur;23;Canadá;false;false;MC;17
+Joel Waterman;28;Canadá;false;false;ZAG;6
+Ali Ahmed;22;Canadá;false;false;MC;20
+Tajon Buchanan;26;Canadá;false;false;PD;11
+Mathieu Choinière;24;Canadá;false;false;PE;21
+Stephen Eustáquio;27;Canadá;false;false;MC;7
+Jayden Nelson;23;Canadá;false;false;PE;23
+Ismael Koné;23;Canadá;false;false;MC;8
+Liam Millar;25;Canadá;false;false;ATA;24
+Jonathan Osorio;33;Canadá;false;false;MC;9
+Nathan-Dylan Saliba;22;Canadá;false;false;MC;25
+Jacob Shaffelburg;25;Canadá;false;false;ATA;26
+Jonathan David;25;Canadá;false;false;ATA;10
+Promise David;23;Canadá;false;false;ATA;27
+Daniel Jebbison;22;Canadá;false;false;ATA;28
+Cyle Larin;30;Canadá;false;false;ATA;29
+Tani Oluwaseyi;23;Canadá;false;false;ATA;30
+Jacen Russell-Rowe;22;Canadá;false;false;ATA;31
+Salah Zakaria;31;Catar;false;false;GOL;1
+Meshaal Barsham;27;Catar;false;false;GOL;12
+Mahmoud Abunada;25;Catar;false;false;GOL;21
+Pedro Miguel;30;Catar;false;false;LE;3
+Sultan Al Brake;28;Catar;false;false;ZAG;5
+Al-Hashmi Al-Hussain;25;Catar;false;false;ZAG;4
+Ayoub Al-Alawi;23;Catar;false;false;LD;2
+Issa Laye;26;Catar;false;false;ZAG;6
+Lucas Mendes;30;Catar;false;false;ZAG;13
+Mohammed Waad;24;Catar;false;false;LD;15
+Niall Mason;29;Catar;false;false;LD;14
+Ahmed Fathi;27;Catar;false;false;MC;16
+Jassim Gaber;25;Catar;false;false;MC;8
+Assim Madibo;27;Catar;false;false;MC;17
+Abdulaziz Hatem;34;Catar;false;false;MC;7
+Karim Boudiaf;33;Catar;false;false;MC;18
+Mohammed Mannai;26;Catar;false;false;MC;19
+Almoez Ali;28;Catar;false;false;ATA;19
+Akram Afif;28;Catar;false;false;PE;11
+Tahsin Mohammed;23;Catar;false;false;ATA;20
+Edmílson Junior;30;Catar;false;false;ATA;22
+Ahmed Alaa;24;Catar;false;false;ATA;23
+Hassan Al-Haydos;33;Catar;false;false;PD;10
+Mubarak Shannan;26;Catar;false;false;MC;24
+Mohammed Muntari;29;Catar;false;false;ATA;9
+Yusuf Abdurisag;23;Catar;false;false;ATA;25
+Marvin Keller;26;Suíça;false;false;GOL;12
+Gregor Kobel;28;Suíça;false;false;GOL;1
+Yvon Mvogo;30;Suíça;false;false;GOL;21
+Manuel Akanji;30;Suíça;false;false;ZAG;5
+Auréle Amenda;23;Suíça;false;false;ZAG;6
+Eray Comert;28;Suíça;false;false;ZAG;4
+Nico Elvedi;28;Suíça;false;false;ZAG;3
+Luca Jaquez;26;Suíça;false;false;LD;2
+Miro Muheim;27;Suíça;false;false;LE;13
+Ricardo Rodriguez;32;Suíça;false;false;LE;13
+Silvan Widmer;32;Suíça;false;false;LD;14
+Michael Aebischer;28;Suíça;false;false;MC;8
+Zeki Amdouni;25;Suíça;false;false;MC;15
+Remo Freuler;33;Suíça;false;false;MC;7
+Ardon Jashari;22;Suíça;false;false;MC;20
+Johan Mazambi;23;Suíça;false;false;MC;17
+Fabian Rieder;22;Suíça;false;false;MC;19
+Djibril Sow;27;Suíça;false;false;MC;9
+Granit Xhaka;33;Suíça;false;false;MC;10
+Denis Zakaria;27;Suíça;false;false;MC;18
+Breel Embolo;28;Suíça;false;false;ATA;10
+Christian Fassnacht;31;Suíça;false;false;PD;22
+Cedric Itten;28;Suíça;false;false;ATA;23
+Dan Ndoye;24;Suíça;false;false;PE;11
+Noah Okafor;25;Suíça;false;false;ATA;24
+Ruben Vargas;26;Suíça;false;false;PE;25
+Alisson;33;Brasil;false;false;GOL;1
+Ederson;32;Brasil;false;false;GOL;23
+Weverton;38;Brasil;false;false;GOL;12
+Alex Sandro;35;Brasil;false;false;LE;6
+Bremer;27;Brasil;false;false;ZAG;4
+Danilo;33;Brasil;false;false;LD;2
+Douglas Santos;30;Brasil;false;false;LE;16
+Gabriel Magalhães;27;Brasil;false;false;ZAG;3
+Ibañez;27;Brasil;false;false;ZAG;13
+Leo Pereira;29;Brasil;false;false;ZAG;14
+Marquinhos;31;Brasil;false;false;ZAG;5
+Bruno Guimarães;27;Brasil;false;false;MC;8
+Casemiro;34;Brasil;false;false;MC;5
+Danilo Santos;24;Brasil;false;false;MC;17
+Fabinho;32;Brasil;false;false;MC;15
+Lucas Paquetá;28;Brasil;false;false;MC;10
+Éderson;26;Brasil;false;false;MC;18
+Endrick;19;Brasil;false;false;ATA;9
+Gabriel Martinelli;24;Brasil;false;false;PE;11
+Igor Thiago;24;Brasil;false;false;ATA;19
+Luiz Henrique;24;Brasil;false;false;ATA;20
+Matheus Cunha;26;Brasil;false;false;ATA;21
+Neymar;34;Brasil;false;false;PE;10
+Raphinha;28;Brasil;false;false;PD;22
+Rayan;19;Brasil;false;false;ATA;24
+Vinicius Junior;25;Brasil;false;false;PE;7
+Craig Gordon;42;Escócia;false;false;GOL;1
+Angus Gunn;29;Escócia;false;false;GOL;12
+Liam Kelly;33;Escócia;false;false;GOL;22
+Grant Hanley;35;Escócia;false;false;ZAG;5
+Jack Hendry;30;Escócia;false;false;ZAG;6
+Aaron Hickey;23;Escócia;false;false;LD;2
+Dom Hyam;29;Escócia;false;false;ZAG;15
+Scott McKenna;31;Escócia;false;false;ZAG;4
+Nathan Patterson;24;Escócia;false;false;LD;14
+Anthony Ralston;26;Escócia;false;false;LD;13
+Andy Robertson;32;Escócia;false;false;LE;3
+John Souttar;29;Escócia;false;false;ZAG;16
+Kieran Tierney;29;Escócia;false;false;LE;17
+Ryan Christie;30;Escócia;false;false;PD;19
+Findlay Curtis;22;Escócia;false;false;PD;20
+Lewis Ferguson;27;Escócia;false;false;MC;8
+Ben Gannon-Doak;21;Escócia;false;false;PD;21
+Tyler Fletcher;22;Escócia;false;false;MC;23
+John McGinn;31;Escócia;false;false;MC;7
+Kenny McLean;33;Escócia;false;false;MC;18
+Scott McTominay;27;Escócia;false;false;MC;10
+Che Adams;29;Escócia;false;false;ATA;9
+Lyndon Dykes;29;Escócia;false;false;ATA;24
+George Hirst;25;Escócia;false;false;ATA;25
+Lawrence Shankland;30;Escócia;false;false;ATA;11
+Ross Stewart;29;Escócia;false;false;ATA;26
+Johnny Placide;37;Haiti;false;false;GOL;1
+Alexandre Pierre;29;Haiti;false;false;GOL;12
+Josué Duverger;26;Haiti;false;false;GOL;22
+Carlens Arcus;28;Haiti;false;false;ZAG;5
+Wilguens Pauguain;30;Haiti;false;false;LE;3
+Duke Lacroix;27;Haiti;false;false;ZAG;4
+Martin Experience;25;Haiti;false;false;ZAG;6
+JK Duverne;26;Haiti;false;false;LD;2
+Ricardo Ade;27;Haiti;false;false;ZAG;13
+Hannes Delcroix;27;Haiti;false;false;ZAG;15
+Keeto Thermoncy;24;Haiti;false;false;LD;14
+Leverton Pierre;28;Haiti;false;false;MC;8
+Carl-Fred Sainthe;26;Haiti;false;false;MC;17
+Jean-Jacques Danley;27;Haiti;false;false;MC;16
+Jeanricner Bellegarde;23;Haiti;false;false;MC;7
+Pierre Woodenski;25;Haiti;false;false;MC;19
+Dominique Simon;28;Haiti;false;false;MC;18
+Louicius Deedson;26;Haiti;false;false;ATA;20
+Ruben Providence;25;Haiti;false;false;ATA;21
+Josué Casimir;24;Haiti;false;false;ATA;23
+Derrick Etienne;30;Haiti;false;false;PD;11
+Wilson Isidor;25;Haiti;false;false;ATA;24
+Duckens Nazon;32;Haiti;false;false;ATA;9
+Frantzdy Pierrot;32;Haiti;false;false;ATA;25
+Yassin Fortune;23;Haiti;false;false;ATA;26
+Lenny Joseph;24;Haiti;false;false;ATA;10
+Yassine Bounou;34;Marrocos;false;false;GOL;1
+Munir El Kajoui;31;Marrocos;false;false;GOL;16
+Ahmed Reda Tagnaouti;29;Marrocos;false;false;GOL;23
+Achraf Hakimi;27;Marrocos;false;false;LD;2
+Noussair Mazraoui;27;Marrocos;false;false;LD;12
+Anass Salah-Eddine;25;Marrocos;false;false;LE;15
+Youssef Belammari;24;Marrocos;false;false;LE;22
+Nayef Aguerd;28;Marrocos;false;false;ZAG;5
+Issa Diop;28;Marrocos;false;false;ZAG;4
+Chadi Riad;23;Marrocos;false;false;ZAG;3
+Redouane Halhal;24;Marrocos;false;false;LE;14
+Zakaria El Ouahdi;24;Marrocos;false;false;LD;13
+Azzedine Ounahi;25;Marrocos;false;false;MC;8
+Neil El Aynaoui;24;Marrocos;false;false;MC;19
+Sofyan Amrabat;29;Marrocos;false;false;MC;6
+Ayoub Bouaddi;19;Marrocos;false;false;MC;20
+Samir El Mourabet;24;Marrocos;false;false;MC;17
+Bilal El Khannouss;21;Marrocos;false;false;MC;7
+Ismaël Saibari;23;Marrocos;false;false;MC;18
+Brahim Díaz;26;Marrocos;false;false;PD;10
+Abdessamad Ezzalzouli;24;Marrocos;false;false;PE;11
+Yassine Bessime;23;Marrocos;false;false;ATA;21
+Chemsdine Talbi;21;Marrocos;false;false;ATA;22
+Soufiane Rahimi;28;Marrocos;false;false;ATA;9
+Ayoub El Kaabi;28;Marrocos;false;false;ATA;23
+Ayoub Amahount;22;Marrocos;false;false;ATA;24
+Patrick Beach;26;Austrália;false;false;GOL;12
+Paul Izzo;34;Austrália;false;false;GOL;22
+Maty Ryan;33;Austrália;false;false;GOL;1
+Aziz Behich;34;Austrália;false;false;LE;5
+Jordan Bos;27;Austrália;false;false;LE;3
+Cameron Burgess;30;Austrália;false;false;ZAG;4
+Alessandro Circati;24;Austrália;false;false;ZAG;15
+Milos Degenek;32;Austrália;false;false;ZAG;6
+Jason Geria;26;Austrália;false;false;LD;2
+Lucas Herrington;24;Austrália;false;false;ZAG;16
+Jacob Italiano;23;Austrália;false;false;ZAG;13
+Harry Souttar;27;Austrália;false;false;ZAG;14
+Kai Trewin;22;Austrália;false;false;ZAG;17
+Cameron Devlin;28;Austrália;false;false;MC;7
+Ajdin Hrustic;28;Austrália;false;false;MC;8
+Jackson Irvine;32;Austrália;false;false;MC;18
+Connor Metcalfe;25;Austrália;false;false;MC;19
+Paul Okon-Engstler;22;Austrália;false;false;MC;20
+Aiden O'Neill;29;Austrália;false;false;MC;10
+Nestory Irankunda;19;Austrália;false;false;ATA;21
+Mathew Leckie;35;Austrália;false;false;PD;11
+Awer Mabil;30;Austrália;false;false;PE;9
+Mohamed Toure;23;Austrália;false;false;ATA;22
+Nishan Velupillay;24;Austrália;false;false;ATA;23
+Cristian Volpato;23;Austrália;false;false;MC;24
+Tete Yengi;26;Austrália;false;false;ATA;25
+Chris Brady;24;Estados Unidos;false;false;GOL;12
+Matt Freese;28;Estados Unidos;false;false;GOL;22
+Matt Turner;31;Estados Unidos;false;false;GOL;1
+Alex Freeman;24;Estados Unidos;false;false;LD;2
+Antonee Robinson;28;Estados Unidos;false;false;LE;5
+Auston Trusty;28;Estados Unidos;false;false;ZAG;4
+Chris Richards;25;Estados Unidos;false;false;ZAG;3
+Mark McKenzie;25;Estados Unidos;false;false;ZAG;14
+Max Arfsten;23;Estados Unidos;false;false;LD;15
+Sergiño Dest;26;Estados Unidos;false;false;LD;2
+Tim Ream;37;Estados Unidos;false;false;ZAG;13
+Miles Robinson;29;Estados Unidos;false;false;ZAG;6
+Joe Scally;24;Estados Unidos;false;false;LD;16
+Brenden Aaronson;26;Estados Unidos;false;false;MC;11
+Cristian Roldan;30;Estados Unidos;false;false;MC;18
+Gio Reyna;23;Estados Unidos;false;false;MC;7
+Malik Tillman;24;Estados Unidos;false;false;MC;17
+Tyler Adams;26;Estados Unidos;false;false;MC;4
+Weston McKennie;27;Estados Unidos;false;false;MC;8
+Alex Zendejas;28;Estados Unidos;false;false;PD;19
+Christian Pulisic;27;Estados Unidos;false;false;PE;10
+Folarin Balogun;23;Estados Unidos;false;false;ATA;9
+Haji Wright;27;Estados Unidos;false;false;ATA;20
+Ricardo Pepi;23;Estados Unidos;false;false;ATA;21
+Tim Weah;25;Estados Unidos;false;false;PD;22
+Orlando Gill;29;Paraguai;false;false;GOL;1
+Gatito Fernández;36;Paraguai;false;false;GOL;23
+Gastón Olveira;29;Paraguai;false;false;GOL;12
+Juan José Cáceres;29;Paraguai;false;false;LD;2
+José Canale;26;Paraguai;false;false;ZAG;15
+Fabián Balbuena;33;Paraguai;false;false;ZAG;3
+Omar Alderete;27;Paraguai;false;false;ZAG;4
+Gustavo Gómez;32;Paraguai;false;false;ZAG;5
+Alexandro Maidana;28;Paraguai;false;false;LE;6
+Junior Alonso;32;Paraguai;false;false;ZAG;13
+Gustavo Velázquez;26;Paraguai;false;false;ZAG;16
+Braian Ojeda;24;Paraguai;false;false;MC;20
+Damián Bobadilla;26;Paraguai;false;false;MC;8
+Andrés Cubas;28;Paraguai;false;false;MC;19
+Diego Gómez Gómez;24;Paraguai;false;false;MC;7
+Alejandro Romero Gamarra;31;Paraguai;false;false;PD;17
+Mauricio Prado;25;Paraguai;false;false;MC;18
+Matías Galarza;24;Paraguai;false;false;MC;21
+Ramón Sosa;25;Paraguai;false;false;PE;11
+Gustavo Caballero;27;Paraguai;false;false;MC;22
+Miguel Almirón;32;Paraguai;false;false;MC;10
+Gabriel Ávalos;28;Paraguai;false;false;ATA;24
+Isidro Pitta;26;Paraguai;false;false;ATA;25
+Álex Arce;30;Paraguai;false;false;ATA;26
+Julio Enciso;22;Paraguai;false;false;ATA;9
+Antonio Sanabria;30;Paraguai;false;false;ATA;27
+Altay Bayindir;27;Turquia;false;false;GOL;1
+Mert Günok;36;Turquia;false;false;GOL;23
+Ugurcan Cakir;29;Turquia;false;false;GOL;12
+Abdulkerim Bardakci;29;Turquia;false;false;ZAG;5
+Caglar Soyuncu;30;Turquia;false;false;ZAG;4
+Eren Elmalı;26;Turquia;false;false;LE;3
+Ferdi Kadıoglu;28;Turquia;false;false;LE;6
+Merih Demiral;27;Turquia;false;false;ZAG;3
+Mert Müldür;28;Turquia;false;false;LD;2
+Ozan Kabak;26;Turquia;false;false;ZAG;15
+Samet Akaydin;30;Turquia;false;false;ZAG;13
+Zeki Celik;29;Turquia;false;false;LD;14
+Hakan Calhanoglu;32;Turquia;false;false;MC;10
+Ismail Yuksek;25;Turquia;false;false;MC;8
+Kaan Ayhan;30;Turquia;false;false;MC;16
+Orkun Kökçü;25;Turquia;false;false;MC;7
+Salih Ozcan;27;Turquia;false;false;MC;17
+Arda Güler;20;Turquia;false;false;PD;11
+Barış Alper Yılmaz;26;Turquia;false;false;PE;21
+Can Uzun;20;Turquia;false;false;ATA;9
+Deniz Gül;26;Turquia;false;false;ATA;22
+Irfan Can Kahveci;29;Turquia;false;false;MC;18
+Kenan Yildiz;20;Turquia;false;false;ATA;19
+Kerem Aktürkoglu;27;Turquia;false;false;ATA;11
+Oguz Aydin;23;Turquia;false;false;ATA;23
+Yunus Akgun;25;Turquia;false;false;ATA;24
+Oliver Baumann;35;Alemanha;false;false;GOL;12
+Manuel Neuer;40;Alemanha;false;false;GOL;1
+Alexander Nubel;29;Alemanha;false;false;GOL;22
+Waldemar Anton;29;Alemanha;false;false;ZAG;5
+Nathaniel Brown;22;Alemanha;false;false;LD;2
+Pascal Grob;22;Alemanha;false;false;ZAG;15
+Joshua Kimmich;31;Alemanha;false;false;LD;6
+Felix Nmecha;25;Alemanha;false;false;MC;20
+Aleksandar Pavlovic;21;Alemanha;false;false;MC;21
+David Raum;28;Alemanha;false;false;LE;3
+Antonio Rudiger;33;Alemanha;false;false;ZAG;4
+Nico Schlotterbeck;26;Alemanha;false;false;ZAG;14
+Angelo Stiller;24;Alemanha;false;false;MC;19
+Jonathan Tah;30;Alemanha;false;false;ZAG;13
+Malick Thiaw;24;Alemanha;false;false;ZAG;16
+Nadiem Amiri;29;Alemanha;false;false;MC;17
+Maximilian Beier;23;Alemanha;false;false;ATA;23
+Leon Goretzka;31;Alemanha;false;false;MC;8
+Kai Havertz;27;Alemanha;false;false;ATA;7
+Assan Ouédraogo;19;Alemanha;false;false;MC;18
+Jamie Leweling;24;Alemanha;false;false;PD;11
+Jamal Musiala;23;Alemanha;false;false;MC;10
+Leroy Sané;30;Alemanha;false;false;PE;19
+Deniz Undav;29;Alemanha;false;false;ATA;24
+Florian Wirtz;23;Alemanha;false;false;MC;22
+Nick Woltemade;23;Alemanha;false;false;ATA;25
+Yahia Fofana;30;Costa do Marfim;false;false;GOL;1
+Mohamed Koné;25;Costa do Marfim;false;false;GOL;12
+Alban Lafont;27;Costa do Marfim;false;false;GOL;23
+Emmanuel Agbadou;28;Costa do Marfim;false;false;ZAG;5
+Christopher Opéri;25;Costa do Marfim;false;false;ZAG;4
+Ousmane Diomande;23;Costa do Marfim;false;false;ZAG;3
+Guéla Doué;27;Costa do Marfim;false;false;LD;2
+Ghislain Konan;30;Costa do Marfim;false;false;LE;6
+Odilon Kossounou;25;Costa do Marfim;false;false;ZAG;13
+Evan Ndicka;25;Costa do Marfim;false;false;ZAG;14
+Wilfried Singo;24;Costa do Marfim;false;false;LD;15
+Seko Fofana;30;Costa do Marfim;false;false;MC;8
+Parfait Guiagon;24;Costa do Marfim;false;false;MC;16
+Christ Inao Oulaï;22;Costa do Marfim;false;false;MC;17
+Franck Kessié;30;Costa do Marfim;false;false;MC;7
+Ibrahim Sangaré;27;Costa do Marfim;false;false;MC;18
+Jean Michaël Seri;32;Costa do Marfim;false;false;MC;10
+Simon Adingra;23;Costa do Marfim;false;false;PE;11
+Ange-Yoan Bonny;21;Costa do Marfim;false;false;ATA;19
+Amad Diallo;23;Costa do Marfim;false;false;PD;20
+Oumar Diakité;25;Costa do Marfim;false;false;ATA;21
+Yan Diomande;20;Costa do Marfim;false;false;ATA;22
+Evann Guessand;24;Costa do Marfim;false;false;ATA;23
+Nicolas Pépé;30;Costa do Marfim;false;false;PD;24
+Bazoumana Touré;21;Costa do Marfim;false;false;ATA;25
+Elye Wahi;23;Costa do Marfim;false;false;ATA;9
+Tyrick Bodak;27;Curaçao;false;false;GOL;12
+Trevor Doornbusch;29;Curaçao;false;false;GOL;22
+Eloy Room;33;Curaçao;false;false;GOL;1
+Riechedly Bazoer;29;Curaçao;false;false;ZAG;5
+Joshua Brenet;32;Curaçao;false;false;LD;2
+Sherel Floranus;28;Curaçao;false;false;LE;3
+Deveron Fonville;27;Curaçao;false;false;ZAG;4
+Juriën Gaari;26;Curaçao;false;false;ZAG;6
+Armando Obispo;26;Curaçao;false;false;ZAG;13
+Shurandy Sambo;27;Curaçao;false;false;ZAG;15
+Roshon van Eijma;25;Curaçao;false;false;LD;14
+Juninho Bacuna;28;Curaçao;false;false;MC;8
+Leandro Bacuna;34;Curaçao;false;false;MC;7
+Livano Comenencia;25;Curaçao;false;false;MC;16
+Kevin Felida;26;Curaçao;false;false;MC;17
+Arjany Martha;29;Curaçao;false;false;MC;18
+Tyrese Noslin;27;Curaçao;false;false;MC;20
+Godfried Roemeratoe;29;Curaçao;false;false;MC;19
+Jeremy Antonisse;25;Curaçao;false;false;ATA;21
+Tahith Chong;27;Curaçao;false;false;PD;10
+Kenji Gorre;29;Curaçao;false;false;PE;11
+Sontje Hansen;24;Curaçao;false;false;ATA;22
+Gervane Kastaneer;30;Curaçao;false;false;ATA;9
+Brandley Kuwas;32;Curaçao;false;false;PE;23
+Jürgen Locadia;32;Curaçao;false;false;ATA;24
+Jearl Margaritha;28;Curaçao;false;false;ATA;25
+Hernán Galíndez;37;Equador;false;false;GOL;1
+Moisés Ramírez;28;Equador;false;false;GOL;12
+Gonzalo Valle;26;Equador;false;false;GOL;22
+Piero Hincapie;24;Equador;false;false;ZAG;3
+Willian Pacho;23;Equador;false;false;ZAG;4
+Pervis Estupinan;27;Equador;false;false;LE;7
+Felix Torres;29;Equador;false;false;ZAG;5
+Joel Ordonez;21;Equador;false;false;ZAG;15
+Jackson Porozo;25;Equador;false;false;ZAG;13
+Angelo Preciado;28;Equador;false;false;LD;2
+Moises Caicedo;23;Equador;false;false;MC;10
+Alan Franco;28;Equador;false;false;MC;8
+Kendry Paez;18;Equador;false;false;MC;20
+Pedro Vite;24;Equador;false;false;MC;14
+Jordy Alcivar;26;Equador;false;false;MC;16
+Denil Castillo;24;Equador;false;false;MC;17
+Yaimar Medina;30;Equador;false;false;MC;6
+Enner Valencia;36;Equador;false;false;ATA;13
+Gonzalo Plata;24;Equador;false;false;PD;11
+Alan Minda;25;Equador;false;false;ATA;21
+John Yeboah;25;Equador;false;false;PE;22
+Kevin Rodriguez;27;Equador;false;false;ATA;9
+Jordy Caicedo;30;Equador;false;false;ATA;23
+Nilson Angulo;25;Equador;false;false;PE;18
+Anthony Valencia;24;Equador;false;false;ATA;24
+Jeremy Arevalo;23;Equador;false;false;ATA;25
+Mark Flekken;32;Holanda;false;false;GOL;12
+Robin Roefs;26;Holanda;false;false;GOL;22
+Bart Verbruggen;23;Holanda;false;false;GOL;1
+Nathan Aké;31;Holanda;false;false;ZAG;5
+Denzel Dumfries;29;Holanda;false;false;LD;2
+Jorrel Hato;20;Holanda;false;false;LE;3
+Jan Paul van Hecke;25;Holanda;false;false;ZAG;4
+Micky van de Ven;24;Holanda;false;false;ZAG;6
+Virgil van Dijk;35;Holanda;false;false;ZAG;4
+Lutsharel Geertruida;25;Holanda;false;false;LD;14
+Frenkie de Jong;29;Holanda;false;false;MC;21
+Marten de Roon;35;Holanda;false;false;MC;15
+Ryan Gravenberch;23;Holanda;false;false;MC;8
+Teun Koopmeiners;28;Holanda;false;false;MC;7
+Tijjani Reijnders;27;Holanda;false;false;MC;17
+Guus Til;28;Holanda;false;false;MC;16
+Quinten Timber;23;Holanda;false;false;MC;18
+Mats Wieffer;25;Holanda;false;false;MC;19
+Brian Brobbey;24;Holanda;false;false;ATA;9
+Memphis Depay;32;Holanda;false;false;ATA;10
+Cody Gakpo;26;Holanda;false;false;PE;11
+Justin Kluivert;28;Holanda;false;false;PE;20
+Noa Lang;27;Holanda;false;false;PE;23
+Donyell Malen;27;Holanda;false;false;PD;22
+Crysencio Summerville;24;Holanda;false;false;PE;24
+Wout Weghorst;33;Holanda;false;false;ATA;25
+Zion Suzuki;23;Japão;false;false;GOL;1
+Keisuke Osako;27;Japão;false;false;GOL;12
+Tomoki Hayakawa;26;Japão;false;false;GOL;22
+Hiroki Ito;26;Japão;false;false;ZAG;5
+Junnosuke Suzuki;22;Japão;false;false;ZAG;15
+Ayumu Seko;25;Japão;false;false;LD;14
+Shogo Taniguchi;33;Japão;false;false;ZAG;3
+Tsuyoshi Watanabe;29;Japão;false;false;ZAG;4
+Ko Itakura;28;Japão;false;false;ZAG;13
+Takehiro Tomiyasu;27;Japão;false;false;LD;2
+Yukinari Sugawara;25;Japão;false;false;LD;16
+Yuto Nagatomo;40;Japão;false;false;LE;5
+Daichi Kamada;29;Japão;false;false;MC;10
+Ao Tanaka;26;Japão;false;false;MC;8
+Kaishu Sano;24;Japão;false;false;MC;17
+Wataru Endo;32;Japão;false;false;MC;7
+Keito Nakamura;24;Japão;false;false;PD;18
+Daizen Maeda;27;Japão;false;false;ATA;19
+Ritsu Doan;27;Japão;false;false;PE;9
+Yuito Suzuki;23;Japão;false;false;MC;20
+Junya Ito;32;Japão;false;false;PD;11
+Ayase Ueda;27;Japão;false;false;ATA;21
+Koki Ogawa;26;Japão;false;false;ATA;22
+Kento Shiogai;23;Japão;false;false;ATA;23
+Keisuke Goto;21;Japão;false;false;ATA;24
+Takefusa Kubo;24;Japão;false;false;MC;25
+Kristoffer Nordfeldt;35;Suécia;false;false;GOL;1
+Viktor Johansson;28;Suécia;false;false;GOL;12
+Jacob Widell Zetterstrom;24;Suécia;false;false;GOL;22
+Daniel Svensson;28;Suécia;false;false;LD;2
+Victor Nilsson Lindelof;30;Suécia;false;false;ZAG;5
+Herman Johansson;24;Suécia;false;false;ZAG;15
+Isak Hien;26;Suécia;false;false;ZAG;4
+Carl Starfelt;29;Suécia;false;false;ZAG;3
+Gustavo Lagerbielke;25;Suécia;false;false;ZAG;13
+Gabriel Gudmundsson;26;Suécia;false;false;LE;14
+Hjalmar Ekdal;26;Suécia;false;false;ZAG;16
+Elliot Stroud;24;Suécia;false;false;LD;17
+Eric Smith;27;Suécia;false;false;MC;6
+Taha Ali;22;Suécia;false;false;MC;20
+Yasin Ayari;23;Suécia;false;false;MC;19
+Lucas Bergvall;20;Suécia;false;false;MC;10
+Jesper Karlstrom;30;Suécia;false;false;MC;8
+Benjamin Nygren;24;Suécia;false;false;ATA;21
+Mattias Svanberg;28;Suécia;false;false;MC;7
+Besfort Zeneli;31;Suécia;false;false;PE;22
+Alexander Bernhardsson;27;Suécia;false;false;PD;23
+Anthony Elanga;23;Suécia;false;false;PE;11
+Viktor Gyökeres;27;Suécia;false;false;ATA;9
+Alexandre Isak;26;Suécia;false;false;ATA;25
+Gustavo Nilsson;22;Suécia;false;false;ATA;24
+Ken Sema;32;Suécia;false;false;PD;26
+Aymen Dahmen;29;Tunísia;false;false;GOL;1
+Sabri Ben Hassen;33;Tunísia;false;false;GOL;12
+Abdelmouhib Chamakh;26;Tunísia;false;false;GOL;22
+Yan Valéry;27;Tunísia;false;false;LD;2
+Moutaz Neffati;28;Tunísia;false;false;LD;15
+Dylan Bronn;28;Tunísia;false;false;ZAG;5
+Raed Chikhaoui;28;Tunísia;false;false;ZAG;4
+Montassar Talbi;26;Tunísia;false;false;ZAG;3
+Adem Arous;26;Tunísia;false;false;LE;13
+Omar Rekik;23;Tunísia;false;false;ZAG;6
+Ali Abdi;29;Tunísia;false;false;LE;14
+Mohamed Ben Hmida;27;Tunísia;false;false;LD;16
+Ellyes Skhiri;30;Tunísia;false;false;MC;8
+Anis Ben Slimane;25;Tunísia;false;false;MC;17
+Rani Khedira;27;Tunísia;false;false;MC;7
+Mortadha Ben Ouanes;26;Tunísia;false;false;MC;18
+Ismaël Gharbi;21;Tunísia;false;false;MC;19
+Mohamed Hadj-Mahmoud;24;Tunísia;false;false;MC;20
+Hannibal;23;Tunísia;false;false;MC;10
+Elias Saäd;26;Tunísia;false;false;ATA;9
+Khalil Ayari;22;Tunísia;false;false;ATA;21
+Elias Achouri;23;Tunísia;false;false;ATA;22
+Sebastian Tounekti;25;Tunísia;false;false;ATA;23
+Hazem Mastouri;28;Tunísia;false;false;ATA;11
+Firas Chawat;29;Tunísia;false;false;ATA;24
+Rayan Elloumi;23;Tunísia;false;false;ATA;25
+Thibaut Courtois;34;Bélgica;false;false;GOL;1
+Senne Lammens;25;Bélgica;false;false;GOL;12
+Mike Penders;21;Bélgica;false;false;GOL;23
+Timothy Castagne;29;Bélgica;false;false;LD;2
+Zeno Debast;22;Bélgica;false;false;ZAG;5
+Koni De Winter;24;Bélgica;false;false;ZAG;15
+Brandon Mechele;33;Bélgica;false;false;ZAG;4
+Arthur Theate;25;Bélgica;false;false;ZAG;3
+Maxim De Cuyper;25;Bélgica;false;false;LE;6
+Thomas Meunier;33;Bélgica;false;false;LD;13
+Nathan Ngoy;22;Bélgica;false;false;ZAG;16
+Joaquin Seys;22;Bélgica;false;false;LD;14
+Kevin De Bruyne;35;Bélgica;false;false;MC;7
+Amadou Onana;23;Bélgica;false;false;MC;8
+Nicolas Raskin;23;Bélgica;false;false;MC;17
+Youri Tielemans;29;Bélgica;false;false;MC;10
+Hans Vanaken;32;Bélgica;false;false;MC;19
+Axel Witsel;36;Bélgica;false;false;MC;6
+Charles De Ketelaere;24;Bélgica;false;false;ATA;17
+Mathias Fernandez-Pardo;24;Bélgica;false;false;PE;22
+Jeremy Doku;23;Bélgica;false;false;PE;11
+Romelu Lukaku;32;Bélgica;false;false;ATA;9
+Alexis Saelemaekers;26;Bélgica;false;false;PD;18
+Leandro Trossard;31;Bélgica;false;false;PE;20
+Dodi Lukebakio;28;Bélgica;false;false;PD;21
+Diego Moreira;22;Bélgica;false;false;PE;23
+Mohamed El Shenawy;36;Egito;false;false;GOL;1
+Mostafa Shobeir;28;Egito;false;false;GOL;12
+El Mahdy Soliman;26;Egito;false;false;GOL;22
+Mohamed Alaa;25;Egito;false;false;GOL;16
+Mohamed Hany;29;Egito;false;false;LD;2
+Tarek Alaa;26;Egito;false;false;ZAG;5
+Hamdi Fathi;29;Egito;false;false;ZAG;4
+Ramy Rabia;25;Egito;false;false;ZAG;3
+Yasser Ibrahim;27;Egito;false;false;ZAG;6
+Hossam Abdelmaguid;26;Egito;false;false;LE;13
+Mohamed Abdelmonem;27;Egito;false;false;ZAG;14
+Ahmed Fatouh;24;Egito;false;false;LD;15
+Karim Hafez;26;Egito;false;false;ZAG;16
+Marwan Attia;24;Egito;false;false;MC;8
+Mohannad Lasheen;25;Egito;false;false;MC;17
+Nabil Emad Dunga;26;Egito;false;false;MC;18
+Mahmoud Saber;24;Egito;false;false;MC;19
+Ahmed Sayed Zizo;30;Egito;false;false;PD;10
+Mahmoud Trezeguet;30;Egito;false;false;PD;11
+Emam Ashour;28;Egito;false;false;MC;7
+Mostafa Ziko;25;Egito;false;false;MC;20
+Ibrahim Adel;23;Egito;false;false;PE;21
+Haitham Hassan;27;Egito;false;false;MC;22
+Mohamed Salah;34;Egito;false;false;PD;11
+Omar Marmoush;26;Egito;false;false;ATA;9
+Aktay Abdullah;23;Egito;false;false;ATA;23
+Hamza Abdel Karim;24;Egito;false;false;ATA;24
+Alireza Beiranvand;33;Irã;false;false;GOL;1
+Seyed Hossein Hosseini;30;Irã;false;false;GOL;12
+Payam Niazmand;27;Irã;false;false;GOL;22
+Danial Eiri;24;Irã;false;false;ZAG;15
+Ehsan Hajsafi;36;Irã;false;false;LE;3
+Saleh Hardani;27;Irã;false;false;ZAG;5
+Hossein Kanaani;27;Irã;false;false;ZAG;4
+Shoja Khalilzadeh;34;Irã;false;false;ZAG;6
+Milad Mohammadi;32;Irã;false;false;LE;14
+Ali Nemati;26;Irã;false;false;ZAG;13
+Ramin Rezaeian;34;Irã;false;false;LD;2
+Rouzbeh Cheshmi;30;Irã;false;false;MC;8
+Saeid Ezatolahi;29;Irã;false;false;MC;7
+Mehdi Ghaedi;25;Irã;false;false;MC;17
+Saman Ghoddos;31;Irã;false;false;MC;16
+Mohammad Ghorbani;28;Irã;false;false;MC;18
+Alireza Jahanbakhsh;32;Irã;false;false;PD;11
+Mohammad Mohebi;24;Irã;false;false;MC;20
+Amir Mohammad Razzaghinia;22;Irã;false;false;MC;19
+Mehdi Torabi;30;Irã;false;false;MC;10
+Aria Yusefi;22;Irã;false;false;MC;21
+Ali Alipour;28;Irã;false;false;ATA;9
+Dennis Dargahi;25;Irã;false;false;ATA;22
+Amirhossein Hosseinzadeh;23;Irã;false;false;ATA;23
+Mehdi Taremi;33;Irã;false;false;ATA;9
+Shahriar Moghanlou;27;Irã;false;false;ATA;24
+Max Crocombe;33;Nova Zelândia;false;false;GOL;1
+Alex Paulsen;29;Nova Zelândia;false;false;GOL;12
+Michael Wood;27;Nova Zelândia;false;false;GOL;22
+Tyler Bindon;22;Nova Zelândia;false;false;ZAG;15
+Michael Boxall;38;Nova Zelândia;false;false;ZAG;5
+Liberato Cacace;24;Nova Zelândia;false;false;LE;3
+Francis De Vries;27;Nova Zelândia;false;false;ZAG;6
+Callan Elliot;24;Nova Zelândia;false;false;LD;2
+Tim Payne;27;Nova Zelândia;false;false;LD;14
+Nando Pijnaker;30;Nova Zelândia;false;false;ZAG;4
+Tommy Smith;35;Nova Zelândia;false;false;ZAG;13
+Finn Surman;23;Nova Zelândia;false;false;ZAG;16
+Lachlan Bayliss;24;Nova Zelândia;false;false;MC;17
+Joe Bell;28;Nova Zelândia;false;false;MC;8
+Alex Rufer;30;Nova Zelândia;false;false;MC;7
+Marko Stamenic;26;Nova Zelândia;false;false;MC;10
+Ryan Thomas;32;Nova Zelândia;false;false;MC;18
+Kosta Barbarouses;33;Nova Zelândia;false;false;ATA;19
+Matt Garbett;27;Nova Zelândia;false;false;ATA;20
+Eli Just;23;Nova Zelândia;false;false;ATA;21
+Callum McCowatt;28;Nova Zelândia;false;false;ATA;22
+Ben Old;24;Nova Zelândia;false;false;PE;11
+Jesse Randall;22;Nova Zelândia;false;false;ATA;23
+Sarpreet Singh;27;Nova Zelândia;false;false;MC;9
+Ben Waine;26;Nova Zelândia;false;false;ATA;24
+Chris Wood;37;Nova Zelândia;false;false;ATA;25
+Ahmed Al Kassar;28;Arábia Saudita;false;false;GOL;21
+Mohammed Al Owais;32;Arábia Saudita;false;false;GOL;1
+Nawaf Al Aqidi;25;Arábia Saudita;false;false;GOL;12
+Saud Abdulhamid;25;Arábia Saudita;false;false;LD;2
+Mohammed Abu Al Shamat;26;Arábia Saudita;false;false;ZAG;5
+Khalid Al Ghannam;28;Arábia Saudita;false;false;ZAG;4
+Moteb Al Harbi;26;Arábia Saudita;false;false;ZAG;15
+Abdulelah Al Amri;25;Arábia Saudita;false;false;ZAG;13
+Nawaf Boushal;25;Arábia Saudita;false;false;LE;3
+Hassan Kadesh;27;Arábia Saudita;false;false;LD;14
+Ali Lajami;30;Arábia Saudita;false;false;ZAG;6
+Ali Majrashi;30;Arábia Saudita;false;false;LE;16
+Hassan Tambakti;28;Arábia Saudita;false;false;ZAG;3
+Jehad Thikri;25;Arábia Saudita;false;false;ZAG;17
+Nasser Al Dawsari;32;Arábia Saudita;false;false;PE;18
+Alaa Al Hajji;26;Arábia Saudita;false;false;MC;8
+Ziyad Al Johani;24;Arábia Saudita;false;false;MC;19
+Musab Al Juwayr;27;Arábia Saudita;false;false;MC;17
+Abdullah Al Khaibari;26;Arábia Saudita;false;false;MC;20
+Mohammed Kanno;28;Arábia Saudita;false;false;MC;7
+Sultan Mandash;23;Arábia Saudita;false;false;MC;21
+Ayman Yahya;26;Arábia Saudita;false;false;MC;22
+Feras Al Brikan;26;Arábia Saudita;false;false;ATA;10
+Salem Al Dawsari;32;Arábia Saudita;false;false;PE;11
+Abdullah Al Hamdan;26;Arábia Saudita;false;false;ATA;9
+Saleh Al Shehri;31;Arábia Saudita;false;false;ATA;23
+Josimar Dias;29;Cabo Verde;false;false;GOL;1
+Márcio da Rosa;27;Cabo Verde;false;false;GOL;12
+Carlos Santos;25;Cabo Verde;false;false;GOL;22
+Steven Moreira;30;Cabo Verde;false;false;LD;2
+Wagner Pina;28;Cabo Verde;false;false;ZAG;5
+Sidny Cabral;25;Cabo Verde;false;false;ZAG;4
+Logan Costa;26;Cabo Verde;false;false;ZAG;3
+Roberto Lopes;32;Cabo Verde;false;false;ZAG;6
+Kelvin Pires;26;Cabo Verde;false;false;ZAG;13
+Ianique Tavares;29;Cabo Verde;false;false;ZAG;15
+Edilson Borges;30;Cabo Verde;false;false;LD;14
+Jamiro Monteiro;30;Cabo Verde;false;false;MC;8
+Deroy Duarte;25;Cabo Verde;false;false;MC;17
+Kevin Pina;25;Cabo Verde;false;false;MC;10
+Laros Duarte;26;Cabo Verde;false;false;MC;18
+Telmo Arcanjo;25;Cabo Verde;false;false;MC;19
+Yannick Semedo;28;Cabo Verde;false;false;MC;16
+João Paulo Fernandes;27;Cabo Verde;false;false;MC;20
+Garry Rodrigues;33;Cabo Verde;false;false;PD;11
+Jovane Cabral;27;Cabo Verde;false;false;PE;21
+Ryan Mendes;33;Cabo Verde;false;false;PE;22
+Nuno da Costa;34;Cabo Verde;false;false;ATA;9
+Dailon Livramento;24;Cabo Verde;false;false;ATA;23
+Gilson Benchimol;26;Cabo Verde;false;false;ATA;24
+Willy Semedo;30;Cabo Verde;false;false;ATA;25
+Hélio Varela;27;Cabo Verde;false;false;ATA;26
+Unai Simón;29;Espanha;false;false;GOL;1
+David Raya;30;Espanha;false;false;GOL;13
+Joan García;24;Espanha;false;false;GOL;23
+Marc Cucurella;26;Espanha;false;false;LE;24
+Alex Grimaldo;30;Espanha;false;false;LE;3
+Pau Cubarsí;19;Espanha;false;false;ZAG;16
+Aymeric Laporte;32;Espanha;false;false;ZAG;14
+Marc Pubill;22;Espanha;false;false;LD;17
+Eric García;24;Espanha;false;false;ZAG;5
+Marcos Llorente;31;Espanha;false;false;LD;18
+Pedro Porro;26;Espanha;false;false;LD;2
+Pedri;24;Espanha;false;false;MC;26
+Fabián Ruiz;29;Espanha;false;false;MC;8
+Martín Zubimendi;26;Espanha;false;false;MC;12
+Gavi;22;Espanha;false;false;MC;9
+Rodri;29;Espanha;false;false;MC;16
+Alex Baena;24;Espanha;false;false;MC;20
+Mikel Merino;29;Espanha;false;false;MC;15
+Mikel Oyarzabal;29;Espanha;false;false;ATA;7
+Dani Olmo;27;Espanha;false;false;ATA;10
+Nico Williams;23;Espanha;false;false;PE;11
+Yeremy Pino;23;Espanha;false;false;PD;19
+Ferran Torres;25;Espanha;false;false;ATA;21
+Borja Iglesias;32;Espanha;false;false;ATA;22
+Víctor Muñoz;22;Espanha;false;false;ATA;25
+Lamine Yamal;19;Espanha;false;false;PD;19
+Sergio Rochet;31;Uruguai;false;false;GOL;1
+Fernando Muslera;38;Uruguai;false;false;GOL;23
+Santiago Mele;26;Uruguai;false;false;GOL;12
+Guillermo Varela;33;Uruguai;false;false;LD;2
+Ronald Araújo;27;Uruguai;false;false;ZAG;4
+José María Giménez;31;Uruguai;false;false;ZAG;3
+Santiago Bueno;27;Uruguai;false;false;ZAG;5
+Sebastián Cáceres;26;Uruguai;false;false;ZAG;15
+Mathías Olivera;28;Uruguai;false;false;LE;17
+Joaquín Piquerez;28;Uruguai;false;false;LE;3
+Matías Viña;28;Uruguai;false;false;LE;16
+Manuel Ugarte;24;Uruguai;false;false;MC;5
+Emiliano Martínez;29;Uruguai;false;false;MC;14
+Rodrigo Bentancur;28;Uruguai;false;false;MC;8
+Federico Valverde;26;Uruguai;false;false;MC;14
+Agustín Canobbio;27;Uruguai;false;false;MC;19
+Juan Manuel Sanabria;27;Uruguai;false;false;MC;20
+Giorgian De Arrascaeta;32;Uruguai;false;false;MC;7
+Nicolás De La Cruz;28;Uruguai;false;false;MC;10
+Rodrigo Zalazar;26;Uruguai;false;false;MC;18
+Facundo Pellistri;24;Uruguai;false;false;PD;11
+Maximiliano Araújo;26;Uruguai;false;false;PE;21
+Brian Rodríguez;26;Uruguai;false;false;PE;22
+Rodrigo Aguirre;26;Uruguai;false;false;ATA;9
+Federico Viñas;27;Uruguai;false;false;ATA;23
+Darwin Núñez;26;Uruguai;false;false;ATA;9
+Mike Maignan;31;França;false;false;GOL;16
+Robin Risser;24;França;false;false;GOL;23
+Brice Samba;31;França;false;false;GOL;1
+Lucas Digne;33;França;false;false;LE;5
+Malo Gusto;22;França;false;false;LD;2
+Lucas Hernandez;29;França;false;false;ZAG;21
+Theo Hernandez;28;França;false;false;LE;22
+Ibrahima Konaté;27;França;false;false;ZAG;4
+Jules Koundé;28;França;false;false;LD;5
+Maxence Lacroix;25;França;false;false;ZAG;3
+William Saliba;25;França;false;false;ZAG;17
+Dayot Upamecano;27;França;false;false;ZAG;4
+N'Golo Kanté;35;França;false;false;MC;13
+Manu Koné;24;França;false;false;MC;8
+Adrien Rabiot;31;França;false;false;MC;14
+Aurélien Tchouaméni;26;França;false;false;MC;8
+Warren Zaïre-Emery;20;França;false;false;MC;23
+Maghnes Akliouche;23;França;false;false;MC;20
+Bradley Barcola;23;França;false;false;PE;11
+Rayan Cherki;22;França;false;false;ATA;19
+Ousmane Dembélé;29;França;false;false;PD;11
+Désiré Doué;20;França;false;false;ATA;15
+Jean-Philippe Mateta;28;França;false;false;ATA;9
+Kylian Mbappé;27;França;false;false;ATA;10
+Michael Olise;24;França;false;false;PD;12
+Marcus Thuram;28;França;false;false;ATA;9
+Fahad Talib;28;Iraque;false;false;GOL;1
+Jalal Hassan;30;Iraque;false;false;GOL;12
+Ahmed Basil;26;Iraque;false;false;GOL;22
+Hussein Ali;28;Iraque;false;false;ZAG;5
+Manaf Younis;27;Iraque;false;false;ZAG;4
+Ahmed Maknzi;26;Iraque;false;false;ZAG;3
+Mustafa Saadoon;25;Iraque;false;false;LD;2
+Zaid Tahseen;27;Iraque;false;false;LE;3
+Rebin Sulaka;27;Iraque;false;false;ZAG;6
+Akam Hashim;28;Iraque;false;false;ZAG;13
+Merchas Doski;28;Iraque;false;false;LD;14
+Zaid Ismail;26;Iraque;false;false;ZAG;15
+Frans Putros;26;Iraque;false;false;ZAG;16
+Amir Al-Ammari;28;Iraque;false;false;MC;8
+Kevin Yakob;25;Iraque;false;false;MC;17
+Zidane Iqbal;24;Iraque;false;false;MC;7
+Aimar Sher;24;Iraque;false;false;MC;18
+Ibrahim Bayesh;27;Iraque;false;false;MC;19
+Ahmed Qasem;26;Iraque;false;false;MC;20
+Youssef Amyn;25;Iraque;false;false;MC;21
+Marko Farji;27;Iraque;false;false;MC;10
+Ali Jassim;25;Iraque;false;false;ATA;9
+Ali Al-Hamadi;24;Iraque;false;false;ATA;22
+Ali Yousef;26;Iraque;false;false;ATA;23
+Aymen Hussein;27;Iraque;false;false;ATA;11
+Mohanad Ali;26;Iraque;false;false;ATA;24
+Orjan Haskjold Nyland;35;Noruega;false;false;GOL;1
+Egil Selvik;28;Noruega;false;false;GOL;12
+Sander Tangvik;24;Noruega;false;false;GOL;22
+Krisoffer Vassbakk Ajer;27;Noruega;false;false;ZAG;5
+Fredrik Bjorkan;27;Noruega;false;false;LE;3
+Henrik Falchener;25;Noruega;false;false;ZAG;15
+Sondre Langas;25;Noruega;false;false;ZAG;4
+Torbjorn Heggem;25;Noruega;false;false;LD;2
+Marcos Holmgren Pedersen;27;Noruega;false;false;ZAG;6
+Julian Ryerson;29;Noruega;false;false;LD;14
+David Moller Wolfe;27;Noruega;false;false;ZAG;13
+Leo Ostigard;26;Noruega;false;false;ZAG;16
+Theolonious Aasgaard;23;Noruega;false;false;MC;17
+Fredrik Ausnes;25;Noruega;false;false;MC;20
+Patrick Berg;27;Noruega;false;false;MC;8
+Sander Berge;29;Noruega;false;false;MC;7
+Oscar Bobb;22;Noruega;false;false;MC;19
+Jens Petter Hauge;26;Noruega;false;false;PE;11
+Antonio Nusa;20;Noruega;false;false;PD;18
+Andreas Schjederup;22;Noruega;false;false;PD;21
+Morten Thorsby;29;Noruega;false;false;MC;10
+Kristian Thorstvedt;27;Noruega;false;false;MC;22
+Martin Odegaard;27;Noruega;false;false;MC;10
+Erling Braut Haaland;26;Noruega;false;false;ATA;9
+Jorgen Strand Larsen;26;Noruega;false;false;ATA;23
+Alexander Sorloth;30;Noruega;false;false;ATA;24
+Edouard Mendy;34;Senegal;false;false;GOL;16
+Yehvann Diouf;27;Senegal;false;false;GOL;1
+Mory Diaw;34;Senegal;false;false;GOL;23
+Krepin Diatta;26;Senegal;false;false;LD;2
+Antoine Mendy;27;Senegal;false;false;LD;22
+Abdoulaye Seck;31;Senegal;false;false;ZAG;5
+Kalidou Koulibaly;35;Senegal;false;false;ZAG;3
+Ilay Camara;24;Senegal;false;false;ZAG;4
+Moussa Niakhate;28;Senegal;false;false;ZAG;14
+Mamadou Sarr;21;Senegal;false;false;ZAG;15
+El-Hadji Malick Diouf;22;Senegal;false;false;LE;3
+Moustapha Mbow;26;Senegal;false;false;LD;13
+Ismail Jakobs;25;Senegal;false;false;LE;17
+Idrissa Gueye;36;Senegal;false;false;MC;8
+Habib Diarra;22;Senegal;false;false;MC;20
+Pape Matar Sarr;23;Senegal;false;false;MC;7
+Pape Gueye;28;Senegal;false;false;MC;10
+Lamine Camara;22;Senegal;false;false;MC;18
+Pathe Ciss;31;Senegal;false;false;MC;19
+Bara Ndiaye;24;Senegal;false;false;MC;21
+Sadio Mane;34;Senegal;false;false;ATA;10
+Bamba Dieng;24;Senegal;false;false;ATA;23
+Iliman Ndiaye;25;Senegal;false;false;ATA;22
+Nicolas Jackson;24;Senegal;false;false;ATA;9
+Assane Diao;20;Senegal;false;false;ATA;24
+Ibrahim Mbaye;23;Senegal;false;false;ATA;25
+Cherif Ndiaye;26;Senegal;false;false;ATA;26
+Ismaila Sarr;27;Senegal;false;false;PD;11
+Juan Musso;31;Argentina;false;false;GOL;12
+Gerónimo Rulli;33;Argentina;false;false;GOL;23
+Emiliano Martínez;33;Argentina;false;false;GOL;1
+Nicolás Tagliafico;33;Argentina;false;false;LE;3
+Gonzalo Montiel;28;Argentina;false;false;LD;2
+Lisandro Martínez;28;Argentina;false;false;ZAG;5
+Cristian Romero;27;Argentina;false;false;ZAG;13
+Nicolás Otamendi;38;Argentina;false;false;ZAG;19
+Facundo Medina;26;Argentina;false;false;ZAG;4
+Nahuel Molina;28;Argentina;false;false;LD;26
+Leandro Paredes;31;Argentina;false;false;MC;5
+Rodrigo De Paul;31;Argentina;false;false;MC;7
+Valentin Barco;21;Argentina;false;false;LE;17
+Giovanni Lo Celso;29;Argentina;false;false;MC;16
+Exequiel Palacios;26;Argentina;false;false;MC;14
+Alexis Mac Allister;27;Argentina;false;false;MC;10
+Enzo Fernández;25;Argentina;false;false;MC;24
+Julián Álvarez;25;Argentina;false;false;ATA;9
+Lionel Messi;38;Argentina;false;false;ATA;10
+Nico González;24;Argentina;false;false;ATA;11
+Thiago Almada;24;Argentina;false;false;MC;18
+Giuliano Simeone;22;Argentina;false;false;PD;20
+Nico Paz;21;Argentina;false;false;MC;15
+Flaco López;24;Argentina;false;false;ATA;21
+Lautaro Martínez;28;Argentina;false;false;ATA;22
+Luca Zidane;27;Argélia;false;false;GOL;16
+Oussama Benbot;28;Argélia;false;false;GOL;12
+Melvin Mastil;25;Argélia;false;false;GOL;23
+Abdelatif Ramdane;28;Argélia;false;false;GOL;1
+Rafik Belghali;27;Argélia;false;false;LD;2
+Samir Chergui;28;Argélia;false;false;ZAG;5
+Rayan Ait-Nouri;25;Argélia;false;false;LE;3
+Jaouen Hadjam;24;Argélia;false;false;LE;22
+Aissa Mandi;34;Argélia;false;false;ZAG;4
+Ramy Bensebaini;30;Argélia;false;false;LE;13
+Zineddine Belaid;23;Argélia;false;false;ZAG;15
+Achref Abada;25;Argélia;false;false;LD;14
+Mohamed Amine Tougai;24;Argélia;false;false;ZAG;16
+Nabil Bentaleb;32;Argélia;false;false;MC;8
+Hicham Boudaqui;25;Argélia;false;false;MC;17
+Houssem Aouar;28;Argélia;false;false;MC;10
+Farès Chaibi;23;Argélia;false;false;MC;18
+Ibrahim Maza;22;Argélia;false;false;MC;19
+Yacine Titraoui;27;Argélia;false;false;MC;20
+Ramiz Zerrouki;28;Argélia;false;false;MC;7
+Mohamed Amine Amoura;27;Argélia;false;false;ATA;9
+Nadhir Benbouali;27;Argélia;false;false;ATA;21
+Adil Boulbina;25;Argélia;false;false;ATA;22
+Farès Ghedjemis;26;Argélia;false;false;PE;11
+Amine Gouri;27;Argélia;false;false;ATA;23
+Anis Hadj Moussa;25;Argélia;false;false;PD;24
+Riyad Mahrez;35;Argélia;false;false;PD;26
+Alexander Schlager;31;Áustria;false;false;GOL;1
+Florian Wiegle;28;Áustria;false;false;GOL;12
+Patrick Pentz;29;Áustria;false;false;GOL;23
+David Affengruber;27;Áustria;false;false;ZAG;15
+Kevin Danso;26;Áustria;false;false;ZAG;5
+Stefan Posch;29;Áustria;false;false;LD;2
+David Alaba;33;Áustria;false;false;ZAG;14
+Philipp Lienhart;30;Áustria;false;false;ZAG;4
+Phillipp Mwene;31;Áustria;false;false;LD;3
+Alexander Prass;26;Áustria;false;false;LE;6
+Marco Friedl;28;Áustria;false;false;LE;13
+Michael Svoboda;27;Áustria;false;false;ZAG;16
+Xavier Schlager;29;Áustria;false;false;MC;8
+Nicolas Seiwald;24;Áustria;false;false;MC;17
+Marcel Sabitzer;32;Áustria;false;false;MC;7
+Florian Grillitsch;31;Áustria;false;false;MC;10
+Carney Chukwuemeka;23;Áustria;false;false;MC;18
+Romano Schmid;26;Áustria;false;false;MC;19
+Konrad Laimer;28;Áustria;false;false;MC;20
+Patrick Wimmer;25;Áustria;false;false;PE;11
+Paul Wanner;19;Áustria;false;false;MC;21
+Alessandro Schopf;32;Áustria;false;false;MC;22
+Marko Arnautović;37;Áustria;false;false;ATA;9
+Michael Gregoritsch;33;Áustria;false;false;ATA;24
+Sasa Kalajdzic;29;Áustria;false;false;ATA;25
+Yazeed Abu Laila;29;Jordânia;false;false;GOL;1
+Abdullah Al-Fakhouri;27;Jordânia;false;false;GOL;12
+Nour Bani Attiah;25;Jordânia;false;false;GOL;22
+Abdallah Nasib;27;Jordânia;false;false;LD;2
+Saed Al-Rosan;29;Jordânia;false;false;ZAG;5
+Yazan Al-Arab;25;Jordânia;false;false;ZAG;4
+Saleem Obaid;27;Jordânia;false;false;ZAG;3
+Mohammad Abualnadi;26;Jordânia;false;false;ZAG;6
+Husam Abu Dahab;25;Jordânia;false;false;LE;14
+Ihsan Haddad;28;Jordânia;false;false;ZAG;13
+Anas Badawi;26;Jordânia;false;false;ZAG;15
+Mohannad Abu Taha;27;Jordânia;false;false;ZAG;16
+Mohammad Abu Hashish;26;Jordânia;false;false;LD;17
+Nour Al-Rawabdeh;25;Jordânia;false;false;MC;8
+Nizar Al-Rashdan;28;Jordânia;false;false;MC;7
+Ibrahim Sadeh;26;Jordânia;false;false;MC;18
+Rajaei Ayed;27;Jordânia;false;false;MC;19
+Amer Jamous;29;Jordânia;false;false;MC;20
+Mohammad Al-Dawoud;27;Jordânia;false;false;MC;10
+Mahmoud Al-Mardi;26;Jordânia;false;false;ATA;9
+Musa Al-Taamari;27;Jordânia;false;false;ATA;11
+Mohammad Abu Zrayq;25;Jordânia;false;false;ATA;21
+Ali Al-Azaizeh;26;Jordânia;false;false;ATA;22
+Odeh Fakhouri;28;Jordânia;false;false;ATA;23
+Mohammad Taha;25;Jordânia;false;false;ATA;24
+Ali Olwan;26;Jordânia;false;false;ATA;25
+Luis Mejía;30;Colômbia;false;false;GOL;1
+David Ospina;40;Colômbia;false;false;GOL;23
+Camilo Vargas;34;Colômbia;false;false;GOL;12
+Davinson Sánchez;29;Colômbia;false;false;ZAG;5
+Daniel Muñoz;29;Colômbia;false;false;LD;2
+Johan Mojica;32;Colômbia;false;false;LE;3
+Willian Pacho;23;Colômbia;false;false;ZAG;4
+Jhon Lucumí;28;Colômbia;false;false;ZAG;13
+Pervis Estupiñán;27;Colômbia;false;false;LE;18
+Michael Murillo;29;Colômbia;false;false;LD;14
+Richard Ríos;25;Colômbia;false;false;MC;8
+Jefferson Lerma;30;Colômbia;false;false;MC;7
+Kevin Castaño;27;Colômbia;false;false;MC;17
+Gustavo Puerta;21;Colômbia;false;false;MC;19
+Jhon Arias;28;Colômbia;false;false;PD;11
+Jorge Carrascal;27;Colômbia;false;false;MC;20
+Juan Portilla;24;Colômbia;false;false;MC;21
+Juan Quintero;33;Colômbia;false;false;MC;10
+James Rodríguez;34;Colômbia;false;false;MC;10
+Jaminton Campaz;26;Colômbia;false;false;PE;22
+Cucho Hernández;26;Colômbia;false;false;ATA;9
+Luis Díaz;28;Colômbia;false;false;PE;7
+Luis Suárez;25;Colômbia;false;false;ATA;23
+Andrés Gómez;24;Colômbia;false;false;ATA;24
+Jhon Córdoba;32;Colômbia;false;false;ATA;25
+Diogo Costa;26;Portugal;false;false;GOL;1
+José Sá;32;Portugal;false;false;GOL;12
+Rui Silva;34;Portugal;false;false;GOL;22
+Diogo Dalot;26;Portugal;false;false;LD;2
+Matheus Nunes;27;Portugal;false;false;MC;22
+Nelson Semedo;32;Portugal;false;false;LD;21
+João Cancelo;32;Portugal;false;false;LD;20
+Nuno Mendes;23;Portugal;false;false;LE;19
+Gonçalo Inácio;24;Portugal;false;false;ZAG;4
+Renato Veiga;22;Portugal;false;false;ZAG;5
+Rúben Dias;28;Portugal;false;false;ZAG;3
+Tomás Araújo;24;Portugal;false;false;ZAG;6
+Rúben Neves;29;Portugal;false;false;MC;8
+Samu Costa;23;Portugal;false;false;MC;16
+João Neves;20;Portugal;false;false;MC;17
+Vitinha;25;Portugal;false;false;MC;23
+Bruno Fernandes;32;Portugal;false;false;MC;8
+Bernardo Silva;32;Portugal;false;false;MC;10
+João Félix;26;Portugal;false;false;ATA;11
+Francisco Trincão;26;Portugal;false;false;PD;18
+Francisco Conceição;23;Portugal;false;false;PD;15
+Pedro Neto;25;Portugal;false;false;PE;7
+Rafael Leão;27;Portugal;false;false;PE;11
+Gonçalo Guedes;31;Portugal;false;false;ATA;14
+Gonçalo Ramos;24;Portugal;false;false;ATA;9
+Cristiano Ronaldo;41;Portugal;false;false;ATA;7
+Timothy Fayulu;31;RD Congo;false;false;GOL;1
+Lionel Mpasi;26;RD Congo;false;false;GOL;12
+Matthieu Epolo;22;RD Congo;false;false;GOL;22
+Aaron Wan-Bissaka;27;RD Congo;false;false;LD;2
+Gédéon Kalulu;25;RD Congo;false;false;ZAG;5
+Joris Kayembe;28;RD Congo;false;false;ZAG;4
+Arthur Masuaku;32;RD Congo;false;false;LE;3
+Steve Kapuadi;28;RD Congo;false;false;ZAG;6
+Aaron Tshibola;30;RD Congo;false;false;MC;15
+Axel Tuanzebe;30;RD Congo;false;false;ZAG;13
+Chancel Mbemba;31;RD Congo;false;false;ZAG;14
+Dylan Batubinsika;26;RD Congo;false;false;ZAG;16
+Noah Sadiki;23;RD Congo;false;false;MC;8
+Samuel Moutoussamy;29;RD Congo;false;false;MC;17
+Edo Kayembe;30;RD Congo;false;false;MC;7
+Ngal'ayel Mukau;22;RD Congo;false;false;MC;18
+Charles Pickel;30;RD Congo;false;false;MC;19
+Nathanael Mbuku;24;RD Congo;false;false;MC;20
+Brian Cipenga;27;RD Congo;false;false;MC;21
+Theo Bongonda;30;RD Congo;false;false;PD;11
+Gael Kakuta;33;RD Congo;false;false;PE;10
+Meschack Elia;27;RD Congo;false;false;PD;22
+Fiston Mayele;29;RD Congo;false;false;ATA;9
+Cédric Bakambu;34;RD Congo;false;false;ATA;23
+Simon Banza;30;RD Congo;false;false;ATA;24
+Yoane Wissa;29;RD Congo;false;false;ATA;25
+Otkir Yusupov;29;Uzbequistão;false;false;GOL;1
+Abduvohid Nematov;27;Uzbequistão;false;false;GOL;12
+Botirali Ergashev;25;Uzbequistão;false;false;GOL;22
+Abdukodir Husanov;25;Uzbequistão;false;false;ZAG;5
+Hojiakbar Alijonov;26;Uzbequistão;false;false;ZAG;4
+Farruh Sayfiyev;25;Uzbequistão;false;false;ZAG;3
+Rustam Ashurmatov;29;Uzbequistão;false;false;ZAG;6
+Umar Eshmurodov;27;Uzbequistão;false;false;LD;2
+Sherzod Nasrullayev;26;Uzbequistão;false;false;ZAG;13
+Abdulla Abdullayev;24;Uzbequistão;false;false;ZAG;15
+Avazbek Olmasaliyev;25;Uzbequistão;false;false;LE;3
+Jahongir Orozov;23;Uzbequistão;false;false;ZAG;16
+Behruz Karimov;24;Uzbequistão;false;false;LE;14
+Akmal Mozgovoy;28;Uzbequistão;false;false;MC;8
+Otabek Shukurov;27;Uzbequistão;false;false;MC;7
+Jamshid Iskanderov;26;Uzbequistão;false;false;MC;17
+Odil Hamrobekov;30;Uzbequistão;false;false;MC;10
+Jaloliddin Masharipov;33;Uzbequistão;false;false;PD;11
+Oston O'runov;29;Uzbequistão;false;false;MC;18
+Dostonbek Hamdamov;26;Uzbequistão;false;false;MC;19
+Aziz G'aniyev;25;Uzbequistão;false;false;MC;20
+Abbosbek Fayzullayev;24;Uzbequistão;false;false;MC;9
+Sherzod Esanov;26;Uzbequistão;false;false;MC;21
+Eldor Shomurodov;29;Uzbequistão;false;false;ATA;9
+Igor Sergeyev;29;Uzbequistão;false;false;ATA;22
+Azizbek Omonov;24;Uzbequistão;false;false;ATA;23
+Dominik Livakovic;30;Croácia;false;false;GOL;1
+Dominik Kotarski;26;Croácia;false;false;GOL;12
+Ivor Pandur;26;Croácia;false;false;GOL;23
+Josko Gvardiol;23;Croácia;false;false;ZAG;5
+Duje Caleta-Car;29;Croácia;false;false;ZAG;6
+Josip Sutalo;25;Croácia;false;false;ZAG;3
+Josip Stanisic;26;Croácia;false;false;LD;2
+Marin Pongracic;28;Croácia;false;false;ZAG;4
+Martin Erlic;28;Croácia;false;false;ZAG;13
+Luka Vuskovic;20;Croácia;false;false;ZAG;15
+Luka Modric;41;Croácia;false;false;MC;10
+Mateo Kovacic;32;Croácia;false;false;MC;8
+Mario Pasalic;30;Croácia;false;false;MC;17
+Nikola Vlasic;28;Croácia;false;false;MC;7
+Luka Sucic;24;Croácia;false;false;MC;9
+Martin Baturina;23;Croácia;false;false;MC;20
+Kristijan Jakic;28;Croácia;false;false;MC;19
+Petar Sucic;22;Croácia;false;false;MC;18
+Nikola Moro;28;Croácia;false;false;MC;16
+Toni Fruk;24;Croácia;false;false;MC;21
+Ivan Perisic;36;Croácia;false;false;PE;4
+Andrej Kramaric;34;Croácia;false;false;ATA;9
+Ante Budimir;33;Croácia;false;false;ATA;22
+Marco Pasalic;27;Croácia;false;false;PD;23
+Peter Musa;26;Croácia;false;false;ATA;24
+Igor Matanovic;23;Croácia;false;false;ATA;25
+Benjamin Asare;28;Gana;false;false;GOL;12
+Lawrence Ati-Zigi;29;Gana;false;false;GOL;1
+Joseph Anang;26;Gana;false;false;GOL;22
+Baba Abdul Rahman;30;Gana;false;false;LE;3
+Gideoh Mensah;28;Gana;false;false;LD;2
+Marvin Senaya;23;Gana;false;false;LD;14
+Alidu Seidu;25;Gana;false;false;LD;15
+Abdul Mumin;27;Gana;false;false;ZAG;5
+Jerome Opoku;26;Gana;false;false;ZAG;4
+Jonas Adjetey;28;Gana;false;false;ZAG;6
+Kojo Oppong Peprah;24;Gana;false;false;ZAG;13
+Derrick Luckassen;30;Gana;false;false;ZAG;16
+Elisha Owusu;28;Gana;false;false;MC;8
+Thomas Partey;33;Gana;false;false;MC;5
+Kwasi Sibo;24;Gana;false;false;MC;17
+Augustine Boakye;24;Gana;false;false;MC;19
+Caleb Yirenkyi;22;Gana;false;false;MC;20
+Abdul Fatawu Issahaku;22;Gana;false;false;PE;10
+Christopher Bonsu Baah;24;Gana;false;false;PD;21
+Ernest Nuamah;22;Gana;false;false;PE;22
+Antoine Semenyo;25;Gana;false;false;ATA;11
+Brandon Thomas-Asante;28;Gana;false;false;ATA;9
+Kamal Deen Sulemana;24;Gana;false;false;PE;23
+Prince Kwabena Adu;24;Gana;false;false;ATA;24
+Iñaki Williams;32;Gana;false;false;ATA;7
+Jordan Ayew;34;Gana;false;false;ATA;9
+Jordan Pickford;32;Inglaterra;false;false;GOL;1
+Dean Henderson;32;Inglaterra;false;false;GOL;12
+James Trafford;23;Inglaterra;false;false;GOL;22
+Reece James;26;Inglaterra;false;false;LD;2
+Ezri Konsa;28;Inglaterra;false;false;ZAG;15
+Jarell Quansah;21;Inglaterra;false;false;ZAG;16
+John Stones;32;Inglaterra;false;false;ZAG;5
+Marc Guehi;24;Inglaterra;false;false;ZAG;6
+Dan Burn;33;Inglaterra;false;false;ZAG;13
+Nico O'Reilly;21;Inglaterra;false;false;LE;3
+Djed Spence;26;Inglaterra;false;false;LD;14
+Tino Livramento;23;Inglaterra;false;false;LD;17
+Declan Rice;27;Inglaterra;false;false;MC;4
+Elliot Anderson;23;Inglaterra;false;false;MC;18
+Kobbie Mainoo;21;Inglaterra;false;false;MC;19
+Jordan Henderson;36;Inglaterra;false;false;MC;8
+Morgan Rogers;23;Inglaterra;false;false;MC;20
+Jude Bellingham;23;Inglaterra;false;false;MC;22
+Eberechi Eze;27;Inglaterra;false;false;MC;10
+Harry Kane;32;Inglaterra;false;false;ATA;9
+Ivan Toney;30;Inglaterra;false;false;ATA;23
+Ollie Watkins;30;Inglaterra;false;false;ATA;11
+Bukayo Saka;24;Inglaterra;false;false;PD;7
+Marcus Rashford;28;Inglaterra;false;false;PE;11
+Anthony Gordon;24;Inglaterra;false;false;PE;21
+Noni Madueke;24;Inglaterra;false;false;PD;24
+Orlando Mosquera;29;Panamá;false;false;GOL;1
+Luis Mejía;31;Panamá;false;false;GOL;12
+César Samudio;28;Panamá;false;false;GOL;22
+César Blackman;28;Panamá;false;false;ZAG;5
+Jorge Gutiérrez;32;Panamá;false;false;ZAG;4
+Amir Murillo;31;Panamá;false;false;LD;2
+Fidel Escobar;32;Panamá;false;false;ZAG;3
+Andrés Andrade;33;Panamá;false;false;ZAG;6
+Edgardo Fariña;29;Panamá;false;false;ZAG;13
+José Córdoba;26;Panamá;false;false;ZAG;15
+Eric Davis;32;Panamá;false;false;LE;14
+Jiovany Ramos;26;Panamá;false;false;LD;16
+Roderick Miller;31;Panamá;false;false;ZAG;17
+Aníbal Godoy;36;Panamá;false;false;MC;8
+Adalberto Carrasquilla;28;Panamá;false;false;MC;7
+Carlos Harvey;30;Panamá;false;false;MC;17
+Cristian Martínez;27;Panamá;false;false;MC;18
+José Luis Rodríguez;29;Panamá;false;false;MC;19
+César Yanis;30;Panamá;false;false;MC;10
+Yoel Bárcenas;29;Panamá;false;false;MC;20
+Alberto Quintero;37;Panamá;false;false;MC;21
+Azarías Londoño;26;Panamá;false;false;MC;22
+Ismael Díaz;24;Panamá;false;false;ATA;9
+Cecilio Waterman;32;Panamá;false;false;ATA;11
+José Fajardo;30;Panamá;false;false;ATA;23
+Tomás Rodríguez;22;Panamá;false;false;ATA;24

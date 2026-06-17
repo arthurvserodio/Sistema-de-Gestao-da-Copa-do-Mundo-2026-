@@ -67,6 +67,11 @@ public class ControllerArbitragem {
                 botaoRelatorio.setVisible(true);
                 botaoHistoria.setVisible(false);
             }
+            else if(u.getFuncao()== Funcao.ORGANIZADOR){
+                botaoUsuario.setVisible(false);
+                botaoRelatorio.setVisible(false);
+                botaoHistoria.setVisible(false);
+            }
         } else {
             botaoLogin.setVisible(true);
             menuUsuario.setVisible(false);
